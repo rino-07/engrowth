@@ -17,11 +17,13 @@ const Header: React.FC = () => {
       href: '/courses',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'コース・料金', href: '/courses' },
+        { name: 'メインコース', href: '/courses', category: 'main' },
         { name: 'ビジネスコース', href: '/courses/business' },
         { name: '学生コース', href: '/courses/study' },
-        { name: 'ビジネススポットサービス', href: '/courses/business-spot' },
-        { name: '学生スポットサービス', href: '/courses/study-spot' },
+        { name: 'スポットサービス', href: '/courses#spot-services', category: 'spot' },
+        { name: 'ビジネススポット', href: '/courses/business-spot' },
+        { name: '学生スポット', href: '/courses/study-spot' },
+        { name: '料金一覧', href: '/courses#pricing', category: 'pricing' },
       ]
     },
     { name: '受講の流れ', href: '/flow' },
@@ -160,27 +162,64 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu - 簡素化された階層構造 */}
         <div
           className={`lg:hidden transition-all duration-300 ease-in-out ${
             isMenuOpen
-              ? 'max-h-96 opacity-100 visible'
+              ? 'max-h-screen opacity-100 visible'
               : 'max-h-0 opacity-0 invisible'
           } overflow-hidden`}
           id="mobile-menu"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-light-gray">
-            {navigation.map((item) => (
+            {/* 学習者向けセクション */}
+            <div className="mb-4">
+              <div className="px-3 py-1 text-xs font-semibold text-gray uppercase tracking-wider">
+                学習者の方へ
+              </div>
               <Link
-                key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                href="/about"
+                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item.name}
+                Engrowthとは
               </Link>
-            ))}
-            <div className="px-3 py-2">
+              <Link
+                href="/courses"
+                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                コース・料金
+              </Link>
+              <Link
+                href="/flow"
+                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                受講の流れ
+              </Link>
+            </div>
+
+            {/* 支援者向けセクション */}
+            <Link
+              href="/supporters"
+              className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              支援者の方へ
+            </Link>
+
+            {/* FAQ */}
+            <Link
+              href="/faq"
+              className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+
+            {/* お問い合わせボタン */}
+            <div className="px-3 py-2 mt-4">
               <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="primary" size="md" className="w-full">
                   お問い合わせ
