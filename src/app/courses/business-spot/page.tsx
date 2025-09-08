@@ -29,19 +29,23 @@ export default function BusinessSpotServicePage() {
           {/* 3つのサービス */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             {/* 通訳・会議同席 */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
-              <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image
-                  src="/images/interpretation-icon.jpg"
-                  alt="通訳・会議同席"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
+            <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center flex-shrink-0">
+                  <Image
+                    src="/images/interpretation-icon.jpg"
+                    alt="通訳・会議同席"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </div>
+                <div className="flex-1">
+                  <Typography variant="heading-sm" className="text-dark-gray">
+                    通訳・会議同席
+                  </Typography>
+                </div>
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                通訳・会議同席
-              </Typography>
               <Typography variant="body-sm" className="text-gray leading-relaxed">
                 重要な会議やプレゼンテーションで、
                 <br />
@@ -52,19 +56,23 @@ export default function BusinessSpotServicePage() {
             </Card>
 
             {/* 資料作成・翻訳サポート */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
-              <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image
-                  src="/images/translation-icon.jpg"
-                  alt="資料作成・翻訳サポート"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
+            <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center flex-shrink-0">
+                  <Image
+                    src="/images/translation-icon.jpg"
+                    alt="資料作成・翻訳サポート"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </div>
+                <div className="flex-1">
+                  <Typography variant="heading-sm" className="text-dark-gray">
+                    資料作成・翻訳サポート
+                  </Typography>
+                </div>
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                資料作成・翻訳サポート
-              </Typography>
               <Typography variant="body-sm" className="text-gray leading-relaxed">
                 英語資料の作成や既存資料の
                 <br />
@@ -75,19 +83,23 @@ export default function BusinessSpotServicePage() {
             </Card>
 
             {/* プレゼンテーション準備 */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
-              <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image
-                  src="/images/presentation-icon.jpg"
-                  alt="プレゼンテーション準備"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
+            <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center flex-shrink-0">
+                  <Image
+                    src="/images/presentation-icon.jpg"
+                    alt="プレゼンテーション準備"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </div>
+                <div className="flex-1">
+                  <Typography variant="heading-sm" className="text-dark-gray">
+                    プレゼンテーション準備
+                  </Typography>
+                </div>
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                プレゼンテーション準備
-              </Typography>
               <Typography variant="body-sm" className="text-gray leading-relaxed">
                 英語でのプレゼンテーション準備から
                 <br />
@@ -120,7 +132,7 @@ export default function BusinessSpotServicePage() {
                   className="w-full h-full rounded-full"
                 />
               </div>
-              <Typography variant="body-md" className="text-dark-gray text-xl">
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 海外から自社製品に関する問い合わせが来た
               </Typography>
             </div>
@@ -135,7 +147,7 @@ export default function BusinessSpotServicePage() {
                   className="w-full h-full rounded-full"
                 />
               </div>
-              <Typography variant="body-md" className="text-dark-gray text-xl">
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 英語が話せるメンバーが急遽会議に参加できなくなってしまった
               </Typography>
             </div>
@@ -150,7 +162,7 @@ export default function BusinessSpotServicePage() {
                   className="w-full h-full rounded-full"
                 />
               </div>
-              <Typography variant="body-md" className="text-dark-gray text-xl">
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 来週、海外チームへのプレゼンをすることに・・・
               </Typography>
             </div>

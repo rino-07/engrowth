@@ -5,13 +5,15 @@ interface TypographyProps {
   children: React.ReactNode;
   className?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
+  style?: React.CSSProperties;
 }
 
 const Typography: React.FC<TypographyProps> = ({
   variant = 'body-md',
   children,
   className = '',
-  as
+  as,
+  style
 }) => {
   // デフォルトの要素を決定
   const getDefaultElement = (variant: string) => {
@@ -29,7 +31,7 @@ const Typography: React.FC<TypographyProps> = ({
   const combinedClasses = `${variant} ${className}`;
 
   return (
-    <Component className={combinedClasses}>
+    <Component className={combinedClasses} style={style}>
       {children}
     </Component>
   );
