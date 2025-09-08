@@ -39,8 +39,15 @@ export default function BusinessSpotServicePage() {
                   className="w-8 h-8"
                 />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray mb-3">
                 通訳・会議同席
+              </Typography>
+              <Typography variant="body-sm" className="text-gray leading-relaxed">
+                重要な会議やプレゼンテーションで、
+                <br />
+                リアルタイムでの通訳サポートを
+                <br />
+                提供いたします。
               </Typography>
             </Card>
 
@@ -55,8 +62,15 @@ export default function BusinessSpotServicePage() {
                   className="w-8 h-8"
                 />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray mb-3">
                 資料作成・翻訳サポート
+              </Typography>
+              <Typography variant="body-sm" className="text-gray leading-relaxed">
+                英語資料の作成や既存資料の
+                <br />
+                翻訳を、専門知識を持つ
+                <br />
+                プロフェッショナルが担当します。
               </Typography>
             </Card>
 
@@ -71,8 +85,15 @@ export default function BusinessSpotServicePage() {
                   className="w-8 h-8"
                 />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray mb-3">
                 プレゼンテーション準備
+              </Typography>
+              <Typography variant="body-sm" className="text-gray leading-relaxed">
+                英語でのプレゼンテーション準備から
+                <br />
+                本番での発表まで、トータルで
+                <br />
+                サポートいたします。
               </Typography>
             </Card>
           </div>
@@ -99,7 +120,7 @@ export default function BusinessSpotServicePage() {
                   className="w-full h-full rounded-full"
                 />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
+              <Typography variant="body-md" className="text-dark-gray text-xl">
                 海外から自社製品に関する問い合わせが来た
               </Typography>
             </div>
@@ -114,7 +135,7 @@ export default function BusinessSpotServicePage() {
                   className="w-full h-full rounded-full"
                 />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
+              <Typography variant="body-md" className="text-dark-gray text-xl">
                 英語が話せるメンバーが急遽会議に参加できなくなってしまった
               </Typography>
             </div>
@@ -129,7 +150,7 @@ export default function BusinessSpotServicePage() {
                   className="w-full h-full rounded-full"
                 />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
+              <Typography variant="body-md" className="text-dark-gray text-xl">
                 来週、海外チームへのプレゼンをすることに・・・
               </Typography>
             </div>
@@ -137,49 +158,14 @@ export default function BusinessSpotServicePage() {
 
           {/* カウンセリングバナー */}
           <div className="relative mb-16">
-            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl overflow-hidden">
+            <div className="max-w-4xl mx-auto">
               <Image
-                src="/images/counseling-banner.jpg"
-                alt="30分の無料カウンセリング"
-                width={800}
-                height={300}
-                className="w-full h-auto"
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリングでご相談ください"
+                width={1200}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-lg"
               />
-              
-              {/* オーバーレイコンテンツ */}
-              <div className="absolute inset-0 flex items-center">
-                <div className="flex flex-col md:flex-row items-center justify-between w-full px-8 md:px-16">
-                  {/* 左側：カンタン2ステップ吹き出し */}
-                  <div className="relative mb-6 md:mb-0">
-                    <div className="bg-white rounded-full px-6 py-3 relative">
-                      <Typography variant="body-md" className="text-dark-gray font-bold">
-                        カンタン2ステップ！
-                      </Typography>
-                      {/* 吹き出しの矢印 */}
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
-                    </div>
-                  </div>
-
-                  {/* 中央：メインテキスト */}
-                  <div className="text-center text-white mb-6 md:mb-0">
-                    <Typography variant="heading-md" className="text-white mb-2">
-                      30分の無料カウンセリングでご相談ください
-                    </Typography>
-                  </div>
-
-                  {/* 右側：無料バッジ + CTAボタン */}
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white text-action-green px-4 py-2 rounded-full">
-                      <Typography variant="body-md" className="font-bold">
-                        無料
-                      </Typography>
-                    </div>
-                    <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white">
-                      カウンセリングを予約する
-                    </Button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </Container>
@@ -201,14 +187,20 @@ export default function BusinessSpotServicePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             {/* 会議通訳 */}
-            <Card className="text-center p-6 border border-gray-200">
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
-                会議通訳（1時間）
-              </Typography>
-              <div className="text-center mb-4">
+            <Card className="text-center p-6 border border-gray-200 h-full flex flex-col">
+              <div className="mb-4 flex-shrink-0" style={{minHeight: '3rem'}}>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  会議通訳
+                  <br />
+                  （1時間）
+                </Typography>
+              </div>
+              <div className="text-center mb-4 flex-shrink-0" style={{minHeight: '4rem'}}>
                 <Typography variant="heading-lg" className="text-brand-red">
                   ¥15,000〜
                 </Typography>
+              </div>
+              <div className="mt-auto">
                 <Typography variant="body-sm" className="text-gray">
                   参加者数・専門性により変動
                 </Typography>
@@ -216,16 +208,20 @@ export default function BusinessSpotServicePage() {
             </Card>
 
             {/* 資料翻訳 */}
-            <Card className="text-center p-6 border border-gray-200">
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
-                資料翻訳
-                <br />
-                （A4 1ページ）
-              </Typography>
-              <div className="text-center mb-4">
+            <Card className="text-center p-6 border border-gray-200 h-full flex flex-col">
+              <div className="mb-4 flex-shrink-0" style={{minHeight: '3rem'}}>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  資料翻訳
+                  <br />
+                  （A4 1ページ）
+                </Typography>
+              </div>
+              <div className="text-center mb-4 flex-shrink-0" style={{minHeight: '4rem'}}>
                 <Typography variant="heading-lg" className="text-brand-red">
                   ¥3,000〜
                 </Typography>
+              </div>
+              <div className="mt-auto">
                 <Typography variant="body-sm" className="text-gray">
                   専門性・納期により変動
                 </Typography>
@@ -233,16 +229,20 @@ export default function BusinessSpotServicePage() {
             </Card>
 
             {/* プレゼン支援 */}
-            <Card className="text-center p-6 border border-gray-200">
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
-                プレゼン支援
-                <br />
-                （半日）
-              </Typography>
-              <div className="text-center mb-4">
+            <Card className="text-center p-6 border border-gray-200 h-full flex flex-col">
+              <div className="mb-4 flex-shrink-0" style={{minHeight: '3rem'}}>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  プレゼン支援
+                  <br />
+                  （半日）
+                </Typography>
+              </div>
+              <div className="text-center mb-4 flex-shrink-0" style={{minHeight: '4rem'}}>
                 <Typography variant="heading-lg" className="text-brand-red">
                   ¥25,000〜
                 </Typography>
+              </div>
+              <div className="mt-auto">
                 <Typography variant="body-sm" className="text-gray">
                   準備・練習・本番
                   <br />
