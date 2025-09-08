@@ -33,11 +33,12 @@ export default function AboutPage() {
                 <span className="text-white text-sm font-bold">●</span>
               </div>
               <div>
-                <Typography variant="body-md" className="text-dark-gray">
-                  <strong>コンサルタントも受講者も英語が話せなかった日本人。</strong>
-                  <br />
+                <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                  コンサルタントも受講者も英語が話せなかった日本人。
+                </div>
+                <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
                   日本人だからこそわかる、つまずくポイントを克服しながら学習を進めます。
-                </Typography>
+                </div>
               </div>
             </div>
 
@@ -46,11 +47,12 @@ export default function AboutPage() {
                 <span className="text-white text-sm font-bold">●</span>
               </div>
               <div>
-                <Typography variant="body-md" className="text-dark-gray">
-                  <strong>脳科学や神経言語学などの科学的根拠に基づいたプログラムで、</strong>
-                  <br />
+                <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                  脳科学や神経言語学などの科学的根拠に基づいたプログラムで、
+                </div>
+                <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
                   英語が苦手なあなたでも、着実な英語力の向上を実現します。
-                </Typography>
+                </div>
               </div>
             </div>
 
@@ -59,13 +61,14 @@ export default function AboutPage() {
                 <span className="text-white text-sm font-bold">●</span>
               </div>
               <div>
-                <Typography variant="body-md" className="text-dark-gray">
-                  <strong>コンサルタントは全員、海外留学経験者。</strong>
-                  <br />
+                <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                  コンサルタントは全員、海外留学経験者。
+                </div>
+                <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
                   日本の学校で習う、ネイティブが使わない英語は除外し、
                   <br />
                   現地で使える生きた英語を身に付けることができます。
-                </Typography>
+                </div>
               </div>
             </div>
           </div>
@@ -112,7 +115,7 @@ export default function AboutPage() {
               <Typography variant="body-sm" className="text-gray mb-4">
                 まずは図（※）
               </Typography>
-              <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div>
                 <Image
                   src="/images/drive-download-20250908T014101Z-1-001/top/top08.png"
                   alt="Engrowthエコシステム図"
@@ -133,9 +136,9 @@ export default function AboutPage() {
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               Engrowthエコシステムへの支援について
             </Typography>
-            <Typography variant="body-md" className="text-dark-gray max-w-3xl mx-auto mb-8">
+            <div className="text-dark-gray max-w-3xl mx-auto mb-8" style={{ fontSize: '24px', lineHeight: '1.5' }}>
               Engrowthは、留学生のコンサルタントが金銭的で自由の学習機会を失わないよう持続可能な支援体制を構築しています。
-            </Typography>
+            </div>
             
             <div className="mb-12">
               <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
@@ -243,10 +246,19 @@ export default function AboutPage() {
                     <text x="300" y="210" textAnchor="middle" className="text-xs fill-current text-gray">(指導者)</text>
                   </g>
 
-                  {/* 曲線での接続 */}
-                  <path d="M 160 90 Q 150 150 140 160" stroke="#d30306" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)"/>
-                  <path d="M 240 90 Q 250 150 260 160" stroke="#d30306" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)"/>
-                  <path d="M 160 200 Q 200 230 240 200" stroke="#d30306" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)"/>
+                  {/* 円形の接続線 */}
+                  {/* 学習者から企業への円弧 */}
+                  <path d="M 160 100 A 80 80 0 0 0 140 160" stroke="#d30306" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)"/>
+                  
+                  {/* 企業からコンサルタントへの円弧 */}
+                  <path d="M 160 180 A 100 100 0 0 0 240 180" stroke="#d30306" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)"/>
+                  
+                  {/* コンサルタントから学習者への円弧 */}
+                  <path d="M 260 160 A 80 80 0 0 0 240 100" stroke="#d30306" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)"/>
+                  
+                  {/* 中央に循環を示す円 */}
+                  <circle cx="200" cy="140" r="25" fill="none" stroke="#d30306" strokeWidth="1" strokeDasharray="5,5" opacity="0.5"/>
+                  <text x="200" y="145" textAnchor="middle" className="text-xs fill-current text-brand-red font-bold">循環</text>
 
                   {/* 矢印マーカー定義 */}
                   <defs>
