@@ -35,8 +35,8 @@ export default function BusinessCoursePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             <Card className="text-center p-6">
               <Image
-                src="/images/business-feature-1.jpg"
-                alt="スマートフォンでの英語学習"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-short-study.jpg"
+                alt="５分から１０分の短時間学習"
                 width={200}
                 height={150}
                 className="w-full h-32 object-cover rounded-lg mb-4"
@@ -58,7 +58,7 @@ export default function BusinessCoursePage() {
 
             <Card className="text-center p-6">
               <Image
-                src="/images/business-feature-2.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-scientific-method.jpg"
                 alt="科学的メソッド"
                 width={200}
                 height={150}
@@ -79,8 +79,8 @@ export default function BusinessCoursePage() {
 
             <Card className="text-center p-6">
               <Image
-                src="/images/business-feature-3.jpg"
-                alt="LINEでの支援"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-line-support.jpg"
+                alt="LINEでの伴走支援"
                 width={200}
                 height={150}
                 className="w-full h-32 object-cover rounded-lg mb-4"
@@ -124,8 +124,8 @@ export default function BusinessCoursePage() {
                 </Typography>
               </div>
               <Image
-                src="/images/busy-professional.jpg"
-                alt="忙しい社会人"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-reason-busy-design.jpg"
+                alt="忙しい人のための設計"
                 width={300}
                 height={200}
                 className="w-full h-40 object-cover rounded-lg mb-4"
@@ -158,8 +158,8 @@ export default function BusinessCoursePage() {
                 </Typography>
               </div>
               <Image
-                src="/images/consistency.jpg"
-                alt="継続性"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-hero-background.jpg"
+                alt="短期間で使える英語力"
                 width={300}
                 height={200}
                 className="w-full h-40 object-cover rounded-lg mb-4"
@@ -193,8 +193,8 @@ export default function BusinessCoursePage() {
                 </Typography>
               </div>
               <Image
-                src="/images/custom-curriculum.jpg"
-                alt="特別カリキュラム"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-reason-executive-program.jpg"
+                alt="特別カリキュラムの一般公開"
                 width={300}
                 height={200}
                 className="w-full h-40 object-cover rounded-lg mb-4"
@@ -259,7 +259,7 @@ export default function BusinessCoursePage() {
             {/* 事業成長 */}
             <Card className="text-center p-6">
               <Image
-                src="/images/business-growth.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-growth-impact.jpg"
                 alt="事業成長"
                 width={200}
                 height={150}
@@ -284,7 +284,7 @@ export default function BusinessCoursePage() {
             {/* 組織のグローバル化 */}
             <Card className="text-center p-6">
               <Image
-                src="/images/global-organization.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
                 alt="組織のグローバル化"
                 width={200}
                 height={150}
@@ -307,7 +307,7 @@ export default function BusinessCoursePage() {
             {/* 関係性での主導権 */}
             <Card className="text-center p-6">
               <Image
-                src="/images/leadership.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-reason-practical-english.jpg"
                 alt="関係性での主導権"
                 width={200}
                 height={150}
@@ -330,7 +330,7 @@ export default function BusinessCoursePage() {
             {/* 競合との差別化 */}
             <Card className="text-center p-6">
               <Image
-                src="/images/differentiation.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-differentiation.jpg"
                 alt="競合との差別化"
                 width={200}
                 height={150}
@@ -351,32 +351,14 @@ export default function BusinessCoursePage() {
 
           {/* 最終カウンセリングバナー */}
           <div className="relative">
-            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-              {/* 吹き出し */}
-              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full px-6 py-3 relative">
-                  <Typography variant="body-md" className="text-dark-gray font-bold">
-                    カンタン
-                    <br />
-                    2ステップ！
-                  </Typography>
-                  {/* 吹き出しの矢印 */}
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
-                </div>
-              </div>
-
-              <Typography variant="heading-md" className="text-white mb-6">
-                30分の無料カウンセリングでご相談ください
-              </Typography>
-
-              <div className="flex justify-center">
-                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
-                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
-                    無料
-                  </span>
-                  カウンセリングを予約する
-                </Button>
-              </div>
+            <div className="max-w-4xl mx-auto">
+              <Image
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリングでご相談ください"
+                width={1200}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
             </div>
           </div>
         </Container>
