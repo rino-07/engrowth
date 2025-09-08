@@ -4,7 +4,7 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
-import { getCourseById } from '@/data/courses';
+// import { getCourseById } from '@/data/courses';
 
 export const metadata = {
   title: '学生コース - 留学の夢を諦めない、経済支援付き英語学習 | Engrowth',
@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default function StudentCoursePage() {
-  const studentCourse = getCourseById('student');
+  // const studentCourse = getCourseById('student');
 
   return (
     <div className="min-h-screen">

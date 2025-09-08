@@ -32,7 +32,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   originalPrice,
   currentPrice,
   monthlyPrice,
-  discount,
+  // discount,
   isPopular = false,
   features,
   buttonText,

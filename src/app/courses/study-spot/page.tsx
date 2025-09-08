@@ -4,7 +4,7 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
-import { getSpotServicesByType } from '@/data/courses';
+// import { getSpotServicesByType } from '@/data/courses';
 
 export const metadata = {
   title: '学生スポットサービス - 留学・就活の重要な場面でサポート | Engrowth',
@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default function StudentSpotServicePage() {
-  const studentSpotServices = getSpotServicesByType('student-spot');
+  // const studentSpotServices = getSpotServicesByType('student-spot');
 
   return (
     <div className="min-h-screen">

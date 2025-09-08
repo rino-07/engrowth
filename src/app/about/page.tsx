@@ -1,5 +1,4 @@
 import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';

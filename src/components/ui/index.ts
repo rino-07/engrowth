@@ -1,6 +1,5 @@
-export { Button } from './Button';
-export { Card } from './Card';
-export { Typography } from './Typography';
-export { Container } from './Container';
-export { Section } from './Section';
+export { default as Button } from './Button';
+export { default as Card } from './Card';
+export { default as Typography } from './Typography';
 export { PricingCard } from './PricingCard';
+export { default as SectionDivider } from './SectionDivider';

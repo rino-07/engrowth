@@ -1,4 +1,3 @@
-import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
@@ -26,9 +25,9 @@ export default function BusinessCoursePage() {
               忙しい社会人でも、英語は習得できる時代へ
             </Typography>
             <Typography variant="body-lg" className="text-gray max-w-4xl mx-auto leading-relaxed">
-              "毎日1〜2時間のまとまった時間"ではなく、1回5分〜10分の隙間式学習の積み重ね。
+              &ldquo;毎日1〜2時間のまとまった時間&rdquo;ではなく、1回5分〜10分の隙間式学習の積み重ね。
               <br />
-              科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく"本当に続けられる"プログラム
+              科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく&ldquo;本当に続けられる&rdquo;プログラム
             </Typography>
           </div>
 
