@@ -1,236 +1,296 @@
-import { Metadata } from 'next';
-
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
-import { courses, pricingPlans, spotServices } from '@/data/courses';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'コース・料金 - Engrowth',
-  description: '目的に合わせて選べるコース・サービス。ビジネスコース、学生コース、スポットサービスをご用意しています。',
+export const metadata = {
+  title: 'コース・料金 - 目的に合わせて選べるコース・サービス | Engrowth',
+  description: 'ビジネスコース、学生コース、スポットサービスなど、あなたの目的に合わせて選べる英語学習プログラム。透明性の高い料金設定で安心してご利用いただけます。',
+  keywords: 'Engrowth, コース, 料金, ビジネス英語, 学生コース, スポットサービス',
 };
 
 export default function CoursesPage() {
   return (
     <div className="min-h-screen">
-      {/* 1. Page Header */}
-      <Section background="gradient" padding="lg">
+      {/* 1. ページヘッダー */}
+      <Section background="warm-white" padding="lg">
         <Container>
           <div className="text-center">
-            <nav className="text-sm mb-8">
-              <Typography variant="body-sm" className="text-gray">
-                Home &gt; コース・料金
-              </Typography>
-            </nav>
-            
-            <Typography variant="heading-xl" className="text-dark-gray mb-4" as="h1">
+            <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h1">
               コース・料金
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-2xl mx-auto">
+            <Typography variant="body-lg" className="text-gray">
               目的に合わせて選べるコース・サービス
             </Typography>
           </div>
         </Container>
       </Section>
 
-      {/* 2. 4コース紹介セクション */}
-      <Section background="warm-white" padding="xl">
+      {/* 2. コース選択（4カード） */}
+      <Section background="light-gray" padding="xl">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             {/* ビジネスコース */}
-            <Card className="text-center hover:shadow-xl transition-shadow duration-300">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">B</span>
+            <Link href="/courses/business">
+              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative">
+                  <Image
+                    src="/images/business-course-detail.jpg"
+                    alt="ビジネスコース"
+                    width={400}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <div className="absolute top-4 left-4 bg-brand-red text-white px-3 py-1 rounded-full text-sm font-bold">
+                    ビジネスコース
+                  </div>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                  ビジネスコース
-                </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
-                  忙しい社会人向けの効率的な英語学習
-                </Typography>
-              </div>
-              <Button variant="secondary" size="sm" className="w-full">
-                詳しく見る
-              </Button>
-            </Card>
+              </Card>
+            </Link>
 
             {/* ビジネススポットサービス */}
-            <Card className="text-center hover:shadow-xl transition-shadow duration-300">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-action-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">BS</span>
+            <Link href="/courses/business-spot">
+              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative">
+                  <Image
+                    src="/images/business-spot-detail.jpg"
+                    alt="ビジネススポットサービス"
+                    width={400}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <div className="absolute top-4 left-4 bg-brand-red text-white px-3 py-1 rounded-full text-sm font-bold">
+                    ビジネススポットサービス
+                  </div>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                  ビジネススポット
-                </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
-                  会議同席・資料翻訳・プレゼン準備
-                </Typography>
-              </div>
-              <Button variant="secondary" size="sm" className="w-full">
-                詳しく見る
-              </Button>
-            </Card>
+              </Card>
+            </Link>
 
             {/* 学生コース */}
-            <Card className="text-center hover:shadow-xl transition-shadow duration-300">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-deep-navy rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">S</span>
+            <Link href="/courses/study">
+              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative">
+                  <Image
+                    src="/images/student-course-detail.jpg"
+                    alt="学生コース"
+                    width={400}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    学生コース
+                  </div>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                  学生コース
-                </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
-                  留学を目指す学生向けの総合プログラム
-                </Typography>
-              </div>
-              <Button variant="secondary" size="sm" className="w-full">
-                詳しく見る
-              </Button>
-            </Card>
+              </Card>
+            </Link>
 
             {/* 学生スポットサービス */}
-            <Card className="text-center hover:shadow-xl transition-shadow duration-300">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-soft-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">SS</span>
+            <Link href="/courses/study-spot">
+              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
+                <div className="relative">
+                  <Image
+                    src="/images/student-spot-detail.jpg"
+                    alt="学生スポットサービス"
+                    width={400}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    学生スポットサービス
+                  </div>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                  学生スポット
-                </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
-                  エッセイ添削・面接練習など
-                </Typography>
+              </Card>
+            </Link>
+          </div>
+
+          {/* 無料カウンセリングバナー */}
+          <div className="relative mb-16">
+            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
+              {/* 吹き出し */}
+              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
+                <div className="bg-white rounded-full px-6 py-3 relative">
+                  <Typography variant="body-md" className="text-dark-gray font-bold">
+                    カンタン
+                    <br />
+                    2ステップ！
+                  </Typography>
+                  {/* 吹き出しの矢印 */}
+                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
+                </div>
               </div>
-              <Button variant="secondary" size="sm" className="w-full">
-                詳しく見る
-              </Button>
-            </Card>
+
+              <Typography variant="heading-md" className="text-white mb-6">
+                30分の無料カウンセリングでご相談ください
+              </Typography>
+
+              <div className="flex justify-center">
+                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
+                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
+                    無料
+                  </span>
+                  カウンセリングを予約する
+                </Button>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
 
-      {/* 3. 無料カウンセリングバナー */}
-      <Section background="brand-red" padding="lg">
+      {/* 3. 料金 */}
+      <Section background="warm-white" padding="xl">
         <Container>
-          <div className="flex flex-col md:flex-row items-center justify-between text-white">
-            <div className="flex items-center mb-4 md:mb-0">
-              <div className="relative">
-                <div className="absolute -top-2 -right-2 bg-white text-brand-red px-2 py-1 rounded-full text-xs font-bold">
-                  カンタン2ステップ！
-                </div>
-                <Typography variant="heading-md" className="text-white mr-8">
-                  30分の無料カウンセリングでご相談ください
-                </Typography>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <div className="bg-white text-action-green px-3 py-1 rounded-full text-sm font-bold mr-4">
-                無料
-              </div>
-              <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700">
-                カウンセリングを予約する
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 4. 料金表セクション */}
-      <Section background="warm-white" padding="xl" id="pricing">
-        <Container>
-          <div className="text-center mb-12">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4">
-              英会話コース
+          <div className="text-center mb-16">
+            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
+              料金
             </Typography>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          {/* 英会話コース料金表 */}
+          <div className="mb-16">
+            <Typography variant="heading-md" className="text-dark-gray mb-8 text-center">
+              英会話コース
+            </Typography>
+
+            <div className="max-w-4xl mx-auto mb-8">
+              <Image
+                src="/images/pricing-table.jpg"
+                alt="英会話コース料金表"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+
+            {/* 料金表（テキスト版） */}
             <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-lg shadow-lg">
+              <table className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
                 <thead>
                   <tr className="bg-light-gray">
-                    <th className="px-6 py-4 text-left font-semibold text-dark-gray">コース</th>
-                    <th className="px-6 py-4 text-center font-semibold text-dark-gray">3ヶ月</th>
-                    <th className="px-6 py-4 text-center font-semibold text-dark-gray">6ヶ月</th>
-                    <th className="px-6 py-4 text-center font-semibold text-dark-gray">12ヶ月</th>
+                    <th className="px-6 py-4 text-left"></th>
+                    <th className="px-6 py-4 text-center font-bold">3ヶ月</th>
+                    <th className="px-6 py-4 text-center font-bold">6ヶ月</th>
+                    <th className="px-6 py-4 text-center font-bold">12ヶ月</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-light-gray">
-                    <td className="px-6 py-4 font-medium text-dark-gray">ビジネスコース</td>
-                    <td className="px-6 py-4 text-center">¥50,000</td>
-                    <td className="px-6 py-4 text-center">¥90,000</td>
-                    <td className="px-6 py-4 text-center">¥150,000</td>
+                  <tr className="border-b">
+                    <td className="px-6 py-4 font-bold">ビジネスコース</td>
+                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
+                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
+                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
                   </tr>
-                  <tr className="border-b border-light-gray">
-                    <td className="px-6 py-4 font-medium text-dark-gray">学生コース</td>
-                    <td className="px-6 py-4 text-center">¥35,000</td>
-                    <td className="px-6 py-4 text-center">¥65,000</td>
-                    <td className="px-6 py-4 text-center">¥110,000</td>
+                  <tr className="border-b">
+                    <td className="px-6 py-4 font-bold">学生コース</td>
+                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
+                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
+                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            
+
             <div className="text-center mt-8">
-              <Typography variant="heading-md" className="text-brand-red font-bold">
-                Engrowthなら入会金は0円
-              </Typography>
+              <div className="inline-block bg-dark-gray text-white px-8 py-3 rounded-lg">
+                <Typography variant="heading-sm" className="text-white">
+                  Engrowthなら入会金は0円
+                </Typography>
+              </div>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* 5. スポットサービス */}
-      <Section background="light-gray" padding="xl" id="spot-services">
+      {/* 4. スポットサービス */}
+      <Section background="light-gray" padding="xl">
         <Container>
-          <div className="text-center mb-12">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4">
+          <div className="text-center mb-16">
+            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               スポットサービス
             </Typography>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             {/* ビジネススポットサービス */}
-            <Card className="p-6">
-              <div className="mb-4">
-                <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                  ビジネススポットサービス
-                </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
-                  会議同席通訳（オンライン）、文書・資料翻訳など
-                </Typography>
-                <Typography variant="body-lg" className="text-brand-red font-bold">
-                  ¥15,000〜
-                </Typography>
-              </div>
-              <Button variant="outline" size="sm">
-                詳しく見る→
-              </Button>
+            <Card className="p-6 text-center">
+              <Image
+                src="/images/business-spot-service.jpg"
+                alt="ビジネススポットサービス"
+                width={300}
+                height={200}
+                className="w-full h-40 object-cover rounded-lg mb-6"
+              />
+              <Typography variant="heading-sm" className="text-dark-gray mb-4">
+                ビジネススポットサービス
+              </Typography>
+              <Typography variant="body-sm" className="text-gray mb-4">
+                会議同席通訳（オンライン）、xxなど
+                <br />
+                ¥xx,xxx
+              </Typography>
+              <Link href="/courses/business-spot">
+                <Button variant="secondary" size="sm" className="w-full">
+                  詳しく見る→
+                </Button>
+              </Link>
             </Card>
 
             {/* 学生スポットサービス */}
-            <Card className="p-6">
-              <div className="mb-4">
-                <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                  学生スポットサービス
-                </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
-                  エッセイ添削、面接練習など
-                </Typography>
-                <Typography variant="body-lg" className="text-brand-red font-bold">
-                  ¥5,000〜
-                </Typography>
-              </div>
-              <Button variant="outline" size="sm">
-                詳しく見る→
-              </Button>
+            <Card className="p-6 text-center">
+              <Image
+                src="/images/student-spot-service.jpg"
+                alt="学生スポットサービス"
+                width={300}
+                height={200}
+                className="w-full h-40 object-cover rounded-lg mb-6"
+              />
+              <Typography variant="heading-sm" className="text-dark-gray mb-4">
+                学生スポットサービス
+              </Typography>
+              <Typography variant="body-sm" className="text-gray mb-4">
+                エッセイ添削、面接練習など
+                <br />
+                ¥xx,xxx
+              </Typography>
+              <Link href="/courses/study-spot">
+                <Button variant="secondary" size="sm" className="w-full">
+                  詳しく見る→
+                </Button>
+              </Link>
             </Card>
+          </div>
+
+          {/* 最終カウンセリングバナー */}
+          <div className="relative">
+            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
+              {/* 吹き出し */}
+              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
+                <div className="bg-white rounded-full px-6 py-3 relative">
+                  <Typography variant="body-md" className="text-dark-gray font-bold">
+                    カンタン
+                    <br />
+                    2ステップ！
+                  </Typography>
+                  {/* 吹き出しの矢印 */}
+                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
+                </div>
+              </div>
+
+              <Typography variant="heading-md" className="text-white mb-6">
+                30分の無料カウンセリングでご相談ください
+              </Typography>
+
+              <div className="flex justify-center">
+                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
+                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
+                    無料
+                  </span>
+                  カウンセリングを予約する
+                </Button>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
