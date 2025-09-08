@@ -72,33 +72,13 @@ export default function AboutPage() {
 
           {/* 無料カウンセリングバナー */}
           <div className="relative mb-20">
-            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-              {/* 吹き出し */}
-              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full px-6 py-3 relative">
-                  <Typography variant="body-md" className="text-dark-gray font-bold">
-                    カンタン
-                    <br />
-                    2ステップ！
-                  </Typography>
-                  {/* 吹き出しの矢印 */}
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
-                </div>
-              </div>
-
-              <Typography variant="heading-md" className="text-white mb-6">
-                30分の無料カウンセリングでご相談ください
-              </Typography>
-
-              <div className="flex justify-center">
-                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
-                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
-                    無料
-                  </span>
-                  カウンセリングを予約する
-                </Button>
-              </div>
-            </div>
+            <Image
+              src="/images/main_banner.png"
+              alt="30分の無料カウンセリング"
+              width={1200}
+              height={300}
+              className="w-full h-auto rounded-2xl"
+            />
           </div>
         </Container>
       </Section>
@@ -134,7 +114,7 @@ export default function AboutPage() {
               </Typography>
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <Image
-                  src="/images/ecosystem-diagram.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/top/top08.png"
                   alt="Engrowthエコシステム図"
                   width={600}
                   height={400}
@@ -169,75 +149,63 @@ export default function AboutPage() {
       {/* 4. Engrowthが選ばれる理由 */}
       <Section background="light-gray" padding="xl">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              Engrowthが選ばれる理由
-            </Typography>
-          </div>
+          <div className="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
+            {/* 左側：タイトル - 20% */}
+            <div className="col-span-12 lg:col-span-2">
+              <Typography variant="heading-lg" className="text-dark-gray" as="h2">
+                Engrowthが選ばれる理由
+              </Typography>
+            </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto mb-16">
-            {/* Point 1 */}
-            <Card className="text-center p-8">
-              <div className="w-12 h-12 bg-soft-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                <Typography variant="body-md" className="text-white font-bold">
-                  Point 1
-                </Typography>
+            {/* 右側：3つのポイント - 80% */}
+            <div className="col-span-12 lg:col-span-10 space-y-12">
+              {/* Point 1 */}
+              <div className="flex items-start gap-6">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm font-bold">●</span>
+                </div>
+                <div>
+                  <Typography className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                    コンサルタントも受講者も英語が話せなかった日本人。
+                  </Typography>
+                  <Typography className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
+                    日本人だからこそわかる、つまずくポイントを克服しながら学習を進めます。
+                  </Typography>
+                </div>
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
-                実績あるコンサルタントは全員、留学経験のある日本人
-              </Typography>
-              <Typography variant="body-sm" className="text-gray leading-relaxed">
-                日本人だからこそ「つまずくポイント」を熟知して理解できる唯一の存在
-                <br /><br />
-                外国人講師には理解して理解できない、日本人特有の英語学習の悩み。
-                <br />
-                なぜ「This」と言えるのに、なぜ「It」と「Is」を含む文章できないのか、
-                <br />
-                なぜ過去形を忘れてしまうのか——————。
-              </Typography>
-            </Card>
 
-            {/* Point 2 */}
-            <Card className="text-center p-8">
-              <div className="w-12 h-12 bg-soft-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                <Typography variant="body-md" className="text-white font-bold">
-                  Point 2
-                </Typography>
+              {/* Point 2 */}
+              <div className="flex items-start gap-6">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm font-bold">●</span>
+                </div>
+                <div>
+                  <Typography className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                    脳科学や神経言語学などの科学的根拠に基づいたプログラムで、
+                  </Typography>
+                  <Typography className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
+                    英語が苦手なあなたでも、着実な英語力の向上を実現します。
+                  </Typography>
+                </div>
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
-                科学的根拠に基づく学習プログラム
-              </Typography>
-              <Typography variant="body-sm" className="text-gray leading-relaxed">
-                感覚や経験論に頼らない、データドリブンな学習設計
-                <br /><br />
-                各人の理解度に合わせてプログラムではなく、第二言語習得理論、認知言語学、脳科学などの最新研究に基づいた学習方法を採用。
-                <br />
-                脳のメカニズムに沿った効果的で効率的な英語学習を実現します。
-                <br /><br />
-                忙しい毎日でも、社会人でも着実な成果が期待できるように設計されています。
-              </Typography>
-            </Card>
 
-            {/* Point 3 */}
-            <Card className="text-center p-8">
-              <div className="w-12 h-12 bg-soft-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                <Typography variant="body-md" className="text-white font-bold">
-                  Point 3
-                </Typography>
+              {/* Point 3 */}
+              <div className="flex items-start gap-6">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm font-bold">●</span>
+                </div>
+                <div>
+                  <Typography className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                    コンサルタントは全員、海外留学経験者。
+                  </Typography>
+                  <Typography className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
+                    日本の学校で習う、ネイティブが使わない英語は除外し、
+                    <br />
+                    現地で使える生きた英語を身に付けることができます。
+                  </Typography>
+                </div>
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
-                1人ひとりに合わせたオーダーメイド学習設計
-              </Typography>
-              <Typography variant="body-sm" className="text-gray leading-relaxed">
-                あなたの目標・レベル・ライフスタイルに合わせた最適なスケジュール
-                <br /><br />
-                「TOEFL100点を目指します」と「内定先企業で活躍したい」では、必要なキャップが異なります。
-                <br /><br />
-                Engrowthでは初回カウンセリングで詳細分析を行い、目標達成までの最適なルートを設計。
-                <br />
-                日々の学習進捗度、運営度での中間調整により、常に最適な学習を維持できます。
-              </Typography>
-            </Card>
+            </div>
           </div>
         </Container>
       </Section>
