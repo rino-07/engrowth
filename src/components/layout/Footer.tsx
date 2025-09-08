@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'Engrowthとは', href: '/about' },
+      { name: 'Engrowthの特徴', href: '/about' },
       { name: 'コース・料金', href: '/courses' },
       { name: '受講の流れ', href: '/flow' },
       { name: '支援者の方へ', href: '/supporters' },

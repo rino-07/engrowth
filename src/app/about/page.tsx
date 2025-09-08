@@ -6,7 +6,7 @@ import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 
 export const metadata = {
-  title: 'Engrowthとは - オーダーメイド英語学習で留学生の経済問題を解決',
+  title: 'Engrowthの特徴 - オーダーメイド英語学習で留学生の経済問題を解決',
   description: 'Engrowthは科学的メソッドとオーダーメイド設計で、留学生・企業・コンサルタントが相互に支援し合う独自のエコシステムを提供。日本人だからこそ分かる課題に対応します。',
   keywords: 'Engrowth, 留学生支援, オーダーメイド学習, 科学的メソッド, エコシステム',
 };
@@ -21,12 +21,12 @@ export default function AboutPage() {
             {/* Breadcrumb */}
             <nav className="text-sm mb-8">
               <Typography variant="body-sm" className="text-gray">
-                Home &gt; Engrowthとは
+                Home &gt; Engrowthの特徴
               </Typography>
             </nav>
             
             <Typography variant="heading-xl" className="text-dark-gray mb-4" as="h1">
-              Engrowthとは
+              Engrowthの特徴
             </Typography>
             <Typography variant="body-lg" className="text-gray max-w-2xl mx-auto mb-8">
               留学生の経済問題を解決する

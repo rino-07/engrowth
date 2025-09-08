@@ -11,24 +11,22 @@ const Header: React.FC = () => {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
   const navigation = [
-    { name: 'Engrowthとは', href: '/about' },
+    { name: 'Engrowthの特徴', href: '/about' },
     { 
       name: 'コース・料金', 
       href: '/courses',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'メインコース', href: '/courses', category: 'main' },
+        { name: 'コース・料金一覧', href: '/courses' },
         { name: 'ビジネスコース', href: '/courses/business' },
         { name: '学生コース', href: '/courses/study' },
-        { name: 'スポットサービス', href: '/courses#spot-services', category: 'spot' },
-        { name: 'ビジネススポット', href: '/courses/business-spot' },
-        { name: '学生スポット', href: '/courses/study-spot' },
-        { name: '料金一覧', href: '/courses#pricing', category: 'pricing' },
+        { name: 'ビジネススポットサービス', href: '/courses/business-spot' },
+        { name: '学生スポットサービス', href: '/courses/study-spot' },
       ]
     },
     { name: '受講の流れ', href: '/flow' },
     { name: '支援者の方へ', href: '/supporters' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'よくある質問', href: '/faq' },
   ];
 
   return (
@@ -182,7 +180,7 @@ const Header: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Engrowthとは
+                Engrowthの特徴
               </Link>
               <Link
                 href="/courses"
