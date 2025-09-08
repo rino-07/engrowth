@@ -35,7 +35,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto">
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
                 <Image
-                  src="/images/hero-students.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/top/top01.png"
                   alt="Engrowthで学ぶ多様な学生たち"
                   width={800}
                   height={400}
@@ -55,20 +55,18 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 2. Why Engrowth Section */}
+      {/* 2. Engrowthは○○な人に選ばれてます Section */}
       <Section background="warm-white" padding="xl">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8">
-              Why Engrowth
-            </Typography>
-            <Typography variant="heading-md" className="text-gray mb-12">
-              Engrowthは○○な人に選ばれてます
-            </Typography>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left: Points */}
+            {/* Left: Title */}
+            <div>
+              <Typography variant="heading-lg" className="text-dark-gray mb-8">
+                Engrowthは○○な人に選ばれてます
+              </Typography>
+            </div>
+
+            {/* Right: Points */}
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
@@ -130,19 +128,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Right: Hero Image */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-warm-white to-light-gray rounded-2xl p-8 text-center">
-                <Image
-                  src="/images/hero-students.jpg"
-                  alt="Engrowthで学ぶ学生たち"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </div>
           </div>
         </Container>
       </Section>
@@ -165,7 +150,7 @@ export default function Home() {
               </div>
               <div className="mb-6">
                 <Image
-                  src="/images/business-course.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
                   alt="ビジネスコース"
                   width={200}
                   height={150}
@@ -191,7 +176,7 @@ export default function Home() {
             <Card className="text-center hover:shadow-xl transition-all duration-300">
               <div className="mb-6">
                 <Image
-                  src="/images/business-spot.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/top/top07.png"
                   alt="ビジネススポットサービス"
                   width={200}
                   height={150}
@@ -219,7 +204,7 @@ export default function Home() {
             <Card className="text-center hover:shadow-xl transition-all duration-300">
               <div className="mb-6">
                 <Image
-                  src="/images/student-course.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
                   alt="学生コース"
                   width={200}
                   height={150}
@@ -245,7 +230,7 @@ export default function Home() {
             <Card className="text-center hover:shadow-xl transition-all duration-300">
               <div className="mb-6">
                 <Image
-                  src="/images/student-spot.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/students/stu03.png"
                   alt="学生スポットサービス"
                   width={200}
                   height={150}
@@ -284,7 +269,7 @@ export default function Home() {
             {/* メイン画像背景 */}
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-brand-red to-red-600">
               <Image
-                src="/images/main_bn.png"
+                src="/images/main_banner.png"
                 alt="30分の無料カウンセリング"
                 width={1200}
                 height={300}
@@ -385,7 +370,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-brand-red rounded-full mt-3 flex-shrink-0"></div>
                   <Typography variant="body-md" className="text-dark-gray">
-                    講師が外国人で日本人のつまづくポイントが理解できない
+                    日本人のつまづくポイントを理解した日本人コンサルタント
                   </Typography>
                 </div>
                 <div className="flex items-start gap-3">
