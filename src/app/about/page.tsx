@@ -162,52 +162,40 @@ export default function AboutPage() {
 
             {/* 2カラムレイアウト：左20% 右80% */}
             <div className="grid grid-cols-12 gap-12">
-              {/* 左側：Point一覧のみ - 20% */}
+              {/* 左側：Point番号のみ - 20% */}
               <div className="col-span-12 lg:col-span-2">
-                <div className="space-y-8">
-                  {/* Point 1 */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Typography variant="body-sm" className="text-white font-bold">
-                        Point 1
-                      </Typography>
-                    </div>
-                    <Typography variant="body-md" className="text-dark-gray font-medium leading-tight">
-                      実在コンサルタントは全員、留学経験のある日本人
+                <div className="space-y-12">
+                  {/* Point 1 番号のみ */}
+                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Point 1
                     </Typography>
                   </div>
 
-                  {/* Point 2 */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Typography variant="body-sm" className="text-white font-bold">
-                        Point 2
-                      </Typography>
-                    </div>
-                    <Typography variant="body-md" className="text-dark-gray font-medium leading-tight">
-                      科学的根拠に基づく学習プログラム
+                  {/* Point 2 番号のみ */}
+                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Point 2
                     </Typography>
                   </div>
 
-                  {/* Point 3 */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Typography variant="body-sm" className="text-white font-bold">
-                        Point 3
-                      </Typography>
-                    </div>
-                    <Typography variant="body-md" className="text-dark-gray font-medium leading-tight">
-                      1人ひとりに合わせたオーダーメイド学習設計
+                  {/* Point 3 番号のみ */}
+                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Point 3
                     </Typography>
                   </div>
                 </div>
               </div>
 
-              {/* 右側：詳細説明 - 80% */}
+              {/* 右側：タイトル + 詳細説明 - 80% */}
               <div className="col-span-12 lg:col-span-10">
                 <div className="space-y-12">
-                  {/* Point 1 詳細 */}
+                  {/* Point 1 タイトル + 詳細 */}
                   <div>
+                    <Typography variant="heading-sm" className="text-dark-gray mb-4 font-bold">
+                      実在コンサルタントは全員、留学経験のある日本人
+                    </Typography>
                     <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4 font-medium">
                       日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在
                     </Typography>
@@ -222,8 +210,11 @@ export default function AboutPage() {
                     </Typography>
                   </div>
 
-                  {/* Point 2 詳細 */}
+                  {/* Point 2 タイトル + 詳細 */}
                   <div>
+                    <Typography variant="heading-sm" className="text-dark-gray mb-4 font-bold">
+                      科学的根拠に基づく学習プログラム
+                    </Typography>
                     <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4 font-medium">
                       感覚や経験論に頼らない、データドリブンな学習設計
                     </Typography>
@@ -236,8 +227,11 @@ export default function AboutPage() {
                     </Typography>
                   </div>
 
-                  {/* Point 3 詳細 */}
+                  {/* Point 3 タイトル + 詳細 */}
                   <div>
+                    <Typography variant="heading-sm" className="text-dark-gray mb-4 font-bold">
+                      1人ひとりに合わせたオーダーメイド学習設計
+                    </Typography>
                     <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4 font-medium">
                       あなたの目標・レベル・ライフスタイルに合わせた最適なスケジュール
                     </Typography>
