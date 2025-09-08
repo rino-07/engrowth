@@ -1,287 +1,235 @@
-import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
-import Typography from '@/components/ui/Typography';
-import Container from '@/components/layout/Container';
-import Section from '@/components/layout/Section';
-import Image from 'next/image';
+import Image from "next/image";
+import Button from "@/components/ui/Button";
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
 
 export const metadata = {
-  title: '受講の流れ - 英語学習の悩み、目標設定、プラン相談など | Engrowth',
-  description: 'あなたのペースに合わせて、専任のコンサルタントが一対一で最適なプランをご提案いたします。LINE登録から始まる4ステップの受講フロー。',
-  keywords: 'Engrowth, 受講の流れ, LINE登録, カウンセリング, 英語学習プラン',
+  title: "受講の流れ - 英語学習の悩み、目標設定、プラン相談など | Engrowth",
+  description:
+    "あなたのペースに合わせて、専任のコンサルタントが一対一で最適なプランをご提案します。LINE登録から始まる受講フロー。",
+  keywords: "Engrowth, 受講の流れ, LINE登録, カウンセリング, 英語学習プラン",
 };
+
+const BRAND = "#d30306";
+const MUTED = "#898989";
 
 export default function FlowPage() {
   return (
     <div className="min-h-screen">
-      {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
+      {/* 1) ヒーロー（背景写真＋主CTA） */}
+      <section className="relative">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/flow/hero.jpg" // ←差し替え
+            alt="オンラインで相談する様子"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/35" />
+        </div>
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              受講の流れ
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
-              英語学習の悩み、目標設定、プラン相談など、
-              <br />
-              〜正しいやり方を知れば
-              <br />
-              誰でも話せるようになる〜
-            </Typography>
+          <div className="relative py-16 sm:py-20 text-white text-center">
+            <h1 className="text-3xl font-bold tracking-tight">受講の流れ</h1>
+            <p className="mt-4 leading-relaxed">
+              英語学習の失敗を、才能のせいにしない。<br />
+              〜正しいやり方を知れば 誰でも話せるようになる〜
+            </p>
+            <div className="mt-8">
+              <Button
+                className="px-8 py-4 rounded-full text-lg font-semibold"
+                style={{ backgroundColor: "#00B14F" }} // LINE色でOKならこのまま。ブランド赤にするなら BRAND を指定
+              >
+                LINE登録はこちら
+              </Button>
+            </div>
           </div>
+        </Container>
+      </section>
 
-          {/* LINE登録バナー */}
-          <div className="relative bg-action-green rounded-2xl p-8 text-center text-white mb-16 max-w-2xl mx-auto">
-            <Typography variant="heading-md" className="text-white mb-6">
-              LINE登録はこちら
-            </Typography>
-            <Button variant="primary" size="lg" className="bg-white text-action-green hover:bg-gray-100">
-              LINE登録はこちら
-            </Button>
+      {/* 2) 見出し */}
+      <Section padding="xl" background="warm-white">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold tracking-tight">受講の流れ</h2>
+            <p className="mt-3 text-[15px]" style={{ color: MUTED }}>
+              あなたのペースに合わせて、専任のコンサルタントが一緒に
+              最適なプランを考えていきます。
+            </p>
           </div>
         </Container>
       </Section>
 
-      {/* 2. 受講の流れ */}
-      <Section background="light-gray" padding="xl">
+      {/* 3) 左右交互（zigzag） */}
+      <section className="relative">
+        {/* 中央ライン（md以上） */}
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              受講の流れ
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto">
-              あなたのペースに合わせて、専任のコンサルタントが一対一で
-              <br />
-              最適なプランをご提案いたします。
-            </Typography>
-          </div>
+          <ol className="space-y-14">
+            {/* STEP 1：画像左 / テキスト右 */}
+            <ZigzagItem
+              n={1}
+              title="LINEに登録"
+              body={
+                <>
+                  Engrowth公式LINEを友達追加。<br />
+                  ビジネスコース・学生コースの
+                  お申込みはページ下部の「お申込みフォーム」から。<br />
+                  各種お問い合わせや、無料面談のご相談は
+                  「LINEでお問い合わせ」からどうぞ。
+                </>
+              }
+              img="/images/flow/step-1.jpg"
+              imgAlt="LINE登録"
+              textOn="right"
+            />
 
-          {/* フロー図 */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* 左側：LINE登録 */}
-              <div className="space-y-8">
-                <Card className="p-8 bg-blue-50 border-2 border-blue-200">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Typography variant="heading-md" className="text-white font-bold">
-                        1
-                      </Typography>
-                    </div>
-                    <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                      LINE登録
-                    </Typography>
-                    <Typography variant="body-sm" className="text-gray">
-                      EngrowthのLINEを友達追加
-                    </Typography>
-                  </div>
-                  <div className="space-y-4">
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      ビジネスコース・学生コースの
-                      <br />
-                      お申込みはページ下部の「全作
-                      <br />
-                      りフォーム」から。
-                    </Typography>
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      各種お問い合わせは、まずは
-                      <br />
-                      LINEでお問い合わせ
-                      <br />
-                      ください。
-                    </Typography>
-                  </div>
-                </Card>
+            {/* STEP 2：画像右 / テキスト左 */}
+            <ZigzagItem
+              n={2}
+              title="オンライン面談でヒアリング"
+              body={
+                <>
+                  Zoom などで面談を実施。初回面談までに英語での自己紹介音声をご提出いただき、
+                  専任のコンサルタントがあなたの英語の癖や傾向を分析。<br />
+                  英語力の現状、目標、ライフスタイルなどをヒアリングして、
+                  実現可能な学習計画を一緒に作成します。
+                </>
+              }
+              img="/images/flow/step-2.jpg"
+              imgAlt="オンライン面談"
+              textOn="left"
+            />
 
-                <Card className="p-8 bg-green-50 border-2 border-green-200">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Typography variant="heading-md" className="text-white font-bold">
-                        3
-                      </Typography>
-                    </div>
-                    <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                      オンライン面談でヒアリング
-                    </Typography>
-                  </div>
-                  <div className="space-y-4">
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      Zoomなどで面談を実施。
-                      <br />
-                      初回面談ではまず現在の学習
-                      <br />
-                      状況をお伺いします。
-                    </Typography>
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      学習の悩みや目標、ライフス
-                      <br />
-                      タイル等についてお聞かせく
-                      <br />
-                      ださい。
-                    </Typography>
-                  </div>
-                </Card>
+            {/* 中段：長文＋画像（右） */}
+            <li className="grid md:grid-cols-2 items-start gap-10">
+              <div>
+                <p className="leading-relaxed text-[15px]">
+                  コース期間中は、英語に関することなら
+                  <strong>24時間いつでも</strong>専任コンサルタントに連絡可能。
+                  苦手な発音の発声法や、ネイティブが使う言い回しなど、
+                  なんでもお気軽にご相談ください。<br />
+                  担当のコンサルタントは
+                  <strong>お一人</strong>だけ。第三者への伝達が不要なため、
+                  行き違いのない高品質な伴走が可能です。<br />
+                  業務で英語が必要な方や、留学準備で不安がある方も、
+                  まずは実用的な課題から一緒に進めていきます。
+                </p>
               </div>
+              <figure className="relative aspect-[16/10] rounded-xl overflow-hidden bg-gray-100">
+                <Image src="/images/flow/step-3.jpg" alt="日々の伴走" fill className="object-cover" />
+                <figcaption className="absolute bottom-2 right-3 text-xs text-gray-600 bg-white/80 px-2 py-1 rounded">
+                  ※原則◯時間以内の返信
+                </figcaption>
+              </figure>
+            </li>
 
-              {/* 右側：コース開始とシミュレーション */}
-              <div className="space-y-8">
-                <Card className="p-8 bg-yellow-50 border-2 border-yellow-200">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Typography variant="heading-md" className="text-white font-bold">
-                        2
-                      </Typography>
-                    </div>
-                    <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                      コース開始は、英語に関する24
-                      <br />
-                      時間いつでもご相談ください
-                    </Typography>
-                  </div>
-                  <div className="space-y-4">
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      コース開始中は、英語に関する
-                      <br />
-                      ことは24時間いつでもご相談
-                      <br />
-                      いただけます。お気軽にお声
-                      <br />
-                      かけください。
-                    </Typography>
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      また、学習のコンサルタントは
-                      <br />
-                      お一人のみとなり、最後まで
-                      <br />
-                      かかわらせて頂きます。第三
-                      <br />
-                      者に伝達する必要が無いため、
-                      <br />
-                      高品質な学習指導が期待でき
-                      <br />
-                      ます。
-                    </Typography>
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      もし再度コンサルタントにご相談
-                      <br />
-                      したい内容があれば、いつでも
-                      <br />
-                      お気軽にお声かけください。
-                    </Typography>
-                  </div>
-                </Card>
+            {/* STEP 4：画像右 / テキスト左 */}
+            <ZigzagItem
+              n={4}
+              title="（ス）シミュレーション英会話"
+              body={
+                <>
+                  留学生が短期間で英語力を鍛える要因のひとつとして、
+                  「ある状況に英語で遭遇し、英語で対処する力がつく」というのが挙げられます。<br />
+                  このプロセスは、私たち日本人がビジネスの現場で英語を獲得するうえでも同様です。<br />
+                  Engrowth ではビジネスシーンや海外大学などのシチュエーションに応じて、
+                  現実の英会話の状況をシミュレーションしてトレーニングします。
+                </>
+              }
+              img="/images/flow/step-4.jpg"
+              imgAlt="シミュレーション英会話"
+              textOn="left"
+            />
+          </ol>
+        </Container>
+      </section>
 
-                <Card className="p-8 bg-purple-50 border-2 border-purple-200">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Typography variant="heading-md" className="text-white font-bold">
-                        4
-                      </Typography>
-                    </div>
-                    <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                      （スケジュール）シミュレーション英会話
-                    </Typography>
-                  </div>
-                  <div className="space-y-4">
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      留学生の体験談に基づき英語力を身につけられる環境の一つとして、「多様な状況に対応できるコミュニケーション能力」の育成を目的としたシミュレーション英会話を実施。
-                    </Typography>
-                    <Typography variant="body-sm" className="text-dark-gray">
-                      Engrowthではビジネスシーンでのシミュレーション、海外大学でのシミュレーション等と幅広いシチュエーションでトレーニングします。
-                    </Typography>
-                  </div>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          {/* 中央の図表 */}
-          <div className="text-center mb-16">
-            <Typography variant="body-sm" className="text-gray mb-4">
-              中程の人間関係の変化
-            </Typography>
-            <div className="max-w-2xl mx-auto">
-              <Image
-                src="/images/flow-diagram.jpg"
-                alt="受講の流れ図"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
+      {/* 4) コース表（画像差し込み） */}
+      <Section padding="xl" background="warm-white">
+        <Container>
+          <div className="max-w-5xl mx-auto space-y-16">
+            <CourseImage title="ビジネスコース" src="/images/flow/business-table.jpg" />
+            <CourseImage title="学生コース" src="/images/flow/student-table.jpg" />
           </div>
         </Container>
       </Section>
 
-      {/* 3. ビジネスコース・学生コース詳細 */}
-      <Section background="warm-white" padding="xl">
+      {/* 5) 最終CTA（ブランド赤） */}
+      <section className="py-16">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto mb-16">
-            {/* ビジネスコース */}
-            <div>
-              <Typography variant="heading-md" className="text-dark-gray mb-8 text-center">
-                ビジネスコース
-              </Typography>
-              <div className="bg-red-50 rounded-2xl p-6 mb-8">
-                <Image
-                  src="/images/business-course-flow.jpg"
-                  alt="ビジネスコース詳細"
-                  width={400}
-                  height={600}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-
-            {/* 学生コース */}
-            <div>
-              <Typography variant="heading-md" className="text-dark-gray mb-8 text-center">
-                学生コース
-              </Typography>
-              <div className="bg-blue-50 rounded-2xl p-6 mb-8">
-                <Image
-                  src="/images/student-course-flow.jpg"
-                  alt="学生コース詳細"
-                  width={400}
-                  height={600}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* 最終カウンセリングバナー */}
-          <div className="relative">
-            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-              {/* 吹き出し */}
-              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full px-6 py-3 relative">
-                  <Typography variant="body-md" className="text-dark-gray font-bold">
-                    カンタン
-                    <br />
-                    2ステップ！
-                  </Typography>
-                  {/* 吹き出しの矢印 */}
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
-                </div>
-              </div>
-
-              <Typography variant="heading-md" className="text-white mb-6">
-                30分の無料カウンセリングでご相談ください
-              </Typography>
-
-              <div className="flex justify-center">
-                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
-                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
-                    無料
-                  </span>
-                  カウンセリングを予約する
-                </Button>
-              </div>
+          <div
+            className="rounded-2xl px-6 py-12 text-center text-white relative overflow-hidden"
+            style={{ background: `linear-gradient(90deg, ${BRAND}, #b00205)` }}
+          >
+            <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%),radial-gradient(circle_at_80%_80%,white,transparent_40%)]" />
+            <p className="text-sm font-bold bg-white text-[color:var(--brand)] px-3 py-1 rounded-full inline-block mb-3"
+               style={{ color: BRAND }}
+            >
+              カンタン 2 ステップ！
+            </p>
+            <h3 className="text-xl font-semibold">30分の無料カウンセリングでご相談ください</h3>
+            <div className="mt-6">
+              <Button className="px-8 py-4 text-white font-semibold rounded-full" style={{ backgroundColor: BRAND }}>
+                カウンセリングを予約する
+              </Button>
             </div>
           </div>
         </Container>
-      </Section>
+      </section>
+    </div>
+  );
+}
+
+/* ---------- parts ---------- */
+
+function ZigzagItem({
+  n,
+  title,
+  body,
+  img,
+  imgAlt,
+  textOn, // "left" | "right"
+}: {
+  n: number;
+  title: string;
+  body: React.ReactNode;
+  img: string;
+  imgAlt: string;
+  textOn: "left" | "right";
+}) {
+  const leftText = textOn === "left";
+  return (
+    <li className="grid md:grid-cols-2 items-start gap-10">
+      {/* 画像 */}
+      <figure className={`relative aspect-[16/10] rounded-xl overflow-hidden bg-gray-100 ${leftText ? "md:order-2" : ""}`}>
+        <Image src={img} alt={imgAlt} fill className="object-cover" />
+      </figure>
+
+      {/* テキスト */}
+      <div className={`${leftText ? "md:order-1 md:pr-12" : "md:pl-12"}`}>
+        <span
+          className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold"
+          style={{ backgroundColor: BRAND }}
+        >
+          {n}
+        </span>
+        <h3 className="mt-2 text-lg font-semibold">{title}</h3>
+        <p className="mt-2 leading-relaxed text-[15px]" style={{ color: MUTED }}>
+          {body}
+        </p>
+      </div>
+    </li>
+  );
+}
+
+function CourseImage({ title, src }: { title: string; src: string }) {
+  return (
+    <div>
+      <h4 className="text-center text-xl font-bold">{title}</h4>
+      <div className="mt-6 rounded-2xl overflow-hidden bg-white shadow ring-1 ring-black/5 max-w-3xl mx-auto">
+        <Image src={src} alt={`${title}の内容`} width={1200} height={900} className="w-full h-auto" />
+      </div>
     </div>
   );
 }
