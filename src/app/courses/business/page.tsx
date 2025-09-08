@@ -268,7 +268,7 @@ export default function BusinessCoursePage() {
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
                 事業成長
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-xs" className="text-gray">
                 海外展開・採用・資金
                 <br />
                 調達・文献アクセスなど、
@@ -293,7 +293,7 @@ export default function BusinessCoursePage() {
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
                 組織のグローバル化
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-xs" className="text-gray">
                 経営トップが英語で話
                 <br />
                 せる組織と、組織内の
@@ -316,7 +316,7 @@ export default function BusinessCoursePage() {
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
                 関係性での主導権
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-xs" className="text-gray">
                 取引先・投資家・パー
                 <br />
                 トナーとの関係で主導
@@ -339,7 +339,7 @@ export default function BusinessCoursePage() {
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
                 競合との差別化
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-xs" className="text-gray">
                 翻訳に頼らず「自分の
                 <br />
                 言葉で話せる」ことで、

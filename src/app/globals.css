@@ -122,6 +122,12 @@ body {
   font-family: var(--font-sans);
 }
 
+.body-xs {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-family: var(--font-sans);
+}
+
 .caption {
   font-size: 0.75rem;
   line-height: 1.5;
