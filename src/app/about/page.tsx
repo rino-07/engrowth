@@ -160,90 +160,69 @@ export default function AboutPage() {
               </Typography>
             </div>
 
-            {/* 2カラムレイアウト：左20% 右80% */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-              {/* 左側：Point番号のみ - 20% */}
-              <div className="lg:col-span-2">
-                {/* モバイル：横並び、デスクトップ：縦並び */}
-                <div className="flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-0 justify-center lg:justify-start">
-                  {/* Point 1 番号のみ */}
-                  <div className="w-16 h-10 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0 lg:mb-[120px]">
-                    <div className="text-white font-bold" style={{ fontSize: '24px' }}>
-                      Point 1
-                    </div>
-                  </div>
-
-                  {/* Point 2 番号のみ */}
-                  <div className="w-16 h-10 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0 lg:mb-[120px]">
-                    <div className="text-white font-bold" style={{ fontSize: '24px' }}>
-                      Point 2
-                    </div>
-                  </div>
-
-                  {/* Point 3 番号のみ */}
-                  <div className="w-16 h-10 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                    <div className="text-white font-bold" style={{ fontSize: '24px' }}>
-                      Point 3
-                    </div>
-                  </div>
+            {/* Point番号と本文を同じブロック内にflexレイアウト */}
+            <div className="space-y-12">
+              {/* Point 1 */}
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">Point 1</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-dark-gray mb-2">
+                    実在コンサルタントは全員、留学経験のある日本人
+                  </h3>
+                  <p className="text-dark-gray leading-relaxed mb-2">
+                    日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在
+                  </p>
+                  <p className="text-dark-gray leading-relaxed">
+                    外国人講師では理解して理解できない、日本人特有の英語学習の悩み。
+                    <br />
+                    なぜ「This」と言えるのに、なぜ「It」と「Is」を含む文章できないのか、
+                    <br />
+                    なぜ過去形を忘れてしまうのか——————。
+                    <br /><br />
+                    あなたと同じ道を歩んだ日本人コンサルタントだからこそ、的確に把握し、効果的な解決策を提示できます。
+                  </p>
                 </div>
               </div>
 
-              {/* 右側：タイトル + 詳細説明 - 80% */}
-              <div className="lg:col-span-10">
-                <div className="space-y-16 lg:space-y-12">
-                  {/* Point 1 タイトル + 詳細 */}
-                  <div>
-                    <Typography variant="heading-sm" className="text-dark-gray mb-4 font-bold">
-                      実在コンサルタントは全員、留学経験のある日本人
-                    </Typography>
-                    <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4 font-medium">
-                      日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在
-                    </Typography>
-                    <Typography variant="body-md" className="text-dark-gray leading-relaxed">
-                      外国人講師では理解して理解できない、日本人特有の英語学習の悩み。
-                      <br />
-                      なぜ「This」と言えるのに、なぜ「It」と「Is」を含む文章できないのか、
-                      <br />
-                      なぜ過去形を忘れてしまうのか——————。
-                      <br /><br />
-                      あなたと同じ道を歩んだ日本人コンサルタントだからこそ、的確に把握し、効果的な解決策を提示できます。
-                    </Typography>
-                  </div>
+              {/* Point 2 */}
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">Point 2</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-dark-gray mb-2">科学的根拠に基づく学習プログラム</h3>
+                  <p className="text-dark-gray leading-relaxed mb-2">
+                    感覚や経験論に頼らない、データドリブンな学習設計
+                  </p>
+                  <p className="text-dark-gray leading-relaxed">
+                    各人の理解度に合わせてプログラムではなく、第二言語習得理論、認知言語学、脳科学などの最新研究に基づいた学習方法を採用。
+                    <br />
+                    脳のメカニズムに沿った効果的で効率的な英語学習を実現します。
+                    <br /><br />
+                    忙しい毎日でも、社会人でも着実な成果が期待できるように設計されています。
+                  </p>
+                </div>
+              </div>
 
-                  {/* Point 2 タイトル + 詳細 */}
-                  <div>
-                    <Typography variant="heading-sm" className="text-dark-gray mb-4 font-bold">
-                      科学的根拠に基づく学習プログラム
-                    </Typography>
-                    <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4 font-medium">
-                      感覚や経験論に頼らない、データドリブンな学習設計
-                    </Typography>
-                    <Typography variant="body-md" className="text-dark-gray leading-relaxed">
-                      各人の理解度に合わせてプログラムではなく、第二言語習得理論、認知言語学、脳科学などの最新研究に基づいた学習方法を採用。
-                      <br />
-                      脳のメカニズムに沿った効果的で効率的な英語学習を実現します。
-                      <br /><br />
-                      忙しい毎日でも、社会人でも着実な成果が期待できるように設計されています。
-                    </Typography>
-                  </div>
-
-                  {/* Point 3 タイトル + 詳細 */}
-                  <div>
-                    <Typography variant="heading-sm" className="text-dark-gray mb-4 font-bold">
-                      1人ひとりに合わせたオーダーメイド学習設計
-                    </Typography>
-                    <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4 font-medium">
-                      あなたの目標・レベル・ライフスタイルに合わせた最適なスケジュール
-                    </Typography>
-                    <Typography variant="body-md" className="text-dark-gray leading-relaxed">
-                      「TOEFL100点を目指します」と「内定先企業で活躍したい」では、必要なギャップが異なります。
-                      <br /><br />
-                      Engrowthでは初回カウンセリングで詳細分析を行い、目標達成までの最適なルートを設計。
-                      <br />
-                      日々の学習進捗度、運営度での中間調整により、常に最適な学習を維持できます。
-                    </Typography>
-                  </div>
+              {/* Point 3 */}
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">Point 3</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-dark-gray mb-2">1人ひとりに合わせたオーダーメイド学習設計</h3>
+                  <p className="text-dark-gray leading-relaxed mb-2">
+                    あなたの目標・レベル・ライフスタイルに合わせた最適なスケジュール
+                  </p>
+                  <p className="text-dark-gray leading-relaxed">
+                    「TOEFL100点を目指します」と「内定先企業で活躍したい」では、必要なギャップが異なります。
+                    <br /><br />
+                    Engrowthでは初回カウンセリングで詳細分析を行い、目標達成までの最適なルートを設計。
+                    <br />
+                    日々の学習進捗度、運営度での中間調整により、常に最適な学習を維持できます。
+                  </p>
                 </div>
               </div>
             </div>
