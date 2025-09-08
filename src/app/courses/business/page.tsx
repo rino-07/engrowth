@@ -3,6 +3,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import { PricingSection } from '@/components/sections/PricingSection';
 import Image from 'next/image';
 
 export const metadata = {
@@ -221,25 +222,11 @@ export default function BusinessCoursePage() {
       </Section>
 
       {/* 3. 料金 */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              料金
-            </Typography>
-          </div>
-
-          <div className="max-w-4xl mx-auto mb-16">
-            <Image
-              src="/images/business-pricing-table.jpg"
-              alt="ビジネスコース料金表"
-              width={800}
-              height={400}
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
-        </Container>
-      </Section>
+      <PricingSection 
+        title="料金"
+        description="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
+        background="warm-white"
+      />
 
       {/* 4. あなたの英語力が、会社の未来を創る */}
       <Section background="light-gray" padding="xl">
