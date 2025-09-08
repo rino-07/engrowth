@@ -153,60 +153,96 @@ export default function AboutPage() {
       <Section background="light-gray" padding="xl">
         <Container>
           <div className="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
-            {/* 左側：タイトル - 20% */}
+            {/* 左側：Point番号とタイトル - 20% */}
             <div className="col-span-12 lg:col-span-2">
-              <Typography variant="heading-lg" className="text-dark-gray" as="h2">
+              <Typography variant="heading-lg" className="text-dark-gray mb-12" as="h2">
                 Engrowthが選ばれる理由
               </Typography>
-            </div>
-
-            {/* 右側：3つのポイント - 80% */}
-            <div className="col-span-12 lg:col-span-10 space-y-12">
+              
               {/* Point 1 */}
-              <div className="flex items-start gap-6">
-                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">●</span>
+              <div className="mb-16">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Point 1
+                    </Typography>
+                  </div>
                 </div>
-                <div>
-                  <Typography className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
-                    コンサルタントも受講者も英語が話せなかった日本人。
-                  </Typography>
-                  <Typography className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
-                    日本人だからこそわかる、つまずくポイントを克服しながら学習を進めます。
-                  </Typography>
-                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  実在コンサルタントは全員、留学経験のある日本人
+                </Typography>
               </div>
 
               {/* Point 2 */}
-              <div className="flex items-start gap-6">
-                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">●</span>
+              <div className="mb-16">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Point 2
+                    </Typography>
+                  </div>
                 </div>
-                <div>
-                  <Typography className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
-                    脳科学や神経言語学などの科学的根拠に基づいたプログラムで、
-                  </Typography>
-                  <Typography className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
-                    英語が苦手なあなたでも、着実な英語力の向上を実現します。
-                  </Typography>
-                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  科学的根拠に基づく学習プログラム
+                </Typography>
               </div>
 
               {/* Point 3 */}
-              <div className="flex items-start gap-6">
-                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">●</span>
+              <div className="mb-16">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Point 3
+                    </Typography>
+                  </div>
                 </div>
-                <div>
-                  <Typography className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
-                    コンサルタントは全員、海外留学経験者。
-                  </Typography>
-                  <Typography className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
-                    日本の学校で習う、ネイティブが使わない英語は除外し、
-                    <br />
-                    現地で使える生きた英語を身に付けることができます。
-                  </Typography>
-                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  1人ひとりに合わせたオーダーメイド学習設計
+                </Typography>
+              </div>
+            </div>
+
+            {/* 右側：詳細説明 - 80% */}
+            <div className="col-span-12 lg:col-span-10 space-y-16">
+              {/* Point 1 詳細 */}
+              <div>
+                <Typography variant="body-md" className="text-dark-gray leading-relaxed">
+                  日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在
+                  <br /><br />
+                  外国人講師では理解して理解できない、日本人特有の英語学習の悩み。
+                  <br />
+                  なぜ「This」と言えるのに、なぜ「It」と「Is」を含む文章できないのか、
+                  <br />
+                  なぜ過去形を忘れてしまうのか——————。
+                  <br /><br />
+                  あなたと同じ道を歩んだ日本人コンサルタントだからこそ、的確に把握し、効果的な解決策を提示できます。
+                </Typography>
+              </div>
+
+              {/* Point 2 詳細 */}
+              <div>
+                <Typography variant="body-md" className="text-dark-gray leading-relaxed">
+                  感覚や経験論に頼らない、データドリブンな学習設計
+                  <br /><br />
+                  各人の理解度に合わせてプログラムではなく、第二言語習得理論、認知言語学、脳科学などの最新研究に基づいた学習方法を採用。
+                  <br />
+                  脳のメカニズムに沿った効果的で効率的な英語学習を実現します。
+                  <br /><br />
+                  忙しい毎日でも、社会人でも着実な成果が期待できるように設計されています。
+                </Typography>
+              </div>
+
+              {/* Point 3 詳細 */}
+              <div>
+                <Typography variant="body-md" className="text-dark-gray leading-relaxed">
+                  あなたの目標・レベル・ライフスタイルに合わせた最適なスケジュール
+                  <br /><br />
+                  「TOEFL100点を目指します」と「内定先企業で活躍したい」では、必要なギャップが異なります。
+                  <br /><br />
+                  Engrowthでは初回カウンセリングで詳細分析を行い、目標達成までの最適なルートを設計。
+                  <br />
+                  日々の学習進捗度、運営度での中間調整により、常に最適な学習を維持できます。
+                </Typography>
               </div>
             </div>
           </div>
