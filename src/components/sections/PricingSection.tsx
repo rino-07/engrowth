@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { PricingCard } from '../ui/PricingCard';
-import { Typography } from '../ui/Typography';
-import { Container } from '../layout/Container';
-import { Section } from '../layout/Section';
+import Typography from '../ui/Typography';
+import Container from '../layout/Container';
+import Section from '../layout/Section';
 import { pricingPlans } from '@/types/pricing';
 
 interface PricingSectionProps {

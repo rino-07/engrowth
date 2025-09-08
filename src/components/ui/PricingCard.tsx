@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Typography } from './Typography';
-import { Button } from './Button';
+import Typography from './Typography';
+import Button from './Button';
 
 export interface PricingCardProps {
   /** 期間 */
