@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
+import SectionDivider from "@/components/ui/SectionDivider";
 
 export const metadata = {
   title: "受講の流れ - 英語学習の悩み、目標設定、プラン相談など | Engrowth",
@@ -20,7 +21,7 @@ export default function FlowPage() {
       <section className="relative">
         <div className="absolute inset-0">
           <Image
-            src="/images/flow/hero.jpg" // ←差し替え
+            src="/images/flow/flow-hero-background.jpg"
             alt="オンラインで相談する様子"
             fill
             className="object-cover"
@@ -38,7 +39,7 @@ export default function FlowPage() {
             <div className="mt-8">
               <Button
                 className="px-8 py-4 rounded-full text-lg font-semibold"
-                style={{ backgroundColor: "#00B14F" }} // LINE色でOKならこのまま。ブランド赤にするなら BRAND を指定
+                style={{ backgroundColor: "#00B14F" }}
               >
                 LINE登録はこちら
               </Button>
@@ -59,6 +60,8 @@ export default function FlowPage() {
           </div>
         </Container>
       </Section>
+
+      <SectionDivider label="FLOW" variant="label" />
 
       {/* 3) 左右交互（zigzag） */}
       <section className="relative">
@@ -96,7 +99,7 @@ export default function FlowPage() {
                   実現可能な学習計画を一緒に作成します。
                 </>
               }
-              img="/images/flow/step-2.jpg"
+              img="/images/flow/top-flow-step1.jpg"
               imgAlt="オンライン面談"
               textOn="left"
             />
@@ -123,29 +126,74 @@ export default function FlowPage() {
                 </figcaption>
               </figure>
             </li>
-
-            {/* STEP 4：画像右 / テキスト左 */}
-            <ZigzagItem
-              n={4}
-              title="（ス）シミュレーション英会話"
-              body={
-                <>
-                  留学生が短期間で英語力を鍛える要因のひとつとして、
-                  「ある状況に英語で遭遇し、英語で対処する力がつく」というのが挙げられます。<br />
-                  このプロセスは、私たち日本人がビジネスの現場で英語を獲得するうえでも同様です。<br />
-                  Engrowth ではビジネスシーンや海外大学などのシチュエーションに応じて、
-                  現実の英会話の状況をシミュレーションしてトレーニングします。
-                </>
-              }
-              img="/images/flow/step-4.jpg"
-              imgAlt="シミュレーション英会話"
-              textOn="left"
-            />
           </ol>
         </Container>
       </section>
 
-      {/* 4) コース表（画像差し込み） */}
+      <SectionDivider variant="soft" />
+
+      {/* 4) シミュレーション英会話（1カラム） */}
+      <Section padding="xl" background="light-gray">
+        <Container>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span
+                className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold mb-4"
+                style={{ backgroundColor: BRAND }}
+              >
+                4
+              </span>
+              <h3 className="text-xl font-semibold mb-4">（ス）シミュレーション英会話</h3>
+              <p className="leading-relaxed text-[15px]" style={{ color: MUTED }}>
+                留学生が短期間で英語力を鍛える要因のひとつとして、
+                「ある状況に英語で遭遇し、英語で対処する力がつく」というのが挙げられます。<br />
+                このプロセスは、私たち日本人がビジネスの現場で英語を獲得するうえでも同様です。<br />
+                Engrowth ではビジネスシーンや海外大学などのシチュエーションに応じて、
+                現実の英会話の状況をシミュレーションしてトレーニングします。
+              </p>
+            </div>
+
+            {/* シミュレーションテーブル */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* 左側テーブル */}
+                <div className="border-r border-gray-200">
+                  <div className="bg-gray-50 px-6 py-4 border-b">
+                    <h4 className="font-semibold text-center">基礎シミュレーション</h4>
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    <SimulationRow week="week 1-2" theme="挨拶" />
+                    <SimulationRow week="week 3-4" theme="自己紹介" />
+                    <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
+                    <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
+                    <SimulationRow week="week 9-10" theme="ホテル（チェックイン/アウト）" />
+                    <SimulationRow week="week 11-12" theme="カフェ＆レストラン（予約、注文）" />
+                  </div>
+                </div>
+
+                {/* 右側テーブル */}
+                <div>
+                  <div className="bg-gray-50 px-6 py-4 border-b">
+                    <h4 className="font-semibold text-center">応用シミュレーション</h4>
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
+                    <SimulationRow week="week 15-16" theme="交通機関（電車、バス）" />
+                    <SimulationRow week="week 17-18" theme="ビジネスメール" />
+                    <SimulationRow week="week 19-20" theme="ビジネスプレゼンテーション①" />
+                    <SimulationRow week="week 21-22" theme="ビジネスプレゼンテーション②" />
+                    <SimulationRow week="week 23-24" theme="カスタム" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <SectionDivider label="COURSES" variant="brand" />
+
+      {/* 5) コース表（画像差し込み） */}
       <Section padding="xl" background="warm-white">
         <Container>
           <div className="max-w-5xl mx-auto space-y-16">
@@ -155,7 +203,9 @@ export default function FlowPage() {
         </Container>
       </Section>
 
-      {/* 5) 最終CTA（ブランド赤） */}
+      <SectionDivider variant="soft" />
+
+      {/* 6) 最終CTA（ブランド赤） */}
       <section className="py-16">
         <Container>
           <div
@@ -209,13 +259,13 @@ function ZigzagItem({
       {/* テキスト */}
       <div className={`${leftText ? "md:order-1 md:pr-12" : "md:pl-12"}`}>
         <span
-          className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold"
+          className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold mb-2"
           style={{ backgroundColor: BRAND }}
         >
           {n}
         </span>
-        <h3 className="mt-2 text-lg font-semibold">{title}</h3>
-        <p className="mt-2 leading-relaxed text-[15px]" style={{ color: MUTED }}>
+        <h3 className="text-lg font-semibold mb-2">{title}</h3>
+        <p className="leading-relaxed text-[15px]" style={{ color: MUTED }}>
           {body}
         </p>
       </div>
@@ -226,9 +276,22 @@ function ZigzagItem({
 function CourseImage({ title, src }: { title: string; src: string }) {
   return (
     <div>
-      <h4 className="text-center text-xl font-bold">{title}</h4>
-      <div className="mt-6 rounded-2xl overflow-hidden bg-white shadow ring-1 ring-black/5 max-w-3xl mx-auto">
+      <h4 className="text-center text-xl font-bold mb-6">{title}</h4>
+      <div className="rounded-2xl overflow-hidden bg-white shadow ring-1 ring-black/5 max-w-3xl mx-auto">
         <Image src={src} alt={`${title}の内容`} width={1200} height={900} className="w-full h-auto" />
+      </div>
+    </div>
+  );
+}
+
+function SimulationRow({ week, theme }: { week: string; theme: string }) {
+  return (
+    <div className="px-6 py-4 grid grid-cols-3 gap-4 items-center">
+      <div className="text-sm font-semibold text-center" style={{ color: BRAND }}>
+        {week}
+      </div>
+      <div className="col-span-2 text-sm leading-relaxed">
+        {theme}
       </div>
     </div>
   );
