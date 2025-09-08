@@ -45,7 +45,7 @@ export default function BusinessCoursePage() {
                 <span className="text-white text-sm font-bold">1</span>
               </div>
               <Typography variant="body-sm" className="text-dark-gray font-bold mb-2">
-                スマートフォンでの学習
+                ５分から１０分の短時間学習
               </Typography>
               <Typography variant="body-xs" className="text-gray">
                 通勤時間や昼休みなど、
@@ -89,7 +89,7 @@ export default function BusinessCoursePage() {
                 <span className="text-white text-sm font-bold">3</span>
               </div>
               <Typography variant="body-sm" className="text-dark-gray font-bold mb-2">
-                LINEでの支援
+                LINEでの伴走支援
               </Typography>
               <Typography variant="body-xs" className="text-gray">
                 24時間いつでも質問可能、
@@ -120,7 +120,7 @@ export default function BusinessCoursePage() {
                   <span className="text-white text-sm font-bold">●</span>
                 </div>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  忙しいあなたの味方
+                  忙しい人のための設計
                 </Typography>
               </div>
               <Image
@@ -154,7 +154,7 @@ export default function BusinessCoursePage() {
                   <span className="text-white text-sm font-bold">●</span>
                 </div>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  継続性・続く
+                  短期間で使える英語力
                 </Typography>
               </div>
               <Image
@@ -189,7 +189,7 @@ export default function BusinessCoursePage() {
                   <span className="text-white text-sm font-bold">●</span>
                 </div>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  特別カリキュラムの提供
+                  特別カリキュラムの一般公開
                 </Typography>
               </div>
               <Image

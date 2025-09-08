@@ -3,6 +3,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import { PricingSection } from '@/components/sections/PricingSection';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -139,69 +140,12 @@ export default function CoursesPage() {
         </Container>
       </Section>
 
-      {/* 3. 料金 */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              料金
-            </Typography>
-          </div>
-
-          {/* 英会話コース料金表 */}
-          <div className="mb-16">
-            <Typography variant="heading-md" className="text-dark-gray mb-8 text-center">
-              英会話コース
-            </Typography>
-
-            <div className="max-w-4xl mx-auto mb-8">
-              <Image
-                src="/images/pricing-table.jpg"
-                alt="英会話コース料金表"
-                width={800}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-
-            {/* 料金表（テキスト版） */}
-            <div className="overflow-x-auto">
-              <table className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
-                <thead>
-                  <tr className="bg-light-gray">
-                    <th className="px-6 py-4 text-left"></th>
-                    <th className="px-6 py-4 text-center font-bold">3ヶ月</th>
-                    <th className="px-6 py-4 text-center font-bold">6ヶ月</th>
-                    <th className="px-6 py-4 text-center font-bold">12ヶ月</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b">
-                    <td className="px-6 py-4 font-bold">ビジネスコース</td>
-                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
-                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
-                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="px-6 py-4 font-bold">学生コース</td>
-                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
-                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
-                    <td className="px-6 py-4 text-center">¥xx,xxx</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="text-center mt-8">
-              <div className="inline-block bg-dark-gray text-white px-8 py-3 rounded-lg">
-                <Typography variant="heading-sm" className="text-white">
-                  Engrowthなら入会金は0円
-                </Typography>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      {/* 3. 料金表 */}
+      <PricingSection 
+        title="あなたの目標とペースに合わせて選べる、柔軟なプランをご用意しました。"
+        description="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
+        background="warm-white"
+      />
 
       {/* 4. スポットサービス */}
       <Section background="light-gray" padding="xl">
