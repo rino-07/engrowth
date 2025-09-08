@@ -40,91 +40,85 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   isDisabled = false,
 }) => {
   return (
-    <div className={`relative bg-white rounded-2xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
-      isPopular ? 'border-brand-red scale-105' : 'border-gray-200'
+    <div className={`relative bg-white rounded-2xl border transition-all duration-300 hover:shadow-lg ${
+      isPopular ? 'border-brand-red shadow-lg' : 'border-gray-200 shadow-sm'
     } ${isDisabled ? 'opacity-60' : ''}`}>
       {/* 人気プランバッジ */}
       {isPopular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <div className="bg-brand-red text-white px-4 py-2 rounded-full text-sm font-bold">
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <div className="bg-brand-red text-white px-3 py-1 rounded-full text-xs font-semibold">
             最人気
           </div>
         </div>
       )}
 
-      <div className="p-8">
-        {/* 期間 */}
-        <div className="text-center mb-4">
-          <Typography variant="heading-sm" className="text-dark-gray font-bold">
-            {period}
-          </Typography>
+      <div className="p-6">
+        {/* プラン名とバッジ */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <div className={`w-3 h-3 rounded-full ${
+              period === "GROUPS" ? "bg-purple-500" : 
+              period === "PRIVATE+" ? "bg-yellow-500" : 
+              "bg-black"
+            }`}></div>
+            <Typography variant="heading-sm" className="text-dark-gray font-semibold">
+              {period}
+            </Typography>
+          </div>
         </div>
 
-        {/* 価格セクション */}
-        <div className="text-center mb-6">
-          {/* 通常価格（取り消し線） */}
-          {originalPrice && (
-            <div className="text-gray-400 line-through text-lg mb-1">
-              {originalPrice}
-            </div>
-          )}
+        {/* 通常価格（小さく） */}
+        {originalPrice && (
+          <div className="text-gray-400 text-sm mb-1">
+            最低料金 {originalPrice}
+          </div>
+        )}
 
-          {/* 現在価格 */}
-          <div className="text-brand-red text-4xl font-bold mb-2">
+        {/* メイン価格 */}
+        <div className="mb-4">
+          <div className="text-dark-gray text-3xl font-bold">
             {currentPrice}
           </div>
-
-          {/* 月額価格 */}
-          <div className="text-gray-600 text-lg">
-            月額 {monthlyPrice}
+          <div className="text-gray-600 text-sm">
+            {monthlyPrice}
           </div>
-
-          {/* 割引率 */}
-          {discount && (
-            <div className="inline-block bg-action-green text-white px-3 py-1 rounded-full text-sm font-bold mt-2">
-              {discount}
-            </div>
-          )}
         </div>
 
-        {/* 特徴リスト */}
-        <div className="space-y-3 mb-8">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-action-green rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <Typography variant="body-md" className="text-dark-gray leading-relaxed">
-                {feature}
-              </Typography>
-            </div>
-          ))}
+        {/* 説明文 */}
+        <div className="text-gray-600 text-sm mb-6 leading-relaxed">
+          {features[0]}
         </div>
 
         {/* ボタン */}
-        <div className="text-center">
+        <div className="mb-6">
           <Button
-            variant={isPopular ? "primary" : "outline"}
+            variant="primary"
             size="lg"
             onClick={onButtonClick}
             disabled={isDisabled}
-            className="w-full"
+            className={`w-full rounded-xl font-semibold ${
+              isPopular ? 'bg-brand-red hover:bg-red-700' : 'bg-black hover:bg-gray-800'
+            } text-white`}
           >
             {buttonText}
           </Button>
         </div>
 
-        {/* 無料お試し期間の注記（1ヶ月プランの場合） */}
-        {period === "1ヶ月" && (
-          <div className="text-center mt-4">
-            <Typography variant="body-sm" className="text-gray-500">
-              ※ 3ヶ月以上のプラン<br />
-              購了者のみ利用可能
-            </Typography>
-          </div>
-        )}
+        {/* 特徴リスト（チェックマーク付き） */}
+        <div className="space-y-2">
+          {features.slice(1).map((feature, index) => (
+            <div key={index} className="flex items-start gap-2">
+              <div className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <Typography variant="body-sm" className="text-gray-600 leading-relaxed">
+                {feature}
+              </Typography>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

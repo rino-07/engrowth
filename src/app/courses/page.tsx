@@ -23,9 +23,6 @@ export default function CoursesPage() {
             <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h1">
               コース・料金
             </Typography>
-            <Typography variant="body-lg" className="text-gray">
-              目的に合わせて選べるコース・サービス
-            </Typography>
           </div>
         </Container>
       </Section>
@@ -33,13 +30,18 @@ export default function CoursesPage() {
       {/* 2. コース選択（4カード） */}
       <Section background="light-gray" padding="xl">
         <Container>
+          <div className="text-center mb-12">
+            <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h2">
+              目的に合わせて選べるコース・サービス
+            </Typography>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             {/* ビジネスコース */}
             <Link href="/courses/business">
               <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative">
                   <Image
-                    src="/images/business-course-detail.jpg"
+                    src="/images/drive-download-20250908T014101Z-1-001/top/service-consultant.jpg"
                     alt="ビジネスコース"
                     width={400}
                     height={200}
@@ -57,7 +59,7 @@ export default function CoursesPage() {
               <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative">
                   <Image
-                    src="/images/business-spot-detail.jpg"
+                    src="/images/drive-download-20250908T014101Z-1-001/spot-business/spot-business-interpretation.jpg"
                     alt="ビジネススポットサービス"
                     width={400}
                     height={200}
@@ -75,7 +77,7 @@ export default function CoursesPage() {
               <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative">
                   <Image
-                    src="/images/student-course-detail.jpg"
+                    src="/images/drive-download-20250908T014101Z-1-001/students/students-class-understanding.jpg"
                     alt="学生コース"
                     width={400}
                     height={200}
@@ -93,7 +95,7 @@ export default function CoursesPage() {
               <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
                 <div className="relative">
                   <Image
-                    src="/images/student-spot-detail.jpg"
+                    src="/images/drive-download-20250908T014101Z-1-001/students/stu08.png"
                     alt="学生スポットサービス"
                     width={400}
                     height={200}
@@ -109,32 +111,14 @@ export default function CoursesPage() {
 
           {/* 無料カウンセリングバナー */}
           <div className="relative mb-16">
-            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-              {/* 吹き出し */}
-              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full px-6 py-3 relative">
-                  <Typography variant="body-md" className="text-dark-gray font-bold">
-                    カンタン
-                    <br />
-                    2ステップ！
-                  </Typography>
-                  {/* 吹き出しの矢印 */}
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
-                </div>
-              </div>
-
-              <Typography variant="heading-md" className="text-white mb-6">
-                30分の無料カウンセリングでご相談ください
-              </Typography>
-
-              <div className="flex justify-center">
-                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
-                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
-                    無料
-                  </span>
-                  カウンセリングを予約する
-                </Button>
-              </div>
+            <div className="max-w-4xl mx-auto">
+              <Image
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリングでご相談ください"
+                width={1200}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
             </div>
           </div>
         </Container>
@@ -160,7 +144,7 @@ export default function CoursesPage() {
             {/* ビジネススポットサービス */}
             <Card className="p-6 text-center">
               <Image
-                src="/images/business-spot-service.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/spot-business/spot-business-observer.jpg"
                 alt="ビジネススポットサービス"
                 width={300}
                 height={200}
@@ -184,7 +168,7 @@ export default function CoursesPage() {
             {/* 学生スポットサービス */}
             <Card className="p-6 text-center">
               <Image
-                src="/images/student-spot-service.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/students/essay-correction-before.jpg"
                 alt="学生スポットサービス"
                 width={300}
                 height={200}
@@ -208,32 +192,14 @@ export default function CoursesPage() {
 
           {/* 最終カウンセリングバナー */}
           <div className="relative">
-            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-              {/* 吹き出し */}
-              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full px-6 py-3 relative">
-                  <Typography variant="body-md" className="text-dark-gray font-bold">
-                    カンタン
-                    <br />
-                    2ステップ！
-                  </Typography>
-                  {/* 吹き出しの矢印 */}
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
-                </div>
-              </div>
-
-              <Typography variant="heading-md" className="text-white mb-6">
-                30分の無料カウンセリングでご相談ください
-              </Typography>
-
-              <div className="flex justify-center">
-                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
-                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
-                    無料
-                  </span>
-                  カウンセリングを予約する
-                </Button>
-              </div>
+            <div className="max-w-4xl mx-auto">
+              <Image
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリングでご相談ください"
+                width={1200}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
             </div>
           </div>
         </Container>
