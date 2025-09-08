@@ -82,7 +82,7 @@ export default function FlowPage() {
                   「LINEでお問い合わせ」からどうぞ。
                 </>
               }
-              img="/images/flow/step-1.jpg"
+              img="/images/flow/flow-hero-background.jpg"
               imgAlt="LINE登録"
               textOn="right"
             />
@@ -103,39 +103,45 @@ export default function FlowPage() {
               imgAlt="オンライン面談"
               textOn="left"
             />
-
-            {/* 中段：長文＋画像（右） */}
-            <li className="grid md:grid-cols-2 items-start gap-10">
-              <div>
-                <p className="leading-relaxed text-[15px]">
-                  コース期間中は、英語に関することなら
-                  <strong>24時間いつでも</strong>専任コンサルタントに連絡可能。
-                  苦手な発音の発声法や、ネイティブが使う言い回しなど、
-                  なんでもお気軽にご相談ください。<br />
-                  担当のコンサルタントは
-                  <strong>お一人</strong>だけ。第三者への伝達が不要なため、
-                  行き違いのない高品質な伴走が可能です。<br />
-                  業務で英語が必要な方や、留学準備で不安がある方も、
-                  まずは実用的な課題から一緒に進めていきます。
-                </p>
-              </div>
-              <figure className="relative aspect-[16/10] rounded-xl overflow-hidden bg-gray-100">
-                <Image src="/images/flow/step-3.jpg" alt="日々の伴走" fill className="object-cover" />
-                <figcaption className="absolute bottom-2 right-3 text-xs text-gray-600 bg-white/80 px-2 py-1 rounded">
-                  ※原則◯時間以内の返信
-                </figcaption>
-              </figure>
-            </li>
           </ol>
         </Container>
       </section>
 
       <SectionDivider variant="soft" />
 
-      {/* 4) シミュレーション英会話（1カラム） */}
+      {/* 4) 24時間サポート説明 */}
+      <section>
+        <Container>
+          <div className="grid md:grid-cols-2 items-start gap-10">
+            <div>
+              <p className="leading-relaxed text-[15px]">
+                コース期間中は、英語に関することなら
+                <strong>24時間いつでも</strong>専任コンサルタントに連絡可能。
+                苦手な発音の発声法や、ネイティブが使う言い回しなど、
+                なんでもお気軽にご相談ください。<br />
+                担当のコンサルタントは
+                <strong>お一人</strong>だけ。第三者への伝達が不要なため、
+                行き違いのない高品質な伴走が可能です。<br />
+                業務で英語が必要な方や、留学準備で不安がある方も、
+                まずは実用的な課題から一緒に進めていきます。
+              </p>
+            </div>
+            <figure className="relative aspect-[16/10] rounded-xl overflow-hidden bg-gray-100">
+              <Image src="/images/flow/service-support.jpg" alt="日々の伴走" fill className="object-cover" />
+              <figcaption className="absolute bottom-2 right-3 text-xs text-gray-600 bg-white/80 px-2 py-1 rounded">
+                ※原則◯時間以内の返信
+              </figcaption>
+            </figure>
+          </div>
+        </Container>
+      </section>
+
+      <SectionDivider variant="soft" />
+
+      {/* 5) シミュレーション英会話（1カラム） */}
       <Section padding="xl" background="light-gray">
         <Container>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <span
                 className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold mb-4"
@@ -153,13 +159,14 @@ export default function FlowPage() {
               </p>
             </div>
 
-            {/* シミュレーションテーブル */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* 左側テーブル */}
-                <div className="border-r border-gray-200">
-                  <div className="bg-gray-50 px-6 py-4 border-b">
-                    <h4 className="font-semibold text-center">基礎シミュレーション</h4>
+            {/* ビジネスコース */}
+            <div className="mb-16">
+              <h4 className="text-center text-xl font-bold mb-8">ビジネスコース</h4>
+              <div className="space-y-8">
+                {/* 基礎シミュレーション */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                  <div className="bg-red-300 text-center py-3">
+                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 1-2" theme="挨拶" />
@@ -171,10 +178,10 @@ export default function FlowPage() {
                   </div>
                 </div>
 
-                {/* 右側テーブル */}
-                <div>
-                  <div className="bg-gray-50 px-6 py-4 border-b">
-                    <h4 className="font-semibold text-center">応用シミュレーション</h4>
+                {/* 応用シミュレーション */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                  <div className="bg-red-300 text-center py-3">
+                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
@@ -187,13 +194,49 @@ export default function FlowPage() {
                 </div>
               </div>
             </div>
+
+            {/* 学生コース */}
+            <div>
+              <h4 className="text-center text-xl font-bold mb-8">学生コース</h4>
+              <div className="space-y-8">
+                {/* 基礎シミュレーション */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                  <div className="bg-red-300 text-center py-3">
+                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    <SimulationRow week="week 1-2" theme="挨拶" />
+                    <SimulationRow week="week 3-4" theme="自己紹介" />
+                    <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
+                    <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
+                    <SimulationRow week="week 9-10" theme="ホテル（チェックイン/アウト）" />
+                    <SimulationRow week="week 11-12" theme="カフェ&レストラン（予約、注文）" />
+                  </div>
+                </div>
+
+                {/* 応用シミュレーション */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                  <div className="bg-red-300 text-center py-3">
+                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
+                    <SimulationRow week="week 15-16" theme="交通機関（電車、バス）" />
+                    <SimulationRow week="week 17-18" theme="国行き連絡" />
+                    <SimulationRow week="week 19-20" theme="就職活動、宅急便" />
+                    <SimulationRow week="week 21-22" theme="病院（予約、受付、診察）" />
+                    <SimulationRow week="week 23-24" theme="カスタム、専任コンサルタントと相談し内容決定" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
 
       <SectionDivider label="COURSES" variant="brand" />
 
-      {/* 5) コース表（画像差し込み） */}
+      {/* 6) コース表（画像差し込み） */}
       <Section padding="xl" background="warm-white">
         <Container>
           <div className="max-w-5xl mx-auto space-y-16">
@@ -205,7 +248,7 @@ export default function FlowPage() {
 
       <SectionDivider variant="soft" />
 
-      {/* 6) 最終CTA（ブランド赤） */}
+      {/* 7) 最終CTA（ブランド赤） */}
       <section className="py-16">
         <Container>
           <div
@@ -287,10 +330,10 @@ function CourseImage({ title, src }: { title: string; src: string }) {
 function SimulationRow({ week, theme }: { week: string; theme: string }) {
   return (
     <div className="px-6 py-4 grid grid-cols-3 gap-4 items-center">
-      <div className="text-sm font-semibold text-center" style={{ color: BRAND }}>
+      <div className="text-sm font-semibold text-center bg-gray-100 py-2 rounded">
         {week}
       </div>
-      <div className="col-span-2 text-sm leading-relaxed">
+      <div className="col-span-2 text-sm leading-relaxed text-center">
         {theme}
       </div>
     </div>
