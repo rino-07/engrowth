@@ -21,7 +21,7 @@ export default function FlowPage() {
       <section className="relative">
         <div className="absolute inset-0">
           <Image
-            src="/images/flow/flow-hero-background.jpg"
+            src="/images/drive-download-20250908T014101Z-1-001/fliw/flow-hero-background.jpg"
             alt="オンラインで相談する様子"
             fill
             className="object-cover"
@@ -82,7 +82,7 @@ export default function FlowPage() {
                   「LINEでお問い合わせ」からどうぞ。
                 </>
               }
-              img="/images/flow/flow-hero-background.jpg"
+              img="/images/drive-download-20250908T014101Z-1-001/fliw/flow-hero-background.jpg"
               imgAlt="LINE登録"
               textOn="right"
             />
@@ -99,7 +99,7 @@ export default function FlowPage() {
                   実現可能な学習計画を一緒に作成します。
                 </>
               }
-              img="/images/flow/top-flow-step1.jpg"
+              img="/images/drive-download-20250908T014101Z-1-001/supporters/top-flow-step1.jpg"
               imgAlt="オンライン面談"
               textOn="left"
             />
@@ -127,7 +127,7 @@ export default function FlowPage() {
               </p>
             </div>
             <figure className="relative aspect-[16/10] rounded-xl overflow-hidden bg-gray-100">
-              <Image src="/images/flow/service-support.jpg" alt="日々の伴走" fill className="object-cover" />
+              <Image src="/images/drive-download-20250908T014101Z-1-001/top/service-support.jpg" alt="日々の伴走" fill className="object-cover" />
               <figcaption className="absolute bottom-2 right-3 text-xs text-gray-600 bg-white/80 px-2 py-1 rounded">
                 ※原則◯時間以内の返信
               </figcaption>
