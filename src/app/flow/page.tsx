@@ -234,39 +234,19 @@ export default function FlowPage() {
         </Container>
       </Section>
 
-      <SectionDivider label="COURSES" variant="brand" />
-
-      {/* 6) コース表（画像差し込み） */}
-      <Section padding="xl" background="warm-white">
-        <Container>
-          <div className="max-w-5xl mx-auto space-y-16">
-            <CourseImage title="ビジネスコース" src="/images/flow/business-table.jpg" />
-            <CourseImage title="学生コース" src="/images/flow/student-table.jpg" />
-          </div>
-        </Container>
-      </Section>
-
       <SectionDivider variant="soft" />
 
-      {/* 7) 最終CTA（ブランド赤） */}
+      {/* 7) 最終CTA（main_banner.png画像） */}
       <section className="py-16">
         <Container>
-          <div
-            className="rounded-2xl px-6 py-12 text-center text-white relative overflow-hidden"
-            style={{ background: `linear-gradient(90deg, ${BRAND}, #b00205)` }}
-          >
-            <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%),radial-gradient(circle_at_80%_80%,white,transparent_40%)]" />
-            <p className="text-sm font-bold bg-white text-[color:var(--brand)] px-3 py-1 rounded-full inline-block mb-3"
-               style={{ color: BRAND }}
-            >
-              カンタン 2 ステップ！
-            </p>
-            <h3 className="text-xl font-semibold">30分の無料カウンセリングでご相談ください</h3>
-            <div className="mt-6">
-              <Button className="px-8 py-4 text-white font-semibold rounded-full" style={{ backgroundColor: BRAND }}>
-                カウンセリングを予約する
-              </Button>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <Image
+              src="/images/main_banner.png"
+              alt="30分の無料カウンセリングでご相談ください"
+              width={1200}
+              height={400}
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
           </div>
         </Container>
       </section>
@@ -316,16 +296,6 @@ function ZigzagItem({
   );
 }
 
-function CourseImage({ title, src }: { title: string; src: string }) {
-  return (
-    <div>
-      <h4 className="text-center text-xl font-bold mb-6">{title}</h4>
-      <div className="rounded-2xl overflow-hidden bg-white shadow ring-1 ring-black/5 max-w-3xl mx-auto">
-        <Image src={src} alt={`${title}の内容`} width={1200} height={900} className="w-full h-auto" />
-      </div>
-    </div>
-  );
-}
 
 function SimulationRow({ week, theme }: { week: string; theme: string }) {
   return (
