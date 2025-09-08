@@ -161,36 +161,37 @@ export default function AboutPage() {
             </div>
 
             {/* 2カラムレイアウト：左20% 右80% */}
-            <div className="grid grid-cols-12 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
               {/* 左側：Point番号のみ - 20% */}
-              <div className="col-span-12 lg:col-span-2">
-                <div className="space-y-12">
+              <div className="lg:col-span-2">
+                {/* モバイル：横並び、デスクトップ：縦並び */}
+                <div className="flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-0 justify-center lg:justify-start">
                   {/* Point 1 番号のみ */}
-                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
-                    <Typography variant="body-sm" className="text-white font-bold">
+                  <div className="w-16 h-10 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0 lg:mb-[120px]">
+                    <div className="text-white font-bold" style={{ fontSize: '24px' }}>
                       Point 1
-                    </Typography>
+                    </div>
                   </div>
 
                   {/* Point 2 番号のみ */}
-                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
-                    <Typography variant="body-sm" className="text-white font-bold">
+                  <div className="w-16 h-10 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0 lg:mb-[120px]">
+                    <div className="text-white font-bold" style={{ fontSize: '24px' }}>
                       Point 2
-                    </Typography>
+                    </div>
                   </div>
 
                   {/* Point 3 番号のみ */}
-                  <div className="w-12 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
-                    <Typography variant="body-sm" className="text-white font-bold">
+                  <div className="w-16 h-10 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="text-white font-bold" style={{ fontSize: '24px' }}>
                       Point 3
-                    </Typography>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* 右側：タイトル + 詳細説明 - 80% */}
-              <div className="col-span-12 lg:col-span-10">
-                <div className="space-y-12">
+              <div className="lg:col-span-10">
+                <div className="space-y-16 lg:space-y-12">
                   {/* Point 1 タイトル + 詳細 */}
                   <div>
                     <Typography variant="heading-sm" className="text-dark-gray mb-4 font-bold">
