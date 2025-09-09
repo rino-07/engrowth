@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import { PricingCard } from '../ui/PricingCard';
 import Typography from '../ui/Typography';
 import Container from '../layout/Container';
@@ -29,10 +29,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
     ? pricingPlans.filter(plan => planIds.includes(plan.id))
     : pricingPlans;
 
-  const handlePlanSelect = () => {
+  const handlePlanSelect = useCallback(() => {
     // お問い合わせページにリダイレクト
     window.location.href = '/contact';
-  };
+  }, []);
 
   return (
     <Section background={background} padding="xl">
@@ -70,7 +70,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
         {/* 注記 */}
         <div className="text-center mt-12">
           <Typography variant="body-sm" className="text-gray-500 max-w-2xl mx-auto">
-            ※ 価格は税込み表示です。プラン変更・キャンセルはいつでも可能です。
+            ※ 価格は税込み表示です。
             <br />
             ※ 長期プランほどお得になっており、継続的な学習をサポートします。
           </Typography>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 
 import Button from '../ui/Button';
@@ -10,6 +10,23 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const [isMobileCoursesOpen, setIsMobileCoursesOpen] = useState(false);
+
+  const handleMenuToggle = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const handleMenuClose = useCallback(() => {
+    setIsMenuOpen(false);
+  }, []);
+
+  const handleMobileCoursesToggle = useCallback(() => {
+    setIsMobileCoursesOpen(prev => !prev);
+  }, []);
+
+  const handleMobileMenuClose = useCallback(() => {
+    setIsMenuOpen(false);
+    setIsMobileCoursesOpen(false);
+  }, []);
 
   const navigation = [
     { name: 'Engrowthの特徴', href: '/about' },
@@ -121,7 +138,7 @@ const Header: React.FC = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-dark-gray hover:text-brand-red hover:bg-light-gray focus:outline-none focus:ring-2 focus:ring-inset focus:ring-action-green"
               aria-controls="mobile-menu"
               aria-expanded="false"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={handleMenuToggle}
             >
               <span className="sr-only">メニューを開く</span>
               {!isMenuOpen ? (
@@ -163,7 +180,7 @@ const Header: React.FC = () => {
 
         {/* Mobile menu - 簡素化された階層構造 */}
         <div
-          className={`lg:hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden transition-all duration-200 ease-in-out ${
             isMenuOpen
               ? 'max-h-screen opacity-100 visible'
               : 'max-h-0 opacity-0 invisible'
@@ -179,7 +196,7 @@ const Header: React.FC = () => {
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleMenuClose}
               >
                 Engrowthの特徴
               </Link>
@@ -189,7 +206,7 @@ const Header: React.FC = () => {
                 <button
                   type="button"
                   className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
-                  onClick={() => setIsMobileCoursesOpen(!isMobileCoursesOpen)}
+                  onClick={handleMobileCoursesToggle}
                 >
                   コース・料金
                   <svg
@@ -211,7 +228,7 @@ const Header: React.FC = () => {
                 
                 {/* サブメニュー */}
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
+                  className={`overflow-hidden transition-all duration-200 ${
                     isMobileCoursesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
@@ -219,50 +236,35 @@ const Header: React.FC = () => {
                     <Link
                       href="/courses"
                       className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setIsMobileCoursesOpen(false);
-                      }}
+                      onClick={handleMobileMenuClose}
                     >
                       コース・料金一覧
                     </Link>
                     <Link
                       href="/courses/business"
                       className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setIsMobileCoursesOpen(false);
-                      }}
+                      onClick={handleMobileMenuClose}
                     >
                       ビジネスコース
                     </Link>
                     <Link
                       href="/courses/study"
                       className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setIsMobileCoursesOpen(false);
-                      }}
+                      onClick={handleMobileMenuClose}
                     >
                       学生コース
                     </Link>
                     <Link
                       href="/courses/business-spot"
                       className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setIsMobileCoursesOpen(false);
-                      }}
+                      onClick={handleMobileMenuClose}
                     >
                       ビジネススポットサービス
                     </Link>
                     <Link
                       href="/courses/study-spot"
                       className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setIsMobileCoursesOpen(false);
-                      }}
+                      onClick={handleMobileMenuClose}
                     >
                       学生スポットサービス
                     </Link>
@@ -273,7 +275,7 @@ const Header: React.FC = () => {
               <Link
                 href="/flow"
                 className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleMenuClose}
               >
                 受講の流れ
               </Link>

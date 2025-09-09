@@ -34,7 +34,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
-                  コンサルタントも受講者も英語が話せなかった日本人。
+                  コンサルタントも以前は英語が話せなかった日本人
                 </div>
                 <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
                   日本人だからこそわかる、つまずくポイントを克服しながら学習を進めます。
@@ -48,7 +48,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
-                  脳科学や神経言語学などの科学的根拠に基づいたプログラムで、
+                  脳科学や神経言語学などの科学的根拠に基づいたプログラム
                 </div>
                 <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
                   英語が苦手なあなたでも、着実な英語力の向上を実現します。
@@ -62,11 +62,10 @@ export default function AboutPage() {
               </div>
               <div>
                 <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
-                  コンサルタントは全員、海外留学経験者。
+                  コンサルタントは全員、海外留学経験者
                 </div>
                 <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
                   日本の学校で習う、ネイティブが使わない英語は除外し、
-                  <br />
                   現地で使える生きた英語を身に付けることができます。
                 </div>
               </div>
@@ -102,13 +101,11 @@ export default function AboutPage() {
               <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
                 Engrowthでは受講者をパートナーと呼んでいます。
                 <br />
-                それは受講者の英語力向上と向上することは、Engrowthの目指す世界に一歩近づくことであり、コンサルタント自身の夢をかなえる一助になるからです。
+                なぜなら受講者の方の英語力が向上することは、Engrowthの目指す世界に一歩近づくことであり、コンサルタント自身の夢を叶える一助になるからです。
               </Typography>
 
               <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
-                私たちは、すべてのステークホルダーがWin-Winの関係で結ばれることを信念とし、
-                <br />
-                共に日本の未来を切り開いていく存在でありたいと考えています。
+                私たちは、すべてのステークホルダーがWin-Winの関係で結ばれることを信念とし、共に日本の未来を切り拓いていく存在でありたいと考えています。
               </Typography>
             </div>
 
@@ -139,13 +136,16 @@ export default function AboutPage() {
               Engrowthエコシステムへの支援について
             </Typography>
             <div className="text-dark-gray max-w-3xl mx-auto mb-8" style={{ fontSize: '24px', lineHeight: '1.5' }}>
-              Engrowthは、留学生のコンサルタントが金銭的で自由の学習機会を失わないよう持続可能な支援体制を構築しています。
+              Engrowthは留学中のコンサルタントが、金銭的な理由で自らの学習機会を失うことがないよう、持続可能な支援体制を構築しています。
+              <br />
+              <br />
+              あなたからのご支援が、世界で活躍する日本人を生み出します。
             </div>
             
             <div className="mb-12">
               <Link href="/supporters">
                 <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-                  ご支援希望者の方へ
+                  ぜひご支援ください
                 </Button>
               </Link>
             </div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl text-dark-gray mb-2">
-                    実在コンサルタントは全員、留学経験のある日本人
+                    専任コンサルタントは全員、留学経験のある日本人
                   </h3>
                   <p className="text-dark-gray leading-relaxed mb-2">
                     日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在

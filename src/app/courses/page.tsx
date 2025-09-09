@@ -129,7 +129,7 @@ export default function CoursesPage() {
       {/* 3. 料金表 */}
       <PricingSection 
         title="あなたの目標とペースに合わせて選べる、柔軟なプランをご用意しました。"
-        description="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
+        description="Engrowthでは、入会金・登録料0円。初期費用は一切かかりません。"
         background="warm-white"
       />
 
