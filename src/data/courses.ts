@@ -206,3 +206,4 @@ export const calculateDiscount = (period: 3 | 6 | 12): number => {
   const plan = pricingPlans.find((p) => p.period === period);
   return plan?.discount || 0;
 };
+

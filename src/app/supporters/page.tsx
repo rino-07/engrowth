@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -31,12 +32,16 @@ export default function SupportersPage() {
             </Typography>
 
             <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700 flex-1">
-                パートナーシップ相談
-              </Button>
-              <Button variant="secondary" size="lg" className="flex-1">
-                Engrowthの仕組み詳細
-              </Button>
+              <Link href="/contact" className="flex-1">
+                <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700 w-full">
+                  パートナーシップ相談
+                </Button>
+              </Link>
+              <Link href="/about" className="flex-1">
+                <Button variant="secondary" size="lg" className="w-full">
+                  Engrowthの仕組み詳細
+                </Button>
+              </Link>
             </div>
           </div>
         </Container>
@@ -159,9 +164,11 @@ export default function SupportersPage() {
             <Typography variant="body-lg" className="text-gray mb-8">
               お気軽にご相談ください
             </Typography>
-            <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-              パートナーシップ相談
-            </Button>
+            <Link href="/contact">
+              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
+                パートナーシップ相談
+              </Button>
+            </Link>
           </div>
         </Container>
       </Section>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -95,7 +96,7 @@ export default function FAQPage() {
                   </Typography>
                 </div>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  プログラムの特徴を教えてください
+                  料金はどのくらいですか？
                 </Typography>
               </div>
               <div className="flex items-start gap-4">
@@ -106,10 +107,10 @@ export default function FAQPage() {
                 </div>
                 <div>
                   <Typography variant="body-md" className="text-dark-gray mb-4">
-                    第二言語習得理論に基づいた科学的アプローチと、AI技術を活用した独自の学習メソッドを採用しています。
+                    ビジネスコースは月額49,800円から、学生コースは月額29,800円からご利用いただけます。
                   </Typography>
                   <Typography variant="body-md" className="text-dark-gray">
-                    実践経験豊富な日本人コンサルタントが、あなたの学習を90日間伴走サポートいたします。
+                    スポットサービスもご用意しており、詳細は料金ページでご確認いただけます。
                   </Typography>
                 </div>
               </div>
@@ -124,7 +125,7 @@ export default function FAQPage() {
                   </Typography>
                 </div>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  プログラムの特徴を教えてください
+                  初心者でも大丈夫ですか？
                 </Typography>
               </div>
               <div className="flex items-start gap-4">
@@ -135,10 +136,10 @@ export default function FAQPage() {
                 </div>
                 <div>
                   <Typography variant="body-md" className="text-dark-gray mb-4">
-                    第二言語習得理論に基づいた科学的アプローチと、AI技術を活用した独自の学習メソッドを採用しています。
+                    はい、初心者の方も安心してご参加いただけます。
                   </Typography>
                   <Typography variant="body-md" className="text-dark-gray">
-                    実践経験豊富な日本人コンサルタントが、あなたの学習を90日間伴走サポートいたします。
+                    個人の英語レベルに合わせたオーダーメイドのカリキュラムを作成し、専属コンサルタントが丁寧にサポートいたします。
                   </Typography>
                 </div>
               </div>
@@ -153,7 +154,7 @@ export default function FAQPage() {
                   </Typography>
                 </div>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  プログラムの特徴を教えてください
+                  オンラインでの受講は可能ですか？
                 </Typography>
               </div>
               <div className="flex items-start gap-4">
@@ -164,10 +165,10 @@ export default function FAQPage() {
                 </div>
                 <div>
                   <Typography variant="body-md" className="text-dark-gray mb-4">
-                    第二言語習得理論に基づいた科学的アプローチと、AI技術を活用した独自の学習メソッドを採用しています。
+                    はい、全てのプログラムがオンラインで受講可能です。
                   </Typography>
                   <Typography variant="body-md" className="text-dark-gray">
-                    実践経験豊富な日本人コンサルタントが、あなたの学習を90日間伴走サポートいたします。
+                    ZoomやSlackを使用したコミュニケーションで、場所を選ばずに学習を継続していただけます。
                   </Typography>
                 </div>
               </div>
@@ -179,9 +180,11 @@ export default function FAQPage() {
             <Typography variant="body-lg" className="text-gray mb-8">
               解決しなかった場合は、下記よりお問い合わせください
             </Typography>
-            <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-              お問い合わせページへ
-            </Button>
+            <Link href="/contact">
+              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
+                お問い合わせページへ
+              </Button>
+            </Link>
           </div>
         </Container>
       </Section>

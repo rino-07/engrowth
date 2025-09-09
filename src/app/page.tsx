@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -25,12 +26,16 @@ export default function Home() {
                 日本人だからこそ提供できる英会話コンサルティングサービス
               </Typography>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button variant="primary" size="lg">
-                  無料相談を予約する
-                </Button>
-                <Button variant="secondary" size="lg">
-                  コース詳細を見る
-                </Button>
+                <Link href="/contact">
+                  <Button variant="primary" size="lg">
+                    無料相談を予約する
+                  </Button>
+                </Link>
+                <Link href="/courses">
+                  <Button variant="secondary" size="lg">
+                    コース詳細を見る
+                  </Button>
+                </Link>
               </div>
             </div>
             
@@ -269,13 +274,15 @@ export default function Home() {
       <Section background="warm-white" padding="lg">
         <Container>
           <div className="relative">
-            <Image
-              src="/images/main_banner.png"
-              alt="30分の無料カウンセリング"
-              width={1200}
-              height={300}
-              className="w-full h-auto rounded-2xl"
-            />
+            <Link href="/contact">
+              <Image
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリング"
+                width={1200}
+                height={300}
+                className="w-full h-auto rounded-2xl cursor-pointer hover:opacity-90 transition-opacity"
+              />
+            </Link>
           </div>
         </Container>
       </Section>

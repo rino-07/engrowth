@@ -9,6 +9,7 @@ import Container from './Container';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  const [isMobileCoursesOpen, setIsMobileCoursesOpen] = useState(false);
 
   const navigation = [
     { name: 'Engrowthの特徴', href: '/about' },
@@ -182,13 +183,93 @@ const Header: React.FC = () => {
               >
                 Engrowthの特徴
               </Link>
-              <Link
-                href="/courses"
-                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                コース・料金
-              </Link>
+              
+              {/* モバイル用コース・料金プルダウン */}
+              <div className="ml-2">
+                <button
+                  type="button"
+                  className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                  onClick={() => setIsMobileCoursesOpen(!isMobileCoursesOpen)}
+                >
+                  コース・料金
+                  <svg
+                    className={`h-4 w-4 transition-transform duration-200 ${
+                      isMobileCoursesOpen ? 'transform rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                
+                {/* サブメニュー */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isMobileCoursesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="py-2 pl-4 space-y-1">
+                    <Link
+                      href="/courses"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsMobileCoursesOpen(false);
+                      }}
+                    >
+                      コース・料金一覧
+                    </Link>
+                    <Link
+                      href="/courses/business"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsMobileCoursesOpen(false);
+                      }}
+                    >
+                      ビジネスコース
+                    </Link>
+                    <Link
+                      href="/courses/study"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsMobileCoursesOpen(false);
+                      }}
+                    >
+                      学生コース
+                    </Link>
+                    <Link
+                      href="/courses/business-spot"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsMobileCoursesOpen(false);
+                      }}
+                    >
+                      ビジネススポットサービス
+                    </Link>
+                    <Link
+                      href="/courses/study-spot"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsMobileCoursesOpen(false);
+                      }}
+                    >
+                      学生スポットサービス
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
               <Link
                 href="/flow"
                 className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"

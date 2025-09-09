@@ -77,3 +77,4 @@ export const pricingPlans: PricingPlan[] = [
     buttonText: "このプランを選ぶ"
   }
 ];
+

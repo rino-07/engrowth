@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -171,13 +172,15 @@ export default function BusinessSpotServicePage() {
           {/* カウンセリングバナー */}
           <div className="relative mb-16">
             <div className="max-w-4xl mx-auto">
-              <Image
-                src="/images/main_banner.png"
-                alt="30分の無料カウンセリングでご相談ください"
-                width={1200}
-                height={400}
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
+              <Link href="/contact">
+                <Image
+                  src="/images/main_banner.png"
+                  alt="30分の無料カウンセリングでご相談ください"
+                  width={1200}
+                  height={400}
+                  className="w-full h-auto rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                />
+              </Link>
             </div>
           </div>
         </Container>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
@@ -74,13 +75,15 @@ export default function AboutPage() {
 
           {/* 無料カウンセリングバナー */}
           <div className="relative mb-20">
-            <Image
-              src="/images/main_banner.png"
-              alt="30分の無料カウンセリング"
-              width={1200}
-              height={300}
-              className="w-full h-auto rounded-2xl"
-            />
+            <Link href="/contact">
+              <Image
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリング"
+                width={1200}
+                height={300}
+                className="w-full h-auto rounded-2xl cursor-pointer hover:opacity-90 transition-opacity"
+              />
+            </Link>
           </div>
         </Container>
       </Section>
@@ -140,9 +143,11 @@ export default function AboutPage() {
             </div>
             
             <div className="mb-12">
-              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-                ご支援希望者の方へ
-              </Button>
+              <Link href="/supporters">
+                <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
+                  ご支援希望者の方へ
+                </Button>
+              </Link>
             </div>
           </div>
         </Container>
@@ -288,21 +293,27 @@ export default function AboutPage() {
 
             {/* 3択CTA */}
             <div className="flex flex-col md:flex-row gap-6 justify-center max-w-4xl mx-auto">
-              <Button variant="secondary" size="lg" className="flex-1 max-w-xs">
-                オブザーバー
-                <br />
-                <span className="text-sm font-normal">（支援者として参加）</span>
-              </Button>
-              <Button variant="secondary" size="lg" className="flex-1 max-w-xs">
-                パートナー
-                <br />
-                <span className="text-sm font-normal">（継続支援のご相談）</span>
-              </Button>
-              <Button variant="secondary" size="lg" className="flex-1 max-w-xs">
-                コンサルタント
-                <br />
-                <span className="text-sm font-normal">（指導者として参加）</span>
-              </Button>
+              <Link href="/contact" className="flex-1 max-w-xs">
+                <Button variant="secondary" size="lg" className="w-full">
+                  オブザーバー
+                  <br />
+                  <span className="text-sm font-normal">（支援者として参加）</span>
+                </Button>
+              </Link>
+              <Link href="/contact" className="flex-1 max-w-xs">
+                <Button variant="secondary" size="lg" className="w-full">
+                  パートナー
+                  <br />
+                  <span className="text-sm font-normal">（継続支援のご相談）</span>
+                </Button>
+              </Link>
+              <Link href="/contact" className="flex-1 max-w-xs">
+                <Button variant="secondary" size="lg" className="w-full">
+                  コンサルタント
+                  <br />
+                  <span className="text-sm font-normal">（指導者として参加）</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </Container>

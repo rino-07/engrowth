@@ -29,10 +29,9 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
     ? pricingPlans.filter(plan => planIds.includes(plan.id))
     : pricingPlans;
 
-  const handlePlanSelect = (planId: string) => {
-    console.log(`Selected plan: ${planId}`);
-    // ここに料金プラン選択時の処理を実装
-    // 例：お申し込みページへの遷移、モーダル表示など
+  const handlePlanSelect = () => {
+    // お問い合わせページにリダイレクト
+    window.location.href = '/contact';
   };
 
   return (
@@ -62,7 +61,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                 features={plan.features}
                 buttonText={plan.buttonText}
                 isDisabled={plan.isDisabled}
-                onButtonClick={() => handlePlanSelect(plan.id)}
+                onButtonClick={handlePlanSelect}
               />
             </div>
           ))}
