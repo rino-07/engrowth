@@ -29,9 +29,9 @@ const Footer: React.FC = () => {
     <footer className="bg-deep-navy text-white">
       <Container>
         <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {/* Logo and Description */}
-            <div className="lg:col-span-1">
+            <div className="xl:col-span-1">
               <Link href="/" className="inline-block mb-4">
                 <span className="text-2xl font-bold text-white font-serif">
                   Engrowth

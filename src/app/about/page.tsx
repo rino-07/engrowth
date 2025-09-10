@@ -4,6 +4,7 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
+import { FaUserTie, FaFlask, FaUsers } from 'react-icons/fa';
 
 export const metadata = {
   title: 'Engrowthの特徴 - オーダーメイド英語学習で留学生の経済問題を解決',
@@ -15,10 +16,20 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* 1. Engrowthの特徴 - メインセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
+      <Section background="warm-white" padding="xl" className="relative overflow-hidden">
+        {/* 背景画像 */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/about/about-hero.png"
+            alt="背景画像"
+            fill
+            className="object-cover opacity-10"
+            priority
+          />
+        </div>
+        <Container className="relative z-10">
           <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h1">
+            <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h1">
               Engrowthの特徴
             </Typography>
             <Typography variant="body-lg" className="text-gray max-w-2xl mx-auto">
@@ -29,45 +40,39 @@ export default function AboutPage() {
           {/* 3つの特徴 */}
           <div className="space-y-8 max-w-4xl mx-auto mb-16">
             <div className="flex items-start gap-6">
-              <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm font-bold">●</span>
-              </div>
+              <FaUserTie className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
               <div>
-                <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
                   コンサルタントも以前は英語が話せなかった日本人
-                </div>
-                <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
+                </Typography>
+                <Typography variant="body-lg" className="text-dark-gray">
                   日本人だからこそわかる、つまずくポイントを克服しながら学習を進めます。
-                </div>
+                </Typography>
               </div>
             </div>
 
             <div className="flex items-start gap-6">
-              <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm font-bold">●</span>
-              </div>
+              <FaFlask className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
               <div>
-                <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
                   脳科学や神経言語学などの科学的根拠に基づいたプログラム
-                </div>
-                <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
+                </Typography>
+                <Typography variant="body-lg" className="text-dark-gray">
                   英語が苦手なあなたでも、着実な英語力の向上を実現します。
-                </div>
+                </Typography>
               </div>
             </div>
 
             <div className="flex items-start gap-6">
-              <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm font-bold">●</span>
-              </div>
+              <FaUsers className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
               <div>
-                <div className="text-dark-gray font-bold mb-2" style={{ fontSize: '28px', lineHeight: '1.4' }}>
+                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
                   コンサルタントは全員、海外留学経験者
-                </div>
-                <div className="text-dark-gray" style={{ fontSize: '24px', lineHeight: '1.5' }}>
+                </Typography>
+                <Typography variant="body-lg" className="text-dark-gray">
                   日本の学校で習う、ネイティブが使わない英語は除外し、
                   現地で使える生きた英語を身に付けることができます。
-                </div>
+                </Typography>
               </div>
             </div>
           </div>
@@ -80,7 +85,7 @@ export default function AboutPage() {
                 alt="30分の無料カウンセリング"
                 width={1200}
                 height={300}
-                className="w-full h-auto rounded-2xl cursor-pointer hover:opacity-90 transition-opacity"
+                className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
               />
             </Link>
           </div>
@@ -96,31 +101,29 @@ export default function AboutPage() {
             </Typography>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-12">
-              <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
-                Engrowthでは受講者をパートナーと呼んでいます。
-                <br />
-                なぜなら受講者の方の英語力が向上することは、Engrowthの目指す世界に一歩近づくことであり、コンサルタント自身の夢を叶える一助になるからです。
-              </Typography>
-
-              <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
-                私たちは、すべてのステークホルダーがWin-Winの関係で結ばれることを信念とし、共に日本の未来を切り拓いていく存在でありたいと考えています。
-              </Typography>
-            </div>
-
-            {/* エコシステム図 */}
-            <div className="text-center mb-16">
-              <Typography variant="body-sm" className="text-gray mb-4">
-                まずは図（※）
-              </Typography>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* 左側: 説明テキスト */}
               <div>
+                <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
+                  Engrowthでは受講者をパートナーと呼んでいます。
+                  <br />
+                  なぜなら受講者の方の英語力が向上することは、Engrowthの目指す世界に一歩近づくことであり、コンサルタント自身の夢を叶える一助になるからです。
+                </Typography>
+
+                <Typography variant="body-md" className="text-dark-gray leading-relaxed">
+                  私たちは、すべてのステークホルダーがWin-Winの関係で結ばれることを信念とし、共に日本の未来を切り拓いていく存在でありたいと考えています。
+                </Typography>
+              </div>
+
+              {/* 右側: エコシステム図 */}
+              <div className="flex justify-center">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/top/top08.png"
+                  src="/images/drive-download-20250908T014101Z-1-001/about/eco01.png"
                   alt="Engrowthエコシステム図"
                   width={600}
                   height={400}
-                  className="w-full max-w-lg mx-auto h-auto"
+                  className="w-full max-w-lg h-auto"
                 />
               </div>
             </div>
@@ -173,7 +176,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl text-dark-gray mb-2">
-                    専任コンサルタントは全員、留学経験のある日本人
+                    専属コンサルタントは全員、留学経験のある日本人
                   </h3>
                   <p className="text-dark-gray leading-relaxed mb-2">
                     日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在
@@ -242,79 +245,76 @@ export default function AboutPage() {
               あなたもEngrowthの一員になりませんか？
             </Typography>
 
-            {/* エコシステム図 - 三角形配置 */}
-            <div className="max-w-2xl mx-auto mb-16">
+            {/* エコシステム図とボタン */}
+            <div className="max-w-4xl mx-auto mb-16">
               <div className="relative">
-                <svg viewBox="0 0 400 300" className="w-full h-auto">
-                  {/* 三角形の頂点: 学習者 */}
-                  <g>
-                    <circle cx="200" cy="50" r="60" fill="#f5f5f5" stroke="#d30306" strokeWidth="2"/>
-                    <text x="200" y="45" textAnchor="middle" className="text-sm font-bold fill-current text-dark-gray">学習者</text>
-                    <text x="200" y="60" textAnchor="middle" className="text-xs fill-current text-gray">(留学生・社会人)</text>
-                  </g>
+                <Image
+                  src="/images/drive-download-20250908T014101Z-1-001/about/eco02.png"
+                  alt="Engrowthエコシステム参加図"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                />
+                
+                {/* ボタンを画像上に絶対配置 - レスポンシブ対応 */}
+                <div className="absolute inset-0">
+                  {/* パートナー（受講者）として参加ボタン */}
+                  <a 
+                    href="http://localhost:3000/contact#:~:text=Engrowth%E3%81%AE-,LINE,-２%E3%81%AB%E7%9B%B8%E8%AB%87%E3%81%99%E3%82%8B"
+                    className="absolute"
+                    style={{
+                      top: '31.5%',
+                      left: '64%',
+                      transform: 'translate(-50%, -50%)'
+                    }}
+                  >
+                    <button
+                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
+                      style={{ backgroundColor: '#db3633' }}
+                    >
+                      参加
+                    </button>
+                  </a>
 
-                  {/* 左下: 企業・支援者 */}
-                  <g>
-                    <circle cx="100" cy="200" r="60" fill="#f5f5f5" stroke="#d30306" strokeWidth="2"/>
-                    <text x="100" y="195" textAnchor="middle" className="text-sm font-bold fill-current text-dark-gray">企業</text>
-                    <text x="100" y="210" textAnchor="middle" className="text-xs fill-current text-gray">(支援者)</text>
-                  </g>
+                  {/* サポーター（支援者）として参加ボタン */}
+                  <a 
+                    href="http://localhost:3000/contact#:~:text=info%40-,engrowth,-.jp"
+                    className="absolute"
+                    style={{
+                      top: '76%',
+                      left: '35%',
+                      transform: 'translate(-50%, -50%)'
+                    }}
+                  >
+                    <button
+                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
+                      style={{ backgroundColor: '#db3633' }}
+                    >
+                      参加
+                    </button>
+                  </a>
 
-                  {/* 右下: コンサルタント */}
-                  <g>
-                    <circle cx="300" cy="200" r="60" fill="#f5f5f5" stroke="#d30306" strokeWidth="2"/>
-                    <text x="300" y="195" textAnchor="middle" className="text-sm font-bold fill-current text-dark-gray">コンサルタント</text>
-                    <text x="300" y="210" textAnchor="middle" className="text-xs fill-current text-gray">(指導者)</text>
-                  </g>
-
-                  {/* 円形の接続線 */}
-                  {/* 学習者から企業への円弧 */}
-                  <path d="M 160 100 A 80 80 0 0 0 140 160" stroke="#d30306" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)"/>
-                  
-                  {/* 企業からコンサルタントへの円弧 */}
-                  <path d="M 160 180 A 100 100 0 0 0 240 180" stroke="#d30306" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)"/>
-                  
-                  {/* コンサルタントから学習者への円弧 */}
-                  <path d="M 260 160 A 80 80 0 0 0 240 100" stroke="#d30306" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)"/>
-                  
-                  {/* 中央に循環を示す円 */}
-                  <circle cx="200" cy="140" r="25" fill="none" stroke="#d30306" strokeWidth="1" strokeDasharray="5,5" opacity="0.5"/>
-                  <text x="200" y="145" textAnchor="middle" className="text-xs fill-current text-brand-red font-bold">循環</text>
-
-                  {/* 矢印マーカー定義 */}
-                  <defs>
-                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                      <polygon points="0 0, 10 3.5, 0 7" fill="#d30306"/>
-                    </marker>
-                  </defs>
-                </svg>
+                  {/* コンサルタントとして参加ボタン */}
+                  <a 
+                    href="http://localhost:3000/contact#:~:text=info%40-,engrowth,-.jp"
+                    className="absolute"
+                    style={{
+                      top: '76%',
+                      left: '90%',
+                      transform: 'translate(-50%, -50%)'
+                    }}
+                  >
+                    <button
+                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
+                      style={{ backgroundColor: '#db3633' }}
+                    >
+                      参加
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* 3択CTA */}
-            <div className="flex flex-col md:flex-row gap-6 justify-center max-w-4xl mx-auto">
-              <Link href="/contact" className="flex-1 max-w-xs">
-                <Button variant="secondary" size="lg" className="w-full">
-                  オブザーバー
-                  <br />
-                  <span className="text-sm font-normal">（支援者として参加）</span>
-                </Button>
-              </Link>
-              <Link href="/contact" className="flex-1 max-w-xs">
-                <Button variant="secondary" size="lg" className="w-full">
-                  パートナー
-                  <br />
-                  <span className="text-sm font-normal">（継続支援のご相談）</span>
-                </Button>
-              </Link>
-              <Link href="/contact" className="flex-1 max-w-xs">
-                <Button variant="secondary" size="lg" className="w-full">
-                  コンサルタント
-                  <br />
-                  <span className="text-sm font-normal">（指導者として参加）</span>
-                </Button>
-              </Link>
-            </div>
           </div>
         </Container>
       </Section>

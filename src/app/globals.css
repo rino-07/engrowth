@@ -75,74 +75,83 @@ body {
   line-height: 1.7;
 }
 
-/* Typography Utilities */
+/* Responsive Typography Utilities */
 .heading-xl {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  /* H1: Mobile 20-28px → PC 32-48px */
+  font-size: clamp(1.25rem, 4vw, 3rem); /* 20px → 48px */
   font-weight: 700;
   font-family: var(--font-serif);
   line-height: 1.2;
 }
 
 .heading-lg {
-  font-size: clamp(2rem, 4vw, 3rem);
+  /* H2: Mobile 18-22px → PC 24-36px */
+  font-size: clamp(1.125rem, 3.5vw, 2.25rem); /* 18px → 36px */
   font-weight: 600;
   font-family: var(--font-serif);
   line-height: 1.3;
 }
 
 .heading-md {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  /* H3: Mobile 16-18px → PC 20-28px */
+  font-size: clamp(1rem, 2.5vw, 1.75rem); /* 16px → 28px */
   font-weight: 600;
   font-family: var(--font-serif);
   line-height: 1.4;
 }
 
 .heading-sm {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  /* H4: Mobile 16px → PC 18-24px */
+  font-size: clamp(1rem, 2vw, 1.5rem); /* 16px → 24px */
   font-weight: 500;
   font-family: var(--font-serif);
   line-height: 1.4;
 }
 
 .body-lg {
-  font-size: 1.125rem;
+  /* 本文大: Mobile 16px → PC 18px */
+  font-size: clamp(1rem, 1.5vw, 1.125rem); /* 16px → 18px */
   line-height: 1.8;
   font-family: var(--font-sans);
 }
 
 .body-md {
-  font-size: 1rem;
+  /* 本文標準: 常に16px */
+  font-size: 1rem; /* 16px固定 */
   line-height: 1.7;
   font-family: var(--font-sans);
 }
 
 .body-sm {
-  font-size: 0.875rem;
+  /* 本文小: Mobile 14px → PC 14px */
+  font-size: 0.875rem; /* 14px固定 */
   line-height: 1.6;
   font-family: var(--font-sans);
 }
 
 .body-xs {
-  font-size: 0.75rem;
+  /* 補足・注釈: Mobile 12px → PC 13px */
+  font-size: clamp(0.75rem, 1vw, 0.8125rem); /* 12px → 13px */
   line-height: 1.5;
   font-family: var(--font-sans);
 }
 
 .caption {
-  font-size: 0.75rem;
+  /* キャプション: 固定12px */
+  font-size: 0.75rem; /* 12px固定 */
   line-height: 1.5;
   font-family: var(--font-sans);
 }
 
 /* Button Styles */
 .btn-primary {
-  background: linear-gradient(135deg, var(--action-green) 0%, #0a9d47 100%);
+  background: linear-gradient(135deg, var(--brand-red) 0%, #b8020d 100%);
   color: white;
   padding: 0.875rem 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(10, 143, 66, 0.25);
+  box-shadow: 0 4px 14px rgba(211, 3, 6, 0.25);
   border: none;
   cursor: pointer;
   font-family: var(--font-sans);
@@ -150,7 +159,7 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(10, 143, 66, 0.35);
+  box-shadow: 0 6px 20px rgba(211, 3, 6, 0.35);
 }
 
 .btn-secondary {
@@ -200,6 +209,75 @@ body {
   height: 4px;
   background: linear-gradient(90deg, var(--soft-gold) 0%, #d4b76a 100%);
   border-radius: 1rem 1rem 0 0;
+}
+
+/* Responsive Spacing Utilities */
+.section-spacing {
+  /* セクション間余白: Mobile 32-48px → PC 64-96px */
+  padding-top: clamp(2rem, 4vw, 6rem); /* 32px → 96px */
+  padding-bottom: clamp(2rem, 4vw, 6rem); /* 32px → 96px */
+}
+
+.section-spacing-sm {
+  /* 小セクション余白: Mobile 24-32px → PC 48-64px */
+  padding-top: clamp(1.5rem, 3vw, 4rem); /* 24px → 64px */
+  padding-bottom: clamp(1.5rem, 3vw, 4rem); /* 24px → 64px */
+}
+
+.hero-spacing {
+  /* ヒーローセクション余白: Mobile 48-64px → PC 80-96px */
+  padding-top: clamp(3rem, 5vw, 6rem); /* 48px → 96px */
+  padding-bottom: clamp(3rem, 5vw, 6rem); /* 48px → 96px */
+}
+
+/* Horizontal Scroll Cards for Mobile */
+.cards-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 0 1rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.cards-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.cards-scroll-item {
+  flex: 0 0 280px; /* 固定幅280px */
+  scroll-snap-align: center;
+}
+
+/* Mobile: 横スクロール、PC: グリッド表示 */
+@media (max-width: 1023px) {
+  .cards-grid-responsive {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 0 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .cards-grid-responsive::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cards-grid-responsive > * {
+    flex: 0 0 280px;
+    scroll-snap-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
 }
 
 /* Animation Utilities */
@@ -253,4 +331,22 @@ body {
   outline: 2px solid var(--action-green);
   outline-offset: 2px;
   border-radius: 0.25rem;
+}
+
+/* Section Title with Underbar */
+.section-title-with-underbar {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-with-underbar::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 0.25rem;
+  background: linear-gradient(90deg, var(--brand-red) 0%, #b8020d 100%);
+  border-radius: 0.125rem;
 }

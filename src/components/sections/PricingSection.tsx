@@ -7,6 +7,17 @@ import Container from '../layout/Container';
 import Section from '../layout/Section';
 import { pricingPlans } from '@/types/pricing';
 
+function FullBleed1440({ children }: { children: React.ReactNode }) {
+  // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
+  return (
+    <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+      <div className="mx-auto max-w-[1440px] px-6">
+        {children}
+      </div>
+    </section>
+  );
+}
+
 interface PricingSectionProps {
   /** セクションタイトル */
   title?: string;
@@ -35,8 +46,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
   }, []);
 
   return (
-    <Section background={background} padding="xl">
-      <Container>
+    <Section background={background} padding="xl" className="overflow-visible">
+      <FullBleed1440>
         <div className="text-center mb-16">
           <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h2">
             {title}
@@ -48,7 +59,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <div className="cards-grid-responsive">
           {displayPlans.map((plan) => (
             <div key={plan.id} className="flex justify-center">
               <PricingCard
@@ -75,7 +86,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
             ※ 長期プランほどお得になっており、継続的な学習をサポートします。
           </Typography>
         </div>
-      </Container>
+      </FullBleed1440>
     </Section>
   );
 };

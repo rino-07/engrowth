@@ -3,7 +3,22 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import { PricingSection } from '@/components/sections/PricingSection';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FaUserTie, FaFlask, FaUsers } from 'react-icons/fa';
+import React from 'react';
+
+function FullBleed1440({ children }: { children: React.ReactNode }) {
+  // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
+  return (
+    <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+      <div className="mx-auto max-w-[1440px] px-6">
+        {children}
+      </div>
+    </section>
+  );
+}
 // import { getCourseById } from '@/data/courses';
 
 export const metadata = {
@@ -35,265 +50,360 @@ export default function StudentCoursePage() {
           </div>
 
           {/* 3つの特徴カード */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
               <Image
-                src="/images/student-feature-1.jpg"
-                alt="学生特化カリキュラム"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-short-study.jpg"
+                alt="５分から１０分の短時間学習"
                 width={200}
                 height={150}
                 className="w-full h-32 object-cover rounded-lg mb-4"
               />
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-white text-sm font-bold">1</span>
               </div>
-              <Typography variant="body-sm" className="text-dark-gray font-bold mb-2">
-                学生特化カリキュラム
+              <Typography variant="body-sm" className="text-dark-gray font-bold mb-2 font-serif">
+                ５分から１０分の短時間学習
               </Typography>
               <Typography variant="body-xs" className="text-gray">
-                留学準備・就活対策に
+                通学時間や昼休みなど、
                 <br />
-                特化した学習内容で
+                忙しいスケジュールの中でも
                 <br />
-                確実なスキルアップ
+                効率的な学習が可能
               </Typography>
             </Card>
 
             <Card className="text-center p-6">
               <Image
-                src="/images/student-feature-2.jpg"
-                alt="経済支援制度"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-scientific-method.jpg"
+                alt="科学的メソッド"
                 width={200}
                 height={150}
                 className="w-full h-32 object-cover rounded-lg mb-4"
               />
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-white text-sm font-bold">2</span>
               </div>
-              <Typography variant="body-sm" className="text-dark-gray font-bold mb-2">
-                経済支援制度
+              <Typography variant="body-sm" className="text-dark-gray font-bold mb-2 font-serif">
+                科学的メソッド
               </Typography>
               <Typography variant="body-xs" className="text-gray">
-                学費負担を軽減する
+                脳科学に基づいた学習方法で、
                 <br />
-                独自の支援プログラムで
-                <br />
-                安心して学習継続
+                効率的な記憶定着を実現
               </Typography>
             </Card>
 
             <Card className="text-center p-6">
               <Image
-                src="/images/student-feature-3.jpg"
-                alt="留学・就活サポート"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-line-support.jpg"
+                alt="LINEでの伴走支援"
                 width={200}
                 height={150}
                 className="w-full h-32 object-cover rounded-lg mb-4"
               />
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-white text-sm font-bold">3</span>
               </div>
-              <Typography variant="body-sm" className="text-dark-gray font-bold mb-2">
-                留学・就活サポート
+              <Typography variant="body-sm" className="text-dark-gray font-bold mb-2 font-serif">
+                LINEでの伴走支援
               </Typography>
               <Typography variant="body-xs" className="text-gray">
-                エッセイ添削・面接対策
+                24時間いつでも質問可能、
                 <br />
-                など実践的な支援で
+                継続をサポートする
                 <br />
-                目標達成をサポート
+                パーソナルコーチング
               </Typography>
             </Card>
           </div>
         </Container>
       </Section>
 
-      {/* 2. Engrowthが学生に選ばれる理由 */}
-      <Section background="light-gray" padding="xl">
+      {/* 2. エッセイ添削し放題セクション */}
+      <Section background="brand-red" padding="xl">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              Engrowthが学生に選ばれる理由
+          <div className="text-center">
+            <Typography variant="heading-lg" className="text-white mb-4" as="h2">
+              エッセイ添削し放題
+            </Typography>
+            <Typography variant="body-lg" className="text-white max-w-4xl mx-auto leading-relaxed">
+              留学前でも留学中でも最重要となるエッセイの添削及びアドバイスを頼み放題！！
             </Typography>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-            {/* 理由1 */}
-            <Card className="p-8">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-sm font-bold">●</span>
-                </div>
-                <Typography variant="heading-sm" className="text-dark-gray">
-                  経済的負担を軽減
-                </Typography>
-              </div>
-              <Image
-                src="/images/student-support-1.jpg"
-                alt="経済支援"
-                width={300}
-                height={200}
-                className="w-full h-40 object-cover rounded-lg mb-4"
-              />
-              <Typography variant="body-sm" className="text-gray leading-relaxed">
-                学費・生活費の心配で留学を
-                <br />
-                諦める必要はありません。
-                <br />
-                Engrowthの独自支援制度により、
-                <br />
-                経済的負担を大幅に軽減。
-                <br />
-                <br />
-                学習に集中できる環境を
-                <br />
-                提供し、あなたの夢の実現を
-                <br />
-                全力でサポートします。
-              </Typography>
-            </Card>
-
-            {/* 理由2 */}
-            <Card className="p-8">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-sm font-bold">●</span>
-                </div>
-                <Typography variant="heading-sm" className="text-dark-gray">
-                  留学・就活に特化
-                </Typography>
-              </div>
-              <Image
-                src="/images/student-support-2.jpg"
-                alt="留学・就活対策"
-                width={300}
-                height={200}
-                className="w-full h-40 object-cover rounded-lg mb-4"
-              />
-              <Typography variant="body-sm" className="text-gray leading-relaxed">
-                TOEFL・IELTS対策から
-                <br />
-                エッセイ添削、面接練習まで
-                <br />
-                留学・就活に必要な全てを
-                <br />
-                カバーします。
-                <br />
-                <br />
-                実際に留学を経験した
-                <br />
-                日本人コンサルタントが、
-                <br />
-                実体験に基づくアドバイスを
-                <br />
-                提供します。
-              </Typography>
-            </Card>
-
-            {/* 理由3 */}
-            <Card className="p-8">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-sm font-bold">●</span>
-                </div>
-                <Typography variant="heading-sm" className="text-dark-gray">
-                  継続しやすい学習設計
-                </Typography>
-              </div>
-              <Image
-                src="/images/student-support-3.jpg"
-                alt="継続学習"
-                width={300}
-                height={200}
-                className="w-full h-40 object-cover rounded-lg mb-4"
-              />
-              <Typography variant="body-sm" className="text-gray leading-relaxed">
-                学業・アルバイトとの両立が
-                <br />
-                可能な柔軟なスケジュール。
-                <br />
-                <br />
-                短時間集中学習と定期的な
-                <br />
-                進捗確認により、無理なく
-                <br />
-                継続できる学習リズムを
-                <br />
-                確立します。
-                <br />
-                <br />
-                同じ目標を持つ仲間との
-                <br />
-                交流機会も提供します。
-              </Typography>
-            </Card>
-          </div>
         </Container>
       </Section>
 
-      {/* 3. 料金 */}
+      {/* 3. 留学の勧めセクション */}
       <Section background="warm-white" padding="xl">
         <Container>
           <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              料金
+            <Typography variant="heading-lg" className="text-dark-gray mb-8 section-title-with-underbar" as="h2">
+              留学について
             </Typography>
-            <Typography variant="body-lg" className="text-gray mb-8">
-              学生向け特別価格 + 経済支援制度
+            <Typography variant="body-lg" className="text-gray">
+              あなたに合った留学のカタチを<br />
+              サービスの詳細はこちら
             </Typography>
           </div>
 
           <div className="max-w-4xl mx-auto mb-16">
-            <Image
-              src="/images/student-pricing-table.jpg"
-              alt="学生コース料金表"
-              width={800}
-              height={400}
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
+            <div className="text-center mb-12">
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
+                「英語に自信がないから留学は無理」<br />
+                そう思っていませんか？
+              </Typography>
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
+                Engrowthでは、<strong>サマーキャンプ</strong>、<strong>志望校選び&出願サポート</strong>、<strong>現地校見学サポート</strong>を一気通貫で行えることで、英語学習から留学まで完全サポートしています。
+              </Typography>
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
+                英語の不安から留学に踏み出せないあなたでも、Engrowthで英語を習得すれば、留学への勇気が得られます。
+              </Typography>
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
+                留学経験によって貴重な価値観が得られることを、<strong>Engrowthコンサルタントは全員留学経験者</strong>なので知っています。
+              </Typography>
+              <Typography variant="body-lg" className="text-brand-red font-bold leading-relaxed">
+                あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
+              </Typography>
+            </div>
+                </div>
 
-          {/* 料金表（テキスト版） */}
-          <div className="overflow-x-auto mb-12">
-            <table className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
-              <thead>
-                <tr className="bg-blue-50">
-                  <th className="px-6 py-4 text-left"></th>
-                  <th className="px-6 py-4 text-center font-bold">3ヶ月</th>
-                  <th className="px-6 py-4 text-center font-bold">6ヶ月</th>
-                  <th className="px-6 py-4 text-center font-bold">12ヶ月</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b">
-                  <td className="px-6 py-4 font-bold">学生コース</td>
-                  <td className="px-6 py-4 text-center">¥35,000</td>
-                  <td className="px-6 py-4 text-center">
-                    ¥65,000
-                    <div className="text-xs text-green-600">10%割引適用</div>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    ¥110,000
-                    <div className="text-xs text-green-600">20%割引適用</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div className="text-center mb-16">
+            <Typography variant="heading-lg" className="text-dark-gray mb-8">
+              こんな不安はありませんか？
+            </Typography>
+            <Typography variant="body-lg" className="text-gray mb-12">
+              多くの学生が抱える英語や留学への不安
+                </Typography>
+              </div>
 
-          <div className="text-center mb-8">
-            <div className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg">
-              <Typography variant="heading-sm" className="text-white">
-                学生なら入会金0円 + 経済支援制度あり
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="space-y-6 text-left mb-12">
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed flex items-start">
+                <span className="text-brand-red font-bold mr-3">•</span>
+                英語に自信がなくて留学に消極的になってしまう
+              </Typography>
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed flex items-start">
+                <span className="text-brand-red font-bold mr-3">•</span>
+                留学したいけど、何から始めればいいかわからない
+              </Typography>
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed flex items-start">
+                <span className="text-brand-red font-bold mr-3">•</span>
+                海外で生活することへの漠然とした不安がある
+              </Typography>
+            </div>
+            
+            <div className="text-center bg-warm-white rounded-lg p-8">
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4">
+                <strong className="text-brand-red">Engrowthで英語を学べば自信がつき、留学の勇気が得られ、</strong>
+              </Typography>
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4">
+                <strong className="text-brand-red">留学によって広い世界から価値観を得られ、</strong>
+              </Typography>
+              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4">
+                <strong className="text-brand-red">より魅力的な人間へと成長し、</strong>
+              </Typography>
+              <Typography variant="body-lg" className="text-brand-red font-bold leading-relaxed">
+                より魅力的な人たちとの出会いと未来が得られる
               </Typography>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* 4. あなたの英語力が、未来への扉を開く */}
+      {/* 3. Engrowthが選ばれる理由 */}
       <Section background="light-gray" padding="xl">
         <Container>
+          <div className="max-w-6xl mx-auto">
+            {/* タイトル - 1カラム全幅 */}
+            <div className="text-center mb-16">
+              <Typography variant="heading-lg" className="text-dark-gray section-title-with-underbar" as="h2">
+                Engrowthが選ばれる理由
+              </Typography>
+            </div>
+
+            {/* Point番号と本文を同じブロック内にflexレイアウト */}
+            <div className="space-y-12">
+              {/* Point 1 */}
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">Point 1</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-dark-gray mb-2">
+                    専属コンサルタントは全員、留学経験のある日本人
+                  </h3>
+                  <p className="text-dark-gray leading-relaxed mb-2">
+                    日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在
+                  </p>
+                  <p className="text-dark-gray leading-relaxed">
+                    外国人講師では理解して理解できない、日本人特有の英語学習の悩み。
+                    <br />
+                    なぜ「This」と言えるのに、なぜ「It」と「Is」を含む文章できないのか、
+                    <br />
+                    なぜ過去形を忘れてしまうのか——————。
+                    <br /><br />
+                    あなたと同じ道を歩んだ日本人コンサルタントだからこそ、的確に把握し、効果的な解決策を提示できます。
+                  </p>
+                </div>
+              </div>
+
+              {/* Point 2 */}
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">Point 2</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-dark-gray mb-2">科学的根拠に基づく学習プログラム</h3>
+                  <p className="text-dark-gray leading-relaxed mb-2">
+                    感覚や経験論に頼らない、データドリブンな学習設計
+                  </p>
+                  <p className="text-dark-gray leading-relaxed">
+                    各人の理解度に合わせてプログラムではなく、第二言語習得理論、認知言語学、脳科学などの最新研究に基づいた学習方法を採用。
+                <br />
+                    脳のメカニズムに沿った効果的で効率的な英語学習を実現します。
+                    <br /><br />
+                    忙しい毎日でも、社会人でも着実な成果が期待できるように設計されています。
+                  </p>
+                </div>
+              </div>
+
+              {/* Point 3 */}
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">Point 3</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-dark-gray mb-2">1人ひとりに合わせたオーダーメイド学習設計</h3>
+                  <p className="text-dark-gray leading-relaxed mb-2">
+                    あなたの目標・レベル・ライフスタイルに合わせた最適なスケジュール
+                  </p>
+                  <p className="text-dark-gray leading-relaxed">
+                    「TOEFL100点を目指します」と「内定先企業で活躍したい」では、必要なギャップが異なります。
+                    <br /><br />
+                    Engrowthでは初回カウンセリングで詳細分析を行い、目標達成までの最適なルートを設計。
+                <br />
+                    日々の学習進捗度、運営度での中間調整により、常に最適な学習を維持できます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 3. 料金 */}
+      <Section background="white" padding="xl">
+        <Container>
+          <div className="text-center mb-16">
+            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h2">
+              料金
+            </Typography>
+            <Typography variant="body-lg" className="text-gray-600 max-w-3xl mx-auto">
+              学生向け特別価格 + 経済支援制度
+            </Typography>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[1440px] mx-auto">
+            {/* 1ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  1ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  ¥1,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-4">
+                  基本プラン
+                </Typography>
+                <Button variant="secondary" size="sm" className="w-full" disabled>
+                  無料お試し
+                </Button>
+              </Card>
+            </div>
+
+            {/* 3ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  3ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  ¥4,980
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 ¥1,660
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-4">
+                  3ヶ月集中プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+          </div>
+
+            {/* 6ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-brand-red bg-gradient-to-b from-red-50 to-white transition-all duration-300 w-full max-w-sm relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold">
+                    人気
+                  </span>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray mb-2 mt-2">
+                  6ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  ¥9,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 ¥1,580
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4">
+                  約5%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-4">
+                  6ヶ月継続プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+          </div>
+
+            {/* 12ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  12ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  ¥17,980
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 ¥1,498
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4">
+                  約10%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-4">
+                  12ヶ月完全サポートプラン
+              </Typography>
+                <Button variant="primary" size="sm" className="w-full">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 4. あなたの英語力が、未来への扉を開く */}
+      <Section background="light-gray" padding="xl" className="overflow-visible">
+        <FullBleed1440>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               あなたの英語力が、未来への扉を開く
@@ -305,18 +415,20 @@ export default function StudentCoursePage() {
             </Typography>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
+            <div className="cards-grid-responsive mb-16">
             {/* 留学成功 */}
-            <Card className="text-center p-6">
+            <article className="w-full min-w-0">
+              <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
+                <div className="flex-1">
               <Image
-                src="/images/study-abroad-success.jpg"
+                src="/images/spot-student-school-visit.jpg"
                 alt="留学成功"
-                width={200}
-                height={150}
-                className="w-full h-32 object-cover rounded-lg mb-4"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                留学成功
+                海外留学
               </Typography>
               <Typography variant="body-sm" className="text-gray">
                 海外大学・大学院への
@@ -327,19 +439,23 @@ export default function StudentCoursePage() {
                 <br />
                 深める機会を獲得
               </Typography>
-            </Card>
+                </div>
+              </div>
+            </article>
 
             {/* 就職活動での差別化 */}
-            <Card className="text-center p-6">
+            <article className="w-full min-w-0">
+              <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
+                <div className="flex-1">
               <Image
-                src="/images/job-hunting-advantage.jpg"
+                src="/images/business-differentiation.jpg"
                 alt="就職活動での差別化"
-                width={200}
-                height={150}
-                className="w-full h-32 object-cover rounded-lg mb-4"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                就職活動での差別化
+                就職活動での<br />差別化
               </Typography>
               <Typography variant="body-sm" className="text-gray">
                 グローバル企業への
@@ -350,19 +466,23 @@ export default function StudentCoursePage() {
                 <br />
                 内定獲得
               </Typography>
-            </Card>
+                </div>
+              </div>
+            </article>
 
             {/* キャリアの選択肢拡大 */}
-            <Card className="text-center p-6">
+            <article className="w-full min-w-0">
+              <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
+                <div className="flex-1">
               <Image
-                src="/images/career-expansion.jpg"
+                src="/images/business-growth-impact.jpg"
                 alt="キャリアの選択肢拡大"
-                width={200}
-                height={150}
-                className="w-full h-32 object-cover rounded-lg mb-4"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                キャリアの選択肢拡大
+                キャリアの<br />選択肢拡大
               </Typography>
               <Typography variant="body-sm" className="text-gray">
                 国内外問わず活躍できる
@@ -371,61 +491,49 @@ export default function StudentCoursePage() {
                 <br />
                 キャリアパスを選択可能
               </Typography>
-            </Card>
+                </div>
+              </div>
+            </article>
 
             {/* 国際的な人脈形成 */}
-            <Card className="text-center p-6">
+            <article className="w-full min-w-0">
+              <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
+                <div className="flex-1">
               <Image
-                src="/images/global-network.jpg"
+                src="/images/supporters-talent-discovery.jpg"
                 alt="国際的な人脈形成"
-                width={200}
-                height={150}
-                className="w-full h-32 object-cover rounded-lg mb-4"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                国際的な人脈形成
+                国際的な<br />人脈形成
               </Typography>
               <Typography variant="body-sm" className="text-gray">
-                世界中の人々とのネットワーク
+                    世界中の人々との<br />ネットワーク
                 <br />
-                構築により、将来のビジネス
-                <br />
-                チャンス創出
+                    構築により将来の<br />ビジネスチャンス創出
               </Typography>
-            </Card>
+                </div>
+              </div>
+            </article>
           </div>
 
           {/* 最終カウンセリングバナー */}
           <div className="relative">
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-              {/* 吹き出し */}
-              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full px-6 py-3 relative">
-                  <Typography variant="body-md" className="text-dark-gray font-bold">
-                    カンタン
-                    <br />
-                    2ステップ！
-                  </Typography>
-                  {/* 吹き出しの矢印 */}
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
-                </div>
-              </div>
-
-              <Typography variant="heading-md" className="text-white mb-6">
-                30分の無料カウンセリングでご相談ください
-              </Typography>
-
-              <div className="flex justify-center">
-                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
-                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
-                    無料
-                  </span>
-                  カウンセリングを予約する
-                </Button>
-              </div>
+            <div className="max-w-4xl mx-auto">
+              <Link href="/contact">
+                <Image
+                  src="/images/main.banner.png"
+                  alt="30分の無料カウンセリングでご相談ください"
+                  width={1200}
+                  height={400}
+                  className="w-full h-auto shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                />
+              </Link>
             </div>
           </div>
-        </Container>
+        </FullBleed1440>
       </Section>
     </div>
   );

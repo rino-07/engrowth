@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -100,6 +101,15 @@ export default function ContactPage() {
               </div>
             </Card>
           </div>
+
+          {/* よくある質問ページへのボタン */}
+          <div className="text-center">
+            <Link href="/faq">
+              <Button variant="secondary" size="lg">
+                よくある質問ページはこちら
+              </Button>
+            </Link>
+          </div>
         </Container>
       </Section>
 
@@ -131,32 +141,26 @@ export default function ContactPage() {
                 LINEでのご相談
               </Typography>
               <Typography variant="body-sm" className="text-gray mb-6">
-                すぐにちょっと聞きたい、といううちにもお気軽にご相談ください
+                すぐにちょっと聞きてみたい、という方におすすめです。
               </Typography>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-action-green rounded-full mt-2 flex-shrink-0"></div>
                   <Typography variant="body-sm" className="text-dark-gray text-left">
-                    回答は即座間時間
+                    即座に質問可能<br />登録時すぐにチャットでご相談いただけます。
                   </Typography>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-action-green rounded-full mt-2 flex-shrink-0"></div>
                   <Typography variant="body-sm" className="text-dark-gray text-left">
-                    気軽な問い合わせに最適
+                    気軽な相談に最適<br />簡単な質問や学習相談におすすめ
                   </Typography>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-action-green rounded-full mt-2 flex-shrink-0"></div>
                   <Typography variant="body-sm" className="text-dark-gray text-left">
-                    レスポンス速度
-                  </Typography>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-action-green rounded-full mt-2 flex-shrink-0"></div>
-                  <Typography variant="body-sm" className="text-dark-gray text-left">
-                    簡単な質問に最適
+                    面倒な手続き無し<br />友だち追加するだけで、簡単気軽に相談
                   </Typography>
                 </div>
               </div>
@@ -184,36 +188,30 @@ export default function ContactPage() {
                   className="w-8 h-8"
                 />
               </div>
-              <Typography variant="heading-md" className="text-dark-gray mb-4">
+              <Typography variant="heading-sm" className="text-dark-gray mb-4">
                 メールでのお問い合わせ
               </Typography>
               <Typography variant="body-sm" className="text-gray mb-6">
-                詳細な相談内容や資料のやり取りが必要な場合におすすめします
+                詳細な相談内容や資料のやり取りが必要な場合に最適です
               </Typography>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                   <Typography variant="body-sm" className="text-dark-gray text-left">
-                    詳細な相談内容
+                    詳細な相談<br />具体的なプラン相談・調整をご希望の方はこちら
                   </Typography>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                   <Typography variant="body-sm" className="text-dark-gray text-left">
-                    正式な問い合わせ
+                    正式な問い合わせ<br />法人企業様や正式な導入相談に最適
                   </Typography>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                   <Typography variant="body-sm" className="text-dark-gray text-left">
-                    正式な回答
-                  </Typography>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <Typography variant="body-sm" className="text-dark-gray text-left">
-                    子細な回答
+                    丁寧な回答<br />詳細まで丁寧に、高い透明度を心がけます
                   </Typography>
                 </div>
               </div>

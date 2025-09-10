@@ -5,7 +5,7 @@ interface SectionProps {
   children: React.ReactNode;
   className?: string;
   containerClassName?: string;
-  background?: 'white' | 'warm-white' | 'light-gray' | 'deep-navy' | 'gradient';
+  background?: 'white' | 'warm-white' | 'light-gray' | 'deep-navy' | 'gradient' | 'brand-red';
   padding?: 'sm' | 'md' | 'lg' | 'xl';
   fullWidth?: boolean;
 }
@@ -23,14 +23,15 @@ const Section: React.FC<SectionProps> = ({
     'warm-white': 'bg-warm-white',
     'light-gray': 'bg-light-gray',
     'deep-navy': 'bg-deep-navy text-white',
+    'brand-red': 'bg-brand-red text-white',
     gradient: 'bg-gradient-to-br from-warm-white to-white'
   };
 
   const paddingClasses = {
-    sm: 'py-8',
-    md: 'py-12',
-    lg: 'py-20',
-    xl: 'py-24'
+    sm: 'section-spacing-sm', // Mobile 24-32px → PC 48-64px
+    md: 'section-spacing-sm', // Mobile 24-32px → PC 48-64px
+    lg: 'section-spacing',    // Mobile 32-48px → PC 64-96px
+    xl: 'section-spacing'     // Mobile 32-48px → PC 64-96px
   };
 
   const sectionClasses = `${backgroundClasses[background]} ${paddingClasses[padding]} ${className}`;

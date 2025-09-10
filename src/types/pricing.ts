@@ -20,59 +20,44 @@ export const pricingPlans: PricingPlan[] = [
     monthlyPrice: "",
     isDisabled: true,
     features: [
-      "専任コンサルタント",
-      "科学的メソッド",
-      "ビジネス実践英会話",
-      "プロ講師陣"
+      "基本プラン"
     ],
     buttonText: "無料お試し"
   },
   {
     id: "3month",
     period: "3ヶ月",
-    originalPrice: "$4,400",
-    currentPrice: "$3,980",
-    monthlyPrice: "$1,326",
-    discount: "約10%OFF",
+    originalPrice: "",
+    currentPrice: "$4,480",
+    monthlyPrice: "$1,493",
+    discount: "",
     features: [
-      "専任コンサルタント",
-      "科学的メソッド", 
-      "ビジネス実践英会話",
-      "プロ講師陣"
+      "3ヶ月集中プラン"
     ],
     buttonText: "このプランを選ぶ"
   },
   {
     id: "6month",
     period: "6ヶ月",
-    originalPrice: "$8,880",
+    originalPrice: "",
     currentPrice: "$7,480",
     monthlyPrice: "$1,246",
     discount: "約16%OFF",
     isPopular: true,
     features: [
-      "専任コンサルタント",
-      "科学的メソッド",
-      "ビジネス実践英会話", 
-      "プロ講師陣",
-      "コミュニティアクセス"
+      "6ヶ月継続プラン"
     ],
     buttonText: "このプランを選ぶ"
   },
   {
     id: "12month",
     period: "12ヶ月",
-    originalPrice: "$17,760",
+    originalPrice: "",
     currentPrice: "$13,980",
     monthlyPrice: "$1,165",
     discount: "約21%OFF",
     features: [
-      "専任コンサルタント",
-      "科学的メソッド",
-      "ビジネス実践英会話",
-      "プロ講師陣",
-      "コミュニティアクセス",
-      "エコシステム参加資格"
+      "12ヶ月完全サポートプラン"
     ],
     buttonText: "このプランを選ぶ"
   }

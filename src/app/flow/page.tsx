@@ -8,7 +8,7 @@ import SectionDivider from "@/components/ui/SectionDivider";
 export const metadata = {
   title: "受講の流れ - 英語学習の悩み、目標設定、プラン相談など | Engrowth",
   description:
-    "あなたのペースに合わせて、専任のコンサルタントが一対一で最適なプランをご提案します。LINE登録から始まる受講フロー。",
+    "あなたのペースに合わせて、専属のコンサルタントが一対一で最適なプランをご提案します。LINE登録から始まる受講フロー。",
   keywords: "Engrowth, 受講の流れ, LINE登録, カウンセリング, 英語学習プラン",
 };
 
@@ -32,8 +32,8 @@ export default function FlowPage() {
         </div>
         <Container>
           <div className="relative py-16 sm:py-20 text-white text-center">
-            <h1 className="text-3xl font-bold tracking-tight">受講の流れ</h1>
-            <p className="mt-4 leading-relaxed">
+            <h1 className="text-5xl font-bold tracking-tight font-serif">専属コンサルタントだから続けられる、３日坊主にならない英語学習</h1>
+            <p className="mt-6 leading-relaxed text-xl font-serif">
               英語学習の失敗を、才能のせいにしない。<br />
               〜正しいやり方を知れば 誰でも話せるようになる〜
             </p>
@@ -53,16 +53,16 @@ export default function FlowPage() {
       <Section padding="xl" background="warm-white">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold tracking-tight">受講の流れ</h2>
+            <h2 className="text-2xl font-bold tracking-tight font-serif">受講の流れ</h2>
             <p className="mt-3 text-[15px]" style={{ color: MUTED }}>
-              あなたのペースに合わせて、専任のコンサルタントが一緒に
+              あなたのペースに合わせて、専属のコンサルタントが一緒に
               最適なプランを考えていきます。
             </p>
           </div>
         </Container>
       </Section>
 
-      <SectionDivider label="FLOW" variant="label" />
+      <SectionDivider variant="soft" />
 
       {/* 3) 左右交互（zigzag） */}
       <section className="relative">
@@ -78,7 +78,7 @@ export default function FlowPage() {
                 <>
                   Engrowth公式LINEを友達追加。<br />
                   ビジネスコース・学生コースの
-                  お申込みはページ下部の「お申込みフォーム」から。<br />
+                  お申込みは「お申込みフォーム」から。<br />
                   各種お問い合わせや、無料面談のご相談は
                   「LINEでお問い合わせ」からどうぞ。
                 </>
@@ -86,16 +86,30 @@ export default function FlowPage() {
               img="/images/drive-download-20250908T014101Z-1-001/fliw/flow-hero-background.jpg"
               imgAlt="LINE登録"
               textOn="right"
+              buttons={
+                <>
+                  <Link href="/contact">
+                    <Button variant="primary" size="sm">
+                      お申し込みフォーム
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button variant="secondary" size="sm">
+                      LINEでお問い合わせ
+                    </Button>
+                  </Link>
+                </>
+              }
             />
 
             {/* STEP 2：画像右 / テキスト左 */}
             <ZigzagItem
               n={2}
-              title="オンライン面談でヒアリング"
+              title="オンライン面談"
               body={
                 <>
                   Zoom などで面談を実施。初回面談までに英語での自己紹介音声をご提出いただき、
-                  専任のコンサルタントがあなたの英語の癖や傾向を分析。<br />
+                  専属のコンサルタントがあなたの英語の癖や傾向を分析。<br />
                   英語力の現状、目標、ライフスタイルなどをヒアリングして、
                   実現可能な学習計画を一緒に作成します。
                 </>
@@ -103,37 +117,41 @@ export default function FlowPage() {
               img="/images/drive-download-20250908T014101Z-1-001/supporters/top-flow-step1.jpg"
               imgAlt="オンライン面談"
               textOn="left"
+              buttons={
+                <>
+                  <Link href="/contact">
+                    <Button variant="secondary" size="sm">
+                      LINEに登録
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button variant="primary" size="sm">
+                      申込フォーム
+                    </Button>
+                  </Link>
+                </>
+              }
+            />
+
+            {/* STEP 3：画像左 / テキスト右 */}
+            <ZigzagItem
+              n={3}
+              title="24時間サポート"
+              body={
+                <>
+                  コース期間中は、英語に関することなら
+                  <strong>24時間いつでも</strong>専属コンサルタントに連絡可能。
+                  苦手な発音の克服法や、ネイティブが使う言い回しなど、
+                  お気軽になんでもご質問ください。<br />
+                  また、弊社のコンサルタントは一人ひとりが学術的に高度な専門分野を持ち、第一線で研究しているメンバーも多く在籍しています。
+                  <br /><br />もし担当コンサルタントが、ご自身の興味ある分野を専攻していたら、ぜひ専門分野に関する相談なども、お気軽にどうぞ。
+                </>
+              }
+              img="/images/drive-download-20250908T014101Z-1-001/top/service-support.jpg"
+              imgAlt="24時間サポート"
+              textOn="right"
             />
           </ol>
-        </Container>
-      </section>
-
-      <SectionDivider variant="soft" />
-
-      {/* 4) 24時間サポート説明 */}
-      <section>
-        <Container>
-          <div className="grid md:grid-cols-2 items-start gap-10">
-            <div>
-              <p className="leading-relaxed text-[15px]">
-                コース期間中は、英語に関することなら
-                <strong>24時間いつでも</strong>専任コンサルタントに連絡可能。
-                苦手な発音の発声法や、ネイティブが使う言い回しなど、
-                なんでもお気軽にご相談ください。<br />
-                担当のコンサルタントは
-                <strong>お一人</strong>だけ。第三者への伝達が不要なため、
-                行き違いのない高品質な伴走が可能です。<br />
-                業務で英語が必要な方や、留学準備で不安がある方も、
-                まずは実用的な課題から一緒に進めていきます。
-              </p>
-            </div>
-            <figure className="relative aspect-[16/10] rounded-xl overflow-hidden bg-gray-100">
-              <Image src="/images/drive-download-20250908T014101Z-1-001/top/service-support.jpg" alt="日々の伴走" fill className="object-cover" />
-              <figcaption className="absolute bottom-2 right-3 text-xs text-gray-600 bg-white/80 px-2 py-1 rounded">
-                ※原則◯時間以内の返信
-              </figcaption>
-            </figure>
-          </div>
         </Container>
       </section>
 
@@ -150,7 +168,7 @@ export default function FlowPage() {
               >
                 4
               </span>
-              <h3 className="text-xl font-semibold mb-4">（ス）シミュレーション英会話</h3>
+              <h3 className="text-xl font-semibold mb-4 font-serif">シミュレーション英会話</h3>
               <p className="leading-relaxed text-[15px]" style={{ color: MUTED }}>
                 留学生が短期間で英語力を鍛える要因のひとつとして、
                 「ある状況に英語で遭遇し、英語で対処する力がつく」というのが挙げられます。<br />
@@ -162,27 +180,27 @@ export default function FlowPage() {
 
             {/* ビジネスコース */}
             <div className="mb-16">
-              <h4 className="text-center text-xl font-bold mb-8">ビジネスコース</h4>
+              <h4 className="text-center text-xl font-bold mb-8 font-serif">ビジネスコース</h4>
               <div className="space-y-8">
                 {/* 基礎シミュレーション */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                  <div className="bg-red-300 text-center py-3">
-                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
+                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
+                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
+                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 1-2" theme="挨拶" />
                     <SimulationRow week="week 3-4" theme="自己紹介" />
                     <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
                     <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
-                    <SimulationRow week="week 9-10" theme="ホテル（チェックイン/アウト）" />
+                    <SimulationRow week="week 9-10" theme="ホテル（チェックイン、アウト）" />
                     <SimulationRow week="week 11-12" theme="カフェ＆レストラン（予約、注文）" />
                   </div>
                 </div>
 
                 {/* 応用シミュレーション */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                  <div className="bg-red-300 text-center py-3">
-                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
+                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
+                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
+                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
@@ -198,35 +216,35 @@ export default function FlowPage() {
 
             {/* 学生コース */}
             <div>
-              <h4 className="text-center text-xl font-bold mb-8">学生コース</h4>
+              <h4 className="text-center text-xl font-bold mb-8 font-serif">学生コース</h4>
               <div className="space-y-8">
                 {/* 基礎シミュレーション */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                  <div className="bg-red-300 text-center py-3">
-                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
+                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
+                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
+                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 1-2" theme="挨拶" />
                     <SimulationRow week="week 3-4" theme="自己紹介" />
                     <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
                     <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
-                    <SimulationRow week="week 9-10" theme="ホテル（チェックイン/アウト）" />
+                    <SimulationRow week="week 9-10" theme="ホテル（チェックイン、アウト）" />
                     <SimulationRow week="week 11-12" theme="カフェ&レストラン（予約、注文）" />
                   </div>
                 </div>
 
                 {/* 応用シミュレーション */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                  <div className="bg-red-300 text-center py-3">
-                    <h5 className="font-semibold">シミュレーションテーマ（場面トピック）</h5>
+                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
+                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
+                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
                     <SimulationRow week="week 15-16" theme="交通機関（電車、バス）" />
-                    <SimulationRow week="week 17-18" theme="国行き連絡" />
+                    <SimulationRow week="week 17-18" theme="銀行口座開設" />
                     <SimulationRow week="week 19-20" theme="就職活動、宅急便" />
                     <SimulationRow week="week 21-22" theme="病院（予約、受付、診察）" />
-                    <SimulationRow week="week 23-24" theme="カスタム、専任コンサルタントと相談し内容決定" />
+                    <SimulationRow week="week 23-24" theme="カスタム、専属コンサルタントと相談し内容決定" />
                   </div>
                 </div>
               </div>
@@ -247,7 +265,7 @@ export default function FlowPage() {
                 alt="30分の無料カウンセリングでご相談ください"
                 width={1200}
                 height={400}
-                className="w-full h-auto rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                className="w-full h-auto  shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
               />
             </Link>
           </div>
@@ -266,6 +284,7 @@ function ZigzagItem({
   img,
   imgAlt,
   textOn, // "left" | "right"
+  buttons,
 }: {
   n: number;
   title: string;
@@ -273,6 +292,7 @@ function ZigzagItem({
   img: string;
   imgAlt: string;
   textOn: "left" | "right";
+  buttons?: React.ReactNode;
 }) {
   const leftText = textOn === "left";
   return (
@@ -290,10 +310,15 @@ function ZigzagItem({
         >
           {n}
         </span>
-        <h3 className="text-lg font-semibold mb-2">{title}</h3>
-        <p className="leading-relaxed text-[15px]" style={{ color: MUTED }}>
+        <h3 className="text-lg font-semibold mb-2 font-serif">{title}</h3>
+        <p className="leading-relaxed text-[15px] mb-4" style={{ color: MUTED }}>
           {body}
         </p>
+        {buttons && (
+          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+            {buttons}
+          </div>
+        )}
       </div>
     </li>
   );
@@ -302,11 +327,11 @@ function ZigzagItem({
 
 function SimulationRow({ week, theme }: { week: string; theme: string }) {
   return (
-    <div className="px-6 py-4 grid grid-cols-3 gap-4 items-center">
-      <div className="text-sm font-semibold text-center bg-gray-100 py-2 rounded">
+    <div className="px-8 py-5 grid grid-cols-3 gap-6 items-center hover:bg-gray-50 transition-colors duration-200">
+      <div className="text-sm font-bold text-center bg-gradient-to-r from-gray-100 to-gray-200 py-3 rounded-lg shadow-sm border font-serif">
         {week}
       </div>
-      <div className="col-span-2 text-sm leading-relaxed text-center">
+      <div className="col-span-2 text-sm leading-relaxed text-center text-gray-700 font-medium">
         {theme}
       </div>
     </div>

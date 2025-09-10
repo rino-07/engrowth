@@ -5,6 +5,18 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
+import React from 'react';
+
+function FullBleed1440({ children }: { children: React.ReactNode }) {
+  // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
+  return (
+    <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+      <div className="mx-auto max-w-[1440px] px-6">
+        {children}
+      </div>
+    </section>
+  );
+}
 
 export const metadata = {
   title: '支援者の方へ - 才能を、資金不足で開ざさない | Engrowth',
@@ -16,17 +28,27 @@ export default function SupportersPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
+      <Section background="warm-white" padding="xl" className="relative overflow-hidden">
+        {/* 背景画像 */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-partnership.jpg"
+            alt="背景画像"
+            fill
+            className="object-cover opacity-10"
+            priority
+          />
+        </div>
+        <Container className="relative z-10">
           <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
+            <Typography variant="heading-lg" className="text-dark-gray mb-6 section-title-with-underbar" as="h1">
               支援者の方へ
             </Typography>
             <Typography variant="heading-md" className="text-gray mb-8">
-              「才能を、資金不足で開ざさない」
+              日本の未来を、経済的な理由で閉ざさないために
             </Typography>
             <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-12">
-              〜グローバル人材育成への投資が、日本の未来への投資に〜
+              〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜
               <br /><br />
               あなたの支援が、明日の日本のグローバルリーダーを育てます
             </Typography>
@@ -55,11 +77,11 @@ export default function SupportersPage() {
               Engrowth支援プログラムとは
             </Typography>
             <Typography variant="body-lg" className="text-gray max-w-4xl mx-auto leading-relaxed">
-              Engrowth独自の仕組みにより、経済的な理由でグローバル人材になりたくても成長機会になります。
+              Engrowth独自の仕組みにより、効率的なグローバル人材への育成が可能になります。
               <br />
-              弊社内での独自システムを通して、有志的に有能な人材（学習能者の高い日本人留学生）と支援可能です。
+              弊社内での独自システムを通じて、将来的に有能な人材（学習意欲の高い日本人留学生）と支援が可能です。
               <br /><br />
-              留学生活での、高度な学び方の環境を維持するための英語コンサルティング活動を支えることで、学習時間の創出と経済的なバックアップが目標となります。
+              留学生活での、高度な学びの環境を維持するための英語コンサルティング活動を支えることで、学習時間の創出と優秀なビジネス人材の育成を目指します。
             </Typography>
           </div>
         </Container>
@@ -77,7 +99,7 @@ export default function SupportersPage() {
           <div className="max-w-4xl mx-auto mb-16">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <Image
-                src="/images/global-talent-ecosystem.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/supporters/cycle.png"
                 alt="グローバル人材エコシステム図"
                 width={600}
                 height={400}
@@ -96,20 +118,17 @@ export default function SupportersPage() {
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              企業メリット
+              企業様メリット
             </Typography>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             {/* 人材発掘・採用機会 */}
             <Card className="p-8 text-center h-full">
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
+              <Typography variant="heading-sm" className="text-dark-gray mb-6 font-serif">
                 人材発掘・採用機会
               </Typography>
-              <Typography variant="body-md" className="text-gray mb-6">
-                支援学生との交流
-              </Typography>
-              <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center">
+              <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
                   src="/images/talent-discovery.jpg"
                   alt="人材発掘"
@@ -118,17 +137,20 @@ export default function SupportersPage() {
                   className="w-full h-full object-cover rounded"
                 />
               </div>
+              <Typography variant="body-md" className="text-dark-gray mb-4 font-semibold">
+                支援学生との交流
+              </Typography>
+              <Typography variant="body-sm" className="text-gray">
+                有能な学生との交流機会は、未来を担う社内人材との貴重な機会を先行して得られる
+              </Typography>
             </Card>
 
             {/* CSR・企業ブランディング */}
             <Card className="p-8 text-center h-full">
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
+              <Typography variant="heading-sm" className="text-dark-gray mb-6 font-serif">
                 CSR・企業ブランディング
               </Typography>
-              <Typography variant="body-md" className="text-gray mb-6">
-                教育支援、人材流出防止
-              </Typography>
-              <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center">
+              <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
                   src="/images/csr-branding.jpg"
                   alt="CSR・ブランディング"
@@ -137,17 +159,20 @@ export default function SupportersPage() {
                   className="w-full h-full object-cover rounded"
                 />
               </div>
+              <Typography variant="body-md" className="text-dark-gray mb-4 font-semibold">
+                教育支援・人材流出防止
+              </Typography>
+              <Typography variant="body-sm" className="text-gray">
+                教育投資による社会貢献で企業イメージ向上と優秀な国内人材の海外流出を防ぐ
+              </Typography>
             </Card>
 
             {/* 事業シナジー */}
             <Card className="p-8 text-center h-full">
-              <Typography variant="heading-sm" className="text-dark-gray mb-4">
+              <Typography variant="heading-sm" className="text-dark-gray mb-6 font-serif">
                 事業シナジー
               </Typography>
-              <Typography variant="body-md" className="text-gray mb-6">
-                ダイバーシティのある人材とのシナジー
-              </Typography>
-              <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center">
+              <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
                   src="/images/business-synergy.jpg"
                   alt="事業シナジー"
@@ -156,33 +181,27 @@ export default function SupportersPage() {
                   className="w-full h-full object-cover rounded"
                 />
               </div>
+              <Typography variant="body-md" className="text-dark-gray mb-4 font-semibold">
+                多様な人材とのシナジー
+              </Typography>
+              <Typography variant="body-sm" className="text-gray">
+                異なる専門分野の学生との協業で新たなビジネス機会と革新的アイデアを創出
+              </Typography>
             </Card>
-          </div>
-
-          {/* お気軽にご相談ください */}
-          <div className="text-center mb-16">
-            <Typography variant="body-lg" className="text-gray mb-8">
-              お気軽にご相談ください
-            </Typography>
-            <Link href="/contact">
-              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-                パートナーシップ相談
-              </Button>
-            </Link>
           </div>
         </Container>
       </Section>
 
       {/* 5. 企業規模・ご予算に応じた柔軟な支援プラン */}
-      <Section background="warm-white" padding="xl">
-        <Container>
+      <Section background="warm-white" padding="xl" className="overflow-visible">
+        <FullBleed1440>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               企業規模・ご予算に応じた柔軟な支援プラン
             </Typography>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+            <div className="cards-grid-responsive w-full mb-16">
             {/* ブロンズパートナー */}
             <Card className="p-6 text-center border-2 border-amber-200 bg-amber-50">
               <Typography variant="heading-sm" className="text-dark-gray mb-2">
@@ -259,7 +278,19 @@ export default function SupportersPage() {
               </div>
             </Card>
           </div>
-        </Container>
+
+          {/* お気軽にご相談ください */}
+          <div className="text-center mb-16">
+            <Typography variant="body-lg" className="text-gray mb-8">
+              お気軽にご相談ください
+            </Typography>
+            <Link href="/contact">
+              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
+                パートナーシップ相談
+              </Button>
+            </Link>
+          </div>
+        </FullBleed1440>
       </Section>
 
       {/* 6. よくある質問 */}
