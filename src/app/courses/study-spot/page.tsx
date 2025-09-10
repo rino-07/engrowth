@@ -19,18 +19,31 @@ export default function StudentSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
+      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
+        {/* 背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/students/stu08.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 40%' }}
+        />
+        <Container className="relative z-10 w-full">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
               学生スポットサービス
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
+            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto">
               留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。
             </Typography>
           </div>
+        </Container>
+      </Section>
 
-          {/* 3つのメインサービス */}
+      {/* 2. 3つのメインサービス */}
+      <Section background="light-gray" padding="xl">
+        <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             {/* エッセイ添削 */}
             <Card className="text-center p-6 border-2 border-gray-200 hover:border-blue-600 transition-all duration-300">
@@ -80,7 +93,7 @@ export default function StudentSpotServicePage() {
         </Container>
       </Section>
 
-      {/* 2. こんな時に、ご利用ください */}
+      {/* 3. こんな時に、ご利用ください */}
       <Section background="light-gray" padding="xl">
         <Container>
           <div className="text-center mb-16">

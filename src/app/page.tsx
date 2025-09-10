@@ -23,18 +23,17 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <Section background="gradient" padding="xl" className="relative overflow-hidden">
+      <Section background="gradient" padding="xl" className="relative min-h-[60vh] flex items-center">
         {/* 背景画像 */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/top/top01.png"
-            alt="背景画像"
-            fill
-            className="object-cover opacity-10"
-            priority
-          />
-        </div>
-        <Container className="relative z-10">
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/top/top01.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 20%' }}
+        />
+        <Container className="relative z-10 w-full">
           <div className="text-center animate-fadeInUp">
             <Typography variant="heading-xl" className="text-dark-gray mb-6" as="h1">
               あなたも
@@ -63,12 +62,12 @@ export default function Home() {
       </Section>
 
       {/* 2. Engrowthは○○な人に選ばれてます Section */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" padding="lg">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left: Title */}
             <div>
-              <Typography variant="heading-lg" className="text-dark-gray mb-8">
+              <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8">
                 Engrowthは○○な人に選ばれてます
               </Typography>
             </div>
@@ -119,10 +118,10 @@ export default function Home() {
       </Section>
 
       {/* 3. Course Section (4-column) */}
-<Section background="light-gray" padding="xl" className="overflow-visible">
+<Section background="light-gray" padding="lg" className="overflow-visible">
   <FullBleed1440>
-    <div className="text-center mb-16">
-      <Typography variant="heading-lg" className="text-dark-gray mb-8 section-title-with-underbar">
+    <div className="text-center mb-8 lg:mb-16">
+      <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8 section-title-with-underbar">
         Course
       </Typography>
     </div>
@@ -192,9 +191,14 @@ export default function Home() {
             </div>
 
             {/* 矢印 - 10% */}
-            <div className="col-span-12 lg:col-span-2 flex items-center justify-center">
+            <div className="col-span-12 lg:col-span-2 flex items-center justify-center py-4 lg:py-0">
               <div className="text-brand-red">
-                <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                {/* スマホ: 下向き矢印 */}
+                <svg className="w-16 h-16 lg:hidden" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M1 13.025l2.828-2.847 6.176 6.176v-16.354h3.992v16.354l6.176-6.176 2.828 2.847-11 10.975z"/>
+                </svg>
+                {/* PC: 右向き矢印 */}
+                <svg className="w-16 h-16 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
                 </svg>
               </div>

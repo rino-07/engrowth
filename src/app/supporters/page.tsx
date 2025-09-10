@@ -28,19 +28,18 @@ export default function SupportersPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative overflow-hidden">
+      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
         {/* 背景画像 */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-partnership.jpg"
-            alt="背景画像"
-            fill
-            className="object-cover opacity-10"
-            priority
-          />
-        </div>
-        <Container className="relative z-10">
-          <div className="text-center mb-16">
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-hero-background.jpg"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 35%' }}
+        />
+        <Container className="relative z-10 w-full">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 section-title-with-underbar" as="h1">
               支援者の方へ
             </Typography>
@@ -130,7 +129,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
-                  src="/images/talent-discovery.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/discovery.png"
                   alt="人材発掘"
                   width={100}
                   height={80}
@@ -152,7 +151,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
-                  src="/images/csr-branding.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/branding.png"
                   alt="CSR・ブランディング"
                   width={100}
                   height={80}
@@ -174,7 +173,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
-                  src="/images/business-synergy.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/synergy.png"
                   alt="事業シナジー"
                   width={100}
                   height={80}
@@ -210,13 +209,13 @@ export default function SupportersPage() {
               <Typography variant="body-md" className="text-brand-red font-bold mb-4">
                 月額：50万円〜
               </Typography>
-              <div className="bg-light-gray rounded-lg p-4 h-24 flex items-center justify-center mb-4">
+              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/bronze-partner.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/bronze.png"
                   alt="ブロンズパートナー"
-                  width={80}
-                  height={60}
-                  className="w-full h-full object-cover rounded"
+                  width={120}
+                  height={120}
+                  className="max-w-full max-h-full object-contain rounded"
                 />
               </div>
             </Card>
@@ -229,13 +228,13 @@ export default function SupportersPage() {
               <Typography variant="body-md" className="text-brand-red font-bold mb-4">
                 月額：100万円〜
               </Typography>
-              <div className="bg-light-gray rounded-lg p-4 h-24 flex items-center justify-center mb-4">
+              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/silver-partner.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/silver.png"
                   alt="シルバーパートナー"
-                  width={80}
-                  height={60}
-                  className="w-full h-full object-cover rounded"
+                  width={120}
+                  height={120}
+                  className="max-w-full max-h-full object-contain rounded"
                 />
               </div>
             </Card>
@@ -248,13 +247,13 @@ export default function SupportersPage() {
               <Typography variant="body-md" className="text-brand-red font-bold mb-4">
                 月額：200万円〜
               </Typography>
-              <div className="bg-light-gray rounded-lg p-4 h-24 flex items-center justify-center mb-4">
+              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/gold-partner.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/gold.png"
                   alt="ゴールドパートナー"
-                  width={80}
-                  height={60}
-                  className="w-full h-full object-cover rounded"
+                  width={120}
+                  height={120}
+                  className="max-w-full max-h-full object-contain rounded"
                 />
               </div>
             </Card>
@@ -267,13 +266,13 @@ export default function SupportersPage() {
               <Typography variant="body-md" className="text-brand-red font-bold mb-4">
                 月額：500万円〜
               </Typography>
-              <div className="bg-light-gray rounded-lg p-4 h-24 flex items-center justify-center mb-4">
+              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/platinum-partner.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/platinum.png"
                   alt="プラチナパートナー"
-                  width={80}
-                  height={60}
-                  className="w-full h-full object-cover rounded"
+                  width={120}
+                  height={120}
+                  className="max-w-full max-h-full object-contain rounded"
                 />
               </div>
             </Card>
@@ -334,35 +333,17 @@ export default function SupportersPage() {
             </div>
           </div>
 
-          {/* 最終カウンセリングバナー */}
+          {/* main_banner.png */}
           <div className="relative">
-            <div className="bg-gradient-to-r from-red-400 to-red-500 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-              {/* 吹き出し */}
-              <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full px-6 py-3 relative">
-                  <Typography variant="body-md" className="text-dark-gray font-bold">
-                    カンタン
-                    <br />
-                    2ステップ！
-                  </Typography>
-                  {/* 吹き出しの矢印 */}
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-transparent border-l-white"></div>
-                </div>
-              </div>
-
-              <Typography variant="heading-md" className="text-white mb-6">
-                30分の無料カウンセリングでご相談ください
-              </Typography>
-
-              <div className="flex justify-center">
-                <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white relative">
-                  <span className="absolute -top-2 -left-2 bg-white text-action-green px-2 py-1 rounded-full text-xs font-bold">
-                    無料
-                  </span>
-                  カウンセリングを予約する
-                </Button>
-              </div>
-            </div>
+            <Link href="/contact">
+              <Image
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリング"
+                width={1200}
+                height={300}
+                className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+              />
+            </Link>
           </div>
         </Container>
       </Section>

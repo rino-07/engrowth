@@ -1,10 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'お問い合わせ - まずはお気軽にご相談ください | Engrowth',
@@ -16,9 +16,18 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
+      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
+        {/* 背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 40%' }}
+        />
+        <Container className="relative z-10 w-full">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
               お問い合わせ
             </Typography>

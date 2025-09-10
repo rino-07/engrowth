@@ -30,18 +30,17 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ページヘッダー */}
-      <Section background="warm-white" padding="lg" className="relative overflow-hidden">
+      <Section background="warm-white" padding="lg" className="relative min-h-[60vh] flex items-center">
         {/* 背景画像 */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
-            alt="背景画像"
-            fill
-            className="object-cover opacity-10"
-            priority
-          />
-        </div>
-        <Container className="relative z-10">
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 30%' }}
+        />
+        <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h1">
               コース・料金

@@ -59,7 +59,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
           )}
         </div>
 
-                <div className="cards-grid-responsive">
+                <div className="pricing-cards-responsive lg:grid lg:grid-cols-4 lg:gap-8">
           {displayPlans.map((plan) => (
             <div key={plan.id} className="flex justify-center">
               <PricingCard

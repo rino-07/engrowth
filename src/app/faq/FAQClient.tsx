@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -125,8 +126,17 @@ export default function FAQClient() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="lg">
-        <Container>
+      <Section background="warm-white" padding="lg" className="relative min-h-[60vh] flex items-center">
+        {/* 背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/top/top06.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 35%' }}
+        />
+        <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h1">
               よくある質問

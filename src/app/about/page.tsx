@@ -15,20 +15,19 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      {/* 1. Engrowthの特徴 - メインセクション */}
-      <Section background="warm-white" padding="xl" className="relative overflow-hidden">
+      {/* 1. ヒーローセクション */}
+      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
         {/* 背景画像 */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/about/about-hero.png"
-            alt="背景画像"
-            fill
-            className="object-cover opacity-10"
-            priority
-          />
-        </div>
-        <Container className="relative z-10">
-          <div className="text-center mb-16">
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/top/reason-ecosystem.jpg"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 25%' }}
+        />
+        <Container className="relative z-10 w-full">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h1">
               Engrowthの特徴
             </Typography>
@@ -36,8 +35,12 @@ export default function AboutPage() {
               学ぶことが支援になる、循環型エコシステムの仕組み
             </Typography>
           </div>
+        </Container>
+      </Section>
 
-          {/* 3つの特徴 */}
+      {/* 2. 3つの特徴 */}
+      <Section background="light-gray" padding="xl">
+        <Container>
           <div className="space-y-8 max-w-4xl mx-auto mb-16">
             <div className="flex items-start gap-6">
               <FaUserTie className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />

@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 
 import Button from '../ui/Button';
 import Container from './Container';
@@ -10,6 +11,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const [isMobileCoursesOpen, setIsMobileCoursesOpen] = useState(false);
+  const pathname = usePathname();
 
   const handleMenuToggle = useCallback(() => {
     setIsMenuOpen(prev => !prev);
@@ -27,6 +29,28 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
     setIsMobileCoursesOpen(false);
   }, []);
+
+  // ページ変更時にメニューを閉じる
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsMobileCoursesOpen(false);
+  }, [pathname]);
+
+  // クリック外でメニューを閉じる
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (isMenuOpen && !target.closest('[data-menu-container]')) {
+        setIsMenuOpen(false);
+        setIsMobileCoursesOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [isMenuOpen]);
 
   const navigation = [
     { name: 'Engrowthの特徴', href: '/about' },
@@ -132,13 +156,14 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden" data-menu-container>
             <button
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-dark-gray hover:text-brand-red hover:bg-light-gray focus:outline-none focus:ring-2 focus:ring-inset focus:ring-action-green"
               aria-controls="mobile-menu"
               aria-expanded="false"
               onClick={handleMenuToggle}
+              data-menu-container
             >
               <span className="sr-only">メニューを開く</span>
               {!isMenuOpen ? (
@@ -186,6 +211,7 @@ const Header: React.FC = () => {
               : 'max-h-0 opacity-0 invisible'
           } overflow-hidden`}
           id="mobile-menu"
+          data-menu-container
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-light-gray">
             {/* 学習者向けセクション */}

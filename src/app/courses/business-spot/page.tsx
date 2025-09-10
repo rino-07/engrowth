@@ -17,18 +17,31 @@ function BusinessSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
+      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
+        {/* 背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/spot-business/spot-business-observer.jpg"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 30%' }}
+        />
+        <Container className="relative z-10 w-full">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
               ビジネススポットサービス
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
+            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto">
               ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。
             </Typography>
           </div>
+        </Container>
+      </Section>
 
-          {/* 3つのサービス */}
+      {/* 2. 3つのサービス */}
+      <Section background="light-gray" padding="xl">
+        <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             {/* 通訳・会議同席 */}
             <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
@@ -91,7 +104,7 @@ function BusinessSpotServicePage() {
         </Container>
       </Section>
 
-      {/* 2. こんな時に、ご利用ください */}
+      {/* 3. こんな時に、ご利用ください */}
       <Section background="light-gray" padding="xl">
         <Container>
           <div className="text-center mb-16">

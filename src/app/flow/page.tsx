@@ -19,21 +19,23 @@ export default function FlowPage() {
   return (
     <div className="min-h-screen">
       {/* 1) ヒーロー（背景写真＋主CTA） */}
-      <section className="relative">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/fliw/flow-hero-background.jpg"
-            alt="オンラインで相談する様子"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/35" />
-        </div>
-        <Container>
-          <div className="relative py-16 sm:py-20 text-white text-center">
-            <h1 className="text-5xl font-bold tracking-tight font-serif">専属コンサルタントだから続けられる、３日坊主にならない英語学習</h1>
-            <p className="mt-6 leading-relaxed text-xl font-serif">
+      <section className="relative min-h-[60vh] flex items-center">
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
+          alt="オンラインで相談する様子"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 25%' }}
+        />
+        <div className="absolute inset-0 bg-black/25 z-5" />
+        <Container className="relative z-10 w-full">
+          <div className="py-16 sm:py-20 text-white text-center">
+            <h1 className="text-xl md:text-5xl font-bold tracking-tight font-serif">
+              専属コンサルタントだから続けられる<br />
+              ３日坊主にならない英語学習
+            </h1>
+            <p className="mt-6 leading-relaxed text-base md:text-xl font-serif">
               英語学習の失敗を、才能のせいにしない。<br />
               〜正しいやり方を知れば 誰でも話せるようになる〜
             </p>
@@ -150,6 +152,20 @@ export default function FlowPage() {
               img="/images/drive-download-20250908T014101Z-1-001/top/service-support.jpg"
               imgAlt="24時間サポート"
               textOn="right"
+              buttons={
+                <>
+                  <Link href="/contact#:~:text=Engrowth%E3%81%AE-,LINE,-２%E3%81%AB%E7%9B%B8%E8%AB%87%E3%81%99%E3%82%8B">
+                    <Button variant="secondary" size="sm" className="text-sm px-4 py-2">
+                      LINEでお問い合わせ
+                    </Button>
+                  </Link>
+                  <Link href="/contact#:~:text=info%40-,engrowth,-.jp">
+                    <Button variant="primary" size="sm" className="bg-brand-red hover:bg-red-700 text-sm px-4 py-2">
+                      メールでお問い合わせ
+                    </Button>
+                  </Link>
+                </>
+              }
             />
           </ol>
         </Container>
@@ -183,9 +199,16 @@ export default function FlowPage() {
               <h4 className="text-center text-xl font-bold mb-8 font-serif">ビジネスコース</h4>
               <div className="space-y-8">
                 {/* 基礎シミュレーション */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
-                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
-                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
+                <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
+                  <div className="bg-brand-red text-center py-3 md:py-4">
+                    <div className="grid grid-cols-[140px_1fr] gap-0">
+                      <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
+                        Week
+                      </div>
+                      <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
+                        テーマ
+                      </div>
+                    </div>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 1-2" theme="挨拶" />
@@ -219,9 +242,16 @@ export default function FlowPage() {
               <h4 className="text-center text-xl font-bold mb-8 font-serif">学生コース</h4>
               <div className="space-y-8">
                 {/* 基礎シミュレーション */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
-                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
-                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
+                <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
+                  <div className="bg-brand-red text-center py-3 md:py-4">
+                    <div className="grid grid-cols-[140px_1fr] gap-0">
+                      <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
+                        Week
+                      </div>
+                      <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
+                        テーマ
+                      </div>
+                    </div>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 1-2" theme="挨拶" />
@@ -304,18 +334,20 @@ function ZigzagItem({
 
       {/* テキスト */}
       <div className={`${leftText ? "md:order-1 md:pr-12" : "md:pl-12"}`}>
-        <span
-          className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold mb-2"
-          style={{ backgroundColor: BRAND }}
-        >
-          {n}
-        </span>
-        <h3 className="text-lg font-semibold mb-2 font-serif">{title}</h3>
+        <div className="flex items-center gap-3 mb-2">
+          <span
+            className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold flex-shrink-0"
+            style={{ backgroundColor: BRAND }}
+          >
+            {n}
+          </span>
+          <h3 className="text-lg font-semibold font-serif">{title}</h3>
+        </div>
         <p className="leading-relaxed text-[15px] mb-4" style={{ color: MUTED }}>
           {body}
         </p>
         {buttons && (
-          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+          <div className="flex flex-row flex-wrap justify-center sm:justify-start gap-3 mt-4">
             {buttons}
           </div>
         )}
@@ -327,11 +359,11 @@ function ZigzagItem({
 
 function SimulationRow({ week, theme }: { week: string; theme: string }) {
   return (
-    <div className="px-8 py-5 grid grid-cols-3 gap-6 items-center hover:bg-gray-50 transition-colors duration-200">
-      <div className="text-sm font-bold text-center bg-gradient-to-r from-gray-100 to-gray-200 py-3 rounded-lg shadow-sm border font-serif">
+    <div className="grid grid-cols-[140px_1fr] gap-0 border-b border-gray-200 hover:bg-gray-50/50 transition-colors duration-200 even:bg-gray-50/30">
+      <div className="px-4 md:px-6 py-3 md:py-4 text-sm text-gray-500 font-mono tracking-wide border-r border-gray-100">
         {week}
       </div>
-      <div className="col-span-2 text-sm leading-relaxed text-center text-gray-700 font-medium">
+      <div className="px-4 md:px-6 py-3 md:py-4 text-sm md:text-base leading-relaxed text-gray-800 font-serif">
         {theme}
       </div>
     </div>

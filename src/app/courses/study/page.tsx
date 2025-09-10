@@ -33,9 +33,18 @@ export default function StudentCoursePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
+      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
+        {/* 背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10"
+          style={{ objectPosition: 'center 30%' }}
+        />
+        <Container className="relative z-10 w-full">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
               学生コース
             </Typography>
@@ -48,8 +57,12 @@ export default function StudentCoursePage() {
               英語学習と経済支援を組み合わせた独自プログラムで、あなたの留学の夢を全力でサポートします。
             </Typography>
           </div>
+        </Container>
+      </Section>
 
-          {/* 3つの特徴カード */}
+      {/* 2. 3つの特徴カード */}
+      <Section background="light-gray" padding="xl">
+        <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
               <Image
@@ -524,7 +537,7 @@ export default function StudentCoursePage() {
             <div className="max-w-4xl mx-auto">
               <Link href="/contact">
                 <Image
-                  src="/images/main.banner.png"
+                  src="/images/main_banner.png"
                   alt="30分の無料カウンセリングでご相談ください"
                   width={1200}
                   height={400}
