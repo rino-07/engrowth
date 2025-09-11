@@ -11,7 +11,7 @@ function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
   return (
     <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-      <div className="mx-auto max-w-[1440px] px-6">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
         {children}
       </div>
     </section>
@@ -59,7 +59,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
           )}
         </div>
 
-                <div className="pricing-cards-responsive lg:grid lg:grid-cols-4 lg:gap-8">
+                <div className="pricing-cards-responsive lg:grid lg:grid-cols-4 lg:gap-8 lg:px-0">
           {displayPlans.map((plan) => (
             <div key={plan.id} className="flex justify-center">
               <PricingCard

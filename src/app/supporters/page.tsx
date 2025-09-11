@@ -35,7 +35,16 @@ export default function SupportersPage() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 35%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/supporters_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 35%' }}
         />
         <Container className="relative z-10 w-full">
@@ -71,7 +80,7 @@ export default function SupportersPage() {
       {/* 2. Engrowth支援プログラムとは */}
       <Section background="light-gray" padding="xl">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               Engrowth支援プログラムとは
             </Typography>

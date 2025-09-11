@@ -37,7 +37,16 @@ export default function CoursesPage() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 30%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/courses_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 30%' }}
         />
         <Container className="relative z-10 w-full">
@@ -96,8 +105,8 @@ export default function CoursesPage() {
       {/* 4. スポットサービス */}
       <Section background="light-gray" padding="xl">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 section-title-with-underbar" as="h2">
+          <div className="text-center lg:mb-16">
+            <Typography variant="heading-lg" className="text-dark-gray lg:mb-8 section-title-with-underbar" as="h2">
               スポットサービス
             </Typography>
           </div>

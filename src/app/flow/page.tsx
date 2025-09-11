@@ -25,7 +25,16 @@ export default function FlowPage() {
           alt="オンラインで相談する様子"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 25%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
+          alt="オンラインで相談する様子"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 25%' }}
         />
         <div className="absolute inset-0 bg-black/25 z-5" />
@@ -286,7 +295,7 @@ export default function FlowPage() {
       <SectionDivider variant="soft" />
 
       {/* 7) 最終CTA（main_banner.png画像） */}
-      <section className="py-16">
+      <section>
         <Container>
           <div className="max-w-4xl mx-auto">
             <Link href="/contact">

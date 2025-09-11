@@ -246,6 +246,17 @@ body {
   padding-bottom: clamp(1.5rem, 3vw, 4rem); /* 24px → 64px */
 }
 
+/* Tailwindの余白調整クラスが確実に適用されるように詳細度を上げる */
+.section-spacing.pt-0,
+.section-spacing-sm.pt-0 {
+  padding-top: 0 !important;
+}
+
+.section-spacing.pb-0,
+.section-spacing-sm.pb-0 {
+  padding-bottom: 0 !important;
+}
+
 .hero-spacing {
   /* ヒーローセクション余白: Mobile 48-64px → PC 80-96px */
   padding-top: clamp(3rem, 5vw, 6rem); /* 48px → 96px */

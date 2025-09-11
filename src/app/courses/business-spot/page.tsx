@@ -24,7 +24,16 @@ function BusinessSpotServicePage() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 30%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/spot-business_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 30%' }}
         />
         <Container className="relative z-10 w-full">
@@ -40,9 +49,9 @@ function BusinessSpotServicePage() {
       </Section>
 
       {/* 2. 3つのサービス */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" padding="xl" className="pb-0">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* 通訳・会議同席 */}
             <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
               <div className="flex items-start gap-4 mb-4">
@@ -105,10 +114,10 @@ function BusinessSpotServicePage() {
       </Section>
 
       {/* 3. こんな時に、ご利用ください */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" padding="xl" className="pt-0">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
+          <div className="text-center py-8">
+            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
               こんな時に、ご利用ください。
             </Typography>
           </div>
@@ -143,7 +152,7 @@ function BusinessSpotServicePage() {
           </div>
 
           {/* カウンセリングバナー */}
-          <div className="relative mb-16">
+          <div className="relative">
             <div className="max-w-4xl mx-auto">
               <Link href="/contact">
                 <Image
@@ -239,7 +248,7 @@ function BusinessSpotServicePage() {
           </div>
 
           {/* 料金に関するご注意 */}
-          <div className="bg-light-gray  p-8 max-w-4xl mx-auto mb-16">
+          <div className="bg-light-gray  p-8 max-w-4xl mx-auto">
             <Typography variant="heading-sm" className="text-dark-gray mb-6 text-center">
               料金に関するご注意
             </Typography>
@@ -276,7 +285,7 @@ function BusinessSpotServicePage() {
       {/* 4. ビジネスチャンスを逃さないために */}
       <Section background="light-gray" padding="xl">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               ビジネスチャンスを逃さないために
             </Typography>

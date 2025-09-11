@@ -40,7 +40,16 @@ export default function StudentCoursePage() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 30%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/students_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 30%' }}
         />
         <Container className="relative z-10 w-full">
@@ -61,7 +70,7 @@ export default function StudentCoursePage() {
       </Section>
 
       {/* 2. 3つの特徴カード */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" padding="xl" className="pb-0">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
@@ -135,7 +144,7 @@ export default function StudentCoursePage() {
       </Section>
 
       {/* 2. エッセイ添削し放題セクション */}
-      <Section background="brand-red" padding="xl">
+      <Section background="brand-red" padding="xl" className="pt-0">
         <Container>
           <div className="text-center">
             <Typography variant="heading-lg" className="text-white mb-4" as="h2">
@@ -161,65 +170,182 @@ export default function StudentCoursePage() {
             </Typography>
           </div>
 
-          <div className="max-w-4xl mx-auto mb-16">
+          {/* ストーリーテリング型レイアウト */}
+          <div className="max-w-5xl mx-auto mb-16">
+            {/* Step 1: 不安の声 */}
+            <div className="relative mb-12">
+              <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 text-center relative">
+                <div className="text-6xl mb-4">💭</div>
+                <Typography variant="heading-md" className="text-dark-gray mb-4">
+                  「英語に自信がないから留学は無理」
+                </Typography>
+                <Typography variant="body-lg" className="text-gray">
+                  そう思っていませんか？
+                </Typography>
+              </div>
+            </div>
+
+            {/* 矢印 */}
             <div className="text-center mb-12">
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
-                「英語に自信がないから留学は無理」<br />
-                そう思っていませんか？
+              <div className="text-4xl text-brand-red">⬇️</div>
+              <Typography variant="body-lg" className="text-brand-red font-bold mt-2">
+                でも実は...
               </Typography>
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
-                Engrowthでは、<strong>サマーキャンプ</strong>、<strong>志望校選び&出願サポート</strong>、<strong>現地校見学サポート</strong>を一気通貫で行えることで、英語学習から留学まで完全サポートしています。
+            </div>
+
+            {/* Step 2: 解決策 */}
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 mb-12">
+              <div className="text-center mb-8">
+                <div className="text-6xl mb-4">🌟</div>
+                <Typography variant="heading-md" className="text-brand-red mb-6">
+                  Engrowthなら完全サポート！
+                </Typography>
+              </div>
+              
+              {/* プロセスフロー */}
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl mb-2 md:mb-3">📚</div>
+                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
+                    サマーキャンプ
+                  </Typography>
+                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                    実践的な英語体験
+                  </Typography>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl mb-2 md:mb-3">🎯</div>
+                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
+                    志望校選び&出願サポート
+                  </Typography>
+                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                    あなたに最適な進路
+                  </Typography>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl mb-2 md:mb-3">✈️</div>
+                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
+                    現地校見学サポート
+                  </Typography>
+                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                    安心の現地サポート
+                  </Typography>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3: コンサルタントの強み */}
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
+              <div className="text-6xl mb-4">👨‍🏫</div>
+              <Typography variant="heading-md" className="text-dark-gray mb-4">
+                全員留学経験者のコンサルタント
               </Typography>
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
-                英語の不安から留学に踏み出せないあなたでも、Engrowthで英語を習得すれば、留学への勇気が得られます。
+              <Typography variant="body-lg" className="text-dark-gray mb-6">
+                留学経験によって得られる貴重な価値観を知っているからこそ、<br />
+                あなたの不安を理解し、適切なサポートができます。
               </Typography>
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-8">
-                留学経験によって貴重な価値観が得られることを、<strong>Engrowthコンサルタントは全員留学経験者</strong>なので知っています。
-              </Typography>
-              <Typography variant="body-lg" className="text-brand-red font-bold leading-relaxed">
+              <Typography variant="body-lg" className="text-brand-red font-bold">
                 あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
               </Typography>
             </div>
-                </div>
+          </div>
 
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8">
-              こんな不安はありませんか？
-            </Typography>
-            <Typography variant="body-lg" className="text-gray mb-12">
-              多くの学生が抱える英語や留学への不安
-                </Typography>
-              </div>
-
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="space-y-6 text-left mb-12">
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed flex items-start">
-                <span className="text-brand-red font-bold mr-3">•</span>
-                英語に自信がなくて留学に消極的になってしまう
+          {/* インフォグラフィック風デザイン */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="text-center mb-12">
+              <div className="text-6xl mb-4">😰</div>
+              <Typography variant="heading-lg" className="text-dark-gray mb-4">
+                こんな不安はありませんか？
               </Typography>
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed flex items-start">
-                <span className="text-brand-red font-bold mr-3">•</span>
-                留学したいけど、何から始めればいいかわからない
-              </Typography>
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed flex items-start">
-                <span className="text-brand-red font-bold mr-3">•</span>
-                海外で生活することへの漠然とした不安がある
+              <Typography variant="body-lg" className="text-gray">
+                多くの学生が抱える英語や留学への不安
               </Typography>
             </div>
-            
-            <div className="text-center bg-warm-white rounded-lg p-8">
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4">
-                <strong className="text-brand-red">Engrowthで英語を学べば自信がつき、留学の勇気が得られ、</strong>
+
+            {/* 不安の声 */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+              <div className="bg-gray-50 rounded-xl p-4 md:p-6 text-center">
+                <div className="text-3xl md:text-4xl mb-3 md:mb-4">❌</div>
+                <Typography variant="body-sm" className="text-dark-gray font-bold mb-1 md:mb-2 text-xs md:text-base">
+                  "英語に自信がない"
+                </Typography>
+                <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                  留学に消極的になってしまう
+                </Typography>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4 md:p-6 text-center">
+                <div className="text-3xl md:text-4xl mb-3 md:mb-4">❌</div>
+                <Typography variant="body-sm" className="text-dark-gray font-bold mb-1 md:mb-2 text-xs md:text-base">
+                  "何から始めればいいか..."
+                </Typography>
+                <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                  留学の準備がわからない
+                </Typography>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4 md:p-6 text-center col-span-2 md:col-span-1">
+                <div className="text-3xl md:text-4xl mb-3 md:mb-4">❌</div>
+                <Typography variant="body-sm" className="text-dark-gray font-bold mb-1 md:mb-2 text-xs md:text-base">
+                  "海外生活が不安"
+                </Typography>
+                <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                  漠然とした恐怖心がある
+                </Typography>
+              </div>
+            </div>
+
+            {/* 変化の矢印 */}
+            <div className="text-center mb-12">
+              <div className="text-5xl text-brand-red mb-4">⬇️</div>
+              <Typography variant="heading-md" className="text-brand-red font-bold">
+                Engrowthなら解決！
               </Typography>
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4">
-                <strong className="text-brand-red">留学によって広い世界から価値観を得られ、</strong>
-              </Typography>
-              <Typography variant="body-lg" className="text-dark-gray leading-relaxed mb-4">
-                <strong className="text-brand-red">より魅力的な人間へと成長し、</strong>
-              </Typography>
-              <Typography variant="body-lg" className="text-brand-red font-bold leading-relaxed">
-                より魅力的な人たちとの出会いと未来が得られる
-              </Typography>
+            </div>
+
+            {/* 成功への道筋 */}
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
+              <div className="text-center mb-8">
+                <div className="text-6xl mb-4">✅</div>
+                <Typography variant="heading-md" className="text-dark-gray mb-6">
+                  成功への道筋
+                </Typography>
+              </div>
+              
+              {/* プロセスフロー */}
+              <div className="grid grid-cols-3 gap-4 md:gap-6 text-center mb-8">
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl md:text-5xl mb-2 md:mb-3">🎯</div>
+                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
+                    英語習得
+                  </Typography>
+                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                    基礎から実践まで
+                  </Typography>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl md:text-5xl mb-2 md:mb-3">🚀</div>
+                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
+                    自信UP
+                  </Typography>
+                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                    留学への勇気が生まれる
+                  </Typography>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl md:text-5xl mb-2 md:mb-3">🌍</div>
+                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
+                    留学成功
+                  </Typography>
+                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
+                    広い世界で価値観を獲得
+                  </Typography>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <Typography variant="body-lg" className="text-brand-red font-bold leading-relaxed">
+                  魅力的な人間へと成長し、魅力的な人たちとの出会いと未来が得られます
+                </Typography>
+              </div>
             </div>
           </div>
         </Container>

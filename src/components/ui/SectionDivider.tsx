@@ -6,7 +6,7 @@ export default function SectionDivider({
   variant?: "soft" | "label" | "brand";
 }) {
   return (
-    <div className="relative my-16 md:my-20">
+    <div className="relative my-0">
       {/* 線 */}
       <div
         className={

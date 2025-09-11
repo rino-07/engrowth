@@ -23,7 +23,16 @@ export default function AboutPage() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 25%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/about_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 25%' }}
         />
         <Container className="relative z-10 w-full">
@@ -81,7 +90,7 @@ export default function AboutPage() {
           </div>
 
           {/* 無料カウンセリングバナー */}
-          <div className="relative mb-20">
+          <div className="relative">
             <Link href="/contact">
               <Image
                 src="/images/main_banner.png"
@@ -98,8 +107,8 @@ export default function AboutPage() {
       {/* 2. Engrowthの仕組み */}
       <Section background="light-gray" padding="xl">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
+          <div className="text-center">
+            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
               Engrowthの仕組み
             </Typography>
           </div>
@@ -243,13 +252,13 @@ export default function AboutPage() {
       {/* 5. あなたもEngrowthの一員になりませんか？ */}
       <Section background="warm-white" padding="xl">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-12" as="h2">
+          <div className="text-center">
+            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
               あなたもEngrowthの一員になりませんか？
             </Typography>
 
             {/* エコシステム図とボタン */}
-            <div className="max-w-4xl mx-auto mb-16">
+            <div className="max-w-4xl mx-auto lg:mb-16">
               <div className="relative">
                 <Image
                   src="/images/drive-download-20250908T014101Z-1-001/about/eco02.png"

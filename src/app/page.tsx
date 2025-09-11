@@ -30,7 +30,16 @@ export default function Home() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 20%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/top_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 20%' }}
         />
         <Container className="relative z-10 w-full">
@@ -156,8 +165,8 @@ export default function Home() {
       {/* 5. 従来スクールとの違い（2カラム比較） */}
       <Section background="warm-white" padding="xl">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 section-title-with-underbar">
+          <div className="text-center">
+            <Typography variant="heading-lg" className="text-dark-gray section-title-with-underbar">
               従来のスクールとのちがい
             </Typography>
           </div>
@@ -191,7 +200,7 @@ export default function Home() {
             </div>
 
             {/* 矢印 - 10% */}
-            <div className="col-span-12 lg:col-span-2 flex items-center justify-center py-4 lg:py-0">
+            <div className="col-span-12 lg:col-span-2 flex items-center justify-center lg:py-0">
               <div className="text-brand-red">
                 {/* スマホ: 下向き矢印 */}
                 <svg className="w-16 h-16 lg:hidden" fill="currentColor" viewBox="0 0 24 24">

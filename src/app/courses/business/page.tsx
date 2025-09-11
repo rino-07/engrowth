@@ -36,7 +36,16 @@ export default function BusinessCoursePage() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 40%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/business_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 40%' }}
         />
         <Container className="relative z-10 w-full">
@@ -57,7 +66,7 @@ export default function BusinessCoursePage() {
       </Section>
 
       {/* 2. 3つの特徴カード */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" padding="xl" className="lg:pb-16 pb-0">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
@@ -131,7 +140,7 @@ export default function BusinessCoursePage() {
       </Section>
 
       {/* 3. Engrowthが選ばれる理由 */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" padding="xl" className="lg:pt-16 pt-0">
         <Container>
           <div className="max-w-6xl mx-auto">
             {/* タイトル - 1カラム全幅 */}

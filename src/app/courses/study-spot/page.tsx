@@ -26,7 +26,16 @@ export default function StudentSpotServicePage() {
           alt="背景画像"
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 40%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/spot-student_hero_sma.png"
+          alt="背景画像"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
           style={{ objectPosition: 'center 40%' }}
         />
         <Container className="relative z-10 w-full">
@@ -42,9 +51,9 @@ export default function StudentSpotServicePage() {
       </Section>
 
       {/* 2. 3つのメインサービス */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" padding="xl" className="pb-0">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* エッセイ添削 */}
             <Card className="text-center p-6 border-2 border-gray-200 hover:border-blue-600 transition-all duration-300">
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
@@ -94,10 +103,10 @@ export default function StudentSpotServicePage() {
       </Section>
 
       {/* 3. こんな時に、ご利用ください */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" padding="xl" className="pt-0">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
+          <div className="text-center py-8">
+            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
               こんな時に、ご利用ください。
             </Typography>
           </div>
@@ -132,7 +141,7 @@ export default function StudentSpotServicePage() {
           </div>
 
           {/* カウンセリングバナー */}
-          <div className="relative mb-16">
+          <div className="relative">
             <div className="max-w-4xl mx-auto">
               <Image
                 src="/images/main_banner.png"
@@ -219,7 +228,7 @@ export default function StudentSpotServicePage() {
           </div>
 
           {/* 料金に関するご注意 */}
-          <div className="bg-light-gray rounded-2xl p-8 max-w-4xl mx-auto mb-16">
+          <div className="bg-light-gray rounded-2xl p-8 max-w-4xl mx-auto">
             <Typography variant="heading-sm" className="text-dark-gray mb-6 text-center">
               料金に関するご注意
             </Typography>
@@ -270,7 +279,7 @@ export default function StudentSpotServicePage() {
           </div>
 
           {/* サポート内容 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="text-center p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Image
