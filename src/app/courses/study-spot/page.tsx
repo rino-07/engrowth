@@ -328,33 +328,32 @@ export default function StudentSpotServicePage() {
               </Typography>
             </Card>
 
-            <Card className="text-center p-0 overflow-hidden">
-              <div className="relative h-48">
+            <Card className="text-center p-6">
+              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
+                  src="/images/drive-download-20250908T014101Z-1-001/method/method-practical-advice.jpg"
                   alt="総合的サポート"
-                  fill
-                  className="object-cover"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-6">
-                <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                  総合的サポート
-                </Typography>
-                <Typography variant="body-sm" className="text-gray">
-                  出願戦略、スケジュール管理、
-                  <br />
-                  優先順位付けなど
-                  <br />
-                  効率的な準備のための
-                  <br />
-                  総合的なアドバイス
-                </Typography>
-              </div>
+              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+                総合的サポート
+              </Typography>
+              <Typography variant="body-sm" className="text-gray">
+                出願戦略、スケジュール管理、
+                <br />
+                優先順位付けなど
+                <br />
+                効率的な準備のための
+                <br />
+                総合的なアドバイス
+              </Typography>
             </Card>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto mt-12">
             <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white flex-1">
               LINEで相談
             </Button>

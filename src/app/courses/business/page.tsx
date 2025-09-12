@@ -153,7 +153,7 @@ export default function BusinessCoursePage() {
       </Section>
 
       {/* 3. Engrowthが選ばれる理由 */}
-      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 lg:pt-16 pt-0">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 lg:pt-20 pt-8">
         <SectionHeaderLeft
           label="Why Choose Us"
           title="ビジネスパーソンが成果を実感する理由"

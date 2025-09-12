@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import Section from '@/components/layout/Section';
 import Container from '@/components/layout/Container';

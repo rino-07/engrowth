@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import Section from '@/components/layout/Section';
 import Container from '@/components/layout/Container';
@@ -45,7 +44,7 @@ export default function SciencePage() {
           <div className="relative bg-white rounded-2xl shadow-lg p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <Typography variant="body-lg" className="text-gray-800 font-semibold mb-4">
-                <strong className="bg-red-100 px-2 rounded" style={{color: '#d30306'}}>「努力しても伸びない」</strong>を科学的に撃破する
+                <strong className="font-bold" style={{color: '#d30306'}}>「努力しても伸びない」</strong>を科学的に撃破する
               </Typography>
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-4">
                 科学的に正しい方法に基づけば、誰でも確実に英語を話せるようになります。
@@ -110,13 +109,6 @@ export default function SciencePage() {
             </Card>
           </div>
 
-          <div className="flex justify-center">
-            <div className="w-64 h-40 bg-gray-100 rounded-lg flex items-center justify-center">
-              <Typography variant="body-sm" className="text-gray-500">
-                失敗例イメージ
-              </Typography>
-            </div>
-          </div>
         </Container>
       </Section>
 
@@ -197,13 +189,6 @@ export default function SciencePage() {
               </Card>
             </div>
 
-            <div className="flex justify-center">
-              <div className="w-64 h-40 bg-gray-100 rounded-lg flex items-center justify-center">
-                <Typography variant="body-sm" className="text-gray-500">
-                  成長・ステップアップイメージ
-                </Typography>
-              </div>
-            </div>
           </div>
         </Container>
       </Section>

@@ -107,6 +107,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
             ※ 価格は税込み表示です。
             <br />
             ※ 長期プランほどお得になっており、継続的な学習をサポートします。
+            <br />
+            ※ 弊社では想定為替レート（3ヶ月ごとの平均値をとった額）を元に円での額を算出してます。
           </Typography>
         </div>
       </FullBleed1440>

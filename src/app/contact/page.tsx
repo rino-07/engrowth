@@ -269,15 +269,6 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* 回答時間について */}
             <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-warm-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Image
-                  src="/images/clock-icon.jpg"
-                  alt="時計"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
-              </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-4">
                 回答時間について
               </Typography>
@@ -288,15 +279,6 @@ export default function ContactPage() {
 
             {/* 営業について */}
             <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-warm-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Image
-                  src="/images/open-icon.jpg"
-                  alt="営業"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
-              </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-4">
                 営業について
               </Typography>

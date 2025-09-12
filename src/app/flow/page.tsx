@@ -41,7 +41,7 @@ export default function FlowPage() {
           />
         </div>
         <div className="relative z-10 flex items-center min-h-[60vh]">
-        <div className="absolute inset-0 bg-black/25 z-5" />
+        <div className="absolute inset-0 bg-black/30" />
         <Container className="relative z-10 w-full">
           <div className="py-16 sm:py-20 text-white text-center">
             <h1 className="text-xl md:text-5xl font-bold tracking-tight font-serif">
@@ -85,7 +85,7 @@ export default function FlowPage() {
         {/* 中央ライン（md以上） */}
         <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
         <Container>
-          <ol className="space-y-14">
+          <ol className="space-y-0">
             {/* STEP 1：画像左 / テキスト右 */}
             <ZigzagItem
               n={1}
@@ -117,6 +117,9 @@ export default function FlowPage() {
                 </>
               }
             />
+            
+            {/* 仕切り線 */}
+            <div className="w-full h-px bg-gray-200 my-14" />
 
             {/* STEP 2：画像右 / テキスト左 */}
             <ZigzagItem
@@ -148,6 +151,9 @@ export default function FlowPage() {
                 </>
               }
             />
+            
+            {/* 仕切り線 */}
+            <div className="w-full h-px bg-gray-200 my-14" />
 
             {/* STEP 3：画像左 / テキスト右 */}
             <ZigzagItem
@@ -181,6 +187,9 @@ export default function FlowPage() {
                 </>
               }
             />
+            
+            {/* 仕切り線 */}
+            <div className="w-full h-px bg-gray-200 my-14" />
           </ol>
         </Container>
       </section>

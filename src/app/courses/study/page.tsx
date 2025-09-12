@@ -588,7 +588,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/spot-student-school-visit.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/students/students-hero-background.jpg"
                 alt="留学成功"
                 width={300}
                 height={200}
@@ -615,7 +615,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/business-differentiation.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/business/business-differentiation.jpg"
                 alt="就職活動での差別化"
                 width={300}
                 height={200}
@@ -642,7 +642,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/business-growth-impact.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/students/unnamed.png"
                 alt="キャリアの選択肢拡大"
                 width={300}
                 height={200}
@@ -667,7 +667,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/supporters-talent-discovery.jpg"
+                src="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
                 alt="国際的な人脈形成"
                 width={300}
                 height={200}
