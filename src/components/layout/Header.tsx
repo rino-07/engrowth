@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 import Button from '../ui/Button';
 import Container from './Container';
@@ -11,6 +11,8 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const [isMobileCoursesOpen, setIsMobileCoursesOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const pathname = usePathname();
 
   const handleMenuToggle = useCallback(() => {
@@ -25,15 +27,21 @@ const Header: React.FC = () => {
     setIsMobileCoursesOpen(prev => !prev);
   }, []);
 
+  const handleMobileAboutToggle = useCallback(() => {
+    setIsMobileAboutOpen(prev => !prev);
+  }, []);
+
   const handleMobileMenuClose = useCallback(() => {
     setIsMenuOpen(false);
     setIsMobileCoursesOpen(false);
+    setIsMobileAboutOpen(false);
   }, []);
 
   // ページ変更時にメニューを閉じる
   useEffect(() => {
     setIsMenuOpen(false);
     setIsMobileCoursesOpen(false);
+    setIsMobileAboutOpen(false);
   }, [pathname]);
 
   // クリック外でメニューを閉じる
@@ -43,6 +51,7 @@ const Header: React.FC = () => {
       if (isMenuOpen && !target.closest('[data-menu-container]')) {
         setIsMenuOpen(false);
         setIsMobileCoursesOpen(false);
+        setIsMobileAboutOpen(false);
       }
     };
 
@@ -53,7 +62,18 @@ const Header: React.FC = () => {
   }, [isMenuOpen]);
 
   const navigation = [
-    { name: 'Engrowthの特徴', href: '/about' },
+    { name: 'ホーム', href: '/' },
+    { 
+      name: 'Engrowthの特徴',
+      href: '/about',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Engrowthエコシステム', href: '/about/ecosystem' },
+        { name: '専門コンサルタント', href: '/about/consultant' },
+        { name: '科学的根拠', href: '/about/science' },
+        { name: '実践の仕組み', href: '/about/practice' },
+      ]
+    },
     { 
       name: 'コース・料金', 
       href: '/courses',
@@ -91,8 +111,20 @@ const Header: React.FC = () => {
                 {item.hasDropdown ? (
                   <div
                     className="relative"
-                    onMouseEnter={() => setIsCoursesOpen(true)}
-                    onMouseLeave={() => setIsCoursesOpen(false)}
+                    onMouseEnter={() => {
+                      if (item.name === 'コース・料金') {
+                        setIsCoursesOpen(true);
+                      } else if (item.name === 'Engrowthの特徴') {
+                        setIsAboutOpen(true);
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      if (item.name === 'コース・料金') {
+                        setIsCoursesOpen(false);
+                      } else if (item.name === 'Engrowthの特徴') {
+                        setIsAboutOpen(false);
+                      }
+                    }}
                   >
                     <Link
                       href={item.href}
@@ -118,7 +150,7 @@ const Header: React.FC = () => {
                     {/* Dropdown Menu */}
                     <div
                       className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 transition-all duration-200 ${
-                        isCoursesOpen
+                        (item.name === 'コース・料金' && isCoursesOpen) || (item.name === 'Engrowthの特徴' && isAboutOpen)
                           ? 'opacity-100 visible transform translate-y-0'
                           : 'opacity-0 invisible transform -translate-y-2'
                       }`}
@@ -219,13 +251,69 @@ const Header: React.FC = () => {
               <div className="px-3 py-1 text-xs font-semibold text-gray uppercase tracking-wider">
                 学習者の方へ
               </div>
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
-                onClick={handleMenuClose}
-              >
-                Engrowthの特徴
-              </Link>
+              {/* モバイル用Engrowthの特徴プルダウン */}
+              <div className="ml-2">
+                <button
+                  type="button"
+                  className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                  onClick={handleMobileAboutToggle}
+                >
+                  Engrowthの特徴
+                  <svg
+                    className={`h-4 w-4 transition-transform duration-200 ${
+                      isMobileAboutOpen ? 'transform rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                
+                {/* サブメニュー */}
+                <div
+                  className={`overflow-hidden transition-all duration-200 ${
+                    isMobileAboutOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="py-2 pl-4 space-y-1">
+                    <Link
+                      href="/about/ecosystem"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={handleMobileMenuClose}
+                    >
+                      Engrowthエコシステム
+                    </Link>
+                    <Link
+                      href="/about/consultant"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={handleMobileMenuClose}
+                    >
+                      専門コンサルタント
+                    </Link>
+                    <Link
+                      href="/about/science"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={handleMobileMenuClose}
+                    >
+                      科学的根拠
+                    </Link>
+                    <Link
+                      href="/about/practice"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      onClick={handleMobileMenuClose}
+                    >
+                      実践の仕組み
+                    </Link>
+                  </div>
+                </div>
+              </div>
               
               {/* モバイル用コース・料金プルダウン */}
               <div className="ml-2">

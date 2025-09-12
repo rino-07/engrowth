@@ -1,350 +1,201 @@
+import React from 'react';
 import Link from 'next/link';
-import Button from '@/components/ui/Button';
-import Typography from '@/components/ui/Typography';
-import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import Container from '@/components/layout/Container';
+import Typography from '@/components/ui/Typography';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
-import Image from 'next/image';
-import { FaUserTie, FaFlask, FaUsers } from 'react-icons/fa';
+import Card from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Engrowthの特徴 - オーダーメイド英語学習で留学生の経済問題を解決',
-  description: 'Engrowthは科学的メソッドとオーダーメイド設計で、留学生・企業・コンサルタントが相互に支援し合う独自のエコシステムを提供。日本人だからこそ分かる課題に対応します。',
-  keywords: 'Engrowth, 留学生支援, オーダーメイド学習, 科学的メソッド, エコシステム',
+  title: 'Engrowthの特徴 - Engrowth',
+  description: 'Engrowthが選ばれる4つの特徴：エコシステム、専門コンサルタント、科学的根拠、実践の仕組み。詳細をご確認ください。',
+  keywords: 'Engrowthの特徴, エコシステム, コンサルタント, 科学的根拠, 実践の仕組み, 英語学習',
 };
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/top/reason-ecosystem.jpg"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 25%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/about_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 25%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center min-h-[60vh]">
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h1">
+    <div className="about-page">
+      {/* ヒーローセクション */}
+      <Section 
+        background="gradient" 
+        className="py-16 sm:py-20 lg:py-24 relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+        }}
+      >
+        <Container>
+          <div className="text-center text-white">
+            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif">
               Engrowthの特徴
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto">
-              学ぶことが支援になる、循環型エコシステムの仕組み
+            <Typography variant="heading-sm" className="opacity-90 max-w-3xl mx-auto">
+              なぜEngrowthが選ばれるのか？4つの特徴をご紹介
             </Typography>
           </div>
         </Container>
-        </div>
       </Section>
 
-      {/* 2. 3つの特徴 */}
+      {/* メインメッセージセクション */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <Container>
+          <div className="text-center mb-12">
+            <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
+              Engrowthが選ばれる4つの特徴
+            </Typography>
+            <Typography variant="body-lg" className="text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              科学的根拠に基づいた学習メソッドと、専門コンサルタントによる伴走サポート、そして独自のエコシステムで、確実な英語力向上を実現します。
+            </Typography>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 4つの特徴カード */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* エコシステム */}
+            <Card className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
+                  <span className="text-2xl">🌐</span>
+                </div>
+                <Typography variant="heading-md" className="text-purple-700 font-serif mb-4">
+                  Engrowthエコシステム
+                </Typography>
+                <Typography variant="body-sm" className="text-gray-600 mb-6 leading-relaxed">
+                  留学生・企業・コンサルタントが相互に支援し合う独自のエコシステム。Win-Win-Winの関係で持続可能な成長を実現。
+                </Typography>
+              </div>
+              <div className="text-center">
+                <Link 
+                  href="/about/ecosystem"
+                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                >
+                  詳細を見る
+                </Link>
+              </div>
+            </Card>
+
+            {/* コンサルタント */}
+            <Card className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                  <span className="text-2xl">👨‍🏫</span>
+                </div>
+                <Typography variant="heading-md" className="text-blue-700 font-serif mb-4">
+                  専門コンサルタント
+                </Typography>
+                <Typography variant="body-sm" className="text-gray-600 mb-6 leading-relaxed">
+                  第二言語習得を成功させた経験者による伴走サポート。日本人だからこそ提供できる心理的安全性。
+                </Typography>
+              </div>
+              <div className="text-center">
+                <Link 
+                  href="/about/consultant"
+                  className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  詳細を見る
+                </Link>
+              </div>
+            </Card>
+
+            {/* 科学的根拠 */}
+            <Card className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+                  <span className="text-2xl">🧬</span>
+                </div>
+                <Typography variant="heading-md" className="text-green-700 font-serif mb-4">
+                  科学的根拠
+                </Typography>
+                <Typography variant="body-sm" className="text-gray-600 mb-6 leading-relaxed">
+                  脳科学・言語学に基づく効果的な学習メソッド。第二言語習得メカニズムの科学的アプローチ。
+                </Typography>
+              </div>
+              <div className="text-center">
+                <Link 
+                  href="/about/science"
+                  className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                >
+                  詳細を見る
+                </Link>
+              </div>
+            </Card>
+
+            {/* 実践の仕組み */}
+            <Card className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
+                  <span className="text-2xl">⚙️</span>
+                </div>
+                <Typography variant="heading-md" className="text-orange-700 font-serif mb-4">
+                  実践の仕組み
+                </Typography>
+                <Typography variant="body-sm" className="text-gray-600 mb-6 leading-relaxed">
+                  習慣化×伴走サポートによる確実な成果創出。3ステップ習慣化プログラムで継続をサポート。
+                </Typography>
+              </div>
+              <div className="text-center">
+                <Link 
+                  href="/about/practice"
+                  className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+                >
+                  詳細を見る
+                </Link>
+              </div>
+            </Card>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 概要セクション */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         <SectionHeaderLeft
-          label="Features"
-          title="Engrowthが選ばれる3つの理由"
-          desc="従来の英語学習にはない、科学的根拠と実践経験に基づいた独自のアプローチで確実な成果を実現します。"
+          label="About Engrowth"
+          title="なぜEngrowthが選ばれるのか"
+          desc="Engrowthは、科学的根拠に基づいた学習メソッドと専門コンサルタントによる伴走サポート、そして独自のエコシステムで、従来の英会話スクールとは一線を画すサービスを提供しています。"
           className="mb-12 lg:mb-16"
         />
-        
+
         <Container>
-          <div className="space-y-8 max-w-4xl mx-auto mb-16">
-            <div className="flex items-start gap-6">
-              <FaUserTie className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
-              <div>
-                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
-                  コンサルタントも以前は英語が話せなかった日本人
-                </Typography>
-                <Typography variant="body-lg" className="text-dark-gray">
-                  日本人だからこそわかる、つまずくポイントを克服しながら学習を進めます。
-                </Typography>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-6">
+                多くの英語学習者が挫折してしまう理由は、科学的根拠に基づかない学習方法と、継続をサポートする仕組みの不足にあります。
+              </Typography>
+              <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-6">
+                Engrowthは、第二言語習得論と脳科学に基づいた学習メソッドにより、効率的で確実な英語力向上を実現します。
+              </Typography>
+              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
+                さらに、留学生・企業・コンサルタントが相互に支援し合う独自のエコシステムにより、持続可能な成長をサポートします。
+              </Typography>
             </div>
-
-            <div className="flex items-start gap-6">
-              <FaFlask className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
-              <div>
-                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
-                  脳科学や神経言語学などの科学的根拠に基づいたプログラム
-                </Typography>
-                <Typography variant="body-lg" className="text-dark-gray">
-                  英語が苦手なあなたでも、着実な英語力の向上を実現します。
-                </Typography>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-6">
-              <FaUsers className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
-              <div>
-                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
-                  コンサルタントは全員、海外留学経験者
-                </Typography>
-                <Typography variant="body-lg" className="text-dark-gray">
-                  日本の学校で習う、ネイティブが使わない英語は除外し、
-                  現地で使える生きた英語を身に付けることができます。
+            <div className="text-center">
+              <div className="w-full h-64 bg-gray-100 rounded-xl flex items-center justify-center">
+                <Typography variant="body-sm" className="text-gray-500">
+                  Engrowthの特徴イメージ
                 </Typography>
               </div>
             </div>
           </div>
+        </Container>
+      </Section>
 
-          {/* 無料カウンセリングバナー */}
-          <div className="relative">
-            <Link href="/contact">
-              <Image
-                src="/images/main_banner.png"
-                alt="30分の無料カウンセリング"
-                width={1200}
-                height={300}
-                className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-              />
+      {/* CTAバナー */}
+      <Section background="gradient" className="py-12 sm:py-16">
+        <Container>
+          <div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-lg p-8 text-center shadow-lg">
+            <div className="text-center text-white">
+              <Typography variant="heading-lg" className="text-gray-900 font-bold mb-4 font-serif">
+                英会話で広がる無限の可能性を
+              </Typography>
+            </div>
+            <Typography variant="body-lg" className="mt-4 text-white mb-6">
+              Engrowthの科学的根拠に基づくプログラムで、英会話習得を目指しましょう
+            </Typography>
+            <Link href="/contact" className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              お問い合わせはこちら
             </Link>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 2. Engrowthの仕組み */}
-      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="System"
-          title="受講者をパートナーと呼ぶ独自のエコシステム"
-          desc="英語力向上を通じて、受講者・コンサルタント・企業が相互に支援し合う持続可能な学習環境を提供しています。"
-          className="mb-12 lg:mb-16"
-        />
-        
-        <Container>
-
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* 左側: 説明テキスト */}
-              <div>
-                <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
-                  Engrowthでは受講者をパートナーと呼んでいます。
-                  <br />
-                  なぜなら受講者の方の英語力が向上することは、Engrowthの目指す世界に一歩近づくことであり、コンサルタント自身の夢を叶える一助になるからです。
-                </Typography>
-
-                <Typography variant="body-md" className="text-dark-gray leading-relaxed">
-                  私たちは、すべてのステークホルダーがWin-Winの関係で結ばれることを信念とし、共に日本の未来を切り拓いていく存在でありたいと考えています。
-                </Typography>
-              </div>
-
-              {/* 右側: エコシステム図 */}
-              <div className="flex justify-center">
-                <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/about/eco01.png"
-                  alt="Engrowthエコシステム図"
-                  width={600}
-                  height={400}
-                  className="w-full max-w-lg h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 3. Engrowthエコシステムへの支援について */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="Support"
-          title="学びを経済的理由で止めない、持続的な支援体制"
-          desc="Engrowthは留学中のコンサルタントが機会を失わないよう、透明性の高い支援スキームを提供します。あなたからのご支援が、世界で活躍する日本人を生み出します。"
-          className="mb-12 lg:mb-16"
-        />
-        
-        <Container>
-          <div className="text-center mb-16">
-            <div className="mb-12">
-              <Link href="/supporters">
-                <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-                  ぜひご支援ください
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 4. Engrowthが選ばれる理由 */}
-      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="Why Choose Us"
-          title="科学的根拠と実践経験に基づく確実な成果"
-          desc="従来の英語学習の課題を解決する、独自のメソッドと徹底したサポート体制で、あなたの目標達成を実現します。"
-          className="mb-12 lg:mb-16"
-        />
-        
-        <Container>
-          <div className="max-w-6xl mx-auto">
-
-            {/* Point番号と本文を同じブロック内にflexレイアウト */}
-            <div className="space-y-12">
-              {/* Point 1 */}
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-lg">Point 1</span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl text-dark-gray mb-2">
-                    専属コンサルタントは全員、留学経験のある日本人
-                  </h3>
-                  <p className="text-dark-gray leading-relaxed mb-2">
-                    日本人ならではの「つまずくポイント」を熟知して理解できる唯一の存在
-                  </p>
-                  <p className="text-dark-gray leading-relaxed">
-                    外国人講師では理解して理解できない、日本人特有の英語学習の悩み。
-                    <br />
-                    なぜ「This」と言えるのに、なぜ「It」と「Is」を含む文章できないのか、
-                    <br />
-                    なぜ過去形を忘れてしまうのか——————。
-                    <br /><br />
-                    あなたと同じ道を歩んだ日本人コンサルタントだからこそ、的確に把握し、効果的な解決策を提示できます。
-                  </p>
-                </div>
-              </div>
-
-              {/* Point 2 */}
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-lg">Point 2</span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl text-dark-gray mb-2">科学的根拠に基づく学習プログラム</h3>
-                  <p className="text-dark-gray leading-relaxed mb-2">
-                    感覚や経験論に頼らない、データドリブンな学習設計
-                  </p>
-                  <p className="text-dark-gray leading-relaxed">
-                    各人の理解度に合わせてプログラムではなく、第二言語習得理論、認知言語学、脳科学などの最新研究に基づいた学習方法を採用。
-                    <br />
-                    脳のメカニズムに沿った効果的で効率的な英語学習を実現します。
-                    <br /><br />
-                    忙しい毎日でも、社会人でも着実な成果が期待できるように設計されています。
-                  </p>
-                </div>
-              </div>
-
-              {/* Point 3 */}
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-12 bg-soft-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-lg">Point 3</span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl text-dark-gray mb-2">1人ひとりに合わせたオーダーメイド学習設計</h3>
-                  <p className="text-dark-gray leading-relaxed mb-2">
-                    あなたの目標・レベル・ライフスタイルに合わせた最適なスケジュール
-                  </p>
-                  <p className="text-dark-gray leading-relaxed">
-                    「TOEFL100点を目指します」と「内定先企業で活躍したい」では、必要なギャップが異なります。
-                    <br /><br />
-                    Engrowthでは初回カウンセリングで詳細分析を行い、目標達成までの最適なルートを設計。
-                    <br />
-                    日々の学習進捗度、運営度での中間調整により、常に最適な学習を維持できます。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 5. あなたもEngrowthの一員になりませんか？ */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="Join Us"
-          title="あなたもEngrowthエコシステムの一員になりませんか？"
-          desc="受講者として、コンサルタントとして、または支援者として。あなたに最適な参加方法で、共に英語学習の未来を創りましょう。"
-          className="mb-12 lg:mb-16"
-        />
-        
-        <Container>
-          <div className="text-center">
-
-            {/* エコシステム図とボタン */}
-            <div className="max-w-4xl mx-auto lg:mb-16">
-              <div className="relative">
-                <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/about/eco02.png"
-                  alt="Engrowthエコシステム参加図"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                />
-                
-                {/* ボタンを画像上に絶対配置 - レスポンシブ対応 */}
-                <div className="absolute inset-0">
-                  {/* パートナー（受講者）として参加ボタン */}
-                  <a 
-                    href="http://localhost:3000/contact#:~:text=Engrowth%E3%81%AE-,LINE,-２%E3%81%AB%E7%9B%B8%E8%AB%87%E3%81%99%E3%82%8B"
-                    className="absolute"
-                    style={{
-                      top: '31.5%',
-                      left: '64%',
-                      transform: 'translate(-50%, -50%)'
-                    }}
-                  >
-                    <button
-                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
-                      style={{ backgroundColor: '#db3633' }}
-                    >
-                      参加
-                    </button>
-                  </a>
-
-                  {/* サポーター（支援者）として参加ボタン */}
-                  <a 
-                    href="http://localhost:3000/contact#:~:text=info%40-,engrowth,-.jp"
-                    className="absolute"
-                    style={{
-                      top: '76%',
-                      left: '35%',
-                      transform: 'translate(-50%, -50%)'
-                    }}
-                  >
-                    <button
-                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
-                      style={{ backgroundColor: '#db3633' }}
-                    >
-                      参加
-                    </button>
-                  </a>
-
-                  {/* コンサルタントとして参加ボタン */}
-                  <a 
-                    href="http://localhost:3000/contact#:~:text=info%40-,engrowth,-.jp"
-                    className="absolute"
-                    style={{
-                      top: '76%',
-                      left: '90%',
-                      transform: 'translate(-50%, -50%)'
-                    }}
-                  >
-                    <button
-                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
-                      style={{ backgroundColor: '#db3633' }}
-                    >
-                      参加
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-
           </div>
         </Container>
       </Section>

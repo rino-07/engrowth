@@ -8,6 +8,7 @@ interface SectionProps {
   background?: 'white' | 'warm-white' | 'light-gray' | 'deep-navy' | 'gradient' | 'brand-red';
   padding?: 'sm' | 'md' | 'lg' | 'xl';
   fullWidth?: boolean;
+  style?: React.CSSProperties;
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -16,7 +17,8 @@ const Section: React.FC<SectionProps> = ({
   containerClassName = '',
   background = 'white',
   padding = 'lg',
-  fullWidth = false
+  fullWidth = false,
+  style
 }) => {
   const backgroundClasses = {
     white: 'bg-white',
@@ -38,14 +40,14 @@ const Section: React.FC<SectionProps> = ({
 
   if (fullWidth) {
     return (
-      <section className={sectionClasses}>
+      <section className={sectionClasses} style={style}>
         {children}
       </section>
     );
   }
 
   return (
-    <section className={sectionClasses}>
+    <section className={sectionClasses} style={style}>
       <Container className={containerClassName}>
         {children}
       </Container>

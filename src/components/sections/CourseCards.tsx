@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 
 interface CourseCardData {
@@ -48,7 +47,7 @@ interface CourseCardsProps {
   showButton?: boolean;
 }
 
-export const CourseCards: React.FC<CourseCardsProps> = ({ showButton = false }) => {
+export const CourseCards: React.FC<CourseCardsProps> = () => {
   return (
     <div className="cards-grid-responsive max-w-[1440px] mx-auto">
       {courseData.map((course) => (

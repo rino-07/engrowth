@@ -5,7 +5,7 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
-import { FaMicrophone, FaLanguage, FaComments, FaGlobe, FaUsers, FaFileAlt, FaChartLine, FaHandshake, FaDesktop } from 'react-icons/fa';
+import { FaMicrophone, FaLanguage, FaGlobe, FaUsers, FaChartLine, FaDesktop } from 'react-icons/fa';
 
 export const metadata = {
   title: 'ビジネススポットサービス - 必要な時に必要なサポートを | Engrowth',

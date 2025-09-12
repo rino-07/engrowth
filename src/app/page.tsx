@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import { CourseCards } from '@/components/sections/CourseCards';
-import { FaUserTie, FaChartLine, FaCog, FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
+import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {

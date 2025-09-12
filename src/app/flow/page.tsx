@@ -3,7 +3,6 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
-import SectionHeaderLeft from "@/components/ui/SectionHeaderLeft";
 import SectionDivider from "@/components/ui/SectionDivider";
 
 export const metadata = {

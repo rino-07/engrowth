@@ -5,9 +5,7 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
-import { PricingSection } from '@/components/sections/PricingSection';
 import Image from 'next/image';
-import { FaUserTie, FaFlask, FaUsers } from 'react-icons/fa';
 import React from 'react';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {

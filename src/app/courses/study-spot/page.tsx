@@ -55,9 +55,9 @@ export default function StudentSpotServicePage() {
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* エッセイ添削 */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center p-6 border-2 border-gray-200 hover:border-red-600 transition-all duration-300">
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaEdit className="w-8 h-8 text-blue-600" />
+                <FaEdit className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-2">
                 エッセイ添削
@@ -70,9 +70,9 @@ export default function StudentSpotServicePage() {
             </Card>
 
             {/* 面接練習・対策 */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center p-6 border-2 border-gray-200 hover:border-red-600 transition-all duration-300">
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaUsers className="w-8 h-8 text-blue-600" />
+                <FaUsers className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-2">
                 面接練習・対策
@@ -85,9 +85,9 @@ export default function StudentSpotServicePage() {
             </Card>
 
             {/* オンラインコンシェルジュ */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center p-6 border-2 border-gray-200 hover:border-red-600 transition-all duration-300">
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaHeadset className="w-8 h-8 text-blue-600" />
+                <FaHeadset className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-2">
                 オンラインコンシェルジュ
@@ -114,7 +114,7 @@ export default function StudentSpotServicePage() {
           <div className="max-w-4xl mx-auto space-y-6 mb-16">
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <FaGraduationCap className="w-4 h-4 text-blue-600" />
+                <FaGraduationCap className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
               <Typography variant="body-md" className="text-dark-gray">
                 留学申請用エッセイの完成度を上げたい
@@ -123,7 +123,7 @@ export default function StudentSpotServicePage() {
 
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <FaBriefcase className="w-4 h-4 text-blue-600" />
+                <FaBriefcase className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
               <Typography variant="body-md" className="text-dark-gray">
               英語面接の練習をしたい
@@ -132,7 +132,7 @@ export default function StudentSpotServicePage() {
 
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <FaQuestionCircle className="w-4 h-4 text-blue-600" />
+                <FaQuestionCircle className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
               <Typography variant="body-md" className="text-dark-gray">
               現地で銀行口座開設を1人でするのは不安だからオンラインでサポートしてほしい
