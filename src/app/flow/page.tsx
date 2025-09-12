@@ -40,12 +40,12 @@ export default function FlowPage() {
           style={{ objectPosition: 'center 25%' }}
         />
         <Container className="relative z-10 w-full">
-          <div className="text-center text-white">
-            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif text-white">
+          <div className="text-center">
+            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif text-dark-gray">
               専属コンサルタントだから続けられる<br />
               ３日坊主にならない英語学習
             </Typography>
-            <Typography variant="heading-sm" className="opacity-90 max-w-5xl mx-auto text-white">
+            <Typography variant="heading-sm" className="text-gray max-w-5xl mx-auto">
               英語学習の失敗を、才能のせいにしない。<br />
               〜正しいやり方を知れば 誰でも話せるようになる〜
             </Typography>
@@ -77,7 +77,7 @@ export default function FlowPage() {
       <SectionDivider variant="soft" />
 
       {/* 3) 左右交互（zigzag） */}
-      <section className="relative">
+      <section className="relative pt-16 lg:pt-24">
         {/* 中央ライン（md以上） */}
         <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
         <Container>
@@ -305,7 +305,7 @@ export default function FlowPage() {
       <SectionDivider variant="soft" />
 
       {/* 7) 最終CTA（main_banner.png画像） */}
-      <section>
+      <section className="py-16 lg:py-24">
         <Container>
           <div className="max-w-4xl mx-auto">
             <Link href="/contact">

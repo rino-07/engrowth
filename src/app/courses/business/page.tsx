@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
@@ -6,7 +7,6 @@ import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import React from 'react';
-import { PricingSection } from '@/components/sections/PricingSection';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -235,13 +235,130 @@ export default function BusinessCoursePage() {
       </Section>
 
       {/* 3. 料金 */}
-      <PricingSection 
-        useNewHeader={true}
-        headerLabel="Pricing"
-        headerTitle="ビジネス向け料金プラン"
-        headerDesc="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
-        background="warm-white"
-      />
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Pricing"
+          title="ビジネス向け料金プラン"
+          desc="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[1440px] mx-auto">
+            {/* 1ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  1ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $1,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,480
+                </Typography>
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  基本プラン
+                </Typography>
+                <Button variant="secondary" size="sm" className="w-full mt-auto" disabled>
+                  無料お試し
+                </Button>
+              </Card>
+            </div>
+
+            {/* 3ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  3ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $4,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,493
+                </Typography>
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  3ヶ月集中プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+
+            {/* 6ヶ月プラン（人気） */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-brand-red bg-red-50 transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold">
+                    人気
+                  </span>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray mb-2 mt-2">
+                  6ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $7,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,246
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
+                  約16%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  6ヶ月継続プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+
+            {/* 12ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  12ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $13,980
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,165
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
+                  約21%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  12ヶ月完全サポートプラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+          </div>
+
+          {/* 注記 */}
+          <div className="text-center mt-12">
+            <Typography variant="body-sm" className="text-gray-500 max-w-2xl mx-auto">
+              ※ 価格は税込み表示です。
+              <br />
+              ※ 長期プランほどお得になっており、継続的な学習をサポートします。
+              <br />
+              ※ 弊社では想定為替レート（3ヶ月ごとの平均値をとった額）を元に円での額を算出してます。
+            </Typography>
+          </div>
+        </Container>
+      </Section>
 
       {/* 4. あなたの英語力が、会社の未来を創る */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
