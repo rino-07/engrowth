@@ -4,6 +4,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import React from 'react';
 
@@ -28,25 +29,30 @@ export default function SupportersPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-hero-background.jpg"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 35%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/supporters_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 35%' }}
-        />
+      <Section background="warm-white" padding="xl" className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-hero-background.jpg"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 35%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/supporters_hero_sma.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 35%' }}
+          />
+          {/* 軽いオーバーレイ */}
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 section-title-with-underbar" as="h1">
@@ -55,7 +61,7 @@ export default function SupportersPage() {
             <Typography variant="heading-md" className="text-gray mb-8">
               日本の未来を、経済的な理由で閉ざさないために
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-12">
+            <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto mb-12">
               〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜
               <br /><br />
               あなたの支援が、明日の日本のグローバルリーダーを育てます
@@ -75,22 +81,21 @@ export default function SupportersPage() {
             </div>
           </div>
         </Container>
+        </div>
       </Section>
 
       {/* 2. Engrowth支援プログラムとは */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Support Program"
+          title="Engrowth支援プログラムで、未来の人材育成に参加"
+          desc="Engrowth独自の仕組みにより、効率的なグローバル人材への育成が可能になります。将来的に有能な人材（学習意欲の高い日本人留学生）への支援を通じて、学習時間の創出と優秀なビジネス人材の育成を目指します。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              Engrowth支援プログラムとは
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-4xl mx-auto leading-relaxed">
-              Engrowth独自の仕組みにより、効率的なグローバル人材への育成が可能になります。
-              <br />
-              弊社内での独自システムを通じて、将来的に有能な人材（学習意欲の高い日本人留学生）と支援が可能です。
-              <br /><br />
-              留学生活での、高度な学びの環境を維持するための英語コンサルティング活動を支えることで、学習時間の創出と優秀なビジネス人材の育成を目指します。
-            </Typography>
+            <p className="text-gray-600">支援プログラムの詳細については、お気軽にお問い合わせください。</p>
           </div>
         </Container>
       </Section>

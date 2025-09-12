@@ -3,6 +3,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import { PricingSection } from '@/components/sections/PricingSection';
 import { CourseCards } from '@/components/sections/CourseCards';
 import Image from 'next/image';
@@ -59,13 +60,15 @@ export default function CoursesPage() {
       </Section>
 
       {/* 2. コース選択（4カード） */}
-      <Section background="light-gray" padding="xl" className="overflow-visible">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
+        <SectionHeaderLeft
+          label="Courses & Services"
+          title="目的に合わせて選べるコース・サービス"
+          desc="ビジネス英語から留学準備、スポット利用まで。あなたのライフスタイルと目標に最適なプランをお選びいただけます。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <FullBleed1440>
-          <div className="text-center mb-12">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h2">
-              目的に合わせて選べるコース・サービス
-            </Typography>
-          </div>
           <CourseCards />
 
           {/* 無料カウンセリングバナー */}
@@ -86,30 +89,39 @@ export default function CoursesPage() {
       </Section>
 
       {/* 3. 入会金0円の強調表示 */}
-      <Section background="brand-red" padding="md">
+      <Section background="white" padding="sm">
         <Container>
           <div className="text-center">
-            <Typography variant="heading-md" className="text-white font-bold">
-              Engrowthでは、入会金・登録料0円。初期費用は一切かかりません。
-            </Typography>
+            <Image
+              src="/images/drive-download-20250908T014101Z-1-001/courses/welcome_banner.png"
+              alt="Engrowthでは、入会金・登録料0円。初期費用は一切かかりません。"
+              width={1200}
+              height={200}
+              className="w-full h-auto"
+            />
           </div>
         </Container>
       </Section>
 
       {/* 4. 料金表 */}
       <PricingSection 
-        title="あなたの目標とペースに合わせて選べる、柔軟なプランをご用意しました。"
+        useNewHeader={true}
+        headerLabel="Pricing"
+        headerTitle="あなたの目標とペースに合わせて選べる料金プラン"
+        headerDesc="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
         background="warm-white"
       />
 
-      {/* 4. スポットサービス */}
-      <Section background="light-gray" padding="xl">
+      {/* 5. スポットサービス */}
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Spot Services"
+          title="必要な時に、必要な分だけ利用できるスポットサービス"
+          desc="定期コースに加えて、特定のニーズに対応したスポット利用も可能です。面接対策やプレゼン準備など、ピンポイントでサポートします。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center lg:mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray lg:mb-8 section-title-with-underbar" as="h2">
-              スポットサービス
-            </Typography>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mb-16">
             {/* ビジネススポットサービス */}

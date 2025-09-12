@@ -3,6 +3,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import { PricingSection } from '@/components/sections/PricingSection';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -33,25 +34,30 @@ export default function StudentCoursePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 30%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/students_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 30%' }}
-        />
+      <Section background="warm-white" padding="xl" className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 30%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/students_hero_sma.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 30%' }}
+          />
+          {/* 軽いオーバーレイ */}
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
@@ -60,17 +66,25 @@ export default function StudentCoursePage() {
             <Typography variant="heading-md" className="text-dark-gray mb-8">
               留学の夢を諦めない、経済支援付き英語学習
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-4xl mx-auto leading-relaxed">
+            <Typography variant="body-lg" className="text-gray max-w-[70ch] mx-auto leading-relaxed">
               経済的な理由で留学を諦める必要はありません。Engrowthの学生コースは、
               <br />
               英語学習と経済支援を組み合わせた独自プログラムで、あなたの留学の夢を全力でサポートします。
             </Typography>
           </div>
         </Container>
+        </div>
       </Section>
 
       {/* 2. 3つの特徴カード */}
-      <Section background="light-gray" padding="xl" className="pb-0">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 pb-0">
+        <SectionHeaderLeft
+          label="Student Features"
+          title="学生だからこそ活用できる3つの強み"
+          desc="時間の自由度と学習意欲の高さを最大限に活かし、将来のキャリアに直結する英語力を身につけます。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
@@ -144,31 +158,34 @@ export default function StudentCoursePage() {
       </Section>
 
       {/* 2. エッセイ添削し放題セクション */}
-      <Section background="brand-red" padding="xl" className="pt-0">
+      <Section background="white" padding="sm" className="pt-0">
         <Container>
           <div className="text-center">
-            <Typography variant="heading-lg" className="text-white mb-4" as="h2">
-              エッセイ添削し放題
-            </Typography>
-            <Typography variant="body-lg" className="text-white max-w-4xl mx-auto leading-relaxed">
-              留学前でも留学中でも最重要となるエッセイの添削及びアドバイスを頼み放題！！
-            </Typography>
+            <Image
+              src="/images/drive-download-20250908T014101Z-1-001/students/students_banner.png"
+              alt="エッセイ添削し放題 - 留学前でも留学中でも最重要となるエッセイの添削及びアドバイスを頼み放題！！"
+              width={1200}
+              height={200}
+              className="w-full h-auto"
+            />
           </div>
         </Container>
       </Section>
 
       {/* 3. 留学の勧めセクション */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Study Abroad"
+          title="英語力と留学経験で、未来の選択肢を広げる"
+          desc="Engrowthでは、留学前に必要な英語力をしっかりと伸ばし、現地で安心して挑戦できる自信を育てます。
+さらに提携パートナー 留サポ
+ と連携し、現地での生活アドバイスは留学経験者から直接ヒアリング可能。
+パスポートや願書などの各種書類作成サポート も、Engrowthと留サポの両方でしっかり対応します。
+学習から渡航準備、現地サポートまで一気通貫で支える体制が整っています。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 section-title-with-underbar" as="h2">
-              留学について
-            </Typography>
-            <Typography variant="body-lg" className="text-gray">
-              あなたに合った留学のカタチを<br />
-              サービスの詳細はこちら
-            </Typography>
-          </div>
 
           {/* ストーリーテリング型レイアウト */}
           <div className="max-w-5xl mx-auto mb-16">
@@ -250,17 +267,21 @@ export default function StudentCoursePage() {
             </div>
           </div>
 
+        </Container>
+      </Section>
+
+      {/* 4. こんな不安はありませんか？セクション */}
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Common Concerns"
+          title="こんな不安はありませんか？"
+          desc="多くの学生が抱える英語や留学への不安。Engrowthなら、これらの不安を一つずつ解決していきます。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <Container>
           {/* インフォグラフィック風デザイン */}
           <div className="max-w-5xl mx-auto mb-16">
-            <div className="text-center mb-12">
-              <div className="text-6xl mb-4">😰</div>
-              <Typography variant="heading-lg" className="text-dark-gray mb-4">
-                こんな不安はありませんか？
-              </Typography>
-              <Typography variant="body-lg" className="text-gray">
-                多くの学生が抱える英語や留学への不安
-              </Typography>
-            </div>
 
             {/* 不安の声 */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
@@ -351,16 +372,17 @@ export default function StudentCoursePage() {
         </Container>
       </Section>
 
-      {/* 3. Engrowthが選ばれる理由 */}
-      <Section background="light-gray" padding="xl">
+      {/* 5. Engrowthが選ばれる理由 */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Why Choose Us"
+          title="学生が将来に向けて選ぶ理由"
+          desc="学生時代だからこそ身につけられる本物の英語力と、将来のキャリアに直結するサポート体制をご提供します。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="max-w-6xl mx-auto">
-            {/* タイトル - 1カラム全幅 */}
-            <div className="text-center mb-16">
-              <Typography variant="heading-lg" className="text-dark-gray section-title-with-underbar" as="h2">
-                Engrowthが選ばれる理由
-              </Typography>
-            </div>
 
             {/* Point番号と本文を同じブロック内にflexレイアウト */}
             <div className="space-y-12">
@@ -432,32 +454,37 @@ export default function StudentCoursePage() {
         </Container>
       </Section>
 
-      {/* 3. 料金 */}
-      <Section background="white" padding="xl">
+      {/* 6. 料金 */}
+      <Section background="white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Pricing"
+          title="学生向け特別価格で始められる英語学習"
+          desc="経済支援制度も充実。学生の皆さんが無理なく続けられる料金設定で、本格的な英語学習をサポートします。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h2">
-              料金
-            </Typography>
-            <Typography variant="body-lg" className="text-gray-600 max-w-3xl mx-auto">
-              学生向け特別価格 + 経済支援制度
-            </Typography>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[1440px] mx-auto">
             {/* 1ヶ月プラン */}
             <div className="flex justify-center">
-              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
                 <Typography variant="heading-sm" className="text-dark-gray mb-2">
                   1ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  ¥1,480
+                  $1,480
                 </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,480
+                </Typography>
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
                   基本プラン
                 </Typography>
-                <Button variant="secondary" size="sm" className="w-full" disabled>
+                <Button variant="secondary" size="sm" className="w-full mt-auto" disabled>
                   無料お試し
                 </Button>
               </Card>
@@ -465,28 +492,31 @@ export default function StudentCoursePage() {
 
             {/* 3ヶ月プラン */}
             <div className="flex justify-center">
-              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
                 <Typography variant="heading-sm" className="text-dark-gray mb-2">
                   3ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  ¥4,980
+                  $4,980
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 ¥1,660
+                  月額 $1,660
                 </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
                   3ヶ月集中プラン
                 </Typography>
-                <Button variant="primary" size="sm" className="w-full">
+                <Button variant="primary" size="sm" className="w-full mt-auto">
                   このプランを選ぶ
                 </Button>
               </Card>
-          </div>
+            </div>
 
             {/* 6ヶ月プラン */}
             <div className="flex justify-center">
-              <Card className="p-6 text-center border-2 border-brand-red bg-gradient-to-b from-red-50 to-white transition-all duration-300 w-full max-w-sm relative">
+              <Card className="p-6 text-center border-2 border-brand-red bg-gradient-to-b from-red-50 to-white transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold">
                     人気
@@ -496,42 +526,42 @@ export default function StudentCoursePage() {
                   6ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  ¥9,480
+                  $9,480
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 ¥1,580
+                  月額 $1,580
                 </Typography>
-                <Typography variant="body-xs" className="text-action-green mb-4">
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
                   約5%OFF
                 </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
                   6ヶ月継続プラン
                 </Typography>
-                <Button variant="primary" size="sm" className="w-full">
+                <Button variant="primary" size="sm" className="w-full mt-auto">
                   このプランを選ぶ
                 </Button>
               </Card>
-          </div>
+            </div>
 
             {/* 12ヶ月プラン */}
             <div className="flex justify-center">
-              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
                 <Typography variant="heading-sm" className="text-dark-gray mb-2">
                   12ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  ¥17,980
+                  $17,980
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 ¥1,498
+                  月額 $1,498
                 </Typography>
-                <Typography variant="body-xs" className="text-action-green mb-4">
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
                   約10%OFF
                 </Typography>
-                <Typography variant="body-sm" className="text-gray mb-4">
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
                   12ヶ月完全サポートプラン
-              </Typography>
-                <Button variant="primary" size="sm" className="w-full">
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
                   このプランを選ぶ
                 </Button>
               </Card>

@@ -126,25 +126,30 @@ export default function FAQClient() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="lg" className="relative min-h-[60vh] flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/top/top06.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 35%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/faq_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 35%' }}
-        />
+      <Section background="warm-white" padding="lg" className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/top/top06.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 35%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/faq_hero_sma.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 35%' }}
+          />
+          {/* 軽いオーバーレイ */}
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h1">
@@ -152,6 +157,7 @@ export default function FAQClient() {
             </Typography>
           </div>
         </Container>
+        </div>
       </Section>
 
       {/* 2. タブナビゲーション */}

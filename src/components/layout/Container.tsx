@@ -9,7 +9,7 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({
   children,
   className = '',
-  size = 'lg'
+  size = 'xl'
 }) => {
   const sizeClasses: Record<NonNullable<ContainerProps['size']>, string> = {
     sm: 'max-w-2xl',

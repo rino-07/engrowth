@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
+import SectionHeaderLeft from "@/components/ui/SectionHeaderLeft";
 import SectionDivider from "@/components/ui/SectionDivider";
 
 export const metadata = {
@@ -19,24 +20,28 @@ export default function FlowPage() {
   return (
     <div className="min-h-screen">
       {/* 1) ヒーロー（背景写真＋主CTA） */}
-      <section className="relative min-h-[60vh] flex items-center">
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
-          alt="オンラインで相談する様子"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 25%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
-          alt="オンラインで相談する様子"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 25%' }}
-        />
+      <section className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
+            alt="オンラインで相談する様子"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 25%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
+            alt="オンラインで相談する様子"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 25%' }}
+          />
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <div className="absolute inset-0 bg-black/25 z-5" />
         <Container className="relative z-10 w-full">
           <div className="py-16 sm:py-20 text-white text-center">
@@ -58,6 +63,7 @@ export default function FlowPage() {
             </div>
           </div>
         </Container>
+        </div>
       </section>
 
       {/* 2) 見出し */}

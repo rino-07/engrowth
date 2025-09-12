@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import { PricingSection } from '@/components/sections/PricingSection';
 import Image from 'next/image';
 import { FaUserTie, FaFlask, FaUsers } from 'react-icons/fa';
@@ -29,25 +31,30 @@ export default function BusinessCoursePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/business/business-hero-background.jpg"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 40%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/business_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 40%' }}
-        />
+      <Section background="warm-white" padding="xl" className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/business/business-hero-background.jpg"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 40%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/business_hero_sma.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 40%' }}
+          />
+          {/* 軽いオーバーレイ */}
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
@@ -56,17 +63,25 @@ export default function BusinessCoursePage() {
             <Typography variant="heading-md" className="text-dark-gray mb-8">
               忙しい社会人でも、英語は習得できる時代へ
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-4xl mx-auto leading-relaxed">
+            <Typography variant="body-lg" className="text-gray max-w-[70ch] mx-auto leading-relaxed">
               &ldquo;毎日1〜2時間のまとまった時間&rdquo;ではなく、1回5分〜10分の隙間式学習の積み重ね。
               <br />
               科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく&ldquo;本当に続けられる&rdquo;プログラム
             </Typography>
           </div>
         </Container>
+        </div>
       </Section>
 
       {/* 2. 3つの特徴カード */}
-      <Section background="light-gray" padding="xl" className="lg:pb-16 pb-0">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 lg:pb-16 pb-0">
+        <SectionHeaderLeft
+          label="Business Features"
+          title="忙しい社会人でも続けられる3つの理由"
+          desc="限られた時間を最大限に活用し、確実に英語力を向上させるための科学的アプローチをご提供します。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
@@ -140,15 +155,16 @@ export default function BusinessCoursePage() {
       </Section>
 
       {/* 3. Engrowthが選ばれる理由 */}
-      <Section background="light-gray" padding="xl" className="lg:pt-16 pt-0">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 lg:pt-16 pt-0">
+        <SectionHeaderLeft
+          label="Why Choose Us"
+          title="ビジネスパーソンが成果を実感する理由"
+          desc="従来の英語学習では解決できなかった社会人特有の課題を、科学的根拠に基づいた独自のメソッドで解決します。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="max-w-6xl mx-auto">
-            {/* タイトル - 1カラム全幅 */}
-            <div className="text-center mb-16">
-              <Typography variant="heading-lg" className="text-dark-gray section-title-with-underbar" as="h2">
-                Engrowthが選ばれる理由
-              </Typography>
-            </div>
 
             {/* Point番号と本文を同じブロック内にflexレイアウト */}
             <div className="space-y-12">
@@ -221,25 +237,139 @@ export default function BusinessCoursePage() {
       </Section>
 
       {/* 3. 料金 */}
-      <PricingSection 
-        title="料金"
-        description="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
-        background="warm-white"
-      />
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Pricing"
+          title="ビジネス向け料金プラン"
+          desc="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[1440px] mx-auto">
+            {/* 1ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  1ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $1,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,480
+                </Typography>
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  基本プラン
+                </Typography>
+                <Button variant="secondary" size="sm" className="w-full mt-auto" disabled>
+                  無料お試し
+                </Button>
+              </Card>
+            </div>
 
-      {/* 4. あなたの英語力が、会社の未来を創る */}
-      <Section background="light-gray" padding="xl" className="overflow-visible">
-        <FullBleed1440>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              あなたの英語力が、会社の未来を創る
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-4xl mx-auto mb-12">
-              一人ひとりの英語力が直接事業売り上げに跳ね返る時代
+            {/* 3ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  3ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                $4,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,493
+                </Typography>
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  3ヶ月集中プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+
+            {/* 6ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-brand-red bg-gradient-to-b from-red-50 to-white transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold">
+                    人気
+                  </span>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray mb-2 mt-2">
+                  6ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                $7,480
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,246
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
+                  約16%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  6ヶ月継続プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+
+            {/* 12ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  12ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                $13,980
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  月額 $1,165
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
+                  約21%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  12ヶ月完全サポートプラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+          </div>
+
+          {/* 注記 */}
+          <div className="text-center mt-12">
+            <Typography variant="body-sm" className="text-gray-500 max-w-2xl mx-auto">
+              ※ 価格は税込み表示です。
               <br />
-              忙しさを理由に後回しにしてきた人でも、今が変わるチャンス
+              ※ 長期プランほどお得になっており、継続的な学習をサポートします。
             </Typography>
           </div>
+        </Container>
+      </Section>
+
+      {/* 4. あなたの英語力が、会社の未来を創る */}
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
+        <SectionHeaderLeft
+          label="Business Impact"
+          title="あなたの英語力が、会社の未来を創る"
+          desc="一人ひとりの英語力が直接事業売り上げに跳ね返る時代。忙しさを理由に後回しにしてきた人でも、今が変わるチャンスです。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <FullBleed1440>
 
             <div className="cards-grid-responsive mb-16">
             {/* 事業成長 */}

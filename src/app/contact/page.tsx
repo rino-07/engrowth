@@ -5,6 +5,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 
 export const metadata = {
   title: 'お問い合わせ - まずはお気軽にご相談ください | Engrowth',
@@ -16,25 +17,30 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 40%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/contact_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 40%' }}
-        />
+      <Section background="warm-white" padding="xl" className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 40%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/contact_hero_sma.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 40%' }}
+          />
+          {/* 軽いオーバーレイ */}
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
@@ -45,26 +51,29 @@ export default function ContactPage() {
               <br />
               ご相談ください
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
+            <Typography variant="body-lg" className="text-gray max-w-[60ch] mx-auto mb-8">
               無料相談、LINE相談受付中
             </Typography>
-            <Typography variant="body-md" className="text-gray max-w-3xl mx-auto">
+            <Typography variant="body-md" className="text-gray max-w-[65ch] mx-auto">
               英語学習の悩み、目標設定、プラン相談など、
               <br />
               どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
             </Typography>
           </div>
         </Container>
+        </div>
       </Section>
 
       {/* 2. お問い合わせ前に、こちらもご確認ください */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="FAQ"
+          title="お問い合わせ前に、こちらもご確認ください"
+          desc="よくいただくご質問をまとめました。お問い合わせの前に、まずはこちらをご確認いただけますと幸いです。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              お問い合わせ前に、こちらもご確認ください。
-            </Typography>
-          </div>
 
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {/* FAQ 1 */}
@@ -132,16 +141,15 @@ export default function ContactPage() {
       </Section>
 
       {/* 3. お問い合わせの方法をお選びください */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Contact Methods"
+          title="お問い合わせの方法をお選びください"
+          desc="ご質問や内容の緊急度に応じて、最適な連絡方法をお選びいただけます。LINEなら即座に、メールなら詳細なご相談が可能です。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              お問い合わせの方法をお選びください
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto">
-              ご質問や内容の緊急度に応じて、最適な連絡方法をお選びいただけます。
-            </Typography>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
             {/* LINE相談 */}

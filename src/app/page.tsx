@@ -4,6 +4,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import { CourseCards } from '@/components/sections/CourseCards';
 import { FaUserTie, FaChartLine, FaCog, FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
@@ -23,25 +24,30 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <Section background="gradient" padding="xl" className="relative min-h-[60vh] flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/top/top01.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 20%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/top_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 20%' }}
-        />
+      <Section background="gradient" padding="xl" className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/top/top01.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 20%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/top_hero_sma.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 20%' }}
+          />
+          {/* 軽いオーバーレイ */}
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <Container className="relative z-10 w-full">
           <div className="text-center animate-fadeInUp">
             <Typography variant="heading-xl" className="text-dark-gray mb-6" as="h1">
@@ -49,7 +55,7 @@ export default function Home() {
               <span className="text-brand-red">Engrowth</span>
               の一員になりませんか？
             </Typography>
-            <Typography variant="body-lg" className="text-gray mb-8 max-w-3xl mx-auto">
+            <Typography variant="body-lg" className="text-gray mb-8 max-w-[65ch] mx-auto">
               独自のエコシステムで留学生の経済問題を解決し、
               <br />
               日本人だからこそ提供できる英会話コンサルティングサービス
@@ -68,20 +74,27 @@ export default function Home() {
             </div>
           </div>
         </Container>
+        </div>
       </Section>
 
-      {/* 2. Engrowthは○○な人に選ばれてます Section */}
-      <Section background="warm-white" padding="lg">
+      {/* 2. What is Engrowth Section - 2カラムレイアウト */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Left: Title */}
+            {/* 左側: タイトルと説明文 */}
             <div>
-              <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8">
-                Engrowthは○○な人に選ばれてます
+              <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4" style={{ color: '#d30306' }}>
+                What is Engrowth
+              </p>
+              <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8 font-serif">
+                本気で英語力を上げたい学習者に選ばれています。
+              </Typography>
+              <Typography variant="body-lg" className="text-gray max-w-[70ch] leading-relaxed">
+                一人ひとりの目標や課題解決に最適化された科学的な学習カリキュラムで、専任のコンサルタントが毎日の学習に徹底伴走し、「学習生産性」と「継続間」を最大化して英語力の上達を実現します。
               </Typography>
             </div>
 
-            {/* Right: Points */}
+            {/* 右側: Point 1-3を縦並び */}
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <Image
@@ -91,7 +104,7 @@ export default function Home() {
                   height={48}
                   className="w-12 h-12 flex-shrink-0"
                 />
-                <Typography variant="heading-sm" className="text-dark-gray">
+                <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   コンサルタントは全員留学経験のある日本人
                 </Typography>
               </div>
@@ -104,7 +117,7 @@ export default function Home() {
                   height={48}
                   className="w-12 h-12 flex-shrink-0"
                 />
-                <Typography variant="heading-sm" className="text-dark-gray">
+                <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   科学的根拠に基づく学習プログラム
                 </Typography>
               </div>
@@ -117,7 +130,7 @@ export default function Home() {
                   height={48}
                   className="w-12 h-12 flex-shrink-0"
                 />
-                <Typography variant="heading-sm" className="text-dark-gray">
+                <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   1人ひとりに合わせたオーダーメイドの学習設計
                 </Typography>
               </div>
@@ -127,23 +140,24 @@ export default function Home() {
       </Section>
 
       {/* 3. Course Section (4-column) */}
-<Section background="light-gray" padding="lg" className="overflow-visible">
-  <FullBleed1440>
-    <div className="text-center mb-8 lg:mb-16">
-      <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8 section-title-with-underbar">
-        Course
-      </Typography>
-    </div>
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
+        <SectionHeaderLeft
+          label="Course"
+          title="目的やレベルに合わせて選べるコース"
+          desc="ビジネス英語から留学準備まで、あなたの目標に最適化されたプログラムをご用意しています。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <FullBleed1440>
+          <CourseCards />
 
-    <CourseCards />
-
-    <div className="text-center mt-12">
-      <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-        コース・料金
-      </Button>
-    </div>
-  </FullBleed1440>
-</Section>
+          <div className="text-center mt-12">
+            <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
+              コース・料金
+            </Button>
+          </div>
+        </FullBleed1440>
+      </Section>
 
       {/* 4. 無料カウンセリングバナー（画像のみ） */}
       <Section background="warm-white" padding="lg">
@@ -163,13 +177,15 @@ export default function Home() {
       </Section>
 
       {/* 5. 従来スクールとの違い（2カラム比較） */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Difference"
+          title="従来のスクールとは根本的に異なるアプローチ"
+          desc="一般的な英語スクールの課題を解決する、科学的根拠に基づいた学習システムを提供しています。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray section-title-with-underbar">
-              従来のスクールとのちがい
-            </Typography>
-          </div>
 
           <div className="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
             {/* 従来スクール - 40% */}

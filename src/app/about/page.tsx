@@ -3,6 +3,7 @@ import Button from '@/components/ui/Button';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import { FaUserTie, FaFlask, FaUsers } from 'react-icons/fa';
 
@@ -16,39 +17,52 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/top/reason-ecosystem.jpg"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 25%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/about_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 25%' }}
-        />
+      <Section background="warm-white" padding="xl" className="relative">
+        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
+          {/* PC用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/top/reason-ecosystem.jpg"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 hidden md:block"
+            style={{ objectPosition: 'center 25%' }}
+          />
+          {/* スマホ用背景画像 */}
+          <Image
+            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/about_hero_sma.png"
+            alt="背景画像"
+            fill
+            priority
+            className="object-cover opacity-15 block md:hidden"
+            style={{ objectPosition: 'center 25%' }}
+          />
+          {/* 軽いオーバーレイ */}
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 flex items-center min-h-[60vh]">
         <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h1">
               Engrowthの特徴
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-2xl mx-auto">
+            <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto">
               学ぶことが支援になる、循環型エコシステムの仕組み
             </Typography>
           </div>
         </Container>
+        </div>
       </Section>
 
       {/* 2. 3つの特徴 */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Features"
+          title="Engrowthが選ばれる3つの理由"
+          desc="従来の英語学習にはない、科学的根拠と実践経験に基づいた独自のアプローチで確実な成果を実現します。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="space-y-8 max-w-4xl mx-auto mb-16">
             <div className="flex items-start gap-6">
@@ -105,13 +119,15 @@ export default function AboutPage() {
       </Section>
 
       {/* 2. Engrowthの仕組み */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="System"
+          title="受講者をパートナーと呼ぶ独自のエコシステム"
+          desc="英語力向上を通じて、受講者・コンサルタント・企業が相互に支援し合う持続可能な学習環境を提供しています。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
-              Engrowthの仕組み
-            </Typography>
-          </div>
 
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -144,19 +160,16 @@ export default function AboutPage() {
       </Section>
 
       {/* 3. Engrowthエコシステムへの支援について */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Support"
+          title="学びを経済的理由で止めない、持続的な支援体制"
+          desc="Engrowthは留学中のコンサルタントが機会を失わないよう、透明性の高い支援スキームを提供します。あなたからのご支援が、世界で活躍する日本人を生み出します。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              Engrowthエコシステムへの支援について
-            </Typography>
-            <div className="text-dark-gray max-w-3xl mx-auto mb-8" style={{ fontSize: '24px', lineHeight: '1.5' }}>
-              Engrowthは留学中のコンサルタントが、金銭的な理由で自らの学習機会を失うことがないよう、持続可能な支援体制を構築しています。
-              <br />
-              <br />
-              あなたからのご支援が、世界で活躍する日本人を生み出します。
-            </div>
-            
             <div className="mb-12">
               <Link href="/supporters">
                 <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
@@ -169,15 +182,16 @@ export default function AboutPage() {
       </Section>
 
       {/* 4. Engrowthが選ばれる理由 */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Why Choose Us"
+          title="科学的根拠と実践経験に基づく確実な成果"
+          desc="従来の英語学習の課題を解決する、独自のメソッドと徹底したサポート体制で、あなたの目標達成を実現します。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="max-w-6xl mx-auto">
-            {/* タイトル - 1カラム全幅 */}
-            <div className="text-center mb-16">
-              <Typography variant="heading-lg" className="text-dark-gray" as="h2">
-                Engrowthが選ばれる理由
-              </Typography>
-            </div>
 
             {/* Point番号と本文を同じブロック内にflexレイアウト */}
             <div className="space-y-12">
@@ -250,12 +264,16 @@ export default function AboutPage() {
       </Section>
 
       {/* 5. あなたもEngrowthの一員になりませんか？ */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Join Us"
+          title="あなたもEngrowthエコシステムの一員になりませんか？"
+          desc="受講者として、コンサルタントとして、または支援者として。あなたに最適な参加方法で、共に英語学習の未来を創りましょう。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
           <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
-              あなたもEngrowthの一員になりませんか？
-            </Typography>
 
             {/* エコシステム図とボタン */}
             <div className="max-w-4xl mx-auto lg:mb-16">
