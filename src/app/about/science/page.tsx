@@ -56,7 +56,7 @@ export default function SciencePage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/method/method-sla-theory.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/top/method-sla-theory.jpg"
                   alt="脳科学・学習イメージ"
                   width={320}
                   height={208}

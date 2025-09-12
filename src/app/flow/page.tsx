@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import SectionDivider from "@/components/ui/SectionDivider";
+import Typography from "@/components/ui/Typography";
 
 export const metadata = {
   title: "受講の流れ - 英語学習の悩み、目標設定、プラン相談など | Engrowth",
@@ -19,39 +20,35 @@ export default function FlowPage() {
   return (
     <div className="min-h-screen">
       {/* 1) ヒーロー（背景写真＋主CTA） */}
-      <section className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
-            alt="オンラインで相談する様子"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 25%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
-            alt="オンラインで相談する様子"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 25%' }}
-          />
-        </div>
-        <div className="relative z-10 flex items-center min-h-[60vh]">
-        <div className="absolute inset-0 bg-black/30" />
+      <Section background="warm-white" padding="lg" className="relative min-h-[60vh] flex items-center">
+        {/* PC用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
+          alt="オンラインで相談する様子"
+          fill
+          priority
+          className="object-cover opacity-10 hidden md:block"
+          style={{ objectPosition: 'center 25%' }}
+        />
+        {/* スマホ用背景画像 */}
+        <Image
+          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
+          alt="オンラインで相談する様子"
+          fill
+          priority
+          className="object-cover opacity-10 block md:hidden"
+          style={{ objectPosition: 'center 25%' }}
+        />
         <Container className="relative z-10 w-full">
-          <div className="py-16 sm:py-20 text-white text-center">
-            <h1 className="text-xl md:text-5xl font-bold tracking-tight font-serif">
+          <div className="text-center text-white">
+            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif text-white">
               専属コンサルタントだから続けられる<br />
               ３日坊主にならない英語学習
-            </h1>
-            <p className="mt-6 leading-relaxed text-base md:text-xl font-serif">
+            </Typography>
+            <Typography variant="heading-sm" className="opacity-90 max-w-5xl mx-auto text-white">
               英語学習の失敗を、才能のせいにしない。<br />
               〜正しいやり方を知れば 誰でも話せるようになる〜
-            </p>
+            </Typography>
             <div className="mt-8">
               <Button
                 className="px-8 py-4 rounded-full text-lg font-semibold"
@@ -62,8 +59,7 @@ export default function FlowPage() {
             </div>
           </div>
         </Container>
-        </div>
-      </section>
+      </Section>
 
       {/* 2) 見出し */}
       <Section padding="xl" background="warm-white">

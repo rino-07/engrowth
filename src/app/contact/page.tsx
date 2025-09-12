@@ -291,11 +291,6 @@ export default function ContactPage() {
 
             {/* 相談は完全無料 */}
             <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-6">
-                <Typography variant="body-md" className="text-white font-bold">
-                  無料
-                </Typography>
-              </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-4">
                 相談は完全無料
               </Typography>

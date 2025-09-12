@@ -56,7 +56,7 @@ export default function PracticePage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/reason/reason-scientific.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/top/reason-scientific.jpg"
                   alt="習慣化・行動科学イメージ"
                   width={320}
                   height={208}
