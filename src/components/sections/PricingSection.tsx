@@ -75,7 +75,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
               {title}
             </Typography>
             {description && (
-              <Typography variant="body-lg" className="text-gray-600 max-w-3xl mx-auto">
+              <Typography variant="body-lg" className="text-gray-600 max-w-5xl mx-auto">
                 {description}
               </Typography>
             )}

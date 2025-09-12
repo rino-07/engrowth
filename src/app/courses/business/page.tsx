@@ -61,7 +61,7 @@ export default function BusinessCoursePage() {
             <Typography variant="heading-md" className="text-dark-gray mb-8">
               忙しい社会人でも、英語は習得できる時代へ
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[70ch] mx-auto leading-relaxed">
+            <Typography variant="body-lg" className="text-gray max-w-[85ch] mx-auto leading-relaxed">
               &ldquo;毎日1〜2時間のまとまった時間&rdquo;ではなく、1回5分〜10分の隙間式学習の積み重ね。
               <br />
               科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく&ldquo;本当に続けられる&rdquo;プログラム
@@ -295,7 +295,7 @@ export default function BusinessCoursePage() {
 
             {/* 6ヶ月プラン */}
             <div className="flex justify-center">
-              <Card className="p-6 text-center border-2 border-brand-red bg-gradient-to-b from-red-50 to-white transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
+              <Card className="p-6 text-center border-2 border-brand-red bg-white transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold">
                     人気

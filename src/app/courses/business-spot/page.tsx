@@ -41,7 +41,7 @@ function BusinessSpotServicePage() {
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
               ビジネススポットサービス
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto">
+            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto">
               ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。
             </Typography>
           </div>
@@ -175,7 +175,7 @@ function BusinessSpotServicePage() {
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               料金例
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
+            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto mb-8">
               透明性の高い料金設定で、安心してご利用いただけます。
               <br />
               詳細なお見積もりは無料でご提供いたします。まずはお気軽にお問い合わせください。

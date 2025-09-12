@@ -43,7 +43,7 @@ export default function StudentSpotServicePage() {
             <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
               学生スポットサービス
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto">
+            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto">
               留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。
             </Typography>
           </div>
@@ -162,7 +162,7 @@ export default function StudentSpotServicePage() {
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               料金例
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
+            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto mb-8">
               学生向け特別価格で、質の高いサポートを提供いたします。
               <br />
               詳細なお見積もりは無料でご提供いたします。まずはお気軽にお問い合わせください。
@@ -281,13 +281,13 @@ export default function StudentSpotServicePage() {
           {/* サポート内容 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/writing-support.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-income-opportunity.jpg"
                   alt="ライティング支援"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
@@ -305,13 +305,13 @@ export default function StudentSpotServicePage() {
             </Card>
 
             <Card className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/speaking-support.jpg"
+                  src="/images/drive-download-20250908T014101Z-1-001/students/students-class-understanding.jpg"
                   alt="スピーキング支援"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
@@ -328,28 +328,29 @@ export default function StudentSpotServicePage() {
               </Typography>
             </Card>
 
-            <Card className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center p-0 overflow-hidden">
+              <div className="relative h-48">
                 <Image
-                  src="/images/strategy-support.jpg"
-                  alt="戦略的サポート"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  src="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
+                  alt="総合的サポート"
+                  fill
+                  className="object-cover"
                 />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                総合的サポート
-              </Typography>
-              <Typography variant="body-sm" className="text-gray">
-                出願戦略、スケジュール管理、
-                <br />
-                優先順位付けなど
-                <br />
-                効率的な準備のための
-                <br />
-                総合的なアドバイス
-              </Typography>
+              <div className="p-6">
+                <Typography variant="heading-sm" className="text-dark-gray mb-3">
+                  総合的サポート
+                </Typography>
+                <Typography variant="body-sm" className="text-gray">
+                  出願戦略、スケジュール管理、
+                  <br />
+                  優先順位付けなど
+                  <br />
+                  効率的な準備のための
+                  <br />
+                  総合的なアドバイス
+                </Typography>
+              </div>
             </Card>
           </div>
 

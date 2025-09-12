@@ -17,18 +17,14 @@ export default function AboutPage() {
     <div className="about-page">
       {/* ヒーローセクション */}
       <Section 
-        background="gradient" 
         className="py-16 sm:py-20 lg:py-24 relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-        }}
       >
         <Container>
           <div className="text-center text-white">
             <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif">
               Engrowthの特徴
             </Typography>
-            <Typography variant="heading-sm" className="opacity-90 max-w-3xl mx-auto">
+            <Typography variant="heading-sm" className="opacity-90 max-w-5xl mx-auto">
               なぜEngrowthが選ばれるのか？4つの特徴をご紹介
             </Typography>
           </div>
@@ -177,25 +173,6 @@ export default function AboutPage() {
                 </Typography>
               </div>
             </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* CTAバナー */}
-      <Section background="gradient" className="py-12 sm:py-16">
-        <Container>
-          <div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-lg p-8 text-center shadow-lg">
-            <div className="text-center text-white">
-              <Typography variant="heading-lg" className="text-gray-900 font-bold mb-4 font-serif">
-                英会話で広がる無限の可能性を
-              </Typography>
-            </div>
-            <Typography variant="body-lg" className="mt-4 text-white mb-6">
-              Engrowthの科学的根拠に基づくプログラムで、英会話習得を目指しましょう
-            </Typography>
-            <Link href="/contact" className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              お問い合わせはこちら
-            </Link>
           </div>
         </Container>
       </Section>

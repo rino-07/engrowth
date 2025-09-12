@@ -64,7 +64,7 @@ export default function StudentCoursePage() {
             <Typography variant="heading-md" className="text-dark-gray mb-8">
               留学の夢を諦めない、経済支援付き英語学習
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[70ch] mx-auto leading-relaxed">
+            <Typography variant="body-lg" className="text-gray max-w-[85ch] mx-auto leading-relaxed">
               経済的な理由で留学を諦める必要はありません。Engrowthの学生コースは、
               <br />
               英語学習と経済支援を組み合わせた独自プログラムで、あなたの留学の夢を全力でサポートします。
@@ -189,7 +189,7 @@ export default function StudentCoursePage() {
           <div className="max-w-5xl mx-auto mb-16">
             {/* Step 1: 不安の声 */}
             <div className="relative mb-12">
-              <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 text-center relative">
+              <div className="bg-gray-50 rounded-2xl p-8 text-center relative">
                 <div className="text-6xl mb-4">💭</div>
                 <Typography variant="heading-md" className="text-dark-gray mb-4">
                   「英語に自信がないから留学は無理」
@@ -209,7 +209,7 @@ export default function StudentCoursePage() {
             </div>
 
             {/* Step 2: 解決策 */}
-            <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 mb-12">
+            <div className="bg-red-50 rounded-2xl p-8 mb-12">
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">🌟</div>
                 <Typography variant="heading-md" className="text-brand-red mb-6">
@@ -250,7 +250,7 @@ export default function StudentCoursePage() {
             </div>
 
             {/* Step 3: コンサルタントの強み */}
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
+            <div className="bg-blue-50 rounded-2xl p-8 text-center">
               <div className="text-6xl mb-4">👨‍🏫</div>
               <Typography variant="heading-md" className="text-dark-gray mb-4">
                 全員留学経験者のコンサルタント
@@ -321,7 +321,7 @@ export default function StudentCoursePage() {
             </div>
 
             {/* 成功への道筋 */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
+            <div className="bg-green-50 rounded-2xl p-8">
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">✅</div>
                 <Typography variant="heading-md" className="text-dark-gray mb-6">
@@ -514,7 +514,7 @@ export default function StudentCoursePage() {
 
             {/* 6ヶ月プラン */}
             <div className="flex justify-center">
-              <Card className="p-6 text-center border-2 border-brand-red bg-gradient-to-b from-red-50 to-white transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
+              <Card className="p-6 text-center border-2 border-brand-red bg-white transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold">
                     人気

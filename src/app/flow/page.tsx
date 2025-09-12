@@ -68,7 +68,7 @@ export default function FlowPage() {
       {/* 2) 見出し */}
       <Section padding="xl" background="warm-white">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold tracking-tight font-serif">受講の流れ</h2>
             <p className="mt-3 text-[15px]" style={{ color: MUTED }}>
               あなたのペースに合わせて、専属のコンサルタントが一緒に
@@ -236,7 +236,7 @@ export default function FlowPage() {
 
                 {/* 応用シミュレーション */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
-                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
+                  <div className="bg-red-600 text-center py-4">
                     <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
@@ -279,7 +279,7 @@ export default function FlowPage() {
 
                 {/* 応用シミュレーション */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
-                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-center py-4">
+                  <div className="bg-red-600 text-center py-4">
                     <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
                   </div>
                   <div className="divide-y divide-gray-100">

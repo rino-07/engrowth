@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <Section background="gradient" padding="xl" className="relative">
+      <Section padding="xl" className="relative">
         <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
           {/* PC用背景画像 */}
           <Image
@@ -88,7 +88,7 @@ export default function Home() {
               <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8 font-serif">
                 本気で英語力を上げたい学習者に選ばれています。
               </Typography>
-              <Typography variant="body-lg" className="text-gray max-w-[70ch] leading-relaxed">
+              <Typography variant="body-lg" className="text-gray max-w-[85ch] leading-relaxed">
                 一人ひとりの目標や課題解決に最適化された科学的な学習カリキュラムで、専任のコンサルタントが毎日の学習に徹底伴走し、「学習生産性」と「継続間」を最大化して英語力の上達を実現します。
               </Typography>
             </div>
@@ -229,7 +229,7 @@ export default function Home() {
             </div>
 
             {/* Engrowth - 40% */}
-            <div className="col-span-12 lg:col-span-5 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 border border-brand-red/20">
+            <div className="col-span-12 lg:col-span-5 bg-red-50 rounded-2xl p-8 border border-brand-red/20">
               <Typography variant="heading-md" className="text-brand-red mb-8 text-center">
                 Engrowth
               </Typography>

@@ -16,7 +16,7 @@ export default function SectionHeaderLeft({
   return (
     <header className={className}>
       {/* ブロックを中央に配置（幅は適度に絞る） */}
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* 中身は左揃えのまま */}
         <p className="text-sm sm:text-base tracking-wider font-medium font-serif" style={{ color: '#d30306' }}>
           {label}
@@ -25,7 +25,7 @@ export default function SectionHeaderLeft({
           {title}
         </h2>
         {desc && (
-          <p className="mt-4 sm:mt-6 max-w-[70ch] text-base text-gray-700 leading-relaxed">
+          <p className="mt-4 sm:mt-6 max-w-[85ch] text-base text-gray-700 leading-relaxed">
             {desc}
           </p>
         )}

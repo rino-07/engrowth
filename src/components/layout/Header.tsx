@@ -76,7 +76,6 @@ const Header: React.FC = () => {
     },
     { 
       name: 'コース・料金', 
-      href: '/courses',
       hasDropdown: true,
       dropdownItems: [
         { name: 'コース・料金一覧', href: '/courses' },
@@ -126,8 +125,7 @@ const Header: React.FC = () => {
                       }
                     }}
                   >
-                    <Link
-                      href={item.href}
+                    <button
                       className="text-dark-gray hover:text-brand-red transition-colors duration-200 font-medium flex items-center"
                     >
                       {item.name}
@@ -145,7 +143,7 @@ const Header: React.FC = () => {
                           d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                    </Link>
+                    </button>
                     
                     {/* Dropdown Menu */}
                     <div
