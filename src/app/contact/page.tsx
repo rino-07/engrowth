@@ -36,7 +36,7 @@ export default function ContactPage() {
         bgDesktopSrc="/images/top/top03.png"
         bgMobileSrc="/images/hero_sma/contact_hero_sma.png"
         bgPosition="center 40%"
-        overlayOpacity={0.85}
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. お問い合わせ前に、こちらもご確認ください */}

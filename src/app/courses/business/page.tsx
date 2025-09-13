@@ -45,7 +45,7 @@ export default function BusinessCoursePage() {
         bgDesktopSrc="/images/business/business-hero-background.jpg"
         bgMobileSrc="/images/hero_sma/business_hero_sma.png"
         bgPosition="center 40%"
-        overlayOpacity={0.85}
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. 3つの特徴カード */}

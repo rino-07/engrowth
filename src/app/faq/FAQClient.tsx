@@ -133,7 +133,7 @@ export default function FAQClient() {
         bgDesktopSrc="/images/top/top06.png"
         bgMobileSrc="/images/hero_sma/faq_hero_sma.png"
         bgPosition="center 35%"
-        overlayOpacity={0.85}
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. タブナビゲーション */}

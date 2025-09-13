@@ -48,7 +48,7 @@ export default function StudentCoursePage() {
         bgDesktopSrc="/images/students/students-communication.jpg"
         bgMobileSrc="/images/hero_sma/students_hero_sma.png"
         bgPosition="center 30%"
-        overlayOpacity={0.85}
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. 3つの特徴カード */}

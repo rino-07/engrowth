@@ -24,7 +24,7 @@ export default function AboutPage() {
         bgDesktopSrc="/images/top/reason-ecosystem.jpg"
         bgMobileSrc="/images/hero_sma/about_hero_sma.png"
         bgPosition="center 25%"
-        overlayOpacity={0.85}
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. 3つの特徴 */}

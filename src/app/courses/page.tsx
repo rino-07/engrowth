@@ -36,7 +36,7 @@ export default function CoursesPage() {
         bgDesktopSrc="/images/courses/courses-business-course.jpg"
         bgMobileSrc="/images/hero_sma/courses_hero_sma.png"
         bgPosition="center 30%"
-        overlayOpacity={0.9}
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. コース選択（4カード） */}

@@ -36,7 +36,7 @@ export default function FlowPage() {
         bgDesktopSrc="/images/fliw/flow_hero.png"
         bgMobileSrc="/images/hero_sma/flow_hero_sma.png"
         bgPosition="center 25%"
-        overlayOpacity={0.9}
+        className="flex items-center justify-center text-center"
         ctas={[
           { href: '/contact', label: 'LINE登録はこちら', variant: 'primary' }
         ]}
