@@ -162,30 +162,14 @@ export default function FAQClient() {
         <Container>
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {filteredFAQs.map((faq, index) => (
-              <Card key={`${activeTab}-${index}`} className="p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Typography variant="body-sm" className="text-white font-bold">
-                      Q
-                    </Typography>
-                  </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
-                    {faq.question}
-                  </Typography>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
-                    <Typography variant="body-sm" className="text-white font-bold">
-                      A
-                    </Typography>
-                  </div>
-                  <div>
-                    <Typography variant="body-md" className="text-dark-gray">
-                      {faq.answer}
-                    </Typography>
-                  </div>
-                </div>
-              </Card>
+              <div key={`${activeTab}-${index}`} className="bg-white rounded-lg p-6">
+                <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
+                  Q. {faq.question}
+                </Typography>
+                <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
+                  {faq.answer}
+                </Typography>
+              </div>
             ))}
           </div>
 

@@ -164,7 +164,7 @@ export default function StudentSpotServicePage() {
                   文字数・専門性により変動
                 </Typography>
               </div>
-              <div className="space-y-2 text-left">
+              <div className="space-y-2 text-center">
                 <Typography variant="body-xs" className="text-gray">
                   • 構成・内容チェック
                 </Typography>
@@ -192,7 +192,7 @@ export default function StudentSpotServicePage() {
                   面接種類により変動
                 </Typography>
               </div>
-              <div className="space-y-2 text-left">
+              <div className="space-y-2 text-center">
                 <Typography variant="body-xs" className="text-gray">
                   • 模擬面接実施
                 </Typography>

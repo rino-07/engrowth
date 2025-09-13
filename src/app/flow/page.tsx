@@ -87,7 +87,7 @@ export default function FlowPage() {
                     </Button>
                   </Link>
                   <Link href="/contact">
-                    <Button variant="secondary" size="sm" className="text-white" style={{ backgroundColor: "#0cc755" }}>
+                    <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }}>
                       LINEでお問い合わせ
                     </Button>
                   </Link>
@@ -116,7 +116,7 @@ export default function FlowPage() {
               buttons={
                 <>
                   <Link href="/contact">
-                    <Button variant="secondary" size="sm" className="text-white" style={{ backgroundColor: "#0cc755" }}>
+                    <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }}>
                       LINEに登録
                     </Button>
                   </Link>
@@ -152,7 +152,7 @@ export default function FlowPage() {
               buttons={
                 <>
                   <Link href="/contact#:~:text=Engrowth%E3%81%AE-,LINE,-２%E3%81%AB%E7%9B%B8%E8%AB%87%E3%81%99%E3%82%8B">
-                    <Button variant="secondary" size="sm" className="text-sm px-4 py-2 text-white" style={{ backgroundColor: "#0cc755" }}>
+                    <Button variant="primary" size="sm" className="text-sm px-4 py-2 text-white border-0" style={{ backgroundColor: "#0cc755" }}>
                       LINEでお問い合わせ
                     </Button>
                   </Link>

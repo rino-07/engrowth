@@ -253,6 +253,21 @@ export default function SciencePage() {
         </Container>
       </Section>
 
+      {/* バナー */}
+      <Section background="white" className="py-8">
+        <Container>
+          <div className="text-center">
+            <Image
+              src="/images/main_banner.png"
+              alt="Engrowthメインバナー"
+              width={1200}
+              height={300}
+              className="mx-auto rounded-lg"
+            />
+          </div>
+        </Container>
+      </Section>
+
      
     </div>
   );
