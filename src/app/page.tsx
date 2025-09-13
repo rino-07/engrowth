@@ -46,7 +46,7 @@ export default function Home() {
           {/* 軽いオーバーレイ */}
           <div className="absolute inset-0 bg-white/10"></div>
         </div>
-        <div className="relative z-10 flex items-center min-h-[60vh]">
+        <div className="relative z-10 flex items-center py-12 sm:py-16">
         <Container className="relative z-10 w-full">
           <div className="text-center animate-fadeInUp">
             <Typography variant="heading-xl" className="text-dark-gray mb-6" as="h1">

@@ -16,29 +16,17 @@ export default function ConsultantPage() {
   return (
     <div className="consultant-page">
       {/* ヒーローセクション */}
-      <Section 
-        className="py-16 sm:py-20 lg:py-24 relative overflow-hidden"
-      >
-        <Container>
-          <div className="text-center text-white">
-            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif">
-              専門コンサルタント
-            </Typography>
-            <Typography variant="heading-sm" className="opacity-90 max-w-5xl mx-auto">
-              第二言語習得を成功させた経験者による伴走サポート
-            </Typography>
-          </div>
-        </Container>
-      </Section>
-
-      {/* メインメッセージセクション */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+      <Section background="warm-white" className="py-12 sm:py-16">
         <SectionHeaderLeft
           label="Consultant"
           title="「英語を第二言語として習得したコンサルタント」の圧倒的な価値"
           desc="なぜEngrowthでは「日本人コンサルタント」にこだわるのか"
           className="mb-12 lg:mb-16"
         />
+      </Section>
+
+      {/* メインメッセージセクション */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         
         <Container>
           <div className="relative bg-white rounded-2xl shadow-lg p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">

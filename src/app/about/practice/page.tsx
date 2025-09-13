@@ -16,29 +16,17 @@ export default function PracticePage() {
   return (
     <div className="practice-page">
       {/* ヒーローセクション */}
-      <Section 
-        className="py-16 sm:py-20 lg:py-24 relative overflow-hidden"
-      >
-        <Container>
-          <div className="text-center text-white">
-            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif">
-              実践の仕組み
-            </Typography>
-            <Typography variant="heading-sm" className="opacity-90 max-w-5xl mx-auto">
-              習慣化×伴走サポートによる確実な成果創出
-            </Typography>
-          </div>
-        </Container>
-      </Section>
-
-      {/* メインメッセージセクション */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+      <Section background="warm-white" className="py-12 sm:py-16">
         <SectionHeaderLeft
           label="Practice System"
           title="習慣化 × 伴走サポートによる「圧倒的成果」の出し方"
           desc="習慣化が成功の9割を決める"
           className="mb-12 lg:mb-16"
         />
+      </Section>
+
+      {/* メインメッセージセクション */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         
         <Container>
           <div className="relative bg-white rounded-2xl shadow-lg p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">

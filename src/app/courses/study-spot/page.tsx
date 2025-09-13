@@ -19,7 +19,7 @@ export default function StudentSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative min-h-[60vh] flex items-center">
+      <Section background="warm-white" className="relative py-12 sm:py-16 flex items-center">
         {/* 背景画像 */}
         <Image
           src="/images/drive-download-20250908T014101Z-1-001/students/stu08.png"
@@ -116,7 +116,7 @@ export default function StudentSpotServicePage() {
               <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <FaGraduationCap className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 留学申請用エッセイの完成度を上げたい
               </Typography>
             </div>
@@ -125,7 +125,7 @@ export default function StudentSpotServicePage() {
               <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <FaBriefcase className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
               英語面接の練習をしたい
               </Typography>
             </div>
@@ -134,7 +134,7 @@ export default function StudentSpotServicePage() {
               <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <FaQuestionCircle className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
               現地で銀行口座開設を1人でするのは不安だからオンラインでサポートしてほしい
               </Typography>
             </div>
@@ -354,7 +354,7 @@ export default function StudentSpotServicePage() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto mt-12">
-            <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white flex-1">
+            <Button variant="primary" size="lg" className="text-white flex-1" style={{ backgroundColor: "#0cc755" }}>
               LINEで相談
             </Button>
             <Button variant="secondary" size="lg" className="flex-1">

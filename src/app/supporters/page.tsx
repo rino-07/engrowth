@@ -52,7 +52,7 @@ export default function SupportersPage() {
           {/* 軽いオーバーレイ */}
           <div className="absolute inset-0 bg-white/10"></div>
         </div>
-        <div className="relative z-10 flex items-center min-h-[60vh]">
+        <div className="relative z-10 flex items-center py-12 sm:py-16">
         <Container className="relative z-10 w-full">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 section-title-with-underbar" as="h1">
@@ -95,7 +95,12 @@ export default function SupportersPage() {
         
         <Container>
           <div className="text-center">
-            <p className="text-gray-600">支援プログラムの詳細については、お気軽にお問い合わせください。</p>
+            <p className="text-gray-600 mb-6">支援プログラムの詳細については、お気軽にお問い合わせください。</p>
+            <Link href="/contact#:~:text=info%40-,engrowth,-.jp">
+              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700 text-white">
+                お問い合わせ
+              </Button>
+            </Link>
           </div>
         </Container>
       </Section>
@@ -317,32 +322,47 @@ export default function SupportersPage() {
 
           <div className="max-w-4xl mx-auto space-y-6 mb-16">
             <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="text-dark-gray font-bold mb-2">
+              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
                 Q. 支援の税務処理はどうなりますか？
               </Typography>
+              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
+                現在の英語力診断、目標設定、最適な学習プランの提案、プログラムの詳細説明など、英語学習に関するあらゆるご相談を承っております。
+              </Typography>
             </div>
 
             <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="text-dark-gray font-bold mb-2">
+              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
                 Q. 支援学生が卒業後、必ず学社に就職するのでしょうか？
               </Typography>
+              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
+                約30分程度を予定しております。お客様のご質問やご相談内容によって、多少前後する場合があります。
+              </Typography>
             </div>
 
             <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="text-dark-gray font-bold mb-2">
+              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
                 Q. 支援途中で学生がやめる場合事業で留学を断念する場合はどうなりますか？
               </Typography>
-            </div>
-
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="text-dark-gray font-bold mb-2">
-                Q. 小規模企業、個人事業主でも参加できますか？
+              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
+                はい、ZoomやGoogle Meetを使用したオンラインカウンセリングも承っております。全国どこからでもご参加いただけます。
               </Typography>
             </div>
 
             <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="text-dark-gray font-bold mb-2">
+              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
+                Q. 小規模企業、個人事業主でも参加できますか？
+              </Typography>
+              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
+                いいえ、カウンセリング後の入会は任意です。まずはプログラムの内容をご理解いただき、ご納得いただいた上でのご入会をお待ちしております。
+              </Typography>
+            </div>
+
+            <div className="bg-white rounded-lg p-6">
+              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
                 Q. 支援学生の選考基準を教えてください。
+              </Typography>
+              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
+                ご相談、プラン提案は完全無料です。まずはお気軽にお声掛けください。
               </Typography>
             </div>
           </div>

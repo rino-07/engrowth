@@ -16,29 +16,17 @@ export default function SciencePage() {
   return (
     <div className="science-page">
       {/* ヒーローセクション */}
-      <Section 
-        className="py-16 sm:py-20 lg:py-24 relative overflow-hidden"
-      >
-        <Container>
-          <div className="text-center text-white">
-            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif">
-              科学的根拠
-            </Typography>
-            <Typography variant="heading-sm" className="opacity-90 max-w-5xl mx-auto">
-              脳科学・言語学に基づく効果的な学習メソッド
-            </Typography>
-          </div>
-        </Container>
-      </Section>
-
-      {/* メインメッセージセクション */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+      <Section background="warm-white" className="py-12 sm:py-16">
         <SectionHeaderLeft
           label="Scientific Method"
           title="科学的に裏付けられた「効率的英語習得メカニズム」"
           desc="「努力しても伸びない」を科学的に撃破する"
           className="mb-12 lg:mb-16"
         />
+      </Section>
+
+      {/* メインメッセージセクション */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         
         <Container>
           <div className="relative bg-white rounded-2xl shadow-lg p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">
@@ -115,7 +103,7 @@ export default function SciencePage() {
       {/* 本質理解セクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         <Container>
-          <div className="bg-gray-50 rounded-xl shadow-inner p-8 mb-12">
+          <div>
             <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
               本質を理解すれば誰でも「話せる」ようになる
             </Typography>

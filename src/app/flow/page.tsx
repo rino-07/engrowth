@@ -20,7 +20,7 @@ export default function FlowPage() {
   return (
     <div className="min-h-screen">
       {/* 1) ヒーロー（背景写真＋主CTA） */}
-      <Section background="warm-white" padding="lg" className="relative min-h-[60vh] flex items-center">
+      <Section background="warm-white" className="relative py-12 sm:py-16 flex items-center">
         {/* PC用背景画像 */}
         <Image
           src="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
@@ -106,7 +106,7 @@ export default function FlowPage() {
                     </Button>
                   </Link>
                   <Link href="/contact">
-                    <Button variant="secondary" size="sm">
+                    <Button variant="secondary" size="sm" style={{ backgroundColor: "#0cc755" }}>
                       LINEでお問い合わせ
                     </Button>
                   </Link>
@@ -135,7 +135,7 @@ export default function FlowPage() {
               buttons={
                 <>
                   <Link href="/contact">
-                    <Button variant="secondary" size="sm">
+                    <Button variant="secondary" size="sm" style={{ backgroundColor: "#0cc755" }}>
                       LINEに登録
                     </Button>
                   </Link>
@@ -171,7 +171,7 @@ export default function FlowPage() {
               buttons={
                 <>
                   <Link href="/contact#:~:text=Engrowth%E3%81%AE-,LINE,-２%E3%81%AB%E7%9B%B8%E8%AB%87%E3%81%99%E3%82%8B">
-                    <Button variant="secondary" size="sm" className="text-sm px-4 py-2">
+                    <Button variant="secondary" size="sm" className="text-sm px-4 py-2" style={{ backgroundColor: "#0cc755" }}>
                       LINEでお問い合わせ
                     </Button>
                   </Link>
@@ -215,7 +215,7 @@ export default function FlowPage() {
 
             {/* ビジネスコース */}
             <div className="mb-16">
-              <h4 className="text-center text-xl font-bold mb-8 font-serif">ビジネスコース</h4>
+              <h4 className="text-center text-xl font-bold mb-8 font-serif mt-8">ビジネスコース</h4>
               <div className="space-y-8">
                 {/* 基礎シミュレーション */}
                 <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
@@ -257,7 +257,8 @@ export default function FlowPage() {
             </div>
 
             {/* 学生コース */}
-            <div>
+            <div className="py-0">
+              <div className="border-t border-gray-200 pt-8"></div>
               <h4 className="text-center text-xl font-bold mb-8 font-serif">学生コース</h4>
               <div className="space-y-8">
                 {/* 基礎シミュレーション */}

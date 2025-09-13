@@ -30,7 +30,7 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ページヘッダー */}
-      <Section background="warm-white" padding="lg" className="relative min-h-[60vh] flex items-center">
+      <Section background="warm-white" className="relative py-12 sm:py-16 flex items-center">
         {/* 背景画像 */}
         <Image
           src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
