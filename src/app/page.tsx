@@ -69,7 +69,7 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/top/top01.png"
+                  src="/images/top/Point1.png"
                   alt="コンサルタントは全員留学経験のある日本人"
                   width={48}
                   height={48}
@@ -82,7 +82,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/top/top02.png"
+                  src="/images/top/Point2.png"
                   alt="科学的根拠に基づく学習プログラム"
                   width={48}
                   height={48}
@@ -95,7 +95,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/top/top03.png"
+                  src="/images/top/Point3.png"
                   alt="1人ひとりに合わせたオーダーメイドの学習設計"
                   width={48}
                   height={48}
