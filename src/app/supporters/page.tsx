@@ -276,50 +276,90 @@ export default function SupportersPage() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6 mb-16">
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
-                Q. 支援の税務処理はどうなりますか？
-              </Typography>
-              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
-                現在の英語力診断、目標設定、最適な学習プランの提案、プログラムの詳細説明など、英語学習に関するあらゆるご相談を承っております。
-              </Typography>
-            </div>
+            <Card className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">支援の税務処理はどうなりますか？</Typography>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">A</Typography>
+                </div>
+                <div>
+                  <Typography variant="body-md" className="text-dark-gray">現在の英語力診断、目標設定、最適な学習プランの提案、プログラムの詳細説明など、英語学習に関するあらゆるご相談を承っております。</Typography>
+                </div>
+              </div>
+            </Card>
 
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
-                Q. 支援学生が卒業後、必ず学社に就職するのでしょうか？
-              </Typography>
-              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
-                約30分程度を予定しております。お客様のご質問やご相談内容によって、多少前後する場合があります。
-              </Typography>
-            </div>
+            <Card className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">支援学生が卒業後、必ず学社に就職するのでしょうか？</Typography>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">A</Typography>
+                </div>
+                <div>
+                  <Typography variant="body-md" className="text-dark-gray">約30分程度を予定しております。お客様のご質問やご相談内容によって、多少前後する場合があります。</Typography>
+                </div>
+              </div>
+            </Card>
 
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
-                Q. 支援途中で学生がやめる場合事業で留学を断念する場合はどうなりますか？
-              </Typography>
-              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
-                はい、ZoomやGoogle Meetを使用したオンラインカウンセリングも承っております。全国どこからでもご参加いただけます。
-              </Typography>
-            </div>
+            <Card className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">支援途中で学生がやめる場合事業で留学を断念する場合はどうなりますか？</Typography>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">A</Typography>
+                </div>
+                <div>
+                  <Typography variant="body-md" className="text-dark-gray">はい、ZoomやGoogle Meetを使用したオンラインカウンセリングも承っております。全国どこからでもご参加いただけます。</Typography>
+                </div>
+              </div>
+            </Card>
 
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
-                Q. 小規模企業、個人事業主でも参加できますか？
-              </Typography>
-              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
-                いいえ、カウンセリング後の入会は任意です。まずはプログラムの内容をご理解いただき、ご納得いただいた上でのご入会をお待ちしております。
-              </Typography>
-            </div>
+            <Card className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">小規模企業、個人事業主でも参加できますか？</Typography>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">A</Typography>
+                </div>
+                <div>
+                  <Typography variant="body-md" className="text-dark-gray">いいえ、カウンセリング後の入会は任意です。まずはプログラムの内容をご理解いただき、ご納得いただいた上でのご入会をお待ちしております。</Typography>
+                </div>
+              </div>
+            </Card>
 
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
-                Q. 支援学生の選考基準を教えてください。
-              </Typography>
-              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
-                ご相談、プラン提案は完全無料です。まずはお気軽にお声掛けください。
-              </Typography>
-            </div>
+            <Card className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">支援学生の選考基準を教えてください。</Typography>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">A</Typography>
+                </div>
+                <div>
+                  <Typography variant="body-md" className="text-dark-gray">ご相談、プラン提案は完全無料です。まずはお気軽にお声掛けください。</Typography>
+                </div>
+              </div>
+            </Card>
           </div>
 
           {/* main_banner.png */}
