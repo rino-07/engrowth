@@ -7,17 +7,25 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    services: [
-      { name: 'Engrowthとは', href: '/about' },
-      { name: 'コース・料金', href: '/courses' },
+    main: [
+      { name: 'ホーム', href: '/' },
       { name: '受講の流れ', href: '/flow' },
       { name: '支援者の方へ', href: '/supporters' },
       { name: 'よくある質問', href: '/faq' },
     ],
-    company: [
-      { name: '会社概要', href: '/about#company' },
-      { name: 'プライバシーポリシー', href: '/privacy' },
-      { name: '利用規約', href: '/terms' },
+    about: [
+      { name: 'Engrowthの特徴', href: '/about' },
+      { name: 'Engrowthエコシステム', href: '/about/ecosystem' },
+      { name: '専門コンサルタント', href: '/about/consultant' },
+      { name: '科学的根拠', href: '/about/science' },
+      { name: '実践の仕組み', href: '/about/practice' },
+    ],
+    courses: [
+      { name: 'コース・料金', href: '/courses' },
+      { name: 'ビジネスコース', href: '/courses/business' },
+      { name: '学生コース', href: '/courses/study' },
+      { name: 'ビジネススポットサービス', href: '/courses/business-spot' },
+      { name: '学生スポットサービス', href: '/courses/study-spot' },
     ],
     contact: [
       { name: 'お問い合わせ', href: '/contact' },
@@ -29,7 +37,7 @@ const Footer: React.FC = () => {
     <footer className="bg-deep-navy text-white">
       <Container>
         <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8">
             {/* Logo and Description */}
             <div className="xl:col-span-1">
               <Link href="/" className="inline-block mb-4">
@@ -37,24 +45,24 @@ const Footer: React.FC = () => {
                   Engrowth
                 </span>
               </Link>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed font-serif">
                 留学生の経済問題を解決する
                 <br />
                 独自のエコシステム
               </p>
             </div>
 
-            {/* Services */}
+            {/* Main */}
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                サービス
+              <h3 className="text-lg font-semibold mb-4 text-white font-serif">
+                メインメニュー
               </h3>
               <ul className="space-y-2">
-                {footerLinks.services.map((link) => (
+                {footerLinks.main.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm"
+                      className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
                     >
                       {link.name}
                     </Link>
@@ -63,15 +71,32 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Company */}
+            {/* About */}
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">会社情報</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white font-serif">Engrowthの特徴</h3>
               <ul className="space-y-2">
-                {footerLinks.company.map((link) => (
+                {footerLinks.about.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm"
+                      className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Courses */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-white font-serif">コース・料金</h3>
+              <ul className="space-y-2">
+                {footerLinks.courses.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
                     >
                       {link.name}
                     </Link>
@@ -82,7 +107,7 @@ const Footer: React.FC = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
+              <h3 className="text-lg font-semibold mb-4 text-white font-serif">
                 お問い合わせ
               </h3>
               <ul className="space-y-2">
@@ -90,7 +115,7 @@ const Footer: React.FC = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm"
+                      className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
                     >
                       {link.name}
                     </Link>
@@ -109,11 +134,11 @@ const Footer: React.FC = () => {
           {/* Bottom Section */}
           <div className="mt-12 pt-8 border-t border-gray-600">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-300 text-sm font-serif">
                 © {currentYear} Engrowth. All rights reserved.
               </p>
               <div className="mt-4 md:mt-0">
-                <p className="text-gray-400 text-xs">
+                <p className="text-gray-400 text-xs font-serif">
                   留学生の夢を支える英会話コンサルティング
                 </p>
               </div>

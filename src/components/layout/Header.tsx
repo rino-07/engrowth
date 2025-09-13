@@ -127,7 +127,7 @@ const Header: React.FC = () => {
                     }}
                   >
                     <button
-                      className="text-dark-gray hover:text-brand-red transition-colors duration-200 font-medium flex items-center"
+                      className="text-dark-gray hover:text-brand-red transition-colors duration-200 font-medium flex items-center font-serif"
                     >
                       {item.name}
                       <svg
@@ -168,7 +168,7 @@ const Header: React.FC = () => {
                 ) : (
                   <Link
                     href={item.href || '/'}
-                    className="text-dark-gray hover:text-brand-red transition-colors duration-200 font-medium"
+                    className="text-dark-gray hover:text-brand-red transition-colors duration-200 font-medium font-serif"
                   >
                     {item.name}
                   </Link>
@@ -254,7 +254,7 @@ const Header: React.FC = () => {
               <div className="ml-2">
                 <button
                   type="button"
-                  className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                  className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                   onClick={handleMobileAboutToggle}
                 >
                   Engrowthの特徴
@@ -284,28 +284,28 @@ const Header: React.FC = () => {
                   <div className="py-2 pl-4 space-y-1">
                     <Link
                       href="/about/ecosystem"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       Engrowthエコシステム
                     </Link>
                     <Link
                       href="/about/consultant"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       専門コンサルタント
                     </Link>
                     <Link
                       href="/about/science"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       科学的根拠
                     </Link>
                     <Link
                       href="/about/practice"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       実践の仕組み
@@ -318,7 +318,7 @@ const Header: React.FC = () => {
               <div className="ml-2">
                 <button
                   type="button"
-                  className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                  className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                   onClick={handleMobileCoursesToggle}
                 >
                   コース・料金
@@ -348,35 +348,35 @@ const Header: React.FC = () => {
                   <div className="py-2 pl-4 space-y-1">
                     <Link
                       href="/courses"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       コース・料金一覧
                     </Link>
                     <Link
                       href="/courses/business"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       ビジネスコース
                     </Link>
                     <Link
                       href="/courses/study"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       学生コース
                     </Link>
                     <Link
                       href="/courses/business-spot"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       ビジネススポットサービス
                     </Link>
                     <Link
                       href="/courses/study-spot"
-                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
                       学生スポットサービス
@@ -397,7 +397,7 @@ const Header: React.FC = () => {
             {/* 支援者向けセクション */}
             <Link
               href="/supporters"
-              className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
               onClick={() => setIsMenuOpen(false)}
             >
               支援者の方へ
@@ -406,7 +406,7 @@ const Header: React.FC = () => {
             {/* FAQ */}
             <Link
               href="/faq"
-              className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200"
+                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
               onClick={() => setIsMenuOpen(false)}
             >
               FAQ

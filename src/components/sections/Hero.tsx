@@ -97,7 +97,7 @@ export default function Hero({
       <div className="relative z-10 flex items-center">
         <Container className="py-12 sm:py-16 lg:py-20 w-full">
           <div className="text-center">
-            <h1 className="text-dark-gray mb-6 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            <h1 className="text-dark-gray mb-6 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight font-serif">
               {title}
             </h1>
 

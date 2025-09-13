@@ -16,21 +16,21 @@ const courseData: CourseCardData[] = [
   {
     id: 'business',
     title: 'ビジネスコース',
-    description: '忙しい社会人向けの効率的な英語学習\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxx',
+    description: '忙しい社会人向けの効率的な英語学習',
     image: '/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg',
     href: '/courses/business'
   },
   {
     id: 'business-spot',
     title: 'ビジネススポット\nサービス',
-    description: '会議同席・資料翻訳・プレゼン準備\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxx',
+    description: '会議同席・資料翻訳・プレゼン準備',
     image: '/images/drive-download-20250908T014101Z-1-001/top/top07.png',
     href: '/courses/business-spot'
   },
   {
     id: 'student',
     title: '学生コース',
-    description: '留学を目指す学生向けの総合プログラム\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxx',
+    description: '留学を目指す学生向けの総合プログラム',
     image: '/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg',
     href: '/courses/study'
   },
