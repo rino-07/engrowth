@@ -6,7 +6,7 @@ import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
 import { FaMicrophone, FaLanguage, FaGlobe, FaUsers, FaChartLine, FaDesktop } from 'react-icons/fa';
-import { PageTitleSection } from '@/components/sections';
+import Hero from '@/components/sections/Hero';
 
 export const metadata = {
   title: 'ビジネススポットサービス - 必要な時に必要なサポートを | Engrowth',
@@ -18,10 +18,13 @@ function BusinessSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <PageTitleSection
-        label="Business Spot Service"
+      <Hero
         title="ビジネススポットサービス"
-        description="ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。"
+        subtitle="ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。"
+        bgDesktopSrc="/images/business/business-spot-service.jpg"
+        bgMobileSrc="/images/hero_sma/business_spot_hero_sma.png"
+        bgPosition="center 30%"
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. 3つのサービス */}

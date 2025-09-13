@@ -5,7 +5,7 @@ import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
 import { FaEdit, FaUsers, FaHeadset, FaGraduationCap, FaBriefcase, FaQuestionCircle } from 'react-icons/fa';
-import { PageTitleSection } from '@/components/sections';
+import Hero from '@/components/sections/Hero';
 // import { getSpotServicesByType } from '@/data/courses';
 
 export const metadata = {
@@ -20,10 +20,13 @@ export default function StudentSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <PageTitleSection
-        label="Student Spot Service"
+      <Hero
         title="学生スポットサービス"
-        description="留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。"
+        subtitle="留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。"
+        bgDesktopSrc="/images/students/students-spot-service.jpg"
+        bgMobileSrc="/images/hero_sma/students_spot_hero_sma.png"
+        bgPosition="center 30%"
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. 3つのメインサービス */}

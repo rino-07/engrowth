@@ -5,7 +5,7 @@ import Container from '@/components/layout/Container';
 import Typography from '@/components/ui/Typography';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Card from '@/components/ui/Card';
-import { PageTitleSection } from '@/components/sections';
+import Hero from '@/components/sections/Hero';
 
 export const metadata = {
   title: 'Engrowthの特徴 - Engrowth',
@@ -17,10 +17,13 @@ export default function AboutPage() {
   return (
     <div className="about-page">
       {/* ヒーローセクション */}
-      <PageTitleSection
-        label="About Engrowth"
+      <Hero
         title="Engrowthの特徴"
-        description="なぜEngrowthが選ばれるのか？4つの特徴をご紹介"
+        subtitle="なぜEngrowthが選ばれるのか？4つの特徴をご紹介"
+        bgDesktopSrc="/images/about/about-features.jpg"
+        bgMobileSrc="/images/hero_sma/about_hero_sma.png"
+        bgPosition="center 30%"
+        className="flex items-center justify-center text-center"
       />
 
       {/* メインメッセージセクション */}

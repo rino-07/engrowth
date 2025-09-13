@@ -34,9 +34,9 @@ export default function Home() {
   }
   subtitle={
     <>
-      独自のエコシステムで留学生の経済問題を解決し、
+      <span className="text-dark-gray">独自のエコシステムで留学生の経済問題を解決し、</span>
       <br />
-      日本人だからこそ提供できる英会話コンサルティングサービス
+      <span className="text-dark-gray">日本人だからこそ提供できる英会話コンサルティングサービス</span>
     </>
   }
   bgDesktopSrc="/images/top/top01.png"

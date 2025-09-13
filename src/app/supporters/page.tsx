@@ -7,7 +7,7 @@ import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import React from 'react';
-import { PageTitleSection } from '@/components/sections';
+import Hero from '@/components/sections/Hero';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -30,10 +30,13 @@ export default function SupportersPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <PageTitleSection
-        label="For Supporters"
+      <Hero
         title="支援者の方へ"
-        description="日本の未来を、経済的な理由で閉ざさないために。〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜 あなたの支援が、明日の日本のグローバルリーダーを育てます"
+        subtitle="日本の未来を、経済的な理由で閉ざさないために。〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜 あなたの支援が、明日の日本のグローバルリーダーを育てます"
+        bgDesktopSrc="/images/supporters/supporters-hero.jpg"
+        bgMobileSrc="/images/hero_sma/supporters_hero_sma.png"
+        bgPosition="center 30%"
+        className="flex items-center justify-center text-center"
       />
 
       {/* 2. Engrowth支援プログラムとは */}
