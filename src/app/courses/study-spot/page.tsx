@@ -23,8 +23,8 @@ export default function StudentSpotServicePage() {
       <Hero
         title="学生スポットサービス"
         subtitle="留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。"
-        bgDesktopSrc="/images/students/students-spot-service.jpg"
-        bgMobileSrc="/images/hero_sma/students_spot_hero_sma.png"
+        bgDesktopSrc="/images/spot-student/spot-student-hero-background.jpg"
+        bgMobileSrc="/images/hero_sma/spot-student_hero_sma.png"
         bgPosition="center 30%"
         className="flex items-center justify-center text-center"
       />

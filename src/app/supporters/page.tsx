@@ -33,7 +33,7 @@ export default function SupportersPage() {
       <Hero
         title="支援者の方へ"
         subtitle="日本の未来を、経済的な理由で閉ざさないために。〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜 あなたの支援が、明日の日本のグローバルリーダーを育てます"
-        bgDesktopSrc="/images/supporters/supporters-hero.jpg"
+        bgDesktopSrc="/images/supporters/supporters-hero-background.jpg"
         bgMobileSrc="/images/hero_sma/supporters_hero_sma.png"
         bgPosition="center 30%"
         className="flex items-center justify-center text-center"

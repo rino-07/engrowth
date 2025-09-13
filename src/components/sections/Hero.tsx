@@ -102,7 +102,7 @@ export default function Hero({
             </h1>
 
             {subtitle && (
-              <p className="text-gray mb-8 md:mb-10 max-w-[65ch] mx-auto text-base md:text-lg leading-relaxed">
+              <p className="text-dark-gray mb-8 md:mb-10 max-w-[65ch] mx-auto text-base md:text-lg leading-relaxed">
                 {subtitle}
               </p>
             )}
