@@ -4,6 +4,7 @@ import Section from '@/components/layout/Section';
 import Container from '@/components/layout/Container';
 import Typography from '@/components/ui/Typography';
 import Card from '@/components/ui/Card';
+import { PageTitleSection } from '@/components/sections';
 
 export const metadata = {
   title: '実践の仕組み - Engrowth',
@@ -15,24 +16,11 @@ export default function PracticePage() {
   return (
     <div className="practice-page">
       {/* ヒーローセクション */}
-      <Section background="warm-white" className="py-12 sm:py-16">
-        <Container>
-          <div className="text-center mb-8">
-            <div className="inline-block">
-              <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4" style={{ color: '#d30306' }}>
-                Practice System
-              </p>
-              <div className="w-full h-px bg-gray-300 mb-6"></div>
-              <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
-                習慣化 × 伴走サポートによる「圧倒的成果」の出し方
-              </Typography>
-              <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto">
-                習慣化が成功の9割を決める
-              </Typography>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <PageTitleSection
+        label="Practice System"
+        title="習慣化 × 伴走サポートによる「圧倒的成果」の出し方"
+        description="習慣化が成功の9割を決める"
+      />
 
       {/* メインメッセージセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">

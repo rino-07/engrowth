@@ -4,6 +4,7 @@ import Section from '@/components/layout/Section';
 import Container from '@/components/layout/Container';
 import Typography from '@/components/ui/Typography';
 import Card from '@/components/ui/Card';
+import { PageTitleSection } from '@/components/sections';
 
 export const metadata = {
   title: '科学的根拠 - Engrowth',
@@ -15,24 +16,11 @@ export default function SciencePage() {
   return (
     <div className="science-page">
       {/* ヒーローセクション */}
-      <Section background="warm-white" className="py-12 sm:py-16">
-        <Container>
-          <div className="text-center mb-8">
-            <div className="inline-block">
-              <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4" style={{ color: '#d30306' }}>
-                Scientific Method
-              </p>
-              <div className="w-full h-px bg-gray-300 mb-6"></div>
-              <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
-                科学的に裏付けられた「効率的英語習得メカニズム」
-              </Typography>
-              <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto">
-                「努力しても伸びない」を科学的に撃破する
-              </Typography>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <PageTitleSection
+        label="Scientific Method"
+        title="科学的に裏付けられた「効率的英語習得メカニズム」"
+        description="「努力しても伸びない」を科学的に撃破する"
+      />
 
       {/* メインメッセージセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
