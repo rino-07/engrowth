@@ -8,6 +8,7 @@ import { CourseCards } from '@/components/sections/CourseCards';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import Hero from '@/components/sections/Hero';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -30,33 +31,13 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ページヘッダー */}
-      <Section background="warm-white" className="relative py-12 sm:py-16 flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 30%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/courses_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 30%' }}
-        />
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h1">
-              コース・料金
-            </Typography>
-          </div>
-        </Container>
-      </Section>
+      <Hero
+        title="コース・料金"
+        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
+        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/courses_hero_sma.png"
+        bgPosition="center 30%"
+        overlayOpacity={0.9}
+      />
 
       {/* 2. コース選択（4カード） */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">

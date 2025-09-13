@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Section from '@/components/layout/Section';
 import Container from '@/components/layout/Container';
 import Typography from '@/components/ui/Typography';
-import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Card from '@/components/ui/Card';
 
 export const metadata = {
@@ -17,12 +16,22 @@ export default function ConsultantPage() {
     <div className="consultant-page">
       {/* ヒーローセクション */}
       <Section background="warm-white" className="py-12 sm:py-16">
-        <SectionHeaderLeft
-          label="Consultant"
-          title="「英語を第二言語として習得したコンサルタント」の圧倒的な価値"
-          desc="なぜEngrowthでは「日本人コンサルタント」にこだわるのか"
-          className="mb-12 lg:mb-16"
-        />
+        <Container>
+          <div className="text-center mb-8">
+            <div className="inline-block">
+              <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4" style={{ color: '#d30306' }}>
+                Consultant
+              </p>
+              <div className="w-full h-px bg-gray-300 mb-6"></div>
+              <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
+                「英語を第二言語として習得したコンサルタント」の圧倒的な価値
+              </Typography>
+              <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto">
+                なぜEngrowthでは「日本人コンサルタント」にこだわるのか
+              </Typography>
+            </div>
+          </div>
+        </Container>
       </Section>
 
       {/* メインメッセージセクション */}

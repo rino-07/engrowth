@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { CourseCards } from '@/components/sections/CourseCards';
 import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
+import Hero from '@/components/sections/Hero';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -23,58 +24,29 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <Section padding="xl" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/top/top01.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 20%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/top_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 20%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center py-12 sm:py-16">
-        <Container className="relative z-10 w-full">
-          <div className="text-center animate-fadeInUp">
-            <Typography variant="heading-xl" className="text-dark-gray mb-6" as="h1">
-              あなたも
-              <span className="text-brand-red">Engrowth</span>
-              の一員になりませんか？
-            </Typography>
-            <Typography variant="body-lg" className="text-gray mb-8 max-w-[65ch] mx-auto">
-              独自のエコシステムで留学生の経済問題を解決し、
-              <br />
-              日本人だからこそ提供できる英会話コンサルティングサービス
-            </Typography>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button variant="primary" size="lg">
-                  無料相談を予約する
-                </Button>
-              </Link>
-              <Link href="/courses">
-                <Button variant="secondary" size="lg">
-                  コース詳細を見る
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </Container>
-        </div>
-      </Section>
+      <Hero
+  title={
+    <>
+      あなたも
+      <span className="text-brand-red">Engrowth</span>
+      の一員になりませんか？
+    </>
+  }
+  subtitle={
+    <>
+      独自のエコシステムで留学生の経済問題を解決し、
+      <br />
+      日本人だからこそ提供できる英会話コンサルティングサービス
+    </>
+  }
+  bgDesktopSrc="/images/top/top01.png"
+  bgMobileSrc="/images/hero_sma/top_hero_sma.png"
+  ctas={[
+    { href: '/contact', label: '無料相談を予約する', variant: 'primary' },
+    { href: '/courses', label: 'コース詳細を見る', variant: 'secondary' },
+  ]}
+  className="flex items-center justify-center text-center"
+/>
 
       {/* 2. What is Engrowth Section - 2カラムレイアウト */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
@@ -110,7 +82,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/Point2.png"
+                  src="/images/point2.png"
                   alt="科学的根拠に基づく学習プログラム"
                   width={48}
                   height={48}
@@ -123,7 +95,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/Point3.png"
+                  src="/images/point3.png"
                   alt="1人ひとりに合わせたオーダーメイドの学習設計"
                   width={48}
                   height={48}
@@ -151,9 +123,11 @@ export default function Home() {
           <CourseCards />
 
           <div className="text-center mt-12">
-            <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-              コース・料金
-            </Button>
+            <Link href="/courses">
+              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
+                コース・料金
+              </Button>
+            </Link>
           </div>
         </FullBleed1440>
       </Section>
@@ -185,7 +159,6 @@ export default function Home() {
         />
         
         <Container>
-
           <div className="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
             {/* 従来スクール - 40% */}
             <div className="col-span-12 lg:col-span-5 bg-gray-50 rounded-2xl p-8">

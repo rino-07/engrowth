@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import SectionDivider from "@/components/ui/SectionDivider";
-import Typography from "@/components/ui/Typography";
+import Hero from "@/components/sections/Hero";
 
 export const metadata = {
   title: "受講の流れ - 英語学習の悩み、目標設定、プラン相談など | Engrowth",
@@ -20,46 +20,27 @@ export default function FlowPage() {
   return (
     <div className="min-h-screen">
       {/* 1) ヒーロー（背景写真＋主CTA） */}
-      <Section background="warm-white" className="relative py-12 sm:py-16 flex items-center">
-        {/* PC用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
-          alt="オンラインで相談する様子"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 25%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
-          alt="オンラインで相談する様子"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 25%' }}
-        />
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif text-dark-gray">
-              専属コンサルタントだから続けられる<br />
-              ３日坊主にならない英語学習
-            </Typography>
-            <Typography variant="heading-sm" className="text-gray max-w-5xl mx-auto">
-              英語学習の失敗を、才能のせいにしない。<br />
-              〜正しいやり方を知れば 誰でも話せるようになる〜
-            </Typography>
-            <div className="mt-8">
-              <Button
-                className="px-8 py-4 rounded-full text-lg font-semibold"
-                style={{ backgroundColor: "#00B14F" }}
-              >
-                LINE登録はこちら
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <Hero
+        title={
+          <>
+            専属コンサルタントだから続けられる<br />
+            ３日坊主にならない英語学習
+          </>
+        }
+        subtitle={
+          <>
+            英語学習の失敗を、才能のせいにしない。<br />
+            〜正しいやり方を知れば 誰でも話せるようになる〜
+          </>
+        }
+        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
+        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
+        bgPosition="center 25%"
+        overlayOpacity={0.9}
+        ctas={[
+          { href: '/contact', label: 'LINE登録はこちら', variant: 'primary' }
+        ]}
+      />
 
       {/* 2) 見出し */}
       <Section padding="xl" background="warm-white">

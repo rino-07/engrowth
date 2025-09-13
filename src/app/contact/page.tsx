@@ -6,6 +6,7 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
+import Hero from '@/components/sections/Hero';
 
 export const metadata = {
   title: 'お問い合わせ - まずはお気軽にご相談ください | Engrowth',
@@ -17,52 +18,26 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 40%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/contact_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 40%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center py-12 sm:py-16">
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              お問い合わせ
-            </Typography>
-            <Typography variant="heading-md" className="text-brand-red mb-8">
-              まずは<span className="text-brand-red">お気軽に</span>
-              <br />
-              ご相談ください
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[60ch] mx-auto mb-8">
-              無料相談、LINE相談受付中
-            </Typography>
-            <Typography variant="body-md" className="text-gray max-w-[65ch] mx-auto">
-              英語学習の悩み、目標設定、プラン相談など、
-              <br />
-              どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
-            </Typography>
-          </div>
-        </Container>
-        </div>
-      </Section>
+      <Hero
+        title="お問い合わせ"
+        subtitle={
+          <>
+            まずは<span className="text-brand-red">お気軽に</span>ご相談ください
+            <br />
+            <br />
+            無料相談、LINE相談受付中
+            <br />
+            <br />
+            英語学習の悩み、目標設定、プラン相談など、
+            <br />
+            どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
+          </>
+        }
+        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
+        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/contact_hero_sma.png"
+        bgPosition="center 40%"
+        overlayOpacity={0.85}
+      />
 
       {/* 2. お問い合わせ前に、こちらもご確認ください */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">

@@ -7,6 +7,7 @@ import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import React from 'react';
+import Hero from '@/components/sections/Hero';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -29,47 +30,23 @@ export default function BusinessCoursePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/business/business-hero-background.jpg"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 40%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/business_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 40%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center py-12 sm:py-16">
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              ビジネスコース
-            </Typography>
-            <Typography variant="heading-md" className="text-dark-gray mb-8">
-              忙しい社会人でも、英語は習得できる時代へ
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[85ch] mx-auto leading-relaxed">
-              &ldquo;毎日1〜2時間のまとまった時間&rdquo;ではなく、1回5分〜10分の隙間式学習の積み重ね。
-              <br />
-              科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく&ldquo;本当に続けられる&rdquo;プログラム
-            </Typography>
-          </div>
-        </Container>
-        </div>
-      </Section>
+      <Hero
+        title="ビジネスコース"
+        subtitle={
+          <>
+            忙しい社会人でも、英語は習得できる時代へ
+            <br />
+            <br />
+            "毎日1〜2時間のまとまった時間"ではなく、1回5分〜10分の隙間式学習の積み重ね。
+            <br />
+            科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく"本当に続けられる"プログラム
+          </>
+        }
+        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/business/business-hero-background.jpg"
+        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/business_hero_sma.png"
+        bgPosition="center 40%"
+        overlayOpacity={0.85}
+      />
 
       {/* 2. 3つの特徴カード */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 lg:pb-16 pb-0">

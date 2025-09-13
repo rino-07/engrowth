@@ -7,6 +7,7 @@ import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import Hero from '@/components/sections/Hero';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -32,47 +33,23 @@ export default function StudentCoursePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 30%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/students_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 30%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center py-12 sm:py-16">
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              学生コース
-            </Typography>
-            <Typography variant="heading-md" className="text-dark-gray mb-8">
-              留学の夢を諦めない、経済支援付き英語学習
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[85ch] mx-auto leading-relaxed">
-              経済的な理由で留学を諦める必要はありません。Engrowthの学生コースは、
-              <br />
-              英語学習と経済支援を組み合わせた独自プログラムで、あなたの留学の夢を全力でサポートします。
-            </Typography>
-          </div>
-        </Container>
-        </div>
-      </Section>
+      <Hero
+        title="学生コース"
+        subtitle={
+          <>
+            留学の夢を諦めない、経済支援付き英語学習
+            <br />
+            <br />
+            経済的な理由で留学を諦める必要はありません。Engrowthの学生コースは、
+            <br />
+            英語学習と経済支援を組み合わせた独自プログラムで、あなたの留学の夢を全力でサポートします。
+          </>
+        }
+        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
+        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/students_hero_sma.png"
+        bgPosition="center 30%"
+        overlayOpacity={0.85}
+      />
 
       {/* 2. 3つの特徴カード */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 pb-0">
