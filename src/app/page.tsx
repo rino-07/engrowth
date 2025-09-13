@@ -84,7 +84,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/point2.png"
+                  src="/images/Point2.png"
                   alt="科学的根拠に基づく学習プログラム"
                   width={48}
                   height={48}
@@ -99,7 +99,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/point3.png"
+                  src="/images/Point3.png"
                   alt="1人ひとりに合わせたオーダーメイドの学習設計"
                   width={48}
                   height={48}
