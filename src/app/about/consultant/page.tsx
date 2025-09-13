@@ -38,7 +38,7 @@ export default function ConsultantPage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/method/method-practical-advice.jpg"
+                  src="/images/method/method-practical-advice.jpg"
                   alt="コンサルタントイメージ"
                   width={320}
                   height={208}
@@ -190,7 +190,7 @@ export default function ConsultantPage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/students/students-class-understanding.jpg"
+                  src="/images/students/students-class-understanding.jpg"
                   alt="留学経験イメージ"
                   width={320}
                   height={208}

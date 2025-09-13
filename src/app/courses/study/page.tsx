@@ -45,8 +45,8 @@ export default function StudentCoursePage() {
             英語学習と経済支援を組み合わせた独自プログラムで、あなたの留学の夢を全力でサポートします。
           </>
         }
-        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
-        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/students_hero_sma.png"
+        bgDesktopSrc="/images/students/students-communication.jpg"
+        bgMobileSrc="/images/hero_sma/students_hero_sma.png"
         bgPosition="center 30%"
         overlayOpacity={0.85}
       />
@@ -64,7 +64,7 @@ export default function StudentCoursePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-short-study.jpg"
+                src="/images/business/business-short-study.jpg"
                 alt="５分から１０分の短時間学習"
                 width={200}
                 height={150}
@@ -87,7 +87,7 @@ export default function StudentCoursePage() {
 
             <Card className="text-center p-6">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-scientific-method.jpg"
+                src="/images/business/business-scientific-method.jpg"
                 alt="科学的メソッド"
                 width={200}
                 height={150}
@@ -108,7 +108,7 @@ export default function StudentCoursePage() {
 
             <Card className="text-center p-6">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-line-support.jpg"
+                src="/images/business/business-line-support.jpg"
                 alt="LINEでの伴走支援"
                 width={200}
                 height={150}
@@ -137,7 +137,7 @@ export default function StudentCoursePage() {
         <Container>
           <div className="text-center">
             <Image
-              src="/images/drive-download-20250908T014101Z-1-001/students/students_banner.png"
+              src="/images/students/students_banner.png"
               alt="エッセイ添削し放題 - 留学前でも留学中でも最重要となるエッセイの添削及びアドバイスを頼み放題！！"
               width={1200}
               height={200}
@@ -575,7 +575,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/students/students-hero-background.jpg"
+                src="/images/students/students-hero-background.jpg"
                 alt="留学成功"
                 width={300}
                 height={200}
@@ -602,7 +602,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-differentiation.jpg"
+                src="/images/business/business-differentiation.jpg"
                 alt="就職活動での差別化"
                 width={300}
                 height={200}
@@ -629,7 +629,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/about/unnamed.png"
+                src="/images/about/unnamed.png"
                 alt="キャリアの選択肢拡大"
                 width={300}
                 height={200}
@@ -654,7 +654,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/students/students-communication.jpg"
+                src="/images/students/students-communication.jpg"
                 alt="国際的な人脈形成"
                 width={300}
                 height={200}

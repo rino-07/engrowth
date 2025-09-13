@@ -8,6 +8,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import Hero from '@/components/sections/Hero';
 
 type TabType = '無料カウンセリング' | 'サービス内容' | '支援プログラム' | '受講生' | 'コンサルタント' | '料金';
 
@@ -126,39 +127,14 @@ export default function FAQClient() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="lg" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/top/top06.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 35%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/faq_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 35%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center py-12 sm:py-16">
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h1">
-              よくある質問
-            </Typography>
-          </div>
-        </Container>
-        </div>
-      </Section>
+      <Hero
+        title="よくある質問"
+        subtitle="Engrowthに関する疑問を解決"
+        bgDesktopSrc="/images/top/top06.png"
+        bgMobileSrc="/images/hero_sma/faq_hero_sma.png"
+        bgPosition="center 35%"
+        overlayOpacity={0.85}
+      />
 
       {/* 2. タブナビゲーション */}
       <Section background="white" padding="md">

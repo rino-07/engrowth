@@ -41,7 +41,7 @@ export default function SciencePage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/top/method-sla-theory.jpg"
+                  src="/images/top/method-sla-theory.jpg"
                   alt="脳科学・学習イメージ"
                   width={320}
                   height={208}
@@ -213,7 +213,7 @@ export default function SciencePage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/method/method-sla-detailed.jpg"
+                  src="/images/method/method-sla-detailed.jpg"
                   alt="脳科学・理論イメージ"
                   width={320}
                   height={208}
@@ -241,7 +241,7 @@ export default function SciencePage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-income-opportunity.jpg"
+                  src="/images/supporters/supporters-income-opportunity.jpg"
                   alt="Engrowthサポートイメージ"
                   width={320}
                   height={208}

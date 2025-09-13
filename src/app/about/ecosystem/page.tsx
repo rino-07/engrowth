@@ -6,6 +6,7 @@ import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import { FaUserTie, FaFlask, FaUsers } from 'react-icons/fa';
+import { Hero } from '@/components/sections';
 
 export const metadata = {
   title: 'Engrowthエコシステム - オーダーメイド英語学習で留学生の経済問題を解決',
@@ -17,42 +18,14 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/top/reason-ecosystem.jpg"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 25%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/about_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 25%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center py-12 sm:py-16">
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4 section-title-with-underbar" as="h1">
-              Engrowthの特徴
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto">
-              学ぶことが支援になる、循環型エコシステムの仕組み
-            </Typography>
-          </div>
-        </Container>
-        </div>
-      </Section>
+      <Hero
+        title="Engrowthの特徴"
+        subtitle="学ぶことが支援になる、循環型エコシステムの仕組み"
+        bgDesktopSrc="/images/top/reason-ecosystem.jpg"
+        bgMobileSrc="/images/hero_sma/about_hero_sma.png"
+        bgPosition="center 25%"
+        overlayOpacity={0.85}
+      />
 
       {/* 2. 3つの特徴 */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
@@ -147,7 +120,7 @@ export default function AboutPage() {
               {/* 右側: エコシステム図 */}
               <div className="flex justify-center">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/about/eco01.png"
+                  src="/images/about/eco01.png"
                   alt="Engrowthエコシステム図"
                   width={600}
                   height={400}
@@ -279,7 +252,7 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto lg:mb-16">
               <div className="relative">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/about/eco02.png"
+                  src="/images/about/eco02.png"
                   alt="Engrowthエコシステム参加図"
                   width={800}
                   height={600}

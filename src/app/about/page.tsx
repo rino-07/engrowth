@@ -5,6 +5,7 @@ import Container from '@/components/layout/Container';
 import Typography from '@/components/ui/Typography';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Card from '@/components/ui/Card';
+import { PageTitleSection } from '@/components/sections';
 
 export const metadata = {
   title: 'Engrowthの特徴 - Engrowth',
@@ -16,20 +17,11 @@ export default function AboutPage() {
   return (
     <div className="about-page">
       {/* ヒーローセクション */}
-      <Section 
-        className="py-16 sm:py-20 lg:py-24 relative overflow-hidden"
-      >
-        <Container>
-          <div className="text-center text-white">
-            <Typography variant="heading-xl" className="font-bold mb-4 lg:mb-6 font-serif">
-              Engrowthの特徴
-            </Typography>
-            <Typography variant="heading-sm" className="opacity-90 max-w-5xl mx-auto">
-              なぜEngrowthが選ばれるのか？4つの特徴をご紹介
-            </Typography>
-          </div>
-        </Container>
-      </Section>
+      <PageTitleSection
+        label="About Engrowth"
+        title="Engrowthの特徴"
+        description="なぜEngrowthが選ばれるのか？4つの特徴をご紹介"
+      />
 
       {/* メインメッセージセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">

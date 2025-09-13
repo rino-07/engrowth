@@ -42,8 +42,8 @@ export default function BusinessCoursePage() {
             科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく"本当に続けられる"プログラム
           </>
         }
-        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/business/business-hero-background.jpg"
-        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/business_hero_sma.png"
+        bgDesktopSrc="/images/business/business-hero-background.jpg"
+        bgMobileSrc="/images/hero_sma/business_hero_sma.png"
         bgPosition="center 40%"
         overlayOpacity={0.85}
       />
@@ -61,7 +61,7 @@ export default function BusinessCoursePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-short-study.jpg"
+                src="/images/business/business-short-study.jpg"
                 alt="５分から１０分の短時間学習"
                 width={200}
                 height={150}
@@ -84,7 +84,7 @@ export default function BusinessCoursePage() {
 
             <Card className="text-center p-6">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-scientific-method.jpg"
+                src="/images/business/business-scientific-method.jpg"
                 alt="科学的メソッド"
                 width={200}
                 height={150}
@@ -105,7 +105,7 @@ export default function BusinessCoursePage() {
 
             <Card className="text-center p-6">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-line-support.jpg"
+                src="/images/business/business-line-support.jpg"
                 alt="LINEでの伴走支援"
                 width={200}
                 height={150}
@@ -354,7 +354,7 @@ export default function BusinessCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
                   <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-growth-impact.jpg"
+                src="/images/business/business-growth-impact.jpg"
                 alt="事業成長"
                 width={300}
                 height={200}
@@ -383,7 +383,7 @@ export default function BusinessCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
                   <Image
-                src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
+                src="/images/courses/courses-business-course.jpg"
                 alt="組織のグローバル化"
                 width={300}
                 height={200}
@@ -410,7 +410,7 @@ export default function BusinessCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
                   <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-reason-practical-english.jpg"
+                src="/images/business/business-reason-practical-english.jpg"
                 alt="関係性での主導権"
                 width={300}
                 height={200}
@@ -437,7 +437,7 @@ export default function BusinessCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
                   <Image
-                src="/images/drive-download-20250908T014101Z-1-001/business/business-differentiation.jpg"
+                src="/images/business/business-differentiation.jpg"
                 alt="競合との差別化"
                 width={300}
                 height={200}

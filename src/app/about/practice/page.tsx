@@ -41,7 +41,7 @@ export default function PracticePage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/top/reason-scientific.jpg"
+                  src="/images/top/reason-scientific.jpg"
                   alt="習慣化・行動科学イメージ"
                   width={320}
                   height={208}
@@ -146,7 +146,7 @@ export default function PracticePage() {
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
+                  src="/images/courses/courses-business-course.jpg"
                   alt="成果イメージ"
                   width={320}
                   height={208}

@@ -7,6 +7,7 @@ import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import Image from 'next/image';
 import React from 'react';
+import { PageTitleSection } from '@/components/sections';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -29,60 +30,11 @@ export default function SupportersPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl" className="relative">
-        <div className="w-full aspect-[16/9] md:aspect-[21/9] absolute inset-0">
-          {/* PC用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-hero-background.jpg"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 hidden md:block"
-            style={{ objectPosition: 'center 35%' }}
-          />
-          {/* スマホ用背景画像 */}
-          <Image
-            src="/images/drive-download-20250908T014101Z-1-001/hero_sma/supporters_hero_sma.png"
-            alt="背景画像"
-            fill
-            priority
-            className="object-cover opacity-15 block md:hidden"
-            style={{ objectPosition: 'center 35%' }}
-          />
-          {/* 軽いオーバーレイ */}
-          <div className="absolute inset-0 bg-white/10"></div>
-        </div>
-        <div className="relative z-10 flex items-center py-12 sm:py-16">
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6 section-title-with-underbar" as="h1">
-              支援者の方へ
-            </Typography>
-            <Typography variant="heading-md" className="text-gray mb-8">
-              日本の未来を、経済的な理由で閉ざさないために
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-[65ch] mx-auto mb-12">
-              〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜
-              <br /><br />
-              あなたの支援が、明日の日本のグローバルリーダーを育てます
-            </Typography>
-
-            <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <Link href="/contact" className="flex-1">
-                <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700 w-full">
-                  パートナーシップ相談
-                </Button>
-              </Link>
-              <Link href="/about" className="flex-1">
-                <Button variant="secondary" size="lg" className="w-full">
-                  Engrowthの仕組み詳細
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </Container>
-        </div>
-      </Section>
+      <PageTitleSection
+        label="For Supporters"
+        title="支援者の方へ"
+        description="日本の未来を、経済的な理由で閉ざさないために。〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜 あなたの支援が、明日の日本のグローバルリーダーを育てます"
+      />
 
       {/* 2. Engrowth支援プログラムとは */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
@@ -117,7 +69,7 @@ export default function SupportersPage() {
           <div className="max-w-4xl mx-auto mb-16">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/supporters/cycle.png"
+                src="/images/supporters/cycle.png"
                 alt="グローバル人材エコシステム図"
                 width={600}
                 height={400}
@@ -148,7 +100,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/discovery.png"
+                  src="/images/supporters/discovery.png"
                   alt="人材発掘"
                   width={100}
                   height={80}
@@ -170,7 +122,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/branding.png"
+                  src="/images/supporters/branding.png"
                   alt="CSR・ブランディング"
                   width={100}
                   height={80}
@@ -192,7 +144,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 h-32 flex items-center justify-center mb-6">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/synergy.png"
+                  src="/images/supporters/synergy.png"
                   alt="事業シナジー"
                   width={100}
                   height={80}
@@ -230,7 +182,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/bronze.png"
+                  src="/images/supporters/bronze.png"
                   alt="ブロンズパートナー"
                   width={120}
                   height={120}
@@ -249,7 +201,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/silver.png"
+                  src="/images/supporters/silver.png"
                   alt="シルバーパートナー"
                   width={120}
                   height={120}
@@ -268,7 +220,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/gold.png"
+                  src="/images/supporters/gold.png"
                   alt="ゴールドパートナー"
                   width={120}
                   height={120}
@@ -287,7 +239,7 @@ export default function SupportersPage() {
               </Typography>
               <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/platinum.png"
+                  src="/images/supporters/platinum.png"
                   alt="プラチナパートナー"
                   width={120}
                   height={120}

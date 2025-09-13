@@ -33,8 +33,8 @@ export default function FlowPage() {
             〜正しいやり方を知れば 誰でも話せるようになる〜
           </>
         }
-        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/fliw/flow_hero.png"
-        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/flow_hero_sma.png"
+        bgDesktopSrc="/images/fliw/flow_hero.png"
+        bgMobileSrc="/images/hero_sma/flow_hero_sma.png"
         bgPosition="center 25%"
         overlayOpacity={0.9}
         ctas={[
@@ -76,7 +76,7 @@ export default function FlowPage() {
                   「LINEでお問い合わせ」からどうぞ。
                 </>
               }
-              img="/images/drive-download-20250908T014101Z-1-001/fliw/flow-hero-background.jpg"
+              img="/images/fliw/flow-hero-background.jpg"
               imgAlt="LINE登録"
               textOn="right"
               buttons={
@@ -110,7 +110,7 @@ export default function FlowPage() {
                   実現可能な学習計画を一緒に作成します。
                 </>
               }
-              img="/images/drive-download-20250908T014101Z-1-001/supporters/top-flow-step1.jpg"
+              img="/images/supporters/top-flow-step1.jpg"
               imgAlt="オンライン面談"
               textOn="left"
               buttons={
@@ -146,7 +146,7 @@ export default function FlowPage() {
                   <br /><br />もし担当コンサルタントが、ご自身の興味ある分野を専攻していたら、ぜひ専門分野に関する相談なども、お気軽にどうぞ。
                 </>
               }
-              img="/images/drive-download-20250908T014101Z-1-001/top/service-support.jpg"
+              img="/images/top/service-support.jpg"
               imgAlt="24時間サポート"
               textOn="right"
               buttons={

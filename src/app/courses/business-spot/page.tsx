@@ -6,6 +6,7 @@ import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
 import { FaMicrophone, FaLanguage, FaGlobe, FaUsers, FaChartLine, FaDesktop } from 'react-icons/fa';
+import { PageTitleSection } from '@/components/sections';
 
 export const metadata = {
   title: 'ビジネススポットサービス - 必要な時に必要なサポートを | Engrowth',
@@ -17,36 +18,11 @@ function BusinessSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" className="relative py-12 sm:py-16 flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/spot-business/spot-business-observer.jpg"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 30%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/spot-business_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 30%' }}
-        />
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              ビジネススポットサービス
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto">
-              ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。
-            </Typography>
-          </div>
-        </Container>
-      </Section>
+      <PageTitleSection
+        label="Business Spot Service"
+        title="ビジネススポットサービス"
+        description="ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。"
+      />
 
       {/* 2. 3つのサービス */}
       <Section background="light-gray" padding="xl" className="pb-0">

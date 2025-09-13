@@ -33,8 +33,8 @@ export default function ContactPage() {
             どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
           </>
         }
-        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/top/top03.png"
-        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/contact_hero_sma.png"
+        bgDesktopSrc="/images/top/top03.png"
+        bgMobileSrc="/images/hero_sma/contact_hero_sma.png"
         bgPosition="center 40%"
         overlayOpacity={0.85}
       />

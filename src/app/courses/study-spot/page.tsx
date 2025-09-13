@@ -5,6 +5,7 @@ import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
 import { FaEdit, FaUsers, FaHeadset, FaGraduationCap, FaBriefcase, FaQuestionCircle } from 'react-icons/fa';
+import { PageTitleSection } from '@/components/sections';
 // import { getSpotServicesByType } from '@/data/courses';
 
 export const metadata = {
@@ -19,36 +20,11 @@ export default function StudentSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" className="relative py-12 sm:py-16 flex items-center">
-        {/* 背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/students/stu08.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 hidden md:block"
-          style={{ objectPosition: 'center 40%' }}
-        />
-        {/* スマホ用背景画像 */}
-        <Image
-          src="/images/drive-download-20250908T014101Z-1-001/hero_sma/spot-student_hero_sma.png"
-          alt="背景画像"
-          fill
-          priority
-          className="object-cover opacity-10 block md:hidden"
-          style={{ objectPosition: 'center 40%' }}
-        />
-        <Container className="relative z-10 w-full">
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              学生スポットサービス
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto">
-              留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。
-            </Typography>
-          </div>
-        </Container>
-      </Section>
+      <PageTitleSection
+        label="Student Spot Service"
+        title="学生スポットサービス"
+        description="留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。"
+      />
 
       {/* 2. 3つのメインサービス */}
       <Section background="light-gray" padding="xl" className="pb-0">
@@ -283,7 +259,7 @@ export default function StudentSpotServicePage() {
             <Card className="text-center p-6">
               <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/supporters/supporters-income-opportunity.jpg"
+                  src="/images/supporters/supporters-income-opportunity.jpg"
                   alt="ライティング支援"
                   width={80}
                   height={80}
@@ -307,7 +283,7 @@ export default function StudentSpotServicePage() {
             <Card className="text-center p-6">
               <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/students/students-class-understanding.jpg"
+                  src="/images/students/students-class-understanding.jpg"
                   alt="スピーキング支援"
                   width={80}
                   height={80}
@@ -331,7 +307,7 @@ export default function StudentSpotServicePage() {
             <Card className="text-center p-6">
               <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/drive-download-20250908T014101Z-1-001/method/method-practical-advice.jpg"
+                  src="/images/method/method-practical-advice.jpg"
                   alt="総合的サポート"
                   width={80}
                   height={80}

@@ -33,8 +33,8 @@ export default function CoursesPage() {
       {/* 1. ページヘッダー */}
       <Hero
         title="コース・料金"
-        bgDesktopSrc="/images/drive-download-20250908T014101Z-1-001/courses/courses-business-course.jpg"
-        bgMobileSrc="/images/drive-download-20250908T014101Z-1-001/hero_sma/courses_hero_sma.png"
+        bgDesktopSrc="/images/courses/courses-business-course.jpg"
+        bgMobileSrc="/images/hero_sma/courses_hero_sma.png"
         bgPosition="center 30%"
         overlayOpacity={0.9}
       />
@@ -73,7 +73,7 @@ export default function CoursesPage() {
         <Container>
           <div className="text-center">
             <Image
-              src="/images/drive-download-20250908T014101Z-1-001/courses/welcome_banner.png"
+              src="/images/courses/welcome_banner.png"
               alt="Engrowthでは、入会金・登録料0円。初期費用は一切かかりません。"
               width={1200}
               height={200}
@@ -224,7 +224,7 @@ export default function CoursesPage() {
             {/* ビジネススポットサービス */}
             <Card className="p-6 text-center">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/spot-business/spot-business-observer.jpg"
+                src="/images/spot-business/spot-business-observer.jpg"
                 alt="ビジネススポットサービス"
                 width={300}
                 height={200}
@@ -250,7 +250,7 @@ export default function CoursesPage() {
             {/* 学生スポットサービス */}
             <Card className="p-6 text-center">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/students/essay-correction-before.jpg"
+                src="/images/students/essay-correction-before.jpg"
                 alt="学生スポットサービス"
                 width={300}
                 height={200}
