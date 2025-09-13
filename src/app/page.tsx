@@ -84,7 +84,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/Point2.png"
+                  src="/images/point2.png"
                   alt="科学的根拠に基づく学習プログラム"
                   width={48}
                   height={48}
