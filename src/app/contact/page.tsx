@@ -52,24 +52,56 @@ export default function ContactPage() {
 
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {/* FAQ 1 */}
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
-                Q. プログラムの特徴を教えてください
-              </Typography>
-              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
-                第二言語習得理論に基づいた科学的アプローチと、AI技術を活用した独自の学習メソッドを採用しています。実践経験豊富な日本人コンサルタントが、あなたの学習を90日間伴走サポートいたします。
-              </Typography>
-            </div>
+            <Card className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">
+                    Q
+                  </Typography>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  プログラムの特徴を教えてください
+                </Typography>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">
+                    A
+                  </Typography>
+                </div>
+                <div>
+                  <Typography variant="body-md" className="text-dark-gray">
+                    第二言語習得理論に基づいた科学的アプローチと、AI技術を活用した独自の学習メソッドを採用しています。実践経験豊富な日本人コンサルタントが、あなたの学習を90日間伴走サポートいたします。
+                  </Typography>
+                </div>
+              </div>
+            </Card>
 
             {/* FAQ 2 */}
-            <div className="bg-white rounded-lg p-6">
-              <Typography variant="body-md" className="font-bold mb-4" style={{ color: '#666', fontSize: '24px' }}>
-                Q. 学習期間はどのくらいですか？
-              </Typography>
-              <Typography variant="body-sm" className="leading-relaxed" style={{ color: '#d30306', fontSize: '16px' }}>
-                標準的なプログラムは3ヶ月（90日間）ですが、目標や現在の英語力に応じて6ヶ月、12ヶ月プランも選択可能です。継続学習により、より確実な成果を実感していただけます。
-              </Typography>
-            </div>
+            <Card className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">
+                    Q
+                  </Typography>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray">
+                  学習期間はどのくらいですか？
+                </Typography>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <Typography variant="body-sm" className="text-white font-bold">
+                    A
+                  </Typography>
+                </div>
+                <div>
+                  <Typography variant="body-md" className="text-dark-gray">
+                    標準的なプログラムは3ヶ月（90日間）ですが、目標や現在の英語力に応じて6ヶ月、12ヶ月プランも選択可能です。継続学習により、より確実な成果を実感していただけます。
+                  </Typography>
+                </div>
+              </div>
+            </Card>
           </div>
 
           {/* よくある質問ページへのボタン */}
