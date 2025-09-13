@@ -69,11 +69,13 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <Image
-                    src="/images/point1.png"
+                  src="/images/point1.png"
                   alt="コンサルタントは全員留学経験のある日本人"
                   width={48}
                   height={48}
                   className="w-12 h-12 flex-shrink-0"
+                  priority
+                  unoptimized
                 />
                 <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   コンサルタントは全員留学経験のある日本人
@@ -82,11 +84,13 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                    src="/images/point2.png"
+                  src="/images/point2.png"
                   alt="科学的根拠に基づく学習プログラム"
                   width={48}
                   height={48}
                   className="w-12 h-12 flex-shrink-0"
+                  priority
+                  unoptimized
                 />
                 <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   科学的根拠に基づく学習プログラム
@@ -95,11 +99,13 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                    src="/images/point3.png"
+                  src="/images/point3.png"
                   alt="1人ひとりに合わせたオーダーメイドの学習設計"
                   width={48}
                   height={48}
                   className="w-12 h-12 flex-shrink-0"
+                  priority
+                  unoptimized
                 />
                 <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   1人ひとりに合わせたオーダーメイドの学習設計
