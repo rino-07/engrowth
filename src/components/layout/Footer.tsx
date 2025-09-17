@@ -37,7 +37,109 @@ const Footer: React.FC = () => {
     <footer className="bg-deep-navy text-white">
       <Container>
         <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8">
+          {/* モバイル: 3段構成（1/2/2カラム）、デスクトップ: 5カラム */}
+          <div className="md:hidden">
+            <div className="grid gap-6">
+              {/* 1段目：タイトル（サイト名・ロゴ等）- 1カラム */}
+              <div>
+                <Link href="/" className="inline-block mb-4">
+                  <span className="text-2xl font-bold text-white font-serif">
+                    Engrowth
+                  </span>
+                </Link>
+                <p className="text-gray-300 text-sm leading-relaxed font-serif">
+                  留学生の経済問題を解決する
+                  <br />
+                  独自のエコシステム
+                </p>
+              </div>
+
+              {/* 2段目：2カラム（メインメニュー / Engrowthの特徴） */}
+              <div className="grid grid-cols-2 gap-6">
+                <nav>
+                  <h3 className="text-lg font-semibold mb-4 text-white font-serif">
+                    メインメニュー
+                  </h3>
+                  <ul className="space-y-2">
+                    {footerLinks.main.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <nav>
+                  <h3 className="text-lg font-semibold mb-4 text-white font-serif">
+                    Engrowthの特徴
+                  </h3>
+                  <ul className="space-y-2">
+                    {footerLinks.about.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+
+              {/* 3段目：2カラム（コース・料金 / お問い合わせ） */}
+              <div className="grid grid-cols-2 gap-6">
+                <nav>
+                  <h3 className="text-lg font-semibold mb-4 text-white font-serif">
+                    コース・料金
+                  </h3>
+                  <ul className="space-y-2">
+                    {footerLinks.courses.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <nav>
+                  <h3 className="text-lg font-semibold mb-4 text-white font-serif">
+                    お問い合わせ
+                  </h3>
+                  <ul className="space-y-2">
+                    {footerLinks.contact.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-300 hover:text-action-green transition-colors duration-200 text-sm font-serif"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4">
+                    <p className="text-gray-300 text-sm">
+                      <span className="block">📞 03-XXXX-XXXX</span>
+                      <span className="block">📧 info@engrowth.com</span>
+                    </p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          {/* デスクトップ: 従来の5カラムレイアウト */}
+          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-5 gap-8">
             {/* Logo and Description */}
             <div className="xl:col-span-1">
               <Link href="/" className="inline-block mb-4">

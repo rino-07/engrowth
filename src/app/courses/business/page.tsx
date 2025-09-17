@@ -234,9 +234,6 @@ export default function BusinessCoursePage() {
                 <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
                   基本プラン
                 </Typography>
-                <Button variant="secondary" size="sm" className="w-full mt-auto" disabled>
-                  無料お試し
-                </Button>
               </Card>
             </div>
 

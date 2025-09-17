@@ -72,7 +72,7 @@ export default function SupportersPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 shadow-none border border-neutral-200">
               <Image
                 src="/images/supporters/cycle.png"
                 alt="グローバル人材エコシステム図"

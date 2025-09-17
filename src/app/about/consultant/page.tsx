@@ -86,7 +86,7 @@ export default function ConsultantPage() {
                 成功体験の共有
               </Typography>
               <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
-                自らも第二言語習得の道を成功したコンサルタントだからこそ、学習者を確実に成長ルートへ導くことができます。
+                自らも第二言語習得の成功体験を持つコンサルタントだからこそ、学習者を確実に成長ルートへ導くことができます。
               </Typography>
             </Card>
           </div>
@@ -101,16 +101,16 @@ export default function ConsultantPage() {
               なぜネイティブスピーカーでは不十分なのか
             </Typography>
             <Typography variant="body-lg" className="text-gray-800 font-semibold mb-4">
-              <strong className="font-bold" style={{color: '#d30306'}}>第一言語と第二言語の習得メカニズムの違い</strong>を理解していないと、学習者は絶対に成功できません。
+              <strong className="font-bold" style={{color: '#d30306'}}>第一言語と第二言語の習得メカニズムの違い</strong>を理解していないと、学習者は成功が難しくなります。
             </Typography>
             <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
-              第一言語は、幼少期の記憶システムを通じて無意識的に習得されます。一方、第二言語習得は、対話意識、意図的記憶を駆使する、全く異なるプロセスを要します。
+              第一言語は、幼少期の記憶システムを通じて無意識的に習得されます。一方、第二言語習得は、意識的な対話や**意図的な記憶（学習）**を用いる全く異なるプロセスを要します。
             </Typography>
             <Typography variant="body-lg" className="text-gray-700 mb-2 leading-relaxed">
               <strong className="font-bold" style={{color: '#d30306'}}>日本人に必要なのは「第二言語習得の成功者」</strong>です。
             </Typography>
             <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-              同じ母国語をもつ成功者だからこそ、第二言語習得者に必要なマインドセットとプロセスを確実にサポートできます。
+              同じ母国語をもつ成功者だからこそ、第二言語習得に必要なマインドセットとプロセスを確実にサポートできます。
             </Typography>
           </div>
         </Container>
@@ -126,13 +126,13 @@ export default function ConsultantPage() {
             
             <div className="mb-6">
               <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
-                聞くだけ学習・独学学習では伸びない理由
+              独学・聞くだけ学習では伸びない理由
               </Typography>
               <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
-                オーディオを聞く、ドラマを見る、単語を覚える。これらは「流入するだけ」の活動でしかありません。
+                オーディオを聞く、ドラマを見る、単語を覚える。これらはインプットに偏った活動でしかありません。
               </Typography>
               <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
-                実際に言語を話せるようになるためには、以下が全て欠かせません。
+                実際に言語を話せるようになるためには、以下が欠かせない活動です。
               </Typography>
               <ul className="space-y-2">
                 <li className="flex items-center">
@@ -145,7 +145,7 @@ export default function ConsultantPage() {
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
-                  <Typography variant="body-lg" className="text-gray-700">精密にフィードバックされる</Typography>
+                  <Typography variant="body-lg" className="text-gray-700">精緻なフィードバックを受ける</Typography>
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
@@ -184,7 +184,7 @@ export default function ConsultantPage() {
                 <strong className="font-bold" style={{color: '#d30306'}}>英語で専門分野を学べる者だけが持つ「教える力」</strong>があります。
               </Typography>
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                実際に英語で学問を継続し、自分のものとした者だからこそ、「どこで迷い」「どのプロセスが区切りになる」を的確に把握し、学習者を確実にサポートできます。
+                実際に英語で学問を継続し、自分のものとした者だからこそ、「どこで迷いやすいか、どのプロセスが区切りになるか」を的確に把握し、学習者を確実にサポートできます。
               </Typography>
             </div>
             <div className="flex-1 flex justify-center">

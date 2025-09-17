@@ -56,34 +56,19 @@ export default function Hero({
     ].join(' ')}
   >
       {/* 背景レイヤー（画像ありの場合のみ） */}
-      {!plain && (bgDesktopSrc || bgMobileSrc) && (
+      {!plain && bgDesktopSrc && (
         <div className="pointer-events-none absolute inset-0 -z-10">
-          {/* PC 用 */}
-          {bgDesktopSrc && (
-            <Image
-              src={bgDesktopSrc}
-              alt=""
-              width={imageWidth}
-              height={imageHeight}
-              priority
-              sizes="100vw"
-              className="hidden md:block object-cover aspect-[2021/748]"
-              style={{ objectPosition: bgPosition }}
-            />
-          )}
-          {/* SP 用 */}
-          {bgMobileSrc && (
-            <Image
-              src={bgMobileSrc}
-              alt=""
-              width={imageWidth}
-              height={imageHeight}
-              priority
-              sizes="100vw"
-              className="block md:hidden object-cover aspect-[2021/748]"
-              style={{ objectPosition: bgPosition }}
-            />
-          )}
+          {/* PC/スマホ共通画像 (2021:748比率厳守) */}
+          <Image
+            src={bgDesktopSrc}
+            alt=""
+            width={imageWidth}
+            height={imageHeight}
+            priority
+            sizes="100vw"
+            className="object-cover aspect-[2021/748] w-full h-full"
+            style={{ objectPosition: bgPosition }}
+          />
         </div>
       )}
 

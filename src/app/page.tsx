@@ -31,16 +31,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover hidden md:block aspect-[16/9]"
-          style={{ objectPosition: 'center 20%' }}
-        />
-        <Image
-          src="/images/hero_sma/top_hero_sma.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover block md:hidden aspect-[16/9]"
+          className="object-cover aspect-[16/9] w-full h-full"
           style={{ objectPosition: 'center 20%' }}
         />
           <div className="absolute inset-0 bg-white opacity-20"></div>
@@ -63,7 +54,8 @@ export default function Home() {
               </Link>
               <Link
                 href="/courses"
-                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors border border-[#d30306] text-[#d30306] hover:bg-red-50"
+                id="cta-course-detail"
+                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-200 bg-white text-gray-800 border border-gray-200 hover:shadow-lg"
               >
                 コース詳細を見る
               </Link>

@@ -405,3 +405,8 @@ body {
   background: var(--brand-red);
   border-radius: 0.125rem;
 }
+
+/* スクロールバー非表示 */
+::-webkit-scrollbar {
+  display: none;
+}

@@ -236,6 +236,46 @@ export default function StudentCoursePage() {
         />
         
         <Container>
+          {/* 留サポ連携バナー */}
+          <div className="max-w-[1100px] mx-auto mb-16">
+            <div className="grid gap-6 md:grid-cols-2 items-center rounded-2xl border border-neutral-200 bg-neutral-50 p-6 md:p-8">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                <Image
+                  src="/images/students/ryusapo_image.png"
+                  alt="留サポ連携による留学前サポートのイメージ"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-[12px] tracking-wide text-neutral-500 mb-2 uppercase">Partnership</p>
+                <Typography variant="heading-md" className="text-dark-gray mb-3">
+                  提携企業"留サポ"との連携で、留学前の不安をゼロに
+                </Typography>
+                <Typography variant="body-sm" className="text-neutral-700 leading-7 mb-4">
+                  「いきなり留学は不安…」「志望校や地域を比較して決めたい」「現地で生活する人や留学生の生の声を聞きたい」——
+                  Engrowthは提携企業"留サポ"との連携により、サマーキャンプ体験、志望校選び＆出願サポート、現地校見学などの機会を安心してご案内します。
+                </Typography>
+                <Typography variant="body-xs" className="text-neutral-500 mb-4">
+                  ※上記サービスの提供主体は提携先"留サポ"です。Engrowth経由でご紹介します。
+                </Typography>
+                <a 
+                  href="https://ryusapo.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 rounded-full bg-dark-gray hover:bg-black text-white px-4 py-2 text-sm font-medium transition-colors duration-200"
+                >
+                  留サポのサービスを見る
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="opacity-80">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+                <Typography variant="body-xs" className="text-neutral-400 mt-2">
+                  提携企業サイトへ
+                </Typography>
+              </div>
+            </div>
+          </div>
 
           {/* ストーリーテリング型レイアウト */}
           <div className="max-w-5xl mx-auto mb-16">
@@ -368,9 +408,6 @@ export default function StudentCoursePage() {
                 <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
                   基本プラン
                 </Typography>
-                <Button variant="secondary" size="sm" className="w-full mt-auto" disabled>
-                  無料お試し
-                </Button>
               </Card>
             </div>
 
