@@ -19,9 +19,9 @@ export default function AboutPage() {
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
       <Hero
-        title="Engrowthの特徴"
-        subtitle="学ぶことが支援になる、循環型エコシステムの仕組み"
-        bgDesktopSrc="/images/top/reason-ecosystem.jpg"
+        title=""
+        subtitle=""
+        bgDesktopSrc="/images/about/about_hero.png"
         bgMobileSrc="/images/hero_sma/about_hero_sma.png"
         bgPosition="center 25%"
         className="flex items-center justify-center text-center"
@@ -158,7 +158,7 @@ export default function AboutPage() {
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
         <SectionHeaderLeft
           label="Why Choose Us"
-          title="科学的根拠と実践経験に基づく確実な成果"
+          title="私たちが選ばれる理由"
           desc="従来の英語学習の課題を解決する、独自のメソッドと徹底したサポート体制で、あなたの目標達成を実現します。"
           className="mb-12 lg:mb-16"
         />

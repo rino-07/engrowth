@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { CourseCards } from '@/components/sections/CourseCards';
 import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
-import Hero from '@/components/sections/Hero';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -24,29 +23,53 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <Hero
-  title={
-    <>
-      あなたも
-      <span className="text-brand-red">Engrowth</span>
-      の一員になりませんか？
-    </>
-  }
-  subtitle={
-    <>
-      <span className="text-dark-gray">独自のエコシステムで留学生の経済問題を解決し、</span>
-      <br />
-      <span className="text-dark-gray">日本人だからこそ提供できる英会話コンサルティングサービス</span>
-    </>
-  }
-  bgDesktopSrc="/images/top/top01.png"
-  bgMobileSrc="/images/hero_sma/top_hero_sma.png"
-  ctas={[
-    { href: '/contact', label: '無料相談を予約する', variant: 'primary' },
-    { href: '/courses', label: 'コース詳細を見る', variant: 'secondary' },
-  ]}
-  className="flex items-center justify-center text-center"
-/>
+      <section className="relative w-full overflow-hidden min-h-[50vh] md:min-h-[60vh] lg:min-h-[80vh]">
+        <Image
+          src="/images/top/top01.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover hidden md:block aspect-[16/9]"
+          style={{ objectPosition: 'center 20%' }}
+        />
+        <Image
+          src="/images/hero_sma/top_hero_sma.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover block md:hidden aspect-[16/9]"
+          style={{ objectPosition: 'center 20%' }}
+        />
+          <div className="absolute inset-0 bg-white opacity-20"></div>
+        <div className="absolute inset-0 flex items-center justify-center text-center">
+          <div className="p-6">
+            <h1 className="text-white mb-6 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+              あなたも<span className="text-brand-red" style={{ textShadow: '2px 2px 4px rgba(255,255,255,0.7)' }}>Engrowth</span>の一員になりませんか？
+            </h1>
+            <p className="text-white mb-8 md:mb-10 max-w-[65ch] mx-auto text-base md:text-lg leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+              独自のエコシステムで留学生の経済問題を解決し、
+              <br />
+              日本人だからこそ提供できる英会話コンサルティングサービス
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors bg-[#d30306] text-white hover:bg-[#b70205]"
+              >
+                無料相談を予約する
+              </Link>
+              <Link
+                href="/courses"
+                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors border border-[#d30306] text-[#d30306] hover:bg-red-50"
+              >
+                コース詳細を見る
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 2. What is Engrowth Section - 2カラムレイアウト */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
@@ -84,7 +107,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/point2.png"
+                  src="/images/top/Point2.png"
                   alt="科学的根拠に基づく学習プログラム"
                   width={48}
                   height={48}
@@ -99,7 +122,7 @@ export default function Home() {
 
               <div className="flex items-start gap-4">
                 <Image
-                  src="/images/Point3.png"
+                  src="/images/top/Point3.png"
                   alt="1人ひとりに合わせたオーダーメイドの学習設計"
                   width={48}
                   height={48}

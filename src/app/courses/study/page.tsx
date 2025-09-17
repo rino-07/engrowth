@@ -34,21 +34,14 @@ export default function StudentCoursePage() {
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
       <Hero
-        title="学生コース"
-        subtitle={
-          <>
-            留学の夢を諦めない、経済支援付き英語学習
-            <br />
-            <br />
-            経済的な理由で留学を諦める必要はありません。Engrowthの学生コースは、
-            <br />
-            英語学習と経済支援を組み合わせた独自プログラムで、あなたの留学の夢を全力でサポートします。
-          </>
-        }
-        bgDesktopSrc="/images/students/students-communication.jpg"
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/students/students_hero.png"
         bgMobileSrc="/images/hero_sma/students_hero_sma.png"
         bgPosition="center 30%"
         className="flex items-center justify-center text-center"
+        imageWidth={2021}
+        imageHeight={748}
       />
 
       {/* 2. 3つの特徴カード */}
@@ -147,212 +140,12 @@ export default function StudentCoursePage() {
         </Container>
       </Section>
 
-      {/* 3. 留学の勧めセクション */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="Study Abroad"
-          title="英語力と留学経験で、未来の選択肢を広げる"
-          desc="Engrowthでは、留学前に必要な英語力をしっかりと伸ばし、現地で安心して挑戦できる自信を育てます。
-さらに提携パートナー 留サポ
- と連携し、現地での生活アドバイスは留学経験者から直接ヒアリング可能。
-パスポートや願書などの各種書類作成サポート も、Engrowthと留サポの両方でしっかり対応します。
-学習から渡航準備、現地サポートまで一気通貫で支える体制が整っています。"
-          className="mb-12 lg:mb-16"
-        />
-        
-        <Container>
-
-          {/* ストーリーテリング型レイアウト */}
-          <div className="max-w-5xl mx-auto mb-16">
-            {/* Step 1: 不安の声 */}
-            <div className="relative mb-12">
-              <div className="bg-gray-50 rounded-2xl p-8 text-center relative">
-                <div className="text-6xl mb-4">💭</div>
-                <Typography variant="heading-md" className="text-dark-gray mb-4">
-                  「英語に自信がないから留学は無理」
-                </Typography>
-                <Typography variant="body-lg" className="text-gray">
-                  そう思っていませんか？
-                </Typography>
-              </div>
-            </div>
-
-            {/* 矢印 */}
-            <div className="text-center mb-12">
-              <div className="text-4xl text-brand-red">⬇️</div>
-              <Typography variant="body-lg" className="text-brand-red font-bold mt-2">
-                でも実は...
-              </Typography>
-            </div>
-
-            {/* Step 2: 解決策 */}
-            <div className="bg-red-50 rounded-2xl p-8 mb-12">
-              <div className="text-center mb-8">
-                <div className="text-6xl mb-4">🌟</div>
-                <Typography variant="heading-md" className="text-brand-red mb-6">
-                  Engrowthなら完全サポート！
-                </Typography>
-              </div>
-              
-              {/* プロセスフロー */}
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl mb-2 md:mb-3">📚</div>
-                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
-                    サマーキャンプ
-                  </Typography>
-                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                    実践的な英語体験
-                  </Typography>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl mb-2 md:mb-3">🎯</div>
-                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
-                    志望校選び&出願サポート
-                  </Typography>
-                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                    あなたに最適な進路
-                  </Typography>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl mb-2 md:mb-3">✈️</div>
-                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
-                    現地校見学サポート
-                  </Typography>
-                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                    安心の現地サポート
-                  </Typography>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 3: コンサルタントの強み */}
-            <div className="bg-blue-50 rounded-2xl p-8 text-center">
-              <div className="text-6xl mb-4">👨‍🏫</div>
-              <Typography variant="heading-md" className="text-dark-gray mb-4">
-                全員留学経験者のコンサルタント
-              </Typography>
-              <Typography variant="body-lg" className="text-dark-gray mb-6">
-                留学経験によって得られる貴重な価値観を知っているからこそ、<br />
-                あなたの不安を理解し、適切なサポートができます。
-              </Typography>
-              <Typography variant="body-lg" className="text-brand-red font-bold">
-                あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
-              </Typography>
-            </div>
-          </div>
-
-        </Container>
-      </Section>
-
-      {/* 4. こんな不安はありませんか？セクション */}
+      {/* 4. Engrowthが選ばれる理由 */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
         <SectionHeaderLeft
-          label="Common Concerns"
-          title="こんな不安はありませんか？"
-          desc="多くの学生が抱える英語や留学への不安。Engrowthなら、これらの不安を一つずつ解決していきます。"
-          className="mb-12 lg:mb-16"
-        />
-        
-        <Container>
-          {/* インフォグラフィック風デザイン */}
-          <div className="max-w-5xl mx-auto mb-16">
-
-            {/* 不安の声 */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
-              <div className="bg-gray-50 rounded-xl p-4 md:p-6 text-center">
-                <div className="text-3xl md:text-4xl mb-3 md:mb-4">❌</div>
-                <Typography variant="body-sm" className="text-dark-gray font-bold mb-1 md:mb-2 text-xs md:text-base">
-                  "英語に自信がない"
-                </Typography>
-                <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                  留学に消極的になってしまう
-                </Typography>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-4 md:p-6 text-center">
-                <div className="text-3xl md:text-4xl mb-3 md:mb-4">❌</div>
-                <Typography variant="body-sm" className="text-dark-gray font-bold mb-1 md:mb-2 text-xs md:text-base">
-                  "何から始めればいいか..."
-                </Typography>
-                <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                  留学の準備がわからない
-                </Typography>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-4 md:p-6 text-center col-span-2 md:col-span-1">
-                <div className="text-3xl md:text-4xl mb-3 md:mb-4">❌</div>
-                <Typography variant="body-sm" className="text-dark-gray font-bold mb-1 md:mb-2 text-xs md:text-base">
-                  "海外生活が不安"
-                </Typography>
-                <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                  漠然とした恐怖心がある
-                </Typography>
-              </div>
-            </div>
-
-            {/* 変化の矢印 */}
-            <div className="text-center mb-12">
-              <div className="text-5xl text-brand-red mb-4">⬇️</div>
-              <Typography variant="heading-md" className="text-brand-red font-bold">
-                Engrowthなら解決！
-              </Typography>
-            </div>
-
-            {/* 成功への道筋 */}
-            <div className="bg-green-50 rounded-2xl p-8">
-              <div className="text-center mb-8">
-                <div className="text-6xl mb-4">✅</div>
-                <Typography variant="heading-md" className="text-dark-gray mb-6">
-                  成功への道筋
-                </Typography>
-              </div>
-              
-              {/* プロセスフロー */}
-              <div className="grid grid-cols-3 gap-4 md:gap-6 text-center mb-8">
-                <div className="flex flex-col items-center">
-                  <div className="text-4xl md:text-5xl mb-2 md:mb-3">🎯</div>
-                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
-                    英語習得
-                  </Typography>
-                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                    基礎から実践まで
-                  </Typography>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="text-4xl md:text-5xl mb-2 md:mb-3">🚀</div>
-                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
-                    自信UP
-                  </Typography>
-                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                    留学への勇気が生まれる
-                  </Typography>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="text-4xl md:text-5xl mb-2 md:mb-3">🌍</div>
-                  <Typography variant="body-sm" className="font-bold text-dark-gray mb-1 md:mb-2 text-xs md:text-base">
-                    留学成功
-                  </Typography>
-                  <Typography variant="body-xs" className="text-gray text-xs md:text-sm">
-                    広い世界で価値観を獲得
-                  </Typography>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <Typography variant="body-lg" className="text-brand-red font-bold leading-relaxed">
-                  魅力的な人間へと成長し、魅力的な人たちとの出会いと未来が得られます
-                </Typography>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 5. Engrowthが選ばれる理由 */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
           label="Why Choose Us"
-          title="学生が将来に向けて選ぶ理由"
-          desc="学生時代だからこそ身につけられる本物の英語力と、将来のキャリアに直結するサポート体制をご提供します。"
+          title="私たちが選ばれる理由"
+          desc="従来の英語学習の課題を解決する、独自のメソッドと徹底したサポート体制で、あなたの目標達成を実現します。"
           className="mb-12 lg:mb-16"
         />
         
@@ -397,7 +190,7 @@ export default function StudentCoursePage() {
                   </p>
                   <p className="text-dark-gray leading-relaxed">
                     各人の理解度に合わせてプログラムではなく、第二言語習得理論、認知言語学、脳科学などの最新研究に基づいた学習方法を採用。
-                <br />
+                    <br />
                     脳のメカニズムに沿った効果的で効率的な英語学習を実現します。
                     <br /><br />
                     忙しい毎日でも、社会人でも着実な成果が期待できるように設計されています。
@@ -419,7 +212,7 @@ export default function StudentCoursePage() {
                     「TOEFL100点を目指します」と「内定先企業で活躍したい」では、必要なギャップが異なります。
                     <br /><br />
                     Engrowthでは初回カウンセリングで詳細分析を行い、目標達成までの最適なルートを設計。
-                <br />
+                    <br />
                     日々の学習進捗度、運営度での中間調整により、常に最適な学習を維持できます。
                   </p>
                 </div>
@@ -428,6 +221,123 @@ export default function StudentCoursePage() {
           </div>
         </Container>
       </Section>
+
+      {/* 3. 留学の勧めセクション */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Study Abroad"
+          title="英語力と留学経験で、未来の選択肢を広げる"
+          desc="Engrowthでは、留学前に必要な英語力をしっかりと伸ばし、現地で安心して挑戦できる自信を育てます。
+さらに提携パートナー 留サポ
+ と連携し、現地での生活アドバイスは留学経験者から直接ヒアリング可能。
+パスポートや願書などの各種書類作成サポート も、Engrowthと留サポの両方でしっかり対応します。
+学習から渡航準備、現地サポートまで一気通貫で支える体制が整っています。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <Container>
+
+          {/* ストーリーテリング型レイアウト */}
+          <div className="max-w-5xl mx-auto mb-16">
+            {/* Step 1: 不安の声 */}
+            <div className="relative mb-12">
+              <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center">
+                <Typography variant="heading-md" className="text-dark-gray mb-4">
+                  「英語に自信がないから留学は無理」
+                </Typography>
+                <Typography variant="body-lg" className="text-gray">
+                  そう思っていませんか？
+                </Typography>
+              </div>
+            </div>
+
+            {/* Step 2: 解決策 */}
+            <div className="bg-brand-red text-white rounded-lg shadow-sm p-8 mb-12 text-center">
+              <Typography variant="heading-md" className="mb-4">
+                Engrowthなら完全サポート！
+              </Typography>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Typography variant="body-lg">
+                  サマーキャンプ
+                </Typography>
+                <Typography variant="body-lg">
+                  志望校選び&出願サポート
+                </Typography>
+                <Typography variant="body-lg">
+                  現地校見学サポート
+                </Typography>
+              </div>
+            </div>
+
+            {/* Step 3: コンサルタントの強み */}
+            <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center">
+              <Typography variant="heading-md" className="text-dark-gray mb-4">
+                全員留学経験者のコンサルタント
+              </Typography>
+              <Typography variant="body-lg" className="text-gray mb-4">
+                留学経験によって得られる貴重な価値観を知っているからこそ、あなたの不安を理解し、適切なサポートができます。
+              </Typography>
+              <Typography variant="body-lg" className="text-brand-red font-bold">
+                あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
+              </Typography>
+            </div>
+          </div>
+
+        </Container>
+      </Section>
+
+      {/* 4. こんな不安はありませんか？セクション */}
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Common Concerns"
+          title="こんな不安はありませんか？"
+          desc="多くの学生が抱える英語や留学への不安。Engrowthなら、これらの不安を一つずつ解決していきます。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* 不安の声 1 */}
+            <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
+              <Typography variant="heading-md" className="text-dark-gray mb-4">
+                "英語に自信がない"
+              </Typography>
+              <Typography variant="body-xs" className="text-gray">
+                留学に消極的になってしまう
+              </Typography>
+            </div>
+            {/* 不安の声 2 */}
+            <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
+              <Typography variant="heading-md" className="text-dark-gray mb-4">
+                "何から始めればいいか..."
+              </Typography>
+              <Typography variant="body-xs" className="text-gray">
+                留学の準備がわからない
+              </Typography>
+            </div>
+            {/* 不安の声 3 */}
+            <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
+              <Typography variant="heading-md" className="text-dark-gray mb-4">
+                "海外生活が不安"
+              </Typography>
+              <Typography variant="body-xs" className="text-gray">
+                漠然とした恐怖心がある
+              </Typography>
+            </div>
+            {/* 解決策 */}
+            <div className="lg:col-span-3 text-center p-6 bg-brand-red rounded-lg shadow-sm">
+              <Typography variant="heading-md" className="text-white mb-4">
+                Engrowthなら解決！
+              </Typography>
+              <Typography variant="body-lg" className="text-white leading-relaxed">
+                英語習得から留学成功まで、あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
+              </Typography>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      
 
       {/* 6. 料金 */}
       <Section background="white" className="py-12 sm:py-16 lg:py-24">

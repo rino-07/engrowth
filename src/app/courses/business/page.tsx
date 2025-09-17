@@ -20,6 +20,7 @@ function FullBleed1440({ children }: { children: React.ReactNode }) {
   );
 }
 
+
 export const metadata = {
   title: 'ビジネスコース - 忙しい社会人でも、英語は習得できる時代へ | Engrowth',
   description: '1回5分〜10分の隙間式学習で、科学的な習慣化理論と第二言語習得理論に基づく本当に続けられるプログラム。忙しい社会人向けの効率的な英語学習コース。',
@@ -31,21 +32,14 @@ export default function BusinessCoursePage() {
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
       <Hero
-        title="ビジネスコース"
-        subtitle={
-          <>
-            忙しい社会人でも、英語は習得できる時代へ
-            <br />
-            <br />
-            "毎日1〜2時間のまとまった時間"ではなく、1回5分〜10分の隙間式学習の積み重ね。
-            <br />
-            科学的な習慣化理論 × 第二言語習得理論（SLA）に基づく"本当に続けられる"プログラム
-          </>
-        }
-        bgDesktopSrc="/images/business/business-hero-background.jpg"
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/business/business_hero.png"
         bgMobileSrc="/images/hero_sma/business_hero_sma.png"
         bgPosition="center 40%"
         className="flex items-center justify-center text-center"
+        imageWidth={2021}
+        imageHeight={748}
       />
 
       {/* 2. 3つの特徴カード */}
@@ -133,7 +127,7 @@ export default function BusinessCoursePage() {
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 lg:pt-20 pt-8">
         <SectionHeaderLeft
           label="Why Choose Us"
-          title="ビジネスパーソンが成果を実感する理由"
+          title="私たちが選ばれる理由"
           desc="従来の英語学習では解決できなかった社会人特有の課題を、科学的根拠に基づいた独自のメソッドで解決します。"
           className="mb-12 lg:mb-16"
         />
