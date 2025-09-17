@@ -31,12 +31,14 @@ export default function SupportersPage() {
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
       <Hero
-        title="支援者の方へ"
-        subtitle="日本の未来を、経済的な理由で閉ざさないために。〜グローバル人材育成への投資が、日本社会や企業の未来への投資に〜 あなたの支援が、明日の日本のグローバルリーダーを育てます"
-        bgDesktopSrc="/images/supporters/supporters-hero-background.jpg"
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/supporters/supporters_hero.png"
         bgMobileSrc="/images/hero_sma/supporters_hero_sma.png"
         bgPosition="center 30%"
         className="flex items-center justify-center text-center"
+        imageWidth={2021}
+        imageHeight={748}
       />
 
       {/* 2. Engrowth支援プログラムとは */}

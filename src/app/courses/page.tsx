@@ -33,7 +33,7 @@ export default function CoursesPage() {
       {/* 1. ページヘッダー */}
       <Hero
         title="コース・料金"
-        bgDesktopSrc="/images/courses/courses-business-course.jpg"
+        bgDesktopSrc="/images/courses/courses_hero.png"
         bgMobileSrc="/images/hero_sma/courses_hero_sma.png"
         bgPosition="center 30%"
         className="flex items-center justify-center text-center"

@@ -6,7 +6,7 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
-import Hero from '@/components/sections/Hero';
+import { PageTitleSection } from '@/components/sections';
 
 export const metadata = {
   title: 'お問い合わせ - まずはお気軽にご相談ください | Engrowth',
@@ -18,25 +18,12 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Hero
+      <PageTitleSection
+        label="CONTACT"
         title="お問い合わせ"
-        subtitle={
-          <>
-            まずは<span className="text-brand-red">お気軽に</span>ご相談ください
-            <br />
-            <br />
-            無料相談、LINE相談受付中
-            <br />
-            <br />
-            英語学習の悩み、目標設定、プラン相談など、
-            <br />
-            どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
-          </>
-        }
-        bgDesktopSrc="/images/top/top03.png"
-        bgMobileSrc="/images/hero_sma/contact_hero_sma.png"
-        bgPosition="center 40%"
-        className="flex items-center justify-center text-center"
+        description={`
+            まずはお気軽にご相談ください。無料相談、LINE相談受付中。|英語学習の悩み、目標設定、プラン相談など、どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
+        `}
       />
 
       {/* 2. お問い合わせ前に、こちらもご確認ください */}

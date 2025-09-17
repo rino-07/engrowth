@@ -21,12 +21,14 @@ export default function StudentSpotServicePage() {
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
       <Hero
-        title="学生スポットサービス"
-        subtitle="留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。"
-        bgDesktopSrc="/images/spot-student/spot-student-hero-background.jpg"
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/spot-student/spot-students_hero.png"
         bgMobileSrc="/images/hero_sma/spot-student_hero_sma.png"
         bgPosition="center 30%"
         className="flex items-center justify-center text-center"
+        imageWidth={2021}
+        imageHeight={748}
       />
 
       {/* 2. 3つのメインサービス */}

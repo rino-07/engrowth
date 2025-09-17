@@ -8,7 +8,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
-import Hero from '@/components/sections/Hero';
+import { PageTitleSection } from '@/components/sections';
 
 type TabType = '無料カウンセリング' | 'サービス内容' | '支援プログラム' | '受講生' | 'コンサルタント' | '料金';
 
@@ -121,19 +121,15 @@ const tabs: TabType[] = ['無料カウンセリング', 'サービス内容', '�
 
 export default function FAQClient() {
   const [activeTab, setActiveTab] = useState<TabType>('無料カウンセリング');
-
   const filteredFAQs = faqData.filter(faq => faq.category === activeTab);
 
   return (
     <div className="min-h-screen">
-      {/* 1. ヒーローセクション */}
-      <Hero
+      {/* 1. ヒーローセクションをPageTitleSectionに置き換える */}
+      <PageTitleSection
+        label="FAQ" // ラベルを追加（「よくある質問」の英語表記など）
         title="よくある質問"
-        subtitle="Engrowthに関する疑問を解決"
-        bgDesktopSrc="/images/top/top06.png"
-        bgMobileSrc="/images/hero_sma/faq_hero_sma.png"
-        bgPosition="center 35%"
-        className="flex items-center justify-center text-center"
+        description="Engrowthに関する疑問を解決" // subtitleはdescriptionに置き換える
       />
 
       {/* 2. タブナビゲーション */}

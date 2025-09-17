@@ -21,25 +21,15 @@ export default function FlowPage() {
     <div className="min-h-screen">
       {/* 1) ヒーロー（背景写真＋主CTA） */}
       <Hero
-        title={
-          <>
-            専属コンサルタントだから続けられる<br />
-            ３日坊主にならない英語学習
-          </>
-        }
-        subtitle={
-          <>
-            英語学習の失敗を、才能のせいにしない。<br />
-            〜正しいやり方を知れば 誰でも話せるようになる〜
-          </>
-        }
-        bgDesktopSrc="/images/fliw/flow_hero.png"
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/fliw/flow.hero.png"
         bgMobileSrc="/images/hero_sma/flow_hero_sma.png"
         bgPosition="center 25%"
         className="flex items-center justify-center text-center"
-        ctas={[
-          { href: '/contact', label: 'LINE登録はこちら', variant: 'primary' }
-        ]}
+        ctas={[]}
+        imageWidth={2021}
+        imageHeight={748}
       />
 
       {/* 2) 見出し */}

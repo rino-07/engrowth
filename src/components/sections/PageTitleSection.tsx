@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Section from '@/components/layout/Section';
 import Container from '@/components/layout/Container';
@@ -12,6 +10,15 @@ type Props = {
 };
 
 export default function PageTitleSection({ label, title, description }: Props) {
+  // 文字列の改行を、Reactの要素に変換
+  const formattedDescription = description.split('|').map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      {/* 最後の行以外に<br />タグを挿入 */}
+      {index < description.split('|').length - 1 && <br />}
+    </React.Fragment>
+  ));
+
   return (
     <Section background="warm-white" className="py-12 sm:py-16">
       <Container>
@@ -22,8 +29,8 @@ export default function PageTitleSection({ label, title, description }: Props) {
           <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
             {title}
           </Typography>
-          <Typography variant="body-lg" className="text-gray max-w-[65ch] mb-6">
-            {description}
+          <Typography variant="body-lg" className="text-gray mb-6">
+            {formattedDescription} {/* 変換した要素をここに渡す */}
           </Typography>
           {/* 仕切り線を下に配置 */}
           <div className="w-24 h-px bg-gray-300"></div>

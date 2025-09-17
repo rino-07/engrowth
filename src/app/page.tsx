@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { CourseCards } from '@/components/sections/CourseCards';
 import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
+import { EvidenceSection } from '@/components/sections/EvidenceSection';
 
 function FullBleed1440({ children }: { children: React.ReactNode }) {
   // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
@@ -137,6 +138,15 @@ export default function Home() {
             </div>
           </div>
         </Container>
+      </Section>
+
+      {/* 6. 科学的根拠セクション */}
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <EvidenceSection
+          label="Scientific Evidence"
+          title="科学的根拠に基づいた学習法"
+          desc="長年の研究によって実証された効果的な英語学習メソッドを採用しています。"
+        />
       </Section>
 
       {/* 3. Course Section (4-column) */}

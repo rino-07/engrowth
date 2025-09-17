@@ -19,12 +19,14 @@ function BusinessSpotServicePage() {
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
       <Hero
-        title="ビジネススポットサービス"
-        subtitle="ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。"
-        bgDesktopSrc="/images/spot-business/spot-business-hero-background.jpg"
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/spot-business/spot-business_hero.png"
         bgMobileSrc="/images/hero_sma/spot-business_hero_sma.png"
         bgPosition="center 30%"
         className="flex items-center justify-center text-center"
+        imageWidth={2021}
+        imageHeight={748}
       />
 
       {/* 2. 3つのサービス */}
