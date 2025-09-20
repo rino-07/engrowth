@@ -251,31 +251,31 @@ export default function AboutPage() {
           <div className="text-center">
 
             {/* エコシステム図とボタン */}
-            <div className="max-w-4xl mx-auto lg:mb-16">
+            <div className="max-w-5xl mx-auto lg:mb-16 px-4">
               <div className="relative">
                 <Image
                   src="/images/about/eco02.png"
                   alt="Engrowthエコシステム参加図"
                   width={800}
                   height={600}
-                  className="w-full h-auto"
+                  className="w-full h-auto mx-auto"
                 />
                 
                 {/* ボタンを画像上に絶対配置 - レスポンシブ対応 */}
                 <div className="absolute inset-0">
                   {/* パートナー（受講者）として参加ボタン */}
                   <a 
-                    href="http://localhost:3000/contact#:~:text=Engrowth%E3%81%AE-,LINE,-２%E3%81%AB%E7%9B%B8%E8%AB%87%E3%81%99%E3%82%8B"
+                    href="/contact"
                     className="absolute"
                     style={{
-                      top: '31.5%',
-                      left: '64%',
+                      top: '32%',
+                      left: '65%',
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <button
-                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
-                      style={{ backgroundColor: '#db3633' }}
+                      className="px-3 py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm md:text-base"
+                      style={{ backgroundColor: '#d30306' }}
                     >
                       参加
                     </button>
@@ -283,17 +283,17 @@ export default function AboutPage() {
 
                   {/* サポーター（支援者）として参加ボタン */}
                   <a 
-                    href="http://localhost:3000/contact#:~:text=info%40-,engrowth,-.jp"
+                    href="/contact"
                     className="absolute"
                     style={{
-                      top: '76%',
-                      left: '35%',
+                      top: '75%',
+                      left: '36%',
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <button
-                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
-                      style={{ backgroundColor: '#db3633' }}
+                      className="px-3 py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm md:text-base"
+                      style={{ backgroundColor: '#d30306' }}
                     >
                       参加
                     </button>
@@ -301,17 +301,17 @@ export default function AboutPage() {
 
                   {/* コンサルタントとして参加ボタン */}
                   <a 
-                    href="http://localhost:3000/contact#:~:text=info%40-,engrowth,-.jp"
+                    href="/contact"
                     className="absolute"
                     style={{
-                      top: '76%',
+                      top: '75%',
                       left: '90%',
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <button
-                      className="px-2 py-1 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs md:text-sm"
-                      style={{ backgroundColor: '#db3633' }}
+                      className="px-3 py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm md:text-base"
+                      style={{ backgroundColor: '#d30306' }}
                     >
                       参加
                     </button>
