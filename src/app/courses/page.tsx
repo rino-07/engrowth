@@ -88,7 +88,7 @@ export default function CoursesPage() {
         <SectionHeaderLeft
           label="Pricing"
           title="あなたの目標とペースに合わせて選べる料金プラン"
-          desc="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
+          desc="Engrowthなら入会金0円。長期プランほどお得に、継続的な学習をサポートします。"
           className="mb-12 lg:mb-16"
         />
         
@@ -104,13 +104,15 @@ export default function CoursesPage() {
                   $1,480
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 $1,480
+                  1ヶ月あたり $1,480
                 </Typography>
                 <div className="h-6 mb-4">
                   {/* 空のスペース（割引表示なし） */}
                 </div>
                 <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
                   基本プラン
+                  <br />
+                  ※継続の方のみ1ヶ月単位でのお申し込み可
                 </Typography>
               </Card>
             </div>
@@ -125,7 +127,7 @@ export default function CoursesPage() {
                   $4,480
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 $1,493
+                  1ヶ月あたり $1,493
                 </Typography>
                 <div className="h-6 mb-4">
                   {/* 空のスペース（割引表示なし） */}
@@ -154,7 +156,7 @@ export default function CoursesPage() {
                   $7,480
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 $1,246
+                  1ヶ月あたり $1,246
                 </Typography>
                 <Typography variant="body-xs" className="text-action-green mb-4 h-6">
                   約16%OFF
@@ -178,7 +180,7 @@ export default function CoursesPage() {
                   $13,980
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 $1,165
+                  1ヶ月あたり $1,165
                 </Typography>
                 <Typography variant="body-xs" className="text-action-green mb-4 h-6">
                   約21%OFF

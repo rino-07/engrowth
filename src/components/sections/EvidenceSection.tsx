@@ -46,20 +46,9 @@ export function EvidenceSection({ label, title, desc }: Props) {
             <p className="mb-3">
               Engrowthでは、研究に裏付けられた理論を実践に落とし込みます。
             </p>
-            <ul className="list-disc pl-5 space-y-3">
-              <li>
-                <strong className="text-red-700">脳科学：</strong>
-                記憶の定着を促す反復間隔の最適化 — 適切な間隔で復習を繰り返すことで、短期記憶が長期記憶に変わり、効率的に英語を定着させられます。
-              </li>
-              <li>
-                <strong className="text-red-700">第二言語習得論：</strong>
-                インプットとアウトプットの最適な比率設計 — 英語を聞いたり読んだりするだけでは不十分です。実際に使う場面（会話・作文）を適切に組み合わせることで、自然に使える「生きた英語力」を養います。
-              </li>
-              <li>
-                <strong className="text-red-700">行動科学：</strong>
-                学習を習慣化するトリガーと環境デザイン — 「やる気」に頼るのではなく、毎日の生活に自然に学習を組み込む仕組みをつくることで、無理なく継続できます。
-              </li>
-            </ul>
+            <p className="mb-3">
+              脳科学、神経言語学、第二言語習得理論、心理学、社会学、行動経済学など、様々な学問分野の研究成果を統合し、科学的に裏付けられた学習メソッドを提供しています。
+            </p>
           </div>
         </div>
       </div>

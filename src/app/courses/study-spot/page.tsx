@@ -46,7 +46,7 @@ export default function StudentSpotServicePage() {
               <Typography variant="body-sm" className="text-gray mb-4">
                 留学申請・就活用エッセイの
                 <br />
-                プロフェッショナル添削
+                プロフェッショナル添削など
               </Typography>
             </Card>
 

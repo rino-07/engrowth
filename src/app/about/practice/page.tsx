@@ -76,10 +76,10 @@ export default function PracticePage() {
             <Card className="p-6 text-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-4xl mb-4">📱</div>
               <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
-                毎日連絡によるマイクロチェックイン
+                毎日連絡で三日坊主防止
               </Typography>
               <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
-                少しずつでも「ズレたら終わり」という行動結果の分岐点をなくします。不安や不明点も即時に直接相談、習慣化を助けます。
+                専属コンサルタントとの連絡でモチベーションダウンしていても学習に取り組むサイクルを作ります。不安や不明点も即時に直接相談することで、習慣化を助けます。
               </Typography>
             </Card>
 
@@ -107,11 +107,13 @@ export default function PracticePage() {
               <strong className="font-bold" style={{color: '#d30306'}}>自走できないフェーズは必ず登場します</strong>。
             </Typography>
             <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
-              他者と比較して落ち込んだり、第三者の言葉で自己否定しそうになったり、続ける意味が分からなくなったり…<br />
-              それでも「大丈夫」と言い、最小単位でも成功体験を重ねる、この伴走は決定的です。
+              学習の道のりには、必ず「自走できない瞬間」が訪れます。他者と比較して落ち込んだり、誰かの言葉に心を揺さぶられ自己否定しそうになったり、続ける意味を見失ってしまうこともあるでしょう。
+            </Typography>
+            <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
+              そんなときに隣で「大丈夫」と声をかけ、たとえ最小単位でも成功体験を積み重ねられるよう支える存在――それが伴走型の学習です。この支えがあるかどうかが、学習を続けられるか、成果を出せるかを決定的に分けます。
             </Typography>
             <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-              行動心理学にも基づいています。実際、励ましてくれる人の存在は、効果を数倍にし、失敗率を劇的に下げます。
+              行動心理学の観点からも、伴走者の存在は学習効果を数倍に高め、挫折率を劇的に下げることが証明されています。だからこそEngrowthは「伴走型」にこだわり、あなたが最後まで走り抜けられる環境を提供します。
             </Typography>
           </div>
         </Container>
@@ -128,20 +130,35 @@ export default function PracticePage() {
               </Typography>
               <div className="mb-4">
                 <Typography variant="body-lg" className="text-gray-700 mb-2">
-                  <strong className="font-bold" style={{color: '#d30306'}}>短期的効果</strong>：
+                  <strong className="font-bold" style={{color: '#d30306'}}>短期的な効果</strong>
+                </Typography>
+                <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-2">
+                  • 学習の継続率が約3倍に向上
+                </Typography>
+                <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-2">
+                  • 毎日の小さな成功体験が積み重なり、自己効力感が高まる
                 </Typography>
                 <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                  学習の継続率が3倍に上昇、毎日の小さな成功体験による自己効力感の向上、学習内容の定着率が飛躍的に向上
+                  • 学習内容の定着率が飛躍的に向上
                 </Typography>
               </div>
-              <div>
+              <div className="mb-4">
                 <Typography variant="body-lg" className="text-gray-700 mb-2">
-                  <strong className="font-bold" style={{color: '#d30306'}}>長期的効果</strong>：
+                  <strong className="font-bold" style={{color: '#d30306'}}>長期的な効果</strong>
+                </Typography>
+                <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-2">
+                  • 自ら学び続けられる「自走力」を獲得
+                </Typography>
+                <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-2">
+                  • 英語を使う場面で揺るがない自信を持てるようになる
                 </Typography>
                 <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                  自走できる英語学習者への成長、英語を使う場面での自信の獲得、海外でも通用する英語力の確立
+                  • 海外でも通用する確かな英語力を築き上げる
                 </Typography>
               </div>
+              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
+                習慣化は、一時的な学習効果にとどまらず、英語を「自分の武器」として根付かせる最も確実な方法です。
+              </Typography>
             </div>
             <div className="flex-1 flex justify-center">
               <div className="w-80 h-52 rounded-lg overflow-hidden">

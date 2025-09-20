@@ -62,7 +62,7 @@ const Header: React.FC = () => {
   }, [isMenuOpen]);
 
   const navigation = [
-    { name: 'ホーム', href: '/' },
+    { name: 'トップ', href: '/' },
     { 
       name: 'Engrowthの特徴',
       href: '/about',
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-50 relative">
       <Container>
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -240,7 +240,7 @@ const Header: React.FC = () => {
             isMenuOpen
               ? 'max-h-screen opacity-100 visible'
               : 'max-h-0 opacity-0 invisible'
-          } overflow-hidden`}
+          } overflow-hidden relative z-50 bg-white`}
           id="mobile-menu"
           data-menu-container
         >

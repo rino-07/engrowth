@@ -32,8 +32,8 @@ export default function BusinessCoursePage() {
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
       <Hero
-        title=""
-        subtitle={null}
+        title="ビジネスコース"
+        subtitle='学ことが支援になる'
         bgDesktopSrc="/images/business/business_hero.png"
         bgMobileSrc="/images/hero_sma/business_hero_sma.png"
         bgPosition="center 40%"

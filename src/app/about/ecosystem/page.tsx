@@ -107,13 +107,15 @@ export default function AboutPage() {
               {/* 左側: 説明テキスト */}
               <div>
                 <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
-                  Engrowthでは受講者をパートナーと呼んでいます。
-                  <br />
-                  なぜなら受講者の方の英語力が向上することは、Engrowthの目指す世界に一歩近づくことであり、コンサルタント自身の夢を叶える一助になるからです。
+                  Engrowthでは「受講者」という言葉をあえて使わず、「パートナー」と呼んでいます。それは、皆さまの英語力の向上が、単なるスキル習得にとどまらず、私たちの掲げるビジョン――「日本人が英語を通じて可能性を広げ、世界で活躍する未来」――へとつながる大切な一歩だと考えているからです。
+                </Typography>
+
+                <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
+                  パートナーの挑戦や努力は、Engrowthのコンサルタントにとっても大きな原動力であり、共に夢を実現していく道のりそのものです。私たちは英語学習の指導者であると同時に、あなたと同じ方向を見つめ、歩みを重ねる伴走者。成果を共に喜び、壁を共に乗り越える「ビジョンを共有する仲間」として、ともに成長していきたいと願っています。
                 </Typography>
 
                 <Typography variant="body-md" className="text-dark-gray leading-relaxed">
-                  私たちは、すべてのステークホルダーがWin-Winの関係で結ばれることを信念とし、共に日本の未来を切り拓いていく存在でありたいと考えています。
+                  さらに、EngrowthはすべてのステークホルダーがWin-Winの関係で結ばれることを信念とし、共に日本の未来を切り拓いていく存在でありたいと考えています。
                 </Typography>
               </div>
 

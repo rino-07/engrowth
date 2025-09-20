@@ -227,10 +227,8 @@ export default function StudentCoursePage() {
         <SectionHeaderLeft
           label="Study Abroad"
           title="英語力と留学経験で、未来の選択肢を広げる"
-          desc="Engrowthでは、留学前に必要な英語力をしっかりと伸ばし、現地で安心して挑戦できる自信を育てます。
-さらに提携パートナー 留サポ
- と連携し、現地での生活アドバイスは留学経験者から直接ヒアリング可能。
-パスポートや願書などの各種書類作成サポート も、Engrowthと留サポの両方でしっかり対応します。
+          desc="Engrowthでは、留学前に必要な英語力をしっかりと伸ばし、現地で安心して挑戦できる自信を育てます。また、あなた専用の専属コンサルタントは海外留学経験者。留学前、留学中でもメンターとして経験を元にあなたのことを様々な角度からサポートします。
+さらに提携パートナー「留学サポート（以下、留サポ）」と提携しており、短期留学体験〜留学準備まで一気通貫でサポート。パスポートや願書などの各種書類作成サポートは、Engrowthと留サポの両方での安心サポート。
 学習から渡航準備、現地サポートまで一気通貫で支える体制が整っています。"
           className="mb-12 lg:mb-16"
         />
@@ -343,16 +341,16 @@ export default function StudentCoursePage() {
                 "英語に自信がない"
               </Typography>
               <Typography variant="body-xs" className="text-gray">
-                留学に消極的になってしまう
+                自分に留学なんて無理かも…
               </Typography>
             </div>
             {/* 不安の声 2 */}
             <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
               <Typography variant="heading-md" className="text-dark-gray mb-4">
-                "何から始めればいいか..."
+                "何から始めればいいかわからない"
               </Typography>
               <Typography variant="body-xs" className="text-gray">
-                留学の準備がわからない
+                留学の準備って難しそう…
               </Typography>
             </div>
             {/* 不安の声 3 */}

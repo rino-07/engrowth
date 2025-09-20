@@ -74,10 +74,10 @@ export default function Home() {
                 What is Engrowth
               </p>
               <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8 font-serif">
-                本気で英語力を上げたい学習者に選ばれています。
+                本気で英語力を上げたい人に選ばれています。
               </Typography>
               <Typography variant="body-lg" className="text-gray max-w-[85ch] leading-relaxed">
-                一人ひとりの目標や課題解決に最適化された科学的な学習カリキュラムで、専任のコンサルタントが毎日の学習に徹底伴走し、「学習生産性」と「継続間」を最大化して英語力の上達を実現します。
+                一人ひとりの目標や課題解決に最適化された科学的な学習カリキュラムで、専属のコンサルタントが毎日の学習に徹底伴走し、「学習生産性」と「継続間」を最大化して英語力の上達を実現します。
               </Typography>
             </div>
 
@@ -193,7 +193,7 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
             {/* 従来スクール - 40% */}
             <div className="col-span-12 lg:col-span-5 bg-gray-50 rounded-2xl p-8">
-              <Typography variant="heading-md" className="text-gray mb-8 text-center">
+              <Typography variant="heading-md" className="text-gray mb-8 text-left">
                 従来
               </Typography>
               <div className="space-y-4">
@@ -222,11 +222,11 @@ export default function Home() {
             <div className="col-span-12 lg:col-span-2 flex items-center justify-center lg:py-0">
               <div className="text-brand-red">
                 {/* スマホ: 下向き矢印 */}
-                <svg className="w-16 h-16 lg:hidden" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-16 h-16 lg:hidden" fill="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                   <path d="M1 13.025l2.828-2.847 6.176 6.176v-16.354h3.992v16.354l6.176-6.176 2.828 2.847-11 10.975z"/>
                 </svg>
                 {/* PC: 右向き矢印 */}
-                <svg className="w-16 h-16 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-16 h-16 hidden lg:block" fill="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                   <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
                 </svg>
               </div>
@@ -234,7 +234,7 @@ export default function Home() {
 
             {/* Engrowth - 40% */}
             <div className="col-span-12 lg:col-span-5 bg-red-50 rounded-2xl p-8 border border-brand-red/20">
-              <Typography variant="heading-md" className="text-brand-red mb-8 text-center">
+              <Typography variant="heading-md" className="text-brand-red mb-8 text-left">
                 Engrowth
               </Typography>
               <div className="space-y-4">
