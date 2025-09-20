@@ -60,7 +60,7 @@ export default function CoursesPage() {
                   alt="30分の無料カウンセリングでご相談ください"
                   width={1200}
                   height={400}
-                  className="w-full h-auto shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                  className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
                 />
               </Link>
             </div>
@@ -282,7 +282,7 @@ export default function CoursesPage() {
                   alt="30分の無料カウンセリングでご相談ください"
                   width={1200}
                   height={400}
-                  className="w-full h-auto  shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                  className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
                 />
               </Link>
             </div>

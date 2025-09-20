@@ -275,6 +275,38 @@ export default function StudentCoursePage() {
             </div>
           </div>
 
+          {/* 留学サポートセクション */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-gradient-to-r from-brand-red to-red-600 rounded-2xl p-8 text-center text-white">
+              <Typography variant="heading-md" className="text-white mb-4 font-serif">
+                「英語に自信がないから留学は無理」
+              </Typography>
+              <Typography variant="heading-sm" className="text-white mb-6 font-serif">
+                そう思っていませんか？
+              </Typography>
+              <Typography variant="heading-lg" className="text-white mb-8 font-serif">
+                Engrowthなら完全サポート！
+              </Typography>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white/10 rounded-lg p-4">
+                  <Typography variant="heading-sm" className="text-white mb-2 font-serif">
+                    サマーキャンプ
+                  </Typography>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4">
+                  <Typography variant="heading-sm" className="text-white mb-2 font-serif">
+                    志望校選び&出願サポート
+                  </Typography>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4">
+                  <Typography variant="heading-sm" className="text-white mb-2 font-serif">
+                    現地校見学サポート
+                  </Typography>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* ストーリーテリング型レイアウト */}
           <div className="max-w-5xl mx-auto mb-16">
             {/* Step 1: 不安の声 */}
