@@ -81,8 +81,8 @@ const Header: React.FC = () => {
       dropdownItems: [
         { name: 'コース・料金一覧', href: '/courses' },
         { name: 'ビジネスコース', href: '/courses/business' },
-        { name: '学生コース', href: '/courses/study' },
         { name: 'ビジネススポットサービス', href: '/courses/business-spot' },
+        { name: '学生コース', href: '/courses/study' },
         { name: '学生スポットサービス', href: '/courses/study-spot' },
       ]
     },
