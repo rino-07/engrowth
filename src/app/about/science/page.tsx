@@ -5,6 +5,7 @@ import Container from '@/components/layout/Container';
 import Typography from '@/components/ui/Typography';
 import Card from '@/components/ui/Card';
 import { PageTitleSection } from '@/components/sections';
+import { FaDownload, FaUpload, FaFlask } from 'react-icons/fa';
 
 export const metadata = {
   title: '科学的根拠 - Engrowth',
@@ -64,7 +65,9 @@ export default function SciencePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
             <Card className="p-6 text-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-4xl mb-4">📥</div>
+              <div className="flex justify-center mb-4">
+                <FaDownload className="text-4xl" style={{color: '#d30306'}} />
+              </div>
               <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
                 インプット偏重
               </Typography>
@@ -74,7 +77,9 @@ export default function SciencePage() {
             </Card>
 
             <Card className="p-6 text-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-4xl mb-4">📤</div>
+              <div className="flex justify-center mb-4">
+                <FaUpload className="text-4xl" style={{color: '#d30306'}} />
+              </div>
               <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
                 アウトプット不足
               </Typography>
@@ -84,7 +89,9 @@ export default function SciencePage() {
             </Card>
 
             <Card className="p-6 text-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-4xl mb-4">🧪</div>
+              <div className="flex justify-center mb-4">
+                <FaFlask className="text-4xl" style={{color: '#d30306'}} />
+              </div>
               <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
                 科学的アプローチ不在
               </Typography>
