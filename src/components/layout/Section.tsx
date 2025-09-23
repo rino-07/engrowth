@@ -9,6 +9,8 @@ interface SectionProps {
   padding?: 'sm' | 'md' | 'lg' | 'xl';
   fullWidth?: boolean;
   style?: React.CSSProperties;
+  id?: string;
+  'aria-label'?: string;
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -18,7 +20,9 @@ const Section: React.FC<SectionProps> = ({
   background = 'white',
   padding = 'lg',
   fullWidth = false,
-  style
+  style,
+  id,
+  'aria-label': ariaLabel
 }) => {
   const backgroundClasses = {
     white: 'bg-white',
@@ -40,14 +44,24 @@ const Section: React.FC<SectionProps> = ({
 
   if (fullWidth) {
     return (
-      <section className={sectionClasses} style={style}>
+      <section 
+        className={sectionClasses} 
+        style={style}
+        id={id}
+        aria-label={ariaLabel}
+      >
         {children}
       </section>
     );
   }
 
   return (
-    <section className={sectionClasses} style={style}>
+    <section 
+      className={sectionClasses} 
+      style={style}
+      id={id}
+      aria-label={ariaLabel}
+    >
       <Container className={containerClassName}>
         {children}
       </Container>

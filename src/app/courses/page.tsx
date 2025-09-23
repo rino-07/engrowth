@@ -4,22 +4,12 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
+import FullBleed1440 from '@/components/layout/FullBleed1440';
 import { CourseCards } from '@/components/sections/CourseCards';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Hero from '@/components/sections/Hero';
-
-function FullBleed1440({ children }: { children: React.ReactNode }) {
-  // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
-  return (
-    <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-      <div className="mx-auto max-w-[1440px] px-6">
-        {children}
-      </div>
-    </section>
-  );
-}
 
 export const metadata = {
   title: 'コース・料金 - 目的に合わせて選べるコース・サービス | Engrowth',
@@ -68,20 +58,15 @@ export default function CoursesPage() {
         </FullBleed1440>
       </Section>
 
-      {/* 3. 入会金0円の強調表示 */}
       <Section background="white" padding="sm">
-        <Container>
-          <div className="text-center">
-            <Image
-              src="/images/courses/welcome_banner.png"
-              alt="Engrowthでは、入会金・登録料0円。初期費用は一切かかりません。"
-              width={1200}
-              height={200}
-              className="w-full h-auto"
-            />
-          </div>
-        </Container>
-      </Section>
+  <Container>
+    <div className="text-center">
+    <h2 style={{ fontSize: '60px', fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}>
+  Engrowthなら入会金無料
+</h2>
+    </div>
+  </Container>
+</Section>
 
       {/* 4. 料金表 */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">

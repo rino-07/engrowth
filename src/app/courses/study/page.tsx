@@ -4,21 +4,11 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
+import FullBleed1440 from '@/components/layout/FullBleed1440';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Hero from '@/components/sections/Hero';
-
-function FullBleed1440({ children }: { children: React.ReactNode }) {
-  // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
-  return (
-    <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-      <div className="mx-auto max-w-[1440px] px-6">
-        {children}
-      </div>
-    </section>
-  );
-}
 // import { getCourseById } from '@/data/courses';
 
 export const metadata = {
@@ -121,21 +111,6 @@ export default function StudentCoursePage() {
                 パーソナルコーチング
               </Typography>
             </Card>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 2. エッセイ添削し放題セクション */}
-      <Section background="white" padding="sm" className="pt-0">
-        <Container>
-          <div className="text-center">
-            <Image
-              src="/images/students/students_banner.png"
-              alt="エッセイ添削し放題 - 留学前でも留学中でも最重要となるエッセイの添削及びアドバイスを頼み放題！！"
-              width={1200}
-              height={200}
-              className="w-full h-auto"
-            />
           </div>
         </Container>
       </Section>
@@ -275,87 +250,40 @@ export default function StudentCoursePage() {
             </div>
           </div>
 
-          {/* 留学サポートセクション */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-gradient-to-r from-brand-red to-red-600 rounded-2xl p-8 text-center text-white">
-              <Typography variant="heading-md" className="text-white mb-4 font-serif">
-                「英語に自信がないから留学は無理」
-              </Typography>
-              <Typography variant="heading-sm" className="text-white mb-6 font-serif">
-                そう思っていませんか？
-              </Typography>
-              <Typography variant="heading-lg" className="text-white mb-8 font-serif">
-                Engrowthなら完全サポート！
-              </Typography>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white/10 rounded-lg p-4">
-                  <Typography variant="heading-sm" className="text-white mb-2 font-serif">
-                    サマーキャンプ
-                  </Typography>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <Typography variant="heading-sm" className="text-white mb-2 font-serif">
-                    志望校選び&出願サポート
-                  </Typography>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <Typography variant="heading-sm" className="text-white mb-2 font-serif">
-                    現地校見学サポート
-                  </Typography>
-                </div>
-              </div>
-            </div>
+          <div style={{ fontFamily: '"Yu Gothic", "Meiryo", sans-serif' }}>
+            <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「英語に自信がないから留学は無理」</p>
+            <p style={{ fontSize: '18px', marginTop: '0' }}>そう思っていませんか？</p>
+            <br />
+            <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>Engrowthなら完全サポート！</p>
+            <p style={{ fontSize: '18px', marginTop: '0' }}>サマーキャンプ</p>
+            <p style={{ fontSize: '18px', marginTop: '0' }}>志望校選び&出願サポート</p>
+            <p style={{ fontSize: '18px', marginTop: '0' }}>現地校見学サポート</p>
           </div>
 
-          {/* ストーリーテリング型レイアウト */}
-          <div className="max-w-5xl mx-auto mb-16">
-            {/* Step 1: 不安の声 */}
-            <div className="relative mb-12">
-              <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center">
-                <Typography variant="heading-md" className="text-dark-gray mb-4">
-                  「英語に自信がないから留学は無理」
-                </Typography>
-                <Typography variant="body-lg" className="text-gray">
-                  そう思っていませんか？
-                </Typography>
-              </div>
-            </div>
+          <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「英語に自信がないから留学は無理」</p>
+          <p style={{ fontSize: '18px', marginTop: '0' }}>留学に消極的になってしまう→自分に留学なんて無理かも…</p>
 
-            {/* Step 2: 解決策 */}
-            <div className="bg-brand-red text-white rounded-lg shadow-sm p-8 mb-12 text-center">
-              <Typography variant="heading-md" className="mb-4">
-                Engrowthなら完全サポート！
-              </Typography>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Typography variant="body-lg">
-                  サマーキャンプ
-                </Typography>
-                <Typography variant="body-lg">
-                  志望校選び&出願サポート
-                </Typography>
-                <Typography variant="body-lg">
-                  現地校見学サポート
-                </Typography>
-              </div>
-            </div>
+          <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「何から始めればいいかわからない」</p>
+          <p style={{ fontSize: '18px', marginTop: '0' }}>留学の準備がわからない→留学の準備って難しそう…</p>
 
-            {/* Step 3: コンサルタントの強み */}
-            <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center">
-              <Typography variant="heading-md" className="text-dark-gray mb-4">
-                全員留学経験者のコンサルタント
-              </Typography>
-              <Typography variant="body-lg" className="text-gray mb-4">
-                留学経験によって得られる貴重な価値観を知っているからこそ、あなたの不安を理解し、適切なサポートができます。
-              </Typography>
-              <Typography variant="body-lg" className="text-brand-red font-bold">
-                あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
-              </Typography>
-            </div>
+          <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「海外生活が不安」</p>
+          <p style={{ fontSize: '18px', marginTop: '0' }}>漠然とした恐怖心がある</p>
+
+          {/* Step 3: コンサルタントの強み */}
+          <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center">
+            <Typography variant="heading-md" className="text-dark-gray mb-4">
+              全員留学経験者のコンサルタント
+            </Typography>
+            <Typography variant="body-lg" className="text-gray mb-4">
+              留学経験によって得られる貴重な価値観を知っているからこそ、あなたの不安を理解し、適切なサポートができます。
+            </Typography>
+            <Typography variant="body-lg" className="text-brand-red font-bold">
+              あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
+            </Typography>
           </div>
-
         </Container>
       </Section>
-
+  
       {/* 4. こんな不安はありませんか？セクション */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
         <SectionHeaderLeft
@@ -406,8 +334,6 @@ export default function StudentCoursePage() {
           </div>
         </Container>
       </Section>
-
-      
 
       {/* 6. 料金 */}
       <Section background="white" className="py-12 sm:py-16 lg:py-24">

@@ -158,7 +158,7 @@ export default function FAQClient() {
         <Container>
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {filteredFAQs.map((faq, index) => (
-              <Card key={`${activeTab}-${index}`} className="p-8">
+              <Card key={`${activeTab}-${index}`} className="p-8" hover={false}>
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Typography variant="body-sm" className="text-white font-bold">

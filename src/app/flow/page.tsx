@@ -13,7 +13,7 @@ export const metadata = {
   keywords: "Engrowth, 受講の流れ, LINE登録, カウンセリング, 英語学習プラン",
 };
 
-const BRAND = "#d30306";
+const BRAND = "var(--brand-red)";
 const MUTED = "#898989";
 
 export default function FlowPage() {
@@ -185,56 +185,56 @@ export default function FlowPage() {
             </div>
 
             {/* ビジネスコース */}
-            <div className="mb-16">
-              <h4 className="text-center text-xl font-bold mb-8 font-serif mt-8">ビジネスコース</h4>
-              <div className="space-y-8">
-                {/* 基礎シミュレーション */}
-                <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
-                  <div className="bg-brand-red text-center py-3 md:py-4">
-                    <div className="grid grid-cols-[140px_1fr] gap-0">
-                      <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
-                        Week
-                      </div>
-                      <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
-                        テーマ
-                      </div>
-                    </div>
-                  </div>
-                  <div className="divide-y divide-gray-100">
-                    <SimulationRow week="week 1-2" theme="挨拶" />
-                    <SimulationRow week="week 3-4" theme="自己紹介" />
-                    <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
-                    <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
-                    <SimulationRow week="week 9-10" theme="ホテル（チェックイン、アウト）" />
-                    <SimulationRow week="week 11-12" theme="カフェ＆レストラン（予約、注文）" />
-                  </div>
-                </div>
+<div className="mb-16">
+  <h4 className="text-xl font-bold mb-8 font-serif mt-8 px-4">ビジネスコース</h4>
+  <div className="space-y-8">
+    {/* 基礎シミュレーション */}
+    <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
+      <div className="bg-brand-red py-3 md:py-4">
+        <div className="grid grid-cols-[140px_1fr] gap-0">
+          <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
+            Week
+          </div>
+          <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
+            テーマ
+          </div>
+        </div>
+      </div>
+      <div className="divide-y divide-gray-100">
+        <SimulationRow week="week 1-2" theme="挨拶" />
+        <SimulationRow week="week 3-4" theme="自己紹介" />
+        <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
+        <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
+        <SimulationRow week="week 9-10" theme="ホテル（チェックイン、アウト）" />
+        <SimulationRow week="week 11-12" theme="カフェ＆レストラン（予約、注文）" />
+      </div>
+    </div>
 
-                {/* 応用シミュレーション */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
-                  <div className="bg-red-600 text-center py-4">
-                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
-                  </div>
-                  <div className="divide-y divide-gray-100">
-                    <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
-                    <SimulationRow week="week 15-16" theme="交通機関（電車、バス）" />
-                    <SimulationRow week="week 17-18" theme="ビジネスメール" />
-                    <SimulationRow week="week 19-20" theme="ビジネスプレゼンテーション①" />
-                    <SimulationRow week="week 21-22" theme="ビジネスプレゼンテーション②" />
-                    <SimulationRow week="week 23-24" theme="カスタム" />
-                  </div>
-                </div>
-              </div>
-            </div>
+    {/* 応用シミュレーション */}
+    <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
+      <div className="bg-red-600 py-4">
+        <h5 className="font-bold text-white text-lg font-serif px-4">シミュレーションテーマ</h5>
+      </div>
+      <div className="divide-y divide-gray-100">
+        <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
+        <SimulationRow week="week 15-16" theme="交通機関（電車、バス）" />
+        <SimulationRow week="week 17-18" theme="ビジネスメール" />
+        <SimulationRow week="week 19-20" theme="ビジネスプレゼンテーション①" />
+        <SimulationRow week="week 21-22" theme="ビジネスプレゼンテーション②" />
+        <SimulationRow week="week 23-24" theme="カスタム" />
+      </div>
+    </div>
+  </div>
+</div>
 
             {/* 学生コース */}
             <div className="py-0">
               <div className="border-t border-gray-200 pt-8"></div>
               <h4 className="text-center text-xl font-bold mb-8 font-serif">学生コース</h4>
               <div className="space-y-8">
-                {/* 基礎シミュレーション */}
-                <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
-                  <div className="bg-brand-red text-center py-3 md:py-4">
+               {/* 基礎シミュレーション */}
+               <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
+                  <div className="bg-brand-red py-3 md:py-4">
                     <div className="grid grid-cols-[140px_1fr] gap-0">
                       <div className="px-4 md:px-6 text-white text-sm font-semibold tracking-wide font-serif">
                         Week
@@ -256,8 +256,8 @@ export default function FlowPage() {
 
                 {/* 応用シミュレーション */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
-                  <div className="bg-red-600 text-center py-4">
-                    <h5 className="font-bold text-white text-lg font-serif">シミュレーションテーマ（場面トピック）</h5>
+                  <div className="bg-red-600 py-4">
+                    <h5 className="font-bold text-white text-lg font-serif px-4">シミュレーションテーマ</h5>
                   </div>
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
@@ -265,7 +265,7 @@ export default function FlowPage() {
                     <SimulationRow week="week 17-18" theme="銀行口座開設" />
                     <SimulationRow week="week 19-20" theme="就職活動、宅急便" />
                     <SimulationRow week="week 21-22" theme="病院（予約、受付、診察）" />
-                    <SimulationRow week="week 23-24" theme="カスタム、専属コンサルタントと相談し内容決定" />
+                    <SimulationRow week="week 23-24" theme="カスタム(専属コンサルタントと相談し内容決定)" />
                   </div>
                 </div>
               </div>
@@ -273,6 +273,8 @@ export default function FlowPage() {
           </div>
         </Container>
       </Section>
+
+      <SectionDivider variant="soft" />
 
       <SectionDivider variant="soft" />
 

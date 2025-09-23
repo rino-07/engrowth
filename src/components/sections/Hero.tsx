@@ -95,8 +95,8 @@ export default function Hero({
                 className={[
                   'inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors',
                   btn.variant === 'secondary'
-                    ? 'border border-[#d30306] text-[#d30306] hover:bg-red-50'
-                    : 'bg-[#d30306] text-white hover:bg-[#b70205]',
+                    ? 'border border-brand-red text-brand-red hover:bg-red-50'
+                    : 'bg-brand-red text-white hover:bg-red-700',
                 ].join(' ')}
               >
                 {btn.label}

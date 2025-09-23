@@ -23,7 +23,7 @@ export default function PageTitleSection({ label, title, description }: Props) {
     <Section background="warm-white" className="py-12 sm:py-16">
       <Container>
         <div className="mb-8">
-          <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4" style={{ color: '#d30306' }}>
+          <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4 text-brand-red">
             {label}
           </p>
           <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">

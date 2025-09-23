@@ -4,12 +4,16 @@ interface ContainerProps {
   children: React.ReactNode;
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '1440' | 'full';
+  center?: boolean;
+  id?: string;
 }
 
 const Container: React.FC<ContainerProps> = ({
   children,
   className = '',
-  size = 'xl'
+  size = 'xl',
+  center = true,
+  id
 }) => {
   const sizeClasses: Record<NonNullable<ContainerProps['size']>, string> = {
     sm: 'max-w-2xl',
@@ -21,10 +25,10 @@ const Container: React.FC<ContainerProps> = ({
     full: 'max-w-full'
   };
   
-  const combinedClasses = `mx-auto px-4 sm:px-6 lg:px-8 ${sizeClasses[size]} ${className}`;
+  const combinedClasses = `${center ? 'mx-auto' : ''} px-4 sm:px-6 lg:px-8 ${sizeClasses[size]} ${className}`;
   
   return (
-    <div className={combinedClasses}>
+    <div className={combinedClasses} id={id}>
       {children}
     </div>
   );

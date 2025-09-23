@@ -6,6 +6,8 @@ interface TypographyProps {
   className?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
   style?: React.CSSProperties;
+  color?: 'default' | 'muted' | 'brand' | 'success' | 'warning' | 'error';
+  weight?: 'normal' | 'medium' | 'semibold' | 'bold';
 }
 
 const Typography: React.FC<TypographyProps> = ({
@@ -13,7 +15,9 @@ const Typography: React.FC<TypographyProps> = ({
   children,
   className = '',
   as,
-  style
+  style,
+  color = 'default',
+  weight
 }) => {
   // デフォルトの要素を決定
   const getDefaultElement = (variant: string) => {
@@ -28,7 +32,26 @@ const Typography: React.FC<TypographyProps> = ({
   };
 
   const Component = as || getDefaultElement(variant);
-  const combinedClasses = `${variant} ${className}`;
+  
+  // カラークラス
+  const colorClasses = {
+    default: 'text-dark-gray',
+    muted: 'text-gray',
+    brand: 'text-brand-red',
+    success: 'text-action-green',
+    warning: 'text-warning',
+    error: 'text-error'
+  };
+
+  // ウェイトクラス
+  const weightClasses = {
+    normal: 'font-normal',
+    medium: 'font-medium',
+    semibold: 'font-semibold',
+    bold: 'font-bold'
+  };
+
+  const combinedClasses = `${variant} ${colorClasses[color]} ${weight ? weightClasses[weight] : ''} ${className}`;
 
   return (
     <Component className={combinedClasses} style={style}>

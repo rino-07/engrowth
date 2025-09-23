@@ -4,22 +4,12 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
+import FullBleed1440 from '@/components/layout/FullBleed1440';
 import Image from 'next/image';
 import { CourseCards } from '@/components/sections/CourseCards';
 import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
 import { EvidenceSection } from '@/components/sections/EvidenceSection';
-
-function FullBleed1440({ children }: { children: React.ReactNode }) {
-  // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
-  return (
-    <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-      <div className="mx-auto max-w-[1440px] px-6">
-        {children}
-      </div>
-    </section>
-  );
-}
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -48,7 +38,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors bg-[#d30306] text-white hover:bg-[#b70205]"
+                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors bg-brand-red text-white hover:bg-red-700"
               >
                 無料相談を予約する
               </Link>
@@ -70,7 +60,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* 左側: タイトルと説明文 */}
             <div>
-              <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4" style={{ color: '#d30306' }}>
+              <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4 text-brand-red">
                 What is Engrowth
               </p>
               <Typography variant="heading-lg" className="text-dark-gray mb-4 lg:mb-8 font-serif">

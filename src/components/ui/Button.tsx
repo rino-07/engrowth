@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   isLoading?: boolean;
   children: React.ReactNode;
 }
@@ -20,13 +20,16 @@ const Button: React.FC<ButtonProps> = ({
   
   const variantClasses = {
     primary: 'btn-primary focus:ring-brand-red',
-    secondary: 'btn-secondary focus:ring-brand-red'
+    secondary: 'btn-secondary focus:ring-brand-red',
+    outline: 'border-2 border-brand-red text-brand-red bg-transparent hover:bg-brand-red hover:text-white focus:ring-brand-red',
+    ghost: 'text-brand-red bg-transparent hover:bg-red-50 focus:ring-brand-red'
   };
   
   const sizeClasses = {
-    sm: 'px-6 py-3 text-sm',
+    sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    lg: 'px-8 py-4 text-lg',
+    xl: 'px-10 py-5 text-xl'
   };
   
   const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;

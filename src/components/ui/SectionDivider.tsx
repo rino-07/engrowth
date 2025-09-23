@@ -11,7 +11,7 @@ export default function SectionDivider({
       <div
         className={
           variant === "brand"
-            ? "h-[2px] bg-gradient-to-r from-transparent via-[#d30306] to-transparent"
+            ? "h-[2px] bg-gradient-to-r from-transparent via-brand-red to-transparent"
             : "h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"
         }
       />
@@ -20,7 +20,7 @@ export default function SectionDivider({
         <span
           className={
             variant === "brand"
-              ? "absolute left-1/2 -translate-x-1/2 -top-3 bg-white px-3 py-0.5 text-[11px] tracking-wider font-semibold text-[#d30306] rounded-full border border-[#d30306]/20"
+              ? "absolute left-1/2 -translate-x-1/2 -top-3 bg-white px-3 py-0.5 text-[11px] tracking-wider font-semibold text-brand-red rounded-full border border-brand-red/20"
               : "absolute left-1/2 -translate-x-1/2 -top-3 bg-white px-3 py-0.5 text-[11px] tracking-wider text-gray-500 rounded-full border border-gray-200"
           }
         >
@@ -29,7 +29,7 @@ export default function SectionDivider({
       )}
       {/* ノッチ（brandだけ中央に小さな丸） */}
       {variant === "brand" && !label && (
-        <span className="absolute left-1/2 -translate-x-1/2 -top-1.5 h-3 w-3 rounded-full bg-[#d30306]" />
+        <span className="absolute left-1/2 -translate-x-1/2 -top-1.5 h-3 w-3 rounded-full bg-brand-red" />
       )}
     </div>
   );

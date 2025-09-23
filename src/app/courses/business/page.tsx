@@ -5,20 +5,10 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
+import FullBleed1440 from '@/components/layout/FullBleed1440';
 import Image from 'next/image';
 import React from 'react';
 import Hero from '@/components/sections/Hero';
-
-function FullBleed1440({ children }: { children: React.ReactNode }) {
-  // 親の max-w-* を抜けて100vwまで広げ、内側で1440px上限に戻す
-  return (
-    <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-      <div className="mx-auto max-w-[1440px] px-6">
-        {children}
-      </div>
-    </section>
-  );
-}
 
 
 export const metadata = {
