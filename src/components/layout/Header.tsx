@@ -212,7 +212,7 @@ Engrowth
 
 {/* Desktop Navigation */}
 
-<nav className="hidden lg:flex lg:items-center lg:space-x-8">
+<nav className="hidden md:flex md:items-center md:space-x-8">
 
 {navigation.map((item) => (
 
@@ -357,7 +357,7 @@ className="text-dark-gray hover:text-brand-red transition-colors duration-200 fo
 
 {/* CTA Button */}
 
-<div className="hidden lg:flex lg:items-center">
+<div className="hidden md:flex md:items-center">
 
 <Link href="/contact">
 
@@ -375,7 +375,7 @@ className="text-dark-gray hover:text-brand-red transition-colors duration-200 fo
 
 {/* Mobile menu button */}
 
-<div className="lg:hidden" data-menu-container>
+<div className="md:hidden" data-menu-container>
 
 <button
 
@@ -473,7 +473,7 @@ d="M6 18L18 6M6 6l12 12"
 
 <div
 
-className={`lg:hidden transition-all duration-200 ease-in-out ${
+className={`md:hidden transition-all duration-200 ease-in-out ${
 
 isMenuOpen
 
