@@ -62,18 +62,18 @@ export default function SupportersPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-none border border-neutral-200">
-              <Image
-                src="/images/supporters/cycle.png"
-                alt="グローバル人材エコシステム図"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg mb-8"
-              />
-              <Typography variant="body-md" className="text-gray text-center">
-                エコシステム図：グローバル人材の流出問題と支援の重要性
-              </Typography>
-            </div>
+          <div className="rounded-2xl p-8">
+  <Image
+    src="/images/supporters/cycle.png"
+    alt="グローバル人材エコシステム図"
+    width={600}
+    height={400}
+    className="w-full h-auto rounded-lg mb-8"
+  />
+  <Typography variant="body-lg" className="text-black text-center">
+    エコシステム図：グローバル人材の流出問題と支援の重要性
+  </Typography>
+</div>
           </div>
         </Container>
       </Section>
