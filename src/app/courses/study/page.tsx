@@ -115,6 +115,16 @@ export default function StudentCoursePage() {
         </Container>
       </Section>
 
+      <Section background="white" padding="sm">
+  <Container>
+    <div className="text-center">
+    <h2 style={{ fontSize: '60px', fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}>
+  Engrowthならエッセイ添削し放題！
+</h2>
+    </div>
+  </Container>
+</Section>
+
       {/* 4. Engrowthが選ばれる理由 */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
         <SectionHeaderLeft
