@@ -268,14 +268,14 @@ export default function AboutPage() {
                     href="/contact"
                     className="absolute"
                     style={{
-                      top: '32%',
-                      left: '65%',
+                      top: '40%',
+                      left: '50%',
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <button
-                      className="px-3 py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm md:text-base"
-                      style={{ backgroundColor: '#d30306' }}
+                      className="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs sm:text-sm md:text-base"
+                      style={{ backgroundColor: '#d30306', minWidth: '60px', maxWidth: '80px' }}
                     >
                       参加
                     </button>
@@ -286,14 +286,14 @@ export default function AboutPage() {
                     href="/contact"
                     className="absolute"
                     style={{
-                      top: '75%',
-                      left: '36%',
+                      top: '85%',
+                      left: '21%',
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <button
-                      className="px-3 py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm md:text-base"
-                      style={{ backgroundColor: '#d30306' }}
+                      className="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs sm:text-sm md:text-base"
+                      style={{ backgroundColor: '#d30306', minWidth: '60px', maxWidth: '80px' }}
                     >
                       参加
                     </button>
@@ -304,14 +304,14 @@ export default function AboutPage() {
                     href="/contact"
                     className="absolute"
                     style={{
-                      top: '75%',
-                      left: '90%',
+                      top: '85%',
+                      left: '79%',
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <button
-                      className="px-3 py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm md:text-base"
-                      style={{ backgroundColor: '#d30306' }}
+                      className="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs sm:text-sm md:text-base"
+                      style={{ backgroundColor: '#d30306', minWidth: '60px', maxWidth: '80px' }}
                     >
                       参加
                     </button>
