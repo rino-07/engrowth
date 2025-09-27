@@ -166,82 +166,35 @@ export default function SupportersPage() {
             </Typography>
           </div>
 
-            <div className="cards-grid-responsive w-full mb-16">
-            {/* ブロンズパートナー */}
-            <Card className="p-6 text-center border-2 border-amber-200 bg-amber-50">
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                ブロンズパートナー
-              </Typography>
-              <Typography variant="body-md" className="text-brand-red font-bold mb-4">
-                月額：50万円〜
-              </Typography>
-              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
-                <Image
-                  src="/images/supporters/bronze.png"
-                  alt="ブロンズパートナー"
-                  width={120}
-                  height={120}
-                  className="max-w-full max-h-full object-contain rounded"
-                />
-              </div>
-            </Card>
-
-            {/* シルバーパートナー */}
-            <Card className="p-6 text-center border-2 border-gray-300 bg-gray-50">
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                シルバーパートナー
-              </Typography>
-              <Typography variant="body-md" className="text-brand-red font-bold mb-4">
-                月額：100万円〜
-              </Typography>
-              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
-                <Image
-                  src="/images/supporters/silver.png"
-                  alt="シルバーパートナー"
-                  width={120}
-                  height={120}
-                  className="max-w-full max-h-full object-contain rounded"
-                />
-              </div>
-            </Card>
-
-            {/* ゴールドパートナー */}
-            <Card className="p-6 text-center border-2 border-yellow-300 bg-yellow-50">
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                ゴールドパートナー
-              </Typography>
-              <Typography variant="body-md" className="text-brand-red font-bold mb-4">
-                月額：200万円〜
-              </Typography>
-              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
-                <Image
-                  src="/images/supporters/gold.png"
-                  alt="ゴールドパートナー"
-                  width={120}
-                  height={120}
-                  className="max-w-full max-h-full object-contain rounded"
-                />
-              </div>
-            </Card>
-
-            {/* プラチナパートナー */}
-            <Card className="p-6 text-center border-2 border-purple-300 bg-purple-50">
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
-                プラチナパートナー
-              </Typography>
-              <Typography variant="body-md" className="text-brand-red font-bold mb-4">
-                月額：500万円〜
-              </Typography>
-              <div className="bg-light-gray rounded-lg p-4 flex items-center justify-center mb-4" style={{ minHeight: '120px' }}>
-                <Image
-                  src="/images/supporters/platinum.png"
-                  alt="プラチナパートナー"
-                  width={120}
-                  height={120}
-                  className="max-w-full max-h-full object-contain rounded"
-                />
-              </div>
-            </Card>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full mb-16 px-4">
+            <Image
+              src="/images/supporters/bronze.png"
+              alt="ブロンズパートナー"
+              width={200}
+              height={200}
+              className="w-full h-auto object-contain rounded-lg shadow-md"
+            />
+            <Image
+              src="/images/supporters/silver.png"
+              alt="シルバーパートナー"
+              width={200}
+              height={200}
+              className="w-full h-auto object-contain rounded-lg shadow-md"
+            />
+            <Image
+              src="/images/supporters/gold.png"
+              alt="ゴールドパートナー"
+              width={200}
+              height={200}
+              className="w-full h-auto object-contain rounded-lg shadow-md"
+            />
+            <Image
+              src="/images/supporters/platinum.png"
+              alt="プラチナパートナー"
+              width={200}
+              height={200}
+              className="w-full h-auto object-contain rounded-lg shadow-md"
+            />
           </div>
 
           {/* お気軽にご相談ください */}

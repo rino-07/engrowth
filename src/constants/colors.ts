@@ -50,3 +50,4 @@ export type ColorKey = keyof typeof COLORS;
 export type BrandColorKey = keyof typeof COLORS.brand;
 export type GrayColorKey = keyof typeof COLORS.gray;
 export type ActionColorKey = keyof typeof COLORS.action;
+

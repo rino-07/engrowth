@@ -47,7 +47,7 @@ export default function StudentCoursePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-20">
             <Card className="text-center p-6">
               <Image
-                src="/images/business/business-short-study.jpg"
+                src="/images/students/student-short.png"
                 alt="５分から１０分の短時間学習"
                 width={200}
                 height={150}

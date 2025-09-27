@@ -22,7 +22,7 @@ export default function CoursesPage() {
     <div className="min-h-screen">
       {/* 1. ページヘッダー */}
       <Hero
-        title="コース・料金"
+        title=""
         bgDesktopSrc="/images/courses/courses_hero.png"
         bgMobileSrc="/images/hero_sma/courses_hero_sma.png"
         bgPosition="center 30%"

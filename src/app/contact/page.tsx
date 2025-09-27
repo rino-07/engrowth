@@ -117,13 +117,7 @@ export default function ContactPage() {
             {/* LINE相談 */}
             <Card className="p-8 text-center border-2 border-action-green">
               <div className="w-16 h-16 bg-action-green rounded-full flex items-center justify-center mx-auto mb-6">
-                <Image
-                  src="/images/line-icon.jpg"
-                  alt="LINE"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
+                <span className="text-white text-2xl font-bold">💬</span>
               </div>
               <Typography variant="heading-md" className="text-dark-gray mb-4">
                 LINEでのご相談
@@ -154,13 +148,7 @@ export default function ContactPage() {
               </div>
 
               <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white w-full">
-                <Image
-                  src="/images/line-icon-white.jpg"
-                  alt="LINE"
-                  width={20}
-                  height={20}
-                  className="w-5 h-5 mr-2"
-                />
+                <span className="mr-2">💬</span>
                 EngrowthのLINEに相談する
               </Button>
             </Card>
@@ -168,13 +156,7 @@ export default function ContactPage() {
             {/* メール相談 */}
             <Card className="p-8 text-center border-2 border-blue-500">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Image
-                  src="/images/email-icon.jpg"
-                  alt="メール"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
+                <span className="text-white text-2xl font-bold">✉️</span>
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-4">
                 メールでのお問い合わせ
@@ -205,13 +187,7 @@ export default function ContactPage() {
               </div>
 
               <Button variant="primary" size="lg" className="bg-blue-500 hover:bg-blue-600 text-white w-full">
-                <Image
-                  src="/images/email-icon-white.jpg"
-                  alt="メール"
-                  width={20}
-                  height={20}
-                  className="w-5 h-5 mr-2"
-                />
+                <span className="mr-2">✉️</span>
                 info@engrowth.jp
               </Button>
             </Card>

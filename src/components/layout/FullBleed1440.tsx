@@ -20,3 +20,4 @@ const FullBleed1440: React.FC<FullBleed1440Props> = ({
 };
 
 export default FullBleed1440;
+

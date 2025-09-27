@@ -15,13 +15,14 @@ const Card: React.FC<CardProps> = ({
   hover = true,
   padding = 'md'
 }) => {
-  const baseClasses = 'rounded-lg transition-all duration-300';
+  // ホバーエフェクトを一時的に無効化してフリーズの原因を切り分け
+  const baseClasses = 'rounded-lg'; // transition-all を削除
   
   const variantClasses = {
-    default: hover ? 'card' : 'bg-white shadow-md border border-gray-200 hover:shadow-lg hover:border-brand-red/20',
-    premium: hover ? 'card-premium' : 'bg-gradient-to-br from-white to-warm-white border border-soft-gold relative hover:shadow-lg',
-    outline: 'bg-transparent border-2 border-gray-200 hover:border-brand-red hover:bg-brand-red/5',
-    ghost: 'bg-transparent hover:bg-gray-50'
+    default: 'bg-white shadow-md border border-gray-200',
+    premium: 'bg-gradient-to-br from-white to-warm-white border border-soft-gold relative',
+    outline: 'bg-transparent border-2 border-gray-200',
+    ghost: 'bg-transparent'
   };
 
   const paddingClasses = {
@@ -31,11 +32,12 @@ const Card: React.FC<CardProps> = ({
     xl: 'p-10'
   };
   
+  // hover prop を一旦無視して、ホバー関連クラスを適用しない
   const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${paddingClasses[padding]} ${className}`;
   
   return (
     <div className={combinedClasses}>
-      {variant === 'premium' && !hover && (
+      {variant === 'premium' && (
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-soft-gold to-yellow-400 rounded-t-lg" />
       )}
       {children}

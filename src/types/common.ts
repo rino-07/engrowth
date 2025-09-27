@@ -61,3 +61,4 @@ export interface PageMetadata {
   keywords?: string;
   ogImage?: string;
 }
+

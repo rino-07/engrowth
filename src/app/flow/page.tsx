@@ -221,7 +221,7 @@ export default function FlowPage() {
         <SimulationRow week="week 17-18" theme="ビジネスメール" />
         <SimulationRow week="week 19-20" theme="ビジネスプレゼンテーション①" />
         <SimulationRow week="week 21-22" theme="ビジネスプレゼンテーション②" />
-        <SimulationRow week="week 23-24" theme="カスタム" />
+        <SimulationRow week="week 23-24" theme="カスタム（専属コンサルタントと相談し内容決定）" />
       </div>
     </div>
   </div>

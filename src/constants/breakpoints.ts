@@ -19,3 +19,4 @@ export const TAILWIND_BREAKPOINTS = {
   xl: '1280px',
   '2xl': '1536px',
 } as const;
+

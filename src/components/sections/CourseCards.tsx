@@ -24,7 +24,7 @@ const courseData: CourseCardData[] = [
     id: 'business-spot',
     title: 'ビジネススポット\nサービス',
     description: '会議同席・資料翻訳・プレゼン準備',
-    image: '/images/top/top07.png',
+    image: '/images/top/top_business_spot.png',
     href: '/courses/business-spot'
   },
   {
