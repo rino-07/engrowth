@@ -128,10 +128,6 @@ const Footer: React.FC = () => {
                     ))}
                   </ul>
                   <div className="mt-4">
-                    <p className="text-gray-300 text-sm">
-                      <span className="block">📞 03-XXXX-XXXX</span>
-                      <span className="block">📧 info@engrowth.com</span>
-                    </p>
                   </div>
                 </nav>
               </div>
@@ -225,10 +221,6 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
               <div className="mt-4">
-                <p className="text-gray-300 text-sm">
-                  <span className="block">📞 03-XXXX-XXXX</span>
-                  <span className="block">📧 info@engrowth.com</span>
-                </p>
               </div>
             </div>
           </div>
