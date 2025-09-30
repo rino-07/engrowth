@@ -213,10 +213,10 @@ export default function BusinessCoursePage() {
                   1ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  $1,480
+                  $1,7800
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 $1,480
+                  月額 $1,780
                 </Typography>
                 <div className="h-6 mb-4">
                   {/* 空のスペース（割引表示なし） */}
@@ -234,7 +234,7 @@ export default function BusinessCoursePage() {
                   3ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  $4,480
+                  $4,490
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
                   月額 $1,493
@@ -263,7 +263,7 @@ export default function BusinessCoursePage() {
                   6ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  $7,480
+                  $7,490
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
                   月額 $1,246
@@ -287,7 +287,7 @@ export default function BusinessCoursePage() {
                   12ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  $13,980
+                  $13,480
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
                   月額 $1,165

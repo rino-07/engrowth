@@ -105,10 +105,10 @@ export default function SciencePage() {
       </Section>
 
       {/* 本質理解セクション */}
-      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+      <Section background="warm-white" className="pt-12 sm:pt-16 lg:pt-24 !pb-0">
         <Container>
-          <div>
-            <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
+          <div className="!mb-0">
+            <Typography variant="heading-lg" className="text-dark-gray !mb-0 font-serif">
               本質を理解すれば誰でも「話せる」ようになる
             </Typography>
           </div>

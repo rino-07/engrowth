@@ -363,10 +363,10 @@ export default function StudentCoursePage() {
                   1ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  $1,480
+                  $1,980
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
-                  月額 $1,480
+                  月額 $1,980
                 </Typography>
                 <div className="h-6 mb-4">
                   {/* 空のスペース（割引表示なし） */}
@@ -515,7 +515,7 @@ export default function StudentCoursePage() {
               <div className="relative w-full min-w-0 rounded-lg shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:z-10 border-2 border-gray-200 hover:border-brand-red bg-white h-full flex flex-col text-center">
                 <div className="flex-1">
               <Image
-                src="/images/business/business-differentiation.jpg"
+                src="/images/students/job.jpg"
                 alt="就職活動での差別化"
                 width={300}
                 height={200}

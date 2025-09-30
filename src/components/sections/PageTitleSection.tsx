@@ -20,16 +20,16 @@ export default function PageTitleSection({ label, title, description }: Props) {
   ));
 
   return (
-    <Section background="warm-white" className="py-12 sm:py-16">
+    <Section background="warm-white" className="pt-12 sm:pt-16 !pb-0">
       <Container>
-        <div className="mb-8">
+        <div className="!mb-0">
           <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4 text-brand-red">
             {label}
           </p>
-          <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
+          <Typography variant="heading-lg" className="text-dark-gray font-serif !mb-0">
             {title}
           </Typography>
-          <Typography variant="body-lg" className="text-gray mb-6">
+          <Typography variant="body-lg" className="text-gray mb-6 !mt-0">
             {formattedDescription} {/* 変換した要素をここに渡す */}
           </Typography>
           {/* 仕切り線を下に配置 */}

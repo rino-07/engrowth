@@ -52,31 +52,39 @@ export default function SupportersPage() {
         </Container>
       </Section>
 
-      {/* 3. 日本が失いつつある、優秀なグローバル人材 */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              日本が失いつつある、優秀なグローバル人材
-            </Typography>
-          </div>
+{/* 3. 日本が失いつつある、優秀なグローバル人材 */}
+<Section background="warm-white" className="pt-24 pb-8">
+  <Container>
+    {/* 1. タイトル・説明文コンテナ: 下マージン mb-16 を mb-0 に削減 */}
+    <div className="text-center mb-0"> 
+      <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h2">
+        日本が失いつつある、優秀なグローバル人材
+      </Typography>
+      
+      {/* 2. 説明文: 下マージン mb-8 を mb-4 に削減 */}
+      <Typography variant="body-lg" className="text-gray mb-4"> 
+        経済的理由により意欲ある人材の学習機会が失われることで起こっている負のサイクル。<br />
+        潜在的な負のリスクが円安によって露見し、留学断念者が続出、その影響は一層未来へ影響していきます。
+      </Typography>
+    </div>
 
-          <div className="max-w-4xl mx-auto mb-16">
-          <div className="rounded-2xl p-8">
-  <Image
-    src="/images/supporters/cycle.png"
-    alt="グローバル人材エコシステム図"
-    width={600}
-    height={400}
-    className="w-full h-auto rounded-lg mb-8"
-  />
-  <Typography variant="body-lg" className="text-black text-center">
-    エコシステム図：グローバル人材の流出問題と支援の重要性
-  </Typography>
-</div>
-          </div>
-        </Container>
-      </Section>
+    {/* 3. 画像コンテナ: 下マージン mb-16 を mb-0 に削減 */}
+    <div className="max-w-4xl mx-auto mb-0">
+      <div className="rounded-2xl p-8">
+        <Image
+          src="/images/supporters/cycle.png"
+          alt="グローバル人材エコシステム図"
+          width={600}
+          height={400}
+          className="w-full h-auto rounded-lg mb-8"
+        />
+        <Typography variant="body-lg" className="text-black text-center">
+          エコシステム図：グローバル人材の流出問題と支援の重要性
+        </Typography>
+      </div>
+    </div>
+  </Container>
+</Section>
 
       {/* 4. 企業メリット */}
       <Section background="light-gray" padding="xl">
@@ -157,12 +165,17 @@ export default function SupportersPage() {
         </Container>
       </Section>
 
-      {/* 5. 企業規模・ご予算に応じた柔軟な支援プラン */}
+      {/* 5. 支援に応じた支援プラン */}
       <Section background="warm-white" padding="xl" className="overflow-visible">
         <FullBleed1440>
           <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              企業規模・ご予算に応じた柔軟な支援プラン
+            <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h2">
+              支援に応じた優待特典をご用意しております
+            </Typography>
+            <Typography variant="body-lg" className="text-gray mb-8">
+              個人、法人問わず、留学生コンサルタントへのご支援を随時受け付けております。<br />
+              日本の未来を担う意欲の高い人材へのご支援を、ぜひご検討ください。<br /><br />
+              なお、ご支援いただいた方に対し、下記を含む特典を提供いたします。<br />
             </Typography>
           </div>
 
