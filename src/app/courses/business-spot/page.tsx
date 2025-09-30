@@ -210,7 +210,9 @@ function BusinessSpotServicePage() {
             <Card className="text-center p-6 border border-gray-200 h-full flex flex-col">
               <div className="mb-4 flex-shrink-0" style={{minHeight: '3rem'}}>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  プレゼンテーション準備
+                  プレゼンテーション
+                  <br />
+                  準備
                 </Typography>
               </div>
               <div className="text-center mb-4 flex-shrink-0" style={{minHeight: '4rem'}}>

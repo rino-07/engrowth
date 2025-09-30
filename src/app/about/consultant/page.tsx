@@ -135,39 +135,53 @@ export default function ConsultantPage() {
               <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
               独学・聞くだけ学習では伸びない理由
               </Typography>
-              <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
-                オーディオを聞く、ドラマを見る、単語を覚える。これらはインプットに偏った活動でしかありません。
-              </Typography>
-              <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
-                実際に言語を話せるようになるためには、以下が欠かせない活動です。
-              </Typography>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
-                  <Typography variant="body-lg" className="text-gray-700">自分で出力する</Typography>
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
-                  <Typography variant="body-lg" className="text-gray-700">直してもらう</Typography>
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
-                  <Typography variant="body-lg" className="text-gray-700">精緻なフィードバックを受ける</Typography>
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
-                  <Typography variant="body-lg" className="text-gray-700">体系的な介入による現在地の分析</Typography>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
-                体系的な介入とフィードバックの重要性
-              </Typography>
-              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                成長は「体系的な介入」による現在地の分析と、適切なフィードバックを繰り返すことで成立します。
-              </Typography>
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                {/* 左側: テキストコンテンツ (6/10) */}
+                <div className="flex-1 md:w-3/5">
+                  <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
+                    オーディオを聞く、ドラマを見る、単語を覚える。これらはインプットに偏った活動でしかありません。
+                  </Typography>
+                  <Typography variant="body-lg" className="text-gray-700 mb-4 leading-relaxed">
+                    実際に言語を話せるようになるためには、以下が欠かせない活動です。
+                  </Typography>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center">
+                      <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
+                      <Typography variant="body-lg" className="text-gray-700">自分で出力する</Typography>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
+                      <Typography variant="body-lg" className="text-gray-700">直してもらう</Typography>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
+                      <Typography variant="body-lg" className="text-gray-700">精緻なフィードバックを受ける</Typography>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2" style={{color: '#d30306'}}>✔️</span>
+                      <Typography variant="body-lg" className="text-gray-700">体系的な介入による現在地の分析</Typography>
+                    </li>
+                  </ul>
+                  
+                  <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
+                    体系的な介入とフィードバックの重要性
+                  </Typography>
+                  <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
+                    成長は「体系的な介入」による現在地の分析と、適切なフィードバックを繰り返すことで成立します。
+                  </Typography>
+                </div>
+                
+                {/* 右側: 画像 (4/10) */}
+                <div className="flex-1 md:w-2/5 flex justify-center">
+                  <Image
+                    src="/images/about/linetalk.png"
+                    alt="LINEトークのイメージ"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto rounded-lg shadow-md"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </Container>
