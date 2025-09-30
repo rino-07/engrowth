@@ -61,7 +61,7 @@ export const CourseCards: React.FC<CourseCardsProps> = () => {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-2 min-h-[3rem] flex items-center justify-center text-center">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 {course.title.split('\n').map((line, index) => (
                   <React.Fragment key={index}>
                     {line}
@@ -69,7 +69,7 @@ export const CourseCards: React.FC<CourseCardsProps> = () => {
                   </React.Fragment>
                 ))}
               </Typography>
-              <Typography variant="body-sm" className="text-gray mb-6 min-h-[4.5rem] flex items-start justify-center leading-relaxed text-center">
+              <Typography variant="body-sm" className="text-gray card-description">
                 {course.description.split('\n').map((line, index) => (
                   <React.Fragment key={index}>
                     {line}

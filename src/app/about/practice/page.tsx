@@ -68,10 +68,10 @@ export default function PracticePage() {
               <div className="flex justify-center mb-4">
                 <FaBullseye className="text-4xl" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
+              <Typography variant="heading-sm" className="card-title font-serif" style={{color: '#d30306'}}>
                 目標設定と行動計画の徹底設計
               </Typography>
-              <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+              <Typography variant="body-sm" className="text-gray-700 card-description leading-relaxed">
                 単なるモチベーション誘導ではなく、数値化された目標を設定します。その上で、日々の行動に落とし込みます。
               </Typography>
             </Card>
@@ -80,10 +80,10 @@ export default function PracticePage() {
               <div className="flex justify-center mb-4">
                 <FaMobile className="text-4xl" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
+              <Typography variant="heading-sm" className="card-title font-serif" style={{color: '#d30306'}}>
                 毎日連絡で三日坊主防止
               </Typography>
-              <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+              <Typography variant="body-sm" className="text-gray-700 card-description leading-relaxed">
                 専属コンサルタントとの連絡でモチベーションダウンしていても学習に取り組むサイクルを作ります。不安や不明点も即時に直接相談することで、習慣化を助けます。
               </Typography>
             </Card>
@@ -92,10 +92,10 @@ export default function PracticePage() {
               <div className="flex justify-center mb-4">
                 <FaTrophy className="text-4xl" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
+              <Typography variant="heading-sm" className="card-title font-serif" style={{color: '#d30306'}}>
                 成功体験の積み上げとモチベーション維持
               </Typography>
-              <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+              <Typography variant="body-sm" className="text-gray-700 card-description leading-relaxed">
                 「やれた」「成果が出た」という小さな成功体験を積み上げます。非常に簡単な成功でも意識的に認識し、下がりがちなモチベーションを保ち続けます。
               </Typography>
             </Card>

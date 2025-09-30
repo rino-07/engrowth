@@ -203,7 +203,7 @@ export default function FlowPage() {
       <div className="divide-y divide-gray-100">
         <SimulationRow week="week 1-2" theme="挨拶" />
         <SimulationRow week="week 3-4" theme="自己紹介" />
-        <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
+        <SimulationRow week="week 5-6" theme="道の聞き方、聞かれた際の答え方" />
         <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
         <SimulationRow week="week 9-10" theme="ホテル（チェックイン、アウト）" />
         <SimulationRow week="week 11-12" theme="カフェ＆レストラン（予約、注文）" />
@@ -247,7 +247,7 @@ export default function FlowPage() {
                   <div className="divide-y divide-gray-100">
                     <SimulationRow week="week 1-2" theme="挨拶" />
                     <SimulationRow week="week 3-4" theme="自己紹介" />
-                    <SimulationRow week="week 5-6" theme="道の聞き方/聞かれた際の答え方" />
+                    <SimulationRow week="week 5-6" theme="道の聞き方、聞かれた際の答え方" />
                     <SimulationRow week="week 7-8" theme="飛行機（チェックイン、機内）" />
                     <SimulationRow week="week 9-10" theme="ホテル（チェックイン、アウト）" />
                     <SimulationRow week="week 11-12" theme="カフェ&レストラン（予約、注文）" />
@@ -263,9 +263,9 @@ export default function FlowPage() {
                     <SimulationRow week="week 13-14" theme="ショッピング（試着、会計）" />
                     <SimulationRow week="week 15-16" theme="交通機関（電車、バス）" />
                     <SimulationRow week="week 17-18" theme="銀行口座開設" />
-                    <SimulationRow week="week 19-20" theme="就職活動、宅急便" />
+                    <SimulationRow week="week 19-20" theme="郵便局、宅急便" />
                     <SimulationRow week="week 21-22" theme="病院（予約、受付、診察）" />
-                    <SimulationRow week="week 23-24" theme="カスタム(専属コンサルタントと相談し内容決定)" />
+                    <SimulationRow week="week 23-24" theme="カスタム（専属コンサルタントと相談し内容決定）" />
                   </div>
                 </div>
               </div>

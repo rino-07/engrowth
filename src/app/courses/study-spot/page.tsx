@@ -40,10 +40,10 @@ export default function StudentSpotServicePage() {
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaEdit className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 エッセイ添削
               </Typography>
-              <Typography variant="body-sm" className="text-gray mb-4">
+              <Typography variant="body-sm" className="text-gray card-description">
                 留学申請・就活用エッセイの
                 <br />
                 プロフェッショナル添削など
@@ -55,10 +55,10 @@ export default function StudentSpotServicePage() {
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaUsers className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 面接練習・対策
               </Typography>
-              <Typography variant="body-sm" className="text-gray mb-4">
+              <Typography variant="body-sm" className="text-gray card-description">
                 留学・就活面接の
                 <br />
                 実践的な練習とフィードバック
@@ -70,10 +70,10 @@ export default function StudentSpotServicePage() {
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaHeadset className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 オンラインコンシェルジュ
               </Typography>
-              <Typography variant="body-sm" className="text-gray mb-4">
+              <Typography variant="body-sm" className="text-gray card-description">
                 学習相談・進路相談から
                 <br />
                 日常的な英語学習サポート

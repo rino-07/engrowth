@@ -341,10 +341,10 @@ export default function BusinessCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 事業成長
               </Typography>
-              <Typography variant="body-xs" className="text-gray">
+              <Typography variant="body-xs" className="text-gray card-description">
                 海外展開・採用・資金
                 <br />
                 調達・文献アクセスなど、
@@ -370,10 +370,10 @@ export default function BusinessCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 組織のグローバル化
               </Typography>
-              <Typography variant="body-xs" className="text-gray">
+              <Typography variant="body-xs" className="text-gray card-description">
                 経営トップが英語で話
                 <br />
                 せる組織と、組織内の
@@ -397,10 +397,10 @@ export default function BusinessCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 関係性での主導権
               </Typography>
-              <Typography variant="body-xs" className="text-gray">
+              <Typography variant="body-xs" className="text-gray card-description">
                 取引先・投資家・パー
                 <br />
                 トナーとの関係で主導
@@ -424,10 +424,10 @@ export default function BusinessCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 競合との差別化
               </Typography>
-              <Typography variant="body-xs" className="text-gray">
+              <Typography variant="body-xs" className="text-gray card-description">
                 翻訳に頼らず「自分の
                 <br />
                 言葉で話せる」ことで、

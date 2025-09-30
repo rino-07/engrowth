@@ -65,10 +65,10 @@ export default function ConsultantPage() {
               <div className="flex justify-center mb-4">
                 <FaShieldAlt className="text-4xl" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
+              <Typography variant="heading-sm" className="card-title font-serif" style={{color: '#d30306'}}>
                 心理的安全性の確保
               </Typography>
-              <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+              <Typography variant="body-sm" className="text-gray-700 card-description leading-relaxed">
                 同じ母国語を持ち、第二言語習得の難しさを知るコンサルタントが、学習者の不安を取り除き、確実な成長を促します。
               </Typography>
             </Card>
@@ -77,10 +77,10 @@ export default function ConsultantPage() {
               <div className="flex justify-center mb-4">
                 <FaBrain className="text-4xl" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
+              <Typography variant="heading-sm" className="card-title font-serif" style={{color: '#d30306'}}>
                 第二言語習得メカニズムの理解
               </Typography>
-              <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+              <Typography variant="body-sm" className="text-gray-700 card-description leading-relaxed">
                 英語を第二言語として習得した経験を持つコンサルタントが、効果的な学習方法を提供します。
               </Typography>
             </Card>
@@ -89,10 +89,10 @@ export default function ConsultantPage() {
               <div className="flex justify-center mb-4">
                 <FaTrophy className="text-4xl" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="mb-4 font-serif" style={{color: '#d30306'}}>
+              <Typography variant="heading-sm" className="card-title font-serif" style={{color: '#d30306'}}>
                 成功体験の共有
               </Typography>
-              <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+              <Typography variant="body-sm" className="text-gray-700 card-description leading-relaxed">
                 自らも第二言語習得の成功体験を持つコンサルタントだからこそ、学習者を確実に成長ルートへ導くことができます。
               </Typography>
             </Card>

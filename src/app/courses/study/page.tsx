@@ -44,7 +44,7 @@ export default function StudentCoursePage() {
         />
         
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             <Card className="text-center p-6">
               <Image
                 src="/images/students/student-short.png"
@@ -494,10 +494,10 @@ export default function StudentCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 海外留学
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-sm" className="text-gray card-description">
                 海外大学・大学院への
                 <br />
                 合格率向上。質の高い
@@ -521,10 +521,10 @@ export default function StudentCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 就職活動での<br />差別化
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-sm" className="text-gray card-description">
                 グローバル企業への
                 <br />
                 就職機会拡大。英語力を
@@ -548,10 +548,10 @@ export default function StudentCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 キャリアの<br />選択肢拡大
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-sm" className="text-gray card-description">
                 国内外問わず活躍できる
                 <br />
                 人材として、多様な
@@ -573,10 +573,10 @@ export default function StudentCoursePage() {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <Typography variant="heading-sm" className="text-dark-gray mb-3">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 国際的な<br />人脈形成
               </Typography>
-              <Typography variant="body-sm" className="text-gray">
+              <Typography variant="body-sm" className="text-gray card-description">
                     世界中の人々との<br />ネットワーク
                 <br />
                     構築により将来の<br />ビジネスチャンス創出
