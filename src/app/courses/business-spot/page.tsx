@@ -280,7 +280,7 @@ function BusinessSpotServicePage() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto">
-            <Button variant="primary" size="lg" className="text-white flex-1" style={{backgroundColor: '#0cc755'}}>
+            <Button variant="primary" size="lg" className="text-white flex-1" style={{backgroundColor: '#0cc755'}} href="https://lin.ee/4h74yvj">
               LINEで相談
             </Button>
             <Button variant="secondary" size="lg" className="flex-1">

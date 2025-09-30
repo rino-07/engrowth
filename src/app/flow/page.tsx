@@ -76,11 +76,9 @@ export default function FlowPage() {
                       お申し込みフォーム
                     </Button>
                   </Link>
-                  <Link href="/contact">
-                    <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }}>
-                      LINEでお問い合わせ
-                    </Button>
-                  </Link>
+                  <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }} href="https://lin.ee/4h74yvj">
+                    LINEでお問い合わせ
+                  </Button>
                 </>
               }
             />
@@ -105,11 +103,9 @@ export default function FlowPage() {
               textOn="left"
               buttons={
                 <>
-                  <Link href="/contact">
-                    <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }}>
-                      LINEに登録
-                    </Button>
-                  </Link>
+                  <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }} href="https://lin.ee/4h74yvj">
+                    LINEに登録
+                  </Button>
                   <Link href="/contact">
                     <Button variant="primary" size="sm">
                       申込フォーム
@@ -141,11 +137,9 @@ export default function FlowPage() {
               textOn="right"
               buttons={
                 <>
-                  <Link href="/contact#:~:text=Engrowth%E3%81%AE-,LINE,-２%E3%81%AB%E7%9B%B8%E8%AB%87%E3%81%99%E3%82%8B">
-                    <Button variant="primary" size="sm" className="text-sm px-4 py-2 text-white border-0" style={{ backgroundColor: "#0cc755" }}>
-                      LINEでお問い合わせ
-                    </Button>
-                  </Link>
+                  <Button variant="primary" size="sm" className="text-sm px-4 py-2 text-white border-0" style={{ backgroundColor: "#0cc755" }} href="https://lin.ee/4h74yvj">
+                    LINEでお問い合わせ
+                  </Button>
                   <Link href="/contact#:~:text=info%40-,engrowth,-.jp">
                     <Button variant="primary" size="sm" className="bg-brand-red hover:bg-red-700 text-sm px-4 py-2">
                       メールでお問い合わせ

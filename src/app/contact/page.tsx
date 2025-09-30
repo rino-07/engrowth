@@ -147,7 +147,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white w-full">
+              <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white w-full" href="https://lin.ee/4h74yvj">
                 <span className="mr-2">💬</span>
                 EngrowthのLINEに相談する
               </Button>
