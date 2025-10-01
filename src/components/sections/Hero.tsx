@@ -40,10 +40,12 @@ export default function Hero({
   subtitle,
   plain = false,
   bgDesktopSrc,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   bgMobileSrc: _bgMobileSrc,
   bgPosition = 'center 20%',
   ctas = [],
   className = '',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   aspectMobile: _aspectMobile = '16/9',
   imageWidth = 2021,
   imageHeight = 748,
