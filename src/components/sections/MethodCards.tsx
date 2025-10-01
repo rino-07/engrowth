@@ -1,8 +1,15 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Typography from '@/components/ui/Typography';
 
+// **********************************************
+// 1. MethodCard コンポーネント
+// **********************************************
+
 interface MethodCardProps {
-  title: string;
+  japaneseTitle: string;
+  englishTitle: string;
   source: string;
   description: string;
   applicationTitle: string;
@@ -10,73 +17,106 @@ interface MethodCardProps {
 }
 
 const MethodCard: React.FC<MethodCardProps> = ({
-  title,
+  japaneseTitle,
+  englishTitle,
   source,
   description,
   applicationTitle,
   applicationContent
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="flex flex-col h-full">
-      {/* 根拠セクション (カード上部) */}
-      <div className="bg-white p-6 rounded-t-lg shadow-md flex-grow">
-        <h3 className="text-xl font-bold text-gray-800 mb-2 border-b-2 border-brand-red pb-1">
-          {title}
+      {/* 根拠セクション - 固定高さで統一 */}
+      <div className="bg-white p-6 rounded-t-lg shadow-md">
+        <h3 className="text-xl font-bold text-brand-red mb-1 border-b-2 border-brand-red pb-1 font-serif">
+          {japaneseTitle}
         </h3>
+        <p className="text-base font-semibold text-brand-red mb-3">
+          {englishTitle}
+        </p>
         <p className="text-sm font-semibold text-gray-600 mb-3">{source}</p>
-        <p className="text-sm text-gray-700 leading-relaxed">{description}</p>
+        <p className="text-sm text-gray-700 leading-relaxed">
+          {isExpanded ? description : `${description.substring(0, 100)}...`}
+        </p>
+        <button 
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-3 text-brand-red text-sm font-medium hover:underline"
+        >
+          {isExpanded ? '閉じる' : '全て見る'}
+        </button>
       </div>
 
-      {/* 矢印 (間に挟む) */}
-      <div className="relative h-6 flex justify-center items-center">
-        <div className="w-0 h-0 border-t-[15px] border-x-[15px] border-solid border-t-gray-400 border-x-transparent" />
-      </div>
+      {/* 矢印 - 条件付き表示 */}
+      {isExpanded && (
+        <div className="relative h-8 flex justify-center items-center my-2">
+          <div className="w-0 h-0 border-t-[30px] border-x-[30px] border-solid border-t-gray-400 border-x-transparent" />
+        </div>
+      )}
 
-      {/* 適用セクション (カード下部) */}
-      <div className="bg-brand-red text-white p-6 rounded-b-lg shadow-md">
-        <h4 className="text-lg font-bold mb-3">{applicationTitle}</h4>
-        <p className="text-sm leading-relaxed">{applicationContent}</p>
-      </div>
+      {/* 適用セクション - 条件付き表示 */}
+      {isExpanded && (
+        <div className="bg-white p-6 rounded-b-lg shadow-md">
+          <h4 className="text-lg font-bold text-brand-red mb-3 border-b-2 border-brand-red pb-1 font-serif">
+            {applicationTitle}
+          </h4>
+          <p className="text-sm text-gray-700 leading-relaxed">{applicationContent}</p>
+        </div>
+      )}
     </div>
   );
 };
 
+// **********************************************
+// 2. MethodCards コンポーネント
+// **********************************************
+
 const MethodCards: React.FC = () => {
   const methods = [
     {
-      title: "1. アクティブラーニング (Active Learning)",
-      source: "研究根拠（ハーバード大学、ハーバード大の物理学者Eric Mazurら）",
-      description: "アクティブラーニング（双方向の学習、ピアラーニング）は従来の講義に比べて理解度・定着率が大幅に高いことが示されています。（Freeman et al., PNAS, 2014; アクティブラーニングは講義型よりも成績が平均6%向上）",
+      japaneseTitle: "1. アクティブラーニング",
+      englishTitle: "(Active Learning)",
+      source: "研究根拠（ハーバード大学）",
+      description:
+        "ハーバード大の物理学者 Eric Mazur らの研究では、アクティブラーニング（双方向の学習、ピアラーニング）は従来型の講義に比べて理解度・定着率が大幅に高いことが示されている",
       applicationTitle: "エングロースでの適用",
-      applicationContent: "コンサルタントが一方的に指導するのではなく、学習者自身が「話す・考える・質問する」プロセスを通じて学ぶシャドーイングやディスカッション練習を重視。→ 知識の定着と実践力が高まる。"
+      applicationContent:
+        "コンサルタントが一方的に指導するのではなく、学習者自身が「話す・考える・質問する」プロセスを通じて学ぶシャドーイングやディスカッション練習を重視。→ 知識の定着と実践力が高まる。"
     },
     {
-      title: "2. フィードバック効果 (Feedback Effect)",
-      source: "研究根拠（ハーバード大学教育大学院、John Hattieの教育効果メタ研究）",
-      description: "教育効果のメタ研究によると、学習成果を大幅に向上させる最も重要な要因の一つは「即座で正確なフィードバック」です。",
+      japaneseTitle: "2. フィードバック効果",
+      englishTitle: "(Feedback Effect)",
+      source: "研究根拠（ハーバード教育大学院）",
+      description:
+        "ハティ（John Hattie, Harvard GSEでも紹介されている教育効果のメタ研究）によると、学習成果を最も大きく伸ばす要因のひとつが「即時かつ的確なフィードバック」であるとされている。",
       applicationTitle: "エングロースでの適用",
-      applicationContent: "エングロースのコンサルタントは英語シャドーイングの録音に注釈を付け、改善点と強みを即座にフィードバック。学習者にとって「何を直せばいいか」が明確になり、効率的な上達が可能。"
+      applicationContent:
+        "→ 英語シャドーイングの録音をコンサルタントが添削し、即時に改善点と強みを提示。→ 学習者は「何を直すか」が明確になり、効率的に上達できる。"
     },
     {
-      title: "3. パーソナライズ学習 (Personalized Learning)",
-      source: "研究根拠（ハーバード大学教育大学院、Christensen Institute）",
-      description: "ハーバード大学教育大学院とChristensen Instituteの研究では、学習内容と進度を個人に合わせた指導が、一律の講義よりも高い成果を上げることが複数の研究で示されています。",
+      japaneseTitle: "3. パーソナライズ学習",
+      englishTitle: "(Personalized Learning)",
+      source: "研究根拠（ハーバード大学教育大学院, Christensen Institute）",
+      description:
+        "学習内容や進度を個別化した指導は、画一的な授業よりも高い成果を上げることが複数の研究で示されている。",
       applicationTitle: "エングロースでの適用",
-      applicationContent: "エングロースでは学習者の目標（英語試験対策、海外就職、面接対策など）に応じて教材と練習方法を最適化。→ 効果までの時間を最大化。"
+      applicationContent:
+        "→ 学習者の目的（例: 英語試験対策、海外就職、面接準備）に応じて教材・練習方法を最適化。→ 時間対効果を最大化。"
     }
   ];
 
   return (
     <div className="w-full">
-      {/* デスクトップ: 3カラムグリッド */}
-      <div className="hidden lg:grid lg:grid-cols-3 gap-8">
+      {/* デスクトップ: 3カラム */}
+      <div className="hidden lg:grid lg:grid-cols-3 gap-8 items-stretch">
         {methods.map((method, index) => (
           <MethodCard key={index} {...method} />
         ))}
       </div>
 
-      {/* タブレット: 2カラムグリッド */}
-      <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-8">
+      {/* タブレット: 2カラム */}
+      <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-8 items-stretch">
         {methods.map((method, index) => (
           <MethodCard key={index} {...method} />
         ))}
@@ -84,15 +124,21 @@ const MethodCards: React.FC = () => {
 
       {/* モバイル: 横スクロール */}
       <div className="md:hidden">
-        <div className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4" 
-             style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+        <div
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
+          style={{
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none"
+          }}
+        >
           {methods.map((method, index) => (
             <div key={index} className="flex-shrink-0 w-[85vw] snap-center">
               <MethodCard {...method} />
             </div>
           ))}
         </div>
-        
+
         {/* スクロールヒント */}
         <div className="text-center mt-4">
           <Typography variant="body-sm" className="text-gray-500">
