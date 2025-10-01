@@ -309,54 +309,70 @@ export default function StudentCoursePage() {
       </Section>
   
       {/* 4. こんな不安はありませんか？セクション */}
-      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="Common Concerns"
-          title="こんな不安はありませんか？"
-          desc="多くの学生が抱える英語や留学への不安。Engrowthなら、これらの不安を一つずつ解決していきます。"
-          className="mb-12 lg:mb-16"
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 relative overflow-hidden">
+        {/* パララックス背景画像 */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(/images/students/background01.png)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            opacity: 0.15
+          }}
         />
         
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* 不安の声 1 */}
-            <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
-              <Typography variant="heading-md" className="text-dark-gray mb-4">
-                "英語に自信がない"
-              </Typography>
-              <Typography variant="body-xs" className="text-gray">
-                自分に留学なんて無理かも…
-              </Typography>
+        {/* コンテンツ */}
+        <div className="relative z-10">
+          <SectionHeaderLeft
+            label="Common Concerns"
+            title="こんな不安はありませんか？"
+            desc="多くの学生が抱える英語や留学への不安。Engrowthなら、これらの不安を一つずつ解決していきます。"
+            className="mb-12 lg:mb-16"
+          />
+          
+          <Container>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* 不安の声 1 */}
+              <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
+                <Typography variant="heading-md" className="text-dark-gray mb-4">
+                  "英語に自信がない"
+                </Typography>
+                <Typography variant="body-xs" className="text-gray">
+                  自分に留学なんて無理かも…
+                </Typography>
+              </div>
+              {/* 不安の声 2 */}
+              <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
+                <Typography variant="heading-md" className="text-dark-gray mb-4">
+                  "何から始めればいいかわからない"
+                </Typography>
+                <Typography variant="body-xs" className="text-gray">
+                  留学の準備って難しそう…
+                </Typography>
+              </div>
+              {/* 不安の声 3 */}
+              <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
+                <Typography variant="heading-md" className="text-dark-gray mb-4">
+                  "海外生活が不安"
+                </Typography>
+                <Typography variant="body-xs" className="text-gray">
+                  漠然とした恐怖心がある
+                </Typography>
+              </div>
+              {/* 解決策 */}
+              <div className="lg:col-span-3 text-center p-6 bg-brand-red rounded-lg shadow-sm">
+                <Typography variant="heading-md" className="text-white mb-4">
+                  Engrowthなら解決！
+                </Typography>
+                <Typography variant="body-lg" className="text-white leading-relaxed">
+                  英語習得から留学成功まで、あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
+                </Typography>
+              </div>
             </div>
-            {/* 不安の声 2 */}
-            <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
-              <Typography variant="heading-md" className="text-dark-gray mb-4">
-                "何から始めればいいかわからない"
-              </Typography>
-              <Typography variant="body-xs" className="text-gray">
-                留学の準備って難しそう…
-              </Typography>
-            </div>
-            {/* 不安の声 3 */}
-            <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
-              <Typography variant="heading-md" className="text-dark-gray mb-4">
-                "海外生活が不安"
-              </Typography>
-              <Typography variant="body-xs" className="text-gray">
-                漠然とした恐怖心がある
-              </Typography>
-            </div>
-            {/* 解決策 */}
-            <div className="lg:col-span-3 text-center p-6 bg-brand-red rounded-lg shadow-sm">
-              <Typography variant="heading-md" className="text-white mb-4">
-                Engrowthなら解決！
-              </Typography>
-              <Typography variant="body-lg" className="text-white leading-relaxed">
-                英語習得から留学成功まで、あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
-              </Typography>
-            </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </Section>
 
       {/* 6. 料金 */}
