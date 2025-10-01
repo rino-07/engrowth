@@ -10,7 +10,7 @@ interface ButtonProps {
   href?: string;
   target?: string;
   rel?: string;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
   style?: React.CSSProperties;
   'aria-label'?: string;
   'aria-describedby'?: string;
@@ -19,6 +19,7 @@ interface ButtonProps {
   'aria-controls'?: string;
   role?: string;
   tabIndex?: number;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -40,6 +41,7 @@ const Button: React.FC<ButtonProps> = ({
   'aria-controls': ariaControls,
   role,
   tabIndex,
+  type = 'button',
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
@@ -67,7 +69,7 @@ const Button: React.FC<ButtonProps> = ({
         target={target || "_blank"}
         rel={rel || "noopener noreferrer"}
         className={combinedClasses}
-        onClick={onClick}
+        onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
         style={style}
         aria-label={ariaLabel}
         aria-describedby={ariaDescribedby}
@@ -106,9 +108,10 @@ const Button: React.FC<ButtonProps> = ({
   
   return (
     <button
+      type={type}
       className={combinedClasses}
       disabled={disabled || isLoading}
-      onClick={onClick}
+      onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
       style={style}
       aria-label={ariaLabel}
       aria-describedby={ariaDescribedby}

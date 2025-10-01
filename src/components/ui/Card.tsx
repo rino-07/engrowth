@@ -4,7 +4,6 @@ interface CardProps {
   variant?: 'default' | 'premium' | 'outline' | 'ghost';
   children: React.ReactNode;
   className?: string;
-  hover?: boolean;
   padding?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
@@ -12,7 +11,6 @@ const Card: React.FC<CardProps> = ({
   variant = 'default',
   children,
   className = '',
-  hover: _hover = true,
   padding = 'md'
 }) => {
   // ホバーエフェクトを一時的に無効化してフリーズの原因を切り分け
