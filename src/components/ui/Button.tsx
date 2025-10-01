@@ -12,6 +12,13 @@ interface ButtonProps {
   rel?: string;
   onClick?: () => void;
   style?: React.CSSProperties;
+  'aria-label'?: string;
+  'aria-describedby'?: string;
+  'aria-expanded'?: boolean;
+  'aria-pressed'?: boolean;
+  'aria-controls'?: string;
+  role?: string;
+  tabIndex?: number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -26,6 +33,13 @@ const Button: React.FC<ButtonProps> = ({
   rel,
   onClick,
   style,
+  'aria-label': ariaLabel,
+  'aria-describedby': ariaDescribedby,
+  'aria-expanded': ariaExpanded,
+  'aria-pressed': ariaPressed,
+  'aria-controls': ariaControls,
+  role,
+  tabIndex,
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
@@ -55,6 +69,13 @@ const Button: React.FC<ButtonProps> = ({
         className={combinedClasses}
         onClick={onClick}
         style={style}
+        aria-label={ariaLabel}
+        aria-describedby={ariaDescribedby}
+        aria-expanded={ariaExpanded}
+        aria-pressed={ariaPressed}
+        aria-controls={ariaControls}
+        role={role}
+        tabIndex={tabIndex}
       >
         {isLoading && (
           <svg
@@ -89,6 +110,13 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled || isLoading}
       onClick={onClick}
       style={style}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedby}
+      aria-expanded={ariaExpanded}
+      aria-pressed={ariaPressed}
+      aria-controls={ariaControls}
+      role={role}
+      tabIndex={tabIndex}
     >
       {isLoading && (
         <svg

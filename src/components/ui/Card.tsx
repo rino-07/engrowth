@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({
   variant = 'default',
   children,
   className = '',
-  hover = true,
+  hover: _hover = true,
   padding = 'md'
 }) => {
   // ホバーエフェクトを一時的に無効化してフリーズの原因を切り分け

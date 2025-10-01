@@ -40,11 +40,11 @@ export default function Hero({
   subtitle,
   plain = false,
   bgDesktopSrc,
-  bgMobileSrc,
+  bgMobileSrc: _bgMobileSrc,
   bgPosition = 'center 20%',
   ctas = [],
   className = '',
-  aspectMobile = '16/9',
+  aspectMobile: _aspectMobile = '16/9',
   imageWidth = 2021,
   imageHeight = 748,
 }: Props) {
