@@ -9,7 +9,7 @@ import Hero from '@/components/sections/Hero';
 
 export const metadata = {
   title: 'Engrowthの特徴 - Engrowth',
-  description: 'Engrowthが選ばれる4つの特徴：エコシステム、専門コンサルタント、科学的根拠、実践の仕組み。詳細をご確認ください。',
+  description: 'Engrowthが選ばれる4つの特徴：エコシステム、専属コンサルタント、科学的根拠、実践の仕組み。詳細をご確認ください。',
   keywords: 'Engrowthの特徴, エコシステム, コンサルタント, 科学的根拠, 実践の仕組み, 英語学習',
 };
 
@@ -34,7 +34,7 @@ export default function AboutPage() {
               Engrowthが選ばれる4つの特徴
             </Typography>
             <Typography variant="body-lg" className="text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              科学的根拠に基づいた学習メソッドと、専門コンサルタントによる伴走サポート、そして独自のエコシステムで、確実な英語力向上を実現します。
+              科学的根拠に基づいた学習メソッドと、専属コンサルタントによる伴走サポート、そして独自のエコシステムで、確実な英語力向上を実現します。
             </Typography>
           </div>
         </Container>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                   <span className="text-2xl">👨‍🏫</span>
                 </div>
                 <Typography variant="heading-md" className="text-blue-700 font-serif mb-4">
-                  専門コンサルタント
+                  専属コンサルタント
                 </Typography>
                 <Typography variant="body-sm" className="text-gray-600 mb-6 leading-relaxed">
                   第二言語習得を成功させた経験者による伴走サポート。日本人だからこそ提供できる心理的安全性。
@@ -144,7 +144,7 @@ export default function AboutPage() {
         <SectionHeaderLeft
           label="About Engrowth"
           title="なぜEngrowthが選ばれるのか"
-          desc="Engrowthは、科学的根拠に基づいた学習メソッドと専門コンサルタントによる伴走サポート、そして独自のエコシステムで、従来の英会話スクールとは一線を画すサービスを提供しています。"
+          desc="Engrowthは、科学的根拠に基づいた学習メソッドと専属コンサルタントによる伴走サポート、そして独自のエコシステムで、従来の英会話スクールとは一線を画すサービスを提供しています。"
           className="mb-12 lg:mb-16"
         />
 

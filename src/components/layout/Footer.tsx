@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
     about: [
       { name: 'Engrowthの特徴', href: '/about' },
       { name: 'Engrowthエコシステム', href: '/about/ecosystem' },
-      { name: '専門コンサルタント', href: '/about/consultant' },
+      { name: '専属コンサルタント', href: '/about/consultant' },
       { name: '科学的根拠', href: '/about/science' },
       { name: '実践の仕組み', href: '/about/practice' },
     ],

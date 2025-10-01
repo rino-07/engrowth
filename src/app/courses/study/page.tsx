@@ -327,15 +327,12 @@ export default function StudentCoursePage() {
             </div>
 
             {/* コンサルタントの強み */}
-            <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center max-w-5xl mx-auto mt-12">
-              <Typography variant="heading-md" className="text-dark-gray mb-4">
+            <div className="text-center max-w-5xl mx-auto mt-12">
+              <Typography variant="heading-md" className="text-black mb-4">
                 全員留学経験者のコンサルタント
               </Typography>
-              <Typography variant="body-lg" className="text-gray mb-4">
+              <Typography variant="body-lg" className="text-black mb-4">
                 留学経験によって得られる貴重な価値観を知っているからこそ、あなたの不安を理解し、適切なサポートができます。
-              </Typography>
-              <Typography variant="body-lg" className="text-brand-red font-bold">
-                あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
               </Typography>
             </div>
           </Container>

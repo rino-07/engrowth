@@ -9,7 +9,7 @@ import { FaBullseye, FaMobile, FaTrophy } from 'react-icons/fa';
 
 export const metadata = {
   title: '実践の仕組み - Engrowth',
-  description: '習慣化×伴走サポートによる確実な成果創出。3ステップ習慣化プログラムと専門コンサルタントによる徹底サポート。',
+  description: '習慣化×伴走サポートによる確実な成果創出。3ステップ習慣化プログラムと専属コンサルタントによる徹底サポート。',
   keywords: '実践の仕組み, 習慣化, 伴走サポート, 英語学習, モチベーション維持',
 };
 

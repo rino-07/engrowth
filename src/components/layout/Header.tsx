@@ -140,7 +140,7 @@ dropdownItems: [
 
 { name: 'Engrowthエコシステム', href: '/about/ecosystem' },
 
-{ name: '専門コンサルタント', href: '/about/consultant' },
+{ name: '専属コンサルタント', href: '/about/consultant' },
 
 { name: '科学的根拠', href: '/about/science' },
 
@@ -588,7 +588,7 @@ onClick={handleMobileMenuClose}
 
 >
 
-専門コンサルタント
+専属コンサルタント
 
 </Link>
 

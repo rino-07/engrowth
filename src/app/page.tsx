@@ -122,7 +122,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 6. 科学的根拠セクション */}
+      {/* 2. 科学的根拠セクション */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
         <EvidenceSection
           label="Scientific Evidence"

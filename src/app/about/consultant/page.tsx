@@ -8,7 +8,7 @@ import { PageTitleSection } from '@/components/sections';
 import { FaShieldAlt, FaBrain, FaTrophy } from 'react-icons/fa';
 
 export const metadata = {
-  title: '専門コンサルタント - Engrowth',
+  title: '専属コンサルタント - Engrowth',
   description: '第二言語習得を成功させた経験者による伴走サポート。日本人コンサルタントだからこそ提供できる心理的安全性と専門的指導。',
   keywords: 'コンサルタント, 第二言語習得, 心理的安全性, 英語学習, 留学経験',
 };
