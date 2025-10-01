@@ -265,7 +265,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0">
                   {/* パートナー（受講者）として参加ボタン */}
                   <a 
-                    href="/contact"
+                    href="/supporters"
                     className="absolute"
                     style={{
                       top: '40%',
@@ -283,7 +283,7 @@ export default function AboutPage() {
 
                   {/* サポーター（支援者）として参加ボタン */}
                   <a 
-                    href="/contact"
+                    href="/flow"
                     className="absolute"
                     style={{
                       top: '85%',

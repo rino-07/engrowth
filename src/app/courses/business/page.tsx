@@ -287,7 +287,7 @@ export default function BusinessCoursePage() {
                   12ヶ月
                 </Typography>
                 <Typography variant="heading-lg" className="text-brand-red mb-4">
-                  $13,480
+                  $13,980
                 </Typography>
                 <Typography variant="body-sm" className="text-gray mb-2">
                   月額 $1,165

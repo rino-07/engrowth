@@ -47,3 +47,4 @@ export type IconImageKey = keyof typeof IMAGE_PATHS.icons;
 export type BannerImageKey = keyof typeof IMAGE_PATHS.banners;
 
 
+
