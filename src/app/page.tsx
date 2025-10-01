@@ -10,6 +10,7 @@ import { CourseCards } from '@/components/sections/CourseCards';
 import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
 import { EvidenceSection } from '@/components/sections/EvidenceSection';
+import MethodCards from '@/components/sections/MethodCards';
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -131,7 +132,23 @@ export default function Home() {
         />
       </Section>
 
-      {/* 3. Course Section (4-column) */}
+      {/* 3. 学習メソッドセクション */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <Container>
+          <div className="text-center mb-12 lg:mb-16">
+            <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
+              科学的根拠に基づく3つの学習メソッド
+            </Typography>
+            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto">
+              ハーバード大学などの最新研究に基づいた効果的な学習方法を、Engrowth独自のアプローチで実践します。
+            </Typography>
+          </div>
+          
+          <MethodCards />
+        </Container>
+      </Section>
+
+      {/* 4. Course Section (4-column) */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
         <SectionHeaderLeft
           label="Course"
