@@ -259,52 +259,6 @@ export default function StudentCoursePage() {
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            {/* 左カラム: テキスト (6/10) */}
-            <div className="flex-1 md:w-3/5" style={{ fontFamily: '"Yu Gothic", "Meiryo", sans-serif' }}>
-              <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「英語に自信がないから留学は無理」</p>
-              <p style={{ fontSize: '18px', marginTop: '0' }}>そう思っていませんか？</p>
-              <br />
-              <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>Engrowthなら完全サポート！</p>
-              <p style={{ fontSize: '18px', marginTop: '0' }}>サマーキャンプ</p>
-              <p style={{ fontSize: '18px', marginTop: '0' }}>志望校選び&出願サポート</p>
-              <p style={{ fontSize: '18px', marginTop: '0' }}>現地校見学サポート</p>
-              <br />
-              <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「英語に自信がないから留学は無理」</p>
-              <p style={{ fontSize: '18px', marginTop: '0' }}>留学に消極的になってしまう→自分に留学なんて無理かも…</p>
-              <br />
-              <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「何から始めればいいかわからない」</p>
-              <p style={{ fontSize: '18px', marginTop: '0' }}>留学の準備がわからない→留学の準備って難しそう…</p>
-              <br />
-              <p style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '0' }}>「海外生活が不安」</p>
-              <p style={{ fontSize: '18px', marginTop: '0' }}>漠然とした恐怖心がある</p>
-            </div>
-
-            {/* 右カラム: 画像 (4/10) */}
-            <div className="flex-1 md:w-2/5 flex justify-center">
-              <Image
-                src="/images/students/ryusapo_image02.png"
-                alt="留学サポートイメージ"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-lg shadow-md"
-              />
-            </div>
-          </div>
-
-          {/* Step 3: コンサルタントの強み */}
-          <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center">
-            <Typography variant="heading-md" className="text-dark-gray mb-4">
-              全員留学経験者のコンサルタント
-            </Typography>
-            <Typography variant="body-lg" className="text-gray mb-4">
-              留学経験によって得られる貴重な価値観を知っているからこそ、あなたの不安を理解し、適切なサポートができます。
-            </Typography>
-            <Typography variant="body-lg" className="text-brand-red font-bold">
-              あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
-            </Typography>
-          </div>
         </Container>
       </Section>
   
@@ -370,6 +324,19 @@ export default function StudentCoursePage() {
                   英語習得から留学成功まで、あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
                 </Typography>
               </div>
+            </div>
+
+            {/* コンサルタントの強み */}
+            <div className="bg-warm-white rounded-lg shadow-sm p-8 text-center max-w-5xl mx-auto mt-12">
+              <Typography variant="heading-md" className="text-dark-gray mb-4">
+                全員留学経験者のコンサルタント
+              </Typography>
+              <Typography variant="body-lg" className="text-gray mb-4">
+                留学経験によって得られる貴重な価値観を知っているからこそ、あなたの不安を理解し、適切なサポートができます。
+              </Typography>
+              <Typography variant="body-lg" className="text-brand-red font-bold">
+                あなたの可能性を広げる第一歩を、私たちと一緒に踏み出しませんか？
+              </Typography>
             </div>
           </Container>
         </div>
