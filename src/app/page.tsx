@@ -3,7 +3,6 @@ import Button from '@/components/ui/Button';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
-import Grid from '@/components/layout/Grid';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import FullBleed1440 from '@/components/layout/FullBleed1440';
 import Image from 'next/image';
@@ -147,24 +146,7 @@ export default function Home() {
             </Typography>
           </div>
           
-          <Grid cols={3} className="gap-8 items-stretch hidden lg:grid">
-            <MethodCards />
-          </Grid>
-          
-          <Grid cols={2} className="gap-8 items-stretch hidden md:grid lg:hidden">
-            <MethodCards />
-          </Grid>
-          
-          <div className="md:hidden">
-            <div className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
-              <MethodCards />
-            </div>
-            <div className="text-center mt-4">
-              <Typography variant="body-sm" className="text-gray-500">
-                ← スワイプして他のメソッドを見る →
-              </Typography>
-            </div>
-          </div>
+          <MethodCards />
         </Container>
       </Section>
 

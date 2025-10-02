@@ -107,9 +107,44 @@ const MethodCards: React.FC = () => {
 
   return (
     <div className="w-full">
-      {methods.map((method, index) => (
-        <MethodCard key={index} {...method} />
-      ))}
+      {/* デスクトップ: 3カラム */}
+      <div className="hidden lg:grid lg:grid-cols-3 gap-8 items-stretch">
+        {methods.map((method, index) => (
+          <MethodCard key={index} {...method} />
+        ))}
+      </div>
+
+      {/* タブレット: 2カラム */}
+      <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-8 items-stretch">
+        {methods.map((method, index) => (
+          <MethodCard key={index} {...method} />
+        ))}
+      </div>
+
+      {/* モバイル: 横スクロール */}
+      <div className="md:hidden">
+        <div
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
+          style={{
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none"
+          }}
+        >
+          {methods.map((method, index) => (
+            <div key={index} className="flex-shrink-0 w-[85vw] snap-center">
+              <MethodCard {...method} />
+            </div>
+          ))}
+        </div>
+
+        {/* スクロールヒント */}
+        <div className="text-center mt-4">
+          <p className="text-sm text-gray-500">
+            ← スワイプして他のメソッドを見る →
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
