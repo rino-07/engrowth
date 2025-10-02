@@ -1,12 +1,7 @@
-'use client';
+import React from 'react';
+import MethodCardList from './MethodCardList';
 
-import React, { useState } from 'react';
-
-// **********************************************
-// 1. MethodCard コンポーネント
-// **********************************************
-
-interface MethodCardProps {
+interface MethodCardData {
   japaneseTitle: string;
   englishTitle: string;
   source: string;
@@ -15,64 +10,8 @@ interface MethodCardProps {
   applicationContent: string;
 }
 
-const MethodCard: React.FC<MethodCardProps> = ({
-  japaneseTitle,
-  englishTitle,
-  source,
-  description,
-  applicationTitle,
-  applicationContent
-}) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
-    <div className="flex flex-col h-full">
-      {/* 根拠セクション - 固定高さで統一 */}
-      <div className="bg-white p-6 rounded-t-lg shadow-md">
-        <h3 className="text-xl font-bold text-brand-red mb-1 border-b-2 border-brand-red pb-1 font-serif">
-          {japaneseTitle}
-        </h3>
-        <p className="text-base font-semibold text-brand-red mb-3">
-          {englishTitle}
-        </p>
-        <p className="text-sm font-semibold text-gray-600 mb-3">{source}</p>
-        <p className="text-sm text-gray-700 leading-relaxed">
-          {isExpanded ? description : `${description.substring(0, 100)}...`}
-        </p>
-        <button 
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-3 text-brand-red text-sm font-medium hover:underline"
-        >
-          {isExpanded ? '閉じる' : '全て見る'}
-        </button>
-      </div>
-
-      {/* 矢印 - 条件付き表示 */}
-      {isExpanded && (
-        <div className="relative h-8 flex justify-center items-center my-2">
-          <div className="w-0 h-0 border-t-[30px] border-x-[30px] border-solid border-t-gray-400 border-x-transparent" />
-        </div>
-      )}
-
-      {/* 適用セクション - 条件付き表示 */}
-      {isExpanded && (
-        <div className="bg-white p-6 rounded-b-lg shadow-md">
-          <h4 className="text-lg font-bold text-brand-red mb-3 border-b-2 border-brand-red pb-1 font-serif">
-            {applicationTitle}
-          </h4>
-          <p className="text-sm text-gray-700 leading-relaxed">{applicationContent}</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// **********************************************
-// 2. MethodCards コンポーネント
-// **********************************************
-
-const MethodCards: React.FC = () => {
-  const methods = [
+const MethodCardsLayout: React.FC = () => {
+  const methods: MethodCardData[] = [
     {
       japaneseTitle: "1. アクティブラーニング",
       englishTitle: "(Active Learning)",
@@ -107,21 +46,17 @@ const MethodCards: React.FC = () => {
 
   return (
     <div className="w-full">
-      {/* デスクトップ: 3カラム */}
+      {/* デスクトップ: 3カラム (責任: 配置) */}
       <div className="hidden lg:grid lg:grid-cols-3 gap-8 items-stretch">
-        {methods.map((method, index) => (
-          <MethodCard key={index} {...method} />
-        ))}
+        <MethodCardList methods={methods} />
       </div>
 
-      {/* タブレット: 2カラム */}
+      {/* タブレット: 2カラム (責任: 配置) */}
       <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-8 items-stretch">
-        {methods.map((method, index) => (
-          <MethodCard key={index} {...method} />
-        ))}
+        <MethodCardList methods={methods} />
       </div>
 
-      {/* モバイル: 横スクロール */}
+      {/* モバイル: 横スクロール (責任: 配置とスクロールヒント) */}
       <div className="md:hidden">
         <div
           className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
@@ -131,11 +66,7 @@ const MethodCards: React.FC = () => {
             msOverflowStyle: "none"
           }}
         >
-          {methods.map((method, index) => (
-            <div key={index} className="flex-shrink-0 w-[85vw] snap-center">
-              <MethodCard {...method} />
-            </div>
-          ))}
+          <MethodCardList methods={methods} wrap={false} />
         </div>
 
         {/* スクロールヒント */}
@@ -149,4 +80,4 @@ const MethodCards: React.FC = () => {
   );
 };
 
-export default MethodCards;
+export default MethodCardsLayout;

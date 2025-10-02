@@ -10,7 +10,7 @@ import { CourseCards } from '@/components/sections/CourseCards';
 import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
 import { EvidenceSection } from '@/components/sections/EvidenceSection';
-import MethodCards from '@/components/sections/MethodCards';
+import MethodCardsLayout from '@/components/sections/MethodCardsLayout';
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -146,7 +146,7 @@ export default function Home() {
             </Typography>
           </div>
           
-          <MethodCards />
+          <MethodCardsLayout />
         </Container>
       </Section>
 
