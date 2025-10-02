@@ -115,7 +115,7 @@ export default function StudentCoursePage() {
         </Container>
       </Section>
 
-      <Section background="white" padding="sm">
+      <Section background="white" className="py-6 sm:py-8 lg:py-12">
   <Container>
     <div className="text-center">
     <h2 style={{ fontSize: '60px', fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}>
@@ -463,7 +463,7 @@ export default function StudentCoursePage() {
       </Section>
 
       {/* 4. あなたの英語力が、未来への扉を開く */}
-      <Section background="light-gray" padding="xl" className="overflow-visible">
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32 overflow-visible">
         <FullBleed1440>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">

@@ -3,6 +3,7 @@ import Button from '@/components/ui/Button';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
+import Grid from '@/components/layout/Grid';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import FullBleed1440 from '@/components/layout/FullBleed1440';
 import Image from 'next/image';
@@ -125,16 +126,18 @@ export default function Home() {
 
       {/* 2. 科学的根拠セクション */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <EvidenceSection
-          label="Scientific Evidence"
-          title="科学的根拠に基づいた学習法"
-          desc="長年の研究によって実証された効果的な英語学習メソッドを採用しています。"
-        />
+        <Container className="px-4 sm:px-6 lg:px-8">
+          <EvidenceSection
+            label="Scientific Evidence"
+            title="科学的根拠に基づいた学習法"
+            desc="長年の研究によって実証された効果的な英語学習メソッドを採用しています。"
+          />
+        </Container>
       </Section>
 
       {/* 3. 学習メソッドセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               科学的根拠に基づく3つの学習メソッド
@@ -144,18 +147,37 @@ export default function Home() {
             </Typography>
           </div>
           
-          <MethodCards />
+          <Grid cols={3} className="gap-8 items-stretch hidden lg:grid">
+            <MethodCards />
+          </Grid>
+          
+          <Grid cols={2} className="gap-8 items-stretch hidden md:grid lg:hidden">
+            <MethodCards />
+          </Grid>
+          
+          <div className="md:hidden">
+            <div className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
+              <MethodCards />
+            </div>
+            <div className="text-center mt-4">
+              <Typography variant="body-sm" className="text-gray-500">
+                ← スワイプして他のメソッドを見る →
+              </Typography>
+            </div>
+          </div>
         </Container>
       </Section>
 
       {/* 4. Course Section (4-column) */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
-        <SectionHeaderLeft
-          label="Course"
-          title="目的やレベルに合わせて選べるコース"
-          desc="ビジネス英語から留学準備まで、あなたの目標に最適化されたプログラムをご用意しています。"
-          className="mb-12 lg:mb-16"
-        />
+        <Container className="px-4 sm:px-6 lg:px-8">
+          <SectionHeaderLeft
+            label="Course"
+            title="目的やレベルに合わせて選べるコース"
+            desc="ビジネス英語から留学準備まで、あなたの目標に最適化されたプログラムをご用意しています。"
+            className="mb-12 lg:mb-16"
+          />
+        </Container>
         
         <FullBleed1440>
           <CourseCards />
@@ -171,8 +193,8 @@ export default function Home() {
       </Section>
 
       {/* 4. 無料カウンセリングバナー（画像のみ） */}
-      <Section background="warm-white" padding="lg">
-        <Container>
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="relative">
             <Link href="/contact">
               <Image
@@ -189,14 +211,16 @@ export default function Home() {
 
       {/* 5. 従来スクールとの違い（2カラム比較） */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="Difference"
-          title="従来のスクールとは根本的に異なるアプローチ"
-          desc="一般的な英語スクールの課題を解決する、科学的根拠に基づいた学習システムを提供しています。"
-          className="mb-12 lg:mb-16"
-        />
+        <Container className="px-4 sm:px-6 lg:px-8">
+          <SectionHeaderLeft
+            label="Difference"
+            title="従来のスクールとは根本的に異なるアプローチ"
+            desc="一般的な英語スクールの課題を解決する、科学的根拠に基づいた学習システムを提供しています。"
+            className="mb-12 lg:mb-16"
+          />
+        </Container>
         
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
             {/* 従来スクール - 40% */}
             <div className="col-span-12 lg:col-span-5 bg-gray-50 rounded-2xl p-8">

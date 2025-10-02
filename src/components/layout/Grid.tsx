@@ -3,7 +3,6 @@ import React from 'react';
 interface GridProps {
   children: React.ReactNode;
   cols?: 1 | 2 | 3 | 4 | 5 | 6 | 12;
-  gap?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   responsive?: {
     sm?: 1 | 2 | 3 | 4 | 5 | 6 | 12;
@@ -16,16 +15,9 @@ interface GridProps {
 const Grid: React.FC<GridProps> = ({
   children,
   cols = 1,
-  gap = 'md',
   className = '',
   responsive
 }) => {
-  const gapClasses = {
-    sm: 'gap-2',
-    md: 'gap-4',
-    lg: 'gap-6',
-    xl: 'gap-8'
-  };
 
   const getGridCols = (cols: number) => {
     const colMap: Record<number, string> = {
@@ -52,7 +44,7 @@ const Grid: React.FC<GridProps> = ({
     return classes;
   };
 
-  const gridClasses = `grid ${getGridCols(cols)}${getResponsiveClasses()} ${gapClasses[gap]} ${className}`;
+  const gridClasses = `grid ${getGridCols(cols)}${getResponsiveClasses()} ${className}`;
 
   return (
     <div className={gridClasses}>

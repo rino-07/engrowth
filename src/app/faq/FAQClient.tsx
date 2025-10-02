@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -133,7 +132,7 @@ export default function FAQClient() {
       />
 
       {/* 2. タブナビゲーション */}
-      <Section background="white" padding="md">
+      <Section background="white" className="py-8 sm:py-12 lg:py-16">
         <Container>
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {tabs.map((tab) => (
@@ -154,7 +153,7 @@ export default function FAQClient() {
       </Section>
 
       {/* 3. FAQ一覧 */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {filteredFAQs.map((faq, index) => (

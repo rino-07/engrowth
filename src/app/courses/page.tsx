@@ -58,7 +58,7 @@ export default function CoursesPage() {
         </FullBleed1440>
       </Section>
 
-      <Section background="white" padding="sm">
+      <Section background="white" className="py-6 sm:py-8 lg:py-12">
   <Container>
     <div className="text-center">
     <h2 style={{ fontSize: '60px', fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}>

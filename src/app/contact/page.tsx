@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
@@ -196,7 +195,7 @@ export default function ContactPage() {
       </Section>
 
       {/* 4. ご注意・お約束 */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">

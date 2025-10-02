@@ -25,7 +25,7 @@ const Container: React.FC<ContainerProps> = ({
     full: 'max-w-full'
   };
   
-  const combinedClasses = `${center ? 'mx-auto' : ''} px-4 sm:px-6 lg:px-8 ${sizeClasses[size]} ${className}`;
+  const combinedClasses = `${center ? 'mx-auto' : ''} ${sizeClasses[size]} ${className}`;
   
   return (
     <div className={combinedClasses} id={id}>

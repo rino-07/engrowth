@@ -33,7 +33,7 @@ export default function FlowPage() {
       />
 
       {/* 2) 見出し */}
-      <Section padding="xl" background="warm-white">
+      <Section className="py-16 sm:py-20 lg:py-32" background="warm-white">
         <Container>
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold tracking-tight font-serif">受講の流れ</h2>
@@ -158,7 +158,7 @@ export default function FlowPage() {
       <SectionDivider variant="soft" />
 
       {/* 5) シミュレーション英会話（1カラム） */}
-      <Section padding="xl" background="light-gray">
+      <Section className="py-16 sm:py-20 lg:py-32" background="light-gray">
         <Container>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">

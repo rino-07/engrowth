@@ -87,7 +87,7 @@ export default function SupportersPage() {
 </Section>
 
       {/* 4. 企業メリット */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
@@ -166,7 +166,7 @@ export default function SupportersPage() {
       </Section>
 
       {/* 5. 支援に応じた支援プラン */}
-      <Section background="warm-white" padding="xl" className="overflow-visible">
+      <Section background="warm-white" className="py-16 sm:py-20 lg:py-32 overflow-visible">
         <FullBleed1440>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h2">
@@ -225,7 +225,7 @@ export default function SupportersPage() {
       </Section>
 
       {/* 6. よくある質問 */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
