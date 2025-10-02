@@ -32,7 +32,7 @@ export default function StudentSpotServicePage() {
       />
 
       {/* 2. 3つのメインサービス */}
-      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32 pb-0">
+      <Section background="light-gray" className="py-8 sm:py-12 lg:py-16 pb-0">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* エッセイ添削 */}
@@ -84,7 +84,7 @@ export default function StudentSpotServicePage() {
       </Section>
 
       {/* 3. こんな時に、ご利用ください */}
-      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32 pt-0">
+      <Section background="light-gray" className="py-8 sm:py-12 lg:py-16 pt-0">
         <Container>
           <div className="text-center py-8">
             <Typography variant="heading-lg" className="text-dark-gray" as="h2">
@@ -137,7 +137,7 @@ export default function StudentSpotServicePage() {
       </Section>
 
       {/* 3. 料金例 */}
-      <Section background="warm-white" className="py-16 sm:py-20 lg:py-32">
+      <Section background="warm-white" className="py-8 sm:py-12 lg:py-16">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
@@ -244,7 +244,7 @@ export default function StudentSpotServicePage() {
       </Section>
 
       {/* 4. 学生の夢を諦めさせない */}
-      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
+      <Section background="light-gray" className="py-8 sm:py-12 lg:py-16">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
