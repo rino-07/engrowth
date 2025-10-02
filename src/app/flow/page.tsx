@@ -71,11 +71,11 @@ export default function FlowPage() {
               textOn="right"
               buttons={
                 <>
-                  <Link href="/contact">
-                    <Button variant="primary" size="sm">
-                      お申し込みフォーム
-                    </Button>
-                  </Link>
+                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLScaQttdkLCkQiEzCjJA6dLRtRqBZIJrpHWJ6EYFkCP7bqgHcw/viewform" target="_blank" rel="noopener noreferrer">
+                      <Button variant="primary" size="sm">
+                        お申し込みフォーム
+                      </Button>
+                    </Link>
                   <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }} href="https://lin.ee/4h74yvj">
                     LINEでお問い合わせ
                   </Button>
@@ -106,9 +106,9 @@ export default function FlowPage() {
                   <Button variant="primary" size="sm" className="text-white border-0" style={{ backgroundColor: "#0cc755" }} href="https://lin.ee/4h74yvj">
                     LINEに登録
                   </Button>
-                  <Link href="/contact">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLScaQttdkLCkQiEzCjJA6dLRtRqBZIJrpHWJ6EYFkCP7bqgHcw/viewform" target="_blank" rel="noopener noreferrer">
                     <Button variant="primary" size="sm">
-                      申込フォーム
+                      お申し込フォーム
                     </Button>
                   </Link>
                 </>
