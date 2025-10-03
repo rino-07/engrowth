@@ -31,7 +31,7 @@ export function EvidenceSection({ label, title, desc }: Props) {
             <p className="text-[13px] tracking-wide text-red-700 mb-2">
               {label}
             </p>
-            <h2 className="text-2xl sm:text-3xl font-semibold leading-tight">
+            <h2 className="text-2xl sm:text-3xl font-semibold leading-tight text-gray-900">
               {title}
             </h2>
             {desc && (
