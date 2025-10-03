@@ -44,7 +44,7 @@ export default function StudentCoursePage() {
         />
         
         <Container className="px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full pb-8">
             <Card className="text-center p-6">
               <Image
                 src="/images/students/student-short.png"

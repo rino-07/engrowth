@@ -57,13 +57,17 @@ export default function CoursesPage() {
           </div>
         </FullBleed1440>
       </Section>
-
+      
       <Section background="white" className="py-6 sm:py-8 lg:py-12">
   <Container>
     <div className="text-center">
-    <h2 style={{ fontSize: '60px', fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}>
-  Engrowthなら入会金無料
-</h2>
+    <h2 
+      // 修正: スマホで1行に収まるサイズから開始し、PCで60px相当のサイズ(xl:text-6xl)まで段階的に拡大
+      className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif" 
+      style={{ fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}
+    >
+      Engrowthなら入会金無料
+    </h2>
     </div>
   </Container>
 </Section>

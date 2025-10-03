@@ -59,7 +59,7 @@ export const CourseCards: React.FC<CourseCardsProps> = () => {
                 alt={course.title}
                 width={300}
                 height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
+                className="w-full h-48 object-cover rounded-lg mb-2"
               />
               <Typography variant="heading-sm" className="text-dark-gray card-title">
                 {course.title.split('\n').map((line, index) => (

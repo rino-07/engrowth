@@ -42,7 +42,7 @@ export default function BusinessCoursePage() {
         />
         
         <Container className="px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             <Card className="text-center p-6">
               <Image
                 src="/images/business/business-short-study.jpg"

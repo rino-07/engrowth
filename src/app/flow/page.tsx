@@ -33,7 +33,7 @@ export default function FlowPage() {
       />
 
       {/* 2) 見出し */}
-      <Section className="py-16 sm:py-20 lg:py-32" background="warm-white">
+      <Section className="py-8 sm:py-12 lg:py-16" background="warm-white">
         <Container className="px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold tracking-tight font-serif">受講の流れ</h2>

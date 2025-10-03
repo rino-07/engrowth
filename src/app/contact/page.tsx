@@ -112,7 +112,7 @@ export default function ContactPage() {
         
         <Container className="px-6 lg:px-8">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* LINE相談 */}
             <Card className="p-8 text-center border-2 border-action-green">
               <div className="w-16 h-16 bg-action-green rounded-full flex items-center justify-center mx-auto mb-6">
@@ -195,7 +195,7 @@ export default function ContactPage() {
       </Section>
 
       {/* 4. ご注意・お約束 */}
-      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
+      <Section background="light-gray" className="py-8 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">

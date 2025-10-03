@@ -133,24 +133,29 @@ export default function FAQClient() {
 
       {/* 2. タブナビゲーション */}
       <Section background="white" className="py-8 sm:py-12 lg:py-16">
-        <Container className="px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeTab === tab
-                    ? 'bg-brand-red text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-        </Container>
-      </Section>
+  <Container className="px-6 lg:px-8">
+    
+    {/* 修正: flex-wrapを維持しつつ、各ボタンをw-1/2のコンテナで囲む */}
+    <div className="flex flex-wrap justify-center gap-y-2 mb-8"> {/* gap-x-2 はボタン側で */}
+      {tabs.map((tab) => (
+        // 🚨 重要な修正: ボタンを w-1/2 の div で囲み、左右にパディング（px-1）で隙間を作る
+        <div key={tab} className="w-1/2 sm:w-auto px-1"> 
+            <button
+              onClick={() => setActiveTab(tab)}
+              // ボタンの幅を flex-grow で w-1/2 内でいっぱいに広げる
+              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 w-full ${ // w-full を追加
+                activeTab === tab
+                  ? 'bg-brand-red text-white shadow-md'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              {tab}
+            </button>
+        </div>
+      ))}
+    </div>
+  </Container>
+</Section>
 
       {/* 3. FAQ一覧 */}
       <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">

@@ -53,10 +53,10 @@ export default function SupportersPage() {
       </Section>
 
 {/* 3. 日本が失いつつある、優秀なグローバル人材 */}
-<Section background="warm-white" className="pt-24 pb-8">
+<Section background="warm-white" className="pt-8 pb-8">
   <Container>
     {/* 1. タイトル・説明文コンテナ: 下マージン mb-16 を mb-0 に削減 */}
-    <div className="text-center mb-0"> 
+    <div className="text-center mb-0 px-4 lg:px-8"> 
       <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h2">
         日本が失いつつある、優秀なグローバル人材
       </Typography>
@@ -87,9 +87,9 @@ export default function SupportersPage() {
 </Section>
 
       {/* 4. 企業メリット */}
-      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
+      <Section background="light-gray" className="py-8 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               企業様メリット
             </Typography>
@@ -166,7 +166,7 @@ export default function SupportersPage() {
       </Section>
 
       {/* 5. 支援に応じた支援プラン */}
-      <Section background="warm-white" className="py-16 sm:py-20 lg:py-32 overflow-visible">
+      <Section background="warm-white" className="py-8 sm:py-12 lg:py-16 overflow-visible">
         <FullBleed1440>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h2">
@@ -211,7 +211,7 @@ export default function SupportersPage() {
           </div>
 
           {/* お気軽にご相談ください */}
-          <div className="text-center mb-16">
+          <div className="text-center">
             <Typography variant="body-lg" className="text-gray mb-8">
               お気軽にご相談ください
             </Typography>
