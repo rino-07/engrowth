@@ -720,20 +720,6 @@ onClick={handleMobileMenuClose}
 
 <Link
 
-href="/courses/study"
-
-className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
-
-onClick={handleMobileMenuClose}
-
->
-
-学生コース
-
-</Link>
-
-<Link
-
 href="/courses/business-spot"
 
 className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
@@ -743,6 +729,20 @@ onClick={handleMobileMenuClose}
 >
 
 ビジネススポットサービス
+
+</Link>
+
+<Link
+
+href="/courses/study"
+
+className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
+
+onClick={handleMobileMenuClose}
+
+>
+
+学生コース
 
 </Link>
 
