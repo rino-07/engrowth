@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-deep-navy text-white">
-      <Container>
+      <Container className="px-4 sm:px-6 lg:px-8">
         <div className="py-12">
           {/* モバイル: 3段構成（1/2/2カラム）、デスクトップ: 5カラム */}
           <div className="md:hidden">

@@ -1,29 +1,10 @@
-/**
- * スペーシング定数
- * 8pxベースのスペーシングシステム
- */
+// 統一されたレスポンシブパディングクラス
+export const HORIZONTAL_PADDING = 'px-4 sm:px-6 lg:px-8';
 
-export const SPACING = {
-  // 基本スペーシング（8pxベース）
-  xs: '0.5rem',   // 8px
-  sm: '1rem',     // 16px
-  md: '1.5rem',   // 24px
-  lg: '2rem',     // 32px
-  xl: '3rem',     // 48px
-  '2xl': '4rem',  // 64px
-  '3xl': '6rem',  // 96px
-  
-  // レスポンシブスペーシング
-  responsive: {
-    section: 'clamp(2rem, 4vw, 6rem)',      // 32px → 96px
-    sectionSm: 'clamp(1.5rem, 3vw, 4rem)',   // 24px → 64px
-    hero: 'clamp(3rem, 5vw, 6rem)',          // 48px → 96px
-  }
-} as const;
-
-export type SpacingKey = keyof typeof SPACING;
-export type ResponsiveSpacingKey = keyof typeof SPACING.responsive;
-
-
-
-
+// 統一されたレスポンシブマージンクラス
+export const VERTICAL_PADDING = {
+  sm: 'py-6 sm:py-8 lg:py-12',
+  md: 'py-8 sm:py-12 lg:py-16', 
+  lg: 'py-12 sm:py-16 lg:py-24',
+  xl: 'py-16 sm:py-20 lg:py-32'
+};

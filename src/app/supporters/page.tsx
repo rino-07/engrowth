@@ -40,7 +40,7 @@ export default function SupportersPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-600 mb-6">支援プログラムの詳細については、お気軽にお問い合わせください。</p>
             <Link href="/contact#:~:text=info%40-,engrowth,-.jp">
@@ -88,7 +88,7 @@ export default function SupportersPage() {
 
       {/* 4. 企業メリット */}
       <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               企業様メリット
@@ -226,7 +226,7 @@ export default function SupportersPage() {
 
       {/* 6. よくある質問 */}
       <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               よくある質問

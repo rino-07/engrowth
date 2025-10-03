@@ -21,7 +21,7 @@ export default function PageTitleSection({ label, title, description }: Props) {
 
   return (
     <Section background="warm-white" className="pt-12 sm:pt-16 !pb-0">
-      <Container>
+      <Container className="px-4 sm:px-6 lg:px-8">
         <div className="!mb-0">
           <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4 text-brand-red">
             {label}

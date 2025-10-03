@@ -133,7 +133,7 @@ export default function FAQClient() {
 
       {/* 2. タブナビゲーション */}
       <Section background="white" className="py-8 sm:py-12 lg:py-16">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {tabs.map((tab) => (
               <button
@@ -154,7 +154,7 @@ export default function FAQClient() {
 
       {/* 3. FAQ一覧 */}
       <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {filteredFAQs.map((faq, index) => (
               <Card key={`${activeTab}-${index}`} className="p-8">

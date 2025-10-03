@@ -31,7 +31,7 @@ function BusinessSpotServicePage() {
 
       {/* 2. 3つのサービス */}
       <Section background="light-gray" className="py-8 sm:py-12 lg:py-16 pb-0">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* 通訳・会議同席 */}
             <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
@@ -96,7 +96,7 @@ function BusinessSpotServicePage() {
 
       {/* 3. こんな時に、ご利用ください */}
       <Section background="light-gray" className="py-8 sm:py-12 lg:py-16 pt-0">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center py-8">
             <Typography variant="heading-lg" className="text-dark-gray" as="h2">
               こんな時に、ご利用ください。
@@ -151,7 +151,7 @@ function BusinessSpotServicePage() {
 
       {/* 3. 料金例 */}
       <Section background="warm-white" className="py-8 sm:py-12 lg:py-16">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               料金例
@@ -267,7 +267,7 @@ function BusinessSpotServicePage() {
 
       {/* 4. ビジネスチャンスを逃さないために */}
       <Section background="light-gray" className="py-8 sm:py-10 lg:py-16">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               ビジネスチャンスを逃さないために

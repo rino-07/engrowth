@@ -57,7 +57,7 @@ export default function Home() {
 
       {/* 2. What is Engrowth Section - 2カラムレイアウト */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* 左側: タイトルと説明文 */}
             <div>

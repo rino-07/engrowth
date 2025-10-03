@@ -41,7 +41,7 @@ export default function BusinessCoursePage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             <Card className="text-center p-6">
               <Image
@@ -122,7 +122,7 @@ export default function BusinessCoursePage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
 
             {/* Point番号と本文を同じブロック内にflexレイアウト */}
@@ -204,7 +204,7 @@ export default function BusinessCoursePage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[1440px] mx-auto">
             {/* 1ヶ月プラン */}
             <div className="flex justify-center">

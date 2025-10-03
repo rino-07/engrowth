@@ -26,7 +26,7 @@ export default function PracticePage() {
       {/* メインメッセージセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="relative bg-white rounded-2xl shadow-lg p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <Typography variant="body-lg" className="text-gray-800 font-semibold mb-4">
@@ -56,7 +56,7 @@ export default function PracticePage() {
 
       {/* 3ステップ習慣化プログラム */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               Engrowthが実施する「3ステップ習慣化プログラム」
@@ -105,7 +105,7 @@ export default function PracticePage() {
 
       {/* 伴走型の必要性セクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 rounded-xl shadow-inner p-8">
             <Typography variant="heading-lg" className="text-dark-gray mb-4 font-serif">
               なぜ「伴走型」が絶対に必要なのか
@@ -129,7 +129,7 @@ export default function PracticePage() {
 
       {/* 成果セクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
@@ -184,7 +184,7 @@ export default function PracticePage() {
 
       {/* バナー */}
       <Section background="white" className="py-8">
-        <Container>
+        <Container className="px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Image
               src="/images/main_banner.png"
