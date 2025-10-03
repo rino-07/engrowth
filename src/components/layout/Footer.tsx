@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
     ],
     contact: [
       { name: 'お問い合わせ', href: '/contact' },
-      { name: 'LINE公式アカウント', href: '/contact#line' },
+      { name: 'LINE公式アカウント', href: 'https://lin.ee/4h74yvj' },
     ],
   };
 
