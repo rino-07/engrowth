@@ -63,7 +63,7 @@ export default function CoursesPage() {
     <div className="text-center">
     <h2 
       // 修正: スマホで1行に収まるサイズから開始し、PCで60px相当のサイズ(xl:text-6xl)まで段階的に拡大
-      className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif" 
+      className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif text-gray-900" 
       style={{ fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}
     >
       Engrowthなら入会金無料

@@ -120,7 +120,7 @@ export default function StudentCoursePage() {
     <div className="text-center">
         <h2 
             // 修正: スマホのフォントサイズを text-xl (約20px) から始める
-            className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-serif" 
+            className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-serif text-gray-900" 
             style={{ fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}
         >
             Engrowthならエッセイ添削し放題！

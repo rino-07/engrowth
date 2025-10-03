@@ -36,7 +36,6 @@ export default function FlowPage() {
       <Section className="py-8 sm:py-12 lg:py-16" background="warm-white">
         <Container className="px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold tracking-tight font-serif">受講の流れ</h2>
             <p className="mt-3 text-[15px]" style={{ color: MUTED }}>
               あなたのペースに合わせて、専属のコンサルタントが一緒に
               最適なプランを考えていきます。
@@ -163,12 +162,12 @@ export default function FlowPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <span
-                className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold mb-4"
+                className="inline-flex items-center justify-center h-8 w-8 rounded-full text-white text-sm font-bold  text-gray-900 mb-4"
                 style={{ backgroundColor: BRAND }}
               >
                 4
               </span>
-              <h3 className="text-xl font-semibold mb-4 font-serif">シミュレーション英会話</h3>
+              <h3 className="text-xl font-semibold mb-4 font-serif  text-gray-900">シミュレーション英会話</h3>
               <p className="leading-relaxed text-[15px]" style={{ color: MUTED }}>
                 留学生が短期間で英語力を鍛える要因のひとつとして、
                 「ある状況に英語で遭遇し、英語で対処する力がつく」というのが挙げられます。<br />
@@ -180,7 +179,7 @@ export default function FlowPage() {
 
             {/* ビジネスコース */}
 <div className="mb-16">
-  <h4 className="text-xl font-bold mb-8 font-serif mt-8 px-4">ビジネスコース</h4>
+  <h4 className="text-xl font-bold mb-8 font-serif text-gray-900 mt-8 px-4">ビジネスコース</h4>
   <div className="space-y-8">
     {/* 基礎シミュレーション */}
     <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
@@ -224,7 +223,7 @@ export default function FlowPage() {
             {/* 学生コース */}
             <div className="py-0">
               <div className="border-t border-gray-200 pt-8"></div>
-              <h4 className="text-center text-xl font-bold mb-8 font-serif">学生コース</h4>
+              <h4 className="text-center text-xl font-bold mb-8 font-serif text-gray-900">学生コース</h4>
               <div className="space-y-8">
                {/* 基礎シミュレーション */}
                <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
