@@ -57,7 +57,7 @@ export default function Home() {
 
       {/* 2. What is Engrowth Section - 2カラムレイアウト */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* 左側: タイトルと説明文 */}
             <div>
@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* 2. 科学的根拠セクション */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <EvidenceSection
             label="Scientific Evidence"
             title="科学的根拠に基づいた学習法"
@@ -136,7 +136,7 @@ export default function Home() {
 
       {/* 3. 学習メソッドセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               科学的根拠に基づく3つの学習メソッド
@@ -152,7 +152,7 @@ export default function Home() {
 
       {/* 4. Course Section (4-column) */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <SectionHeaderLeft
             label="Course"
             title="目的やレベルに合わせて選べるコース"
@@ -176,7 +176,7 @@ export default function Home() {
 
       {/* 4. 無料カウンセリングバナー（画像のみ） */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="relative">
             <Link href="/contact">
               <Image
@@ -193,7 +193,7 @@ export default function Home() {
 
       {/* 5. 従来スクールとの違い（2カラム比較） */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <SectionHeaderLeft
             label="Difference"
             title="従来のスクールとは根本的に異なるアプローチ"
@@ -202,7 +202,7 @@ export default function Home() {
           />
         </Container>
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
             {/* 従来スクール - 40% */}
             <div className="col-span-12 lg:col-span-5 bg-gray-50 rounded-2xl p-8">

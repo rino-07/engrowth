@@ -34,7 +34,7 @@ export default function ContactPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
 
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {/* FAQ 1 */}
@@ -110,7 +110,7 @@ export default function ContactPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
             {/* LINE相談 */}
@@ -196,7 +196,7 @@ export default function ContactPage() {
 
       {/* 4. ご注意・お約束 */}
       <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               ご注意・お約束

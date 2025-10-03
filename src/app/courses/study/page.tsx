@@ -43,7 +43,7 @@ export default function StudentCoursePage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             <Card className="text-center p-6">
               <Image
@@ -116,13 +116,17 @@ export default function StudentCoursePage() {
       </Section>
 
       <Section background="white" className="py-6 sm:py-8 lg:py-12">
-  <Container>
+      <Container>
     <div className="text-center">
-    <h2 style={{ fontSize: '60px', fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}>
-  Engrowthならエッセイ添削し放題！
-</h2>
+        <h2 
+            // 修正: スマホのフォントサイズを text-xl (約20px) から始める
+            className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-serif" 
+            style={{ fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}
+        >
+            Engrowthならエッセイ添削し放題！
+        </h2>
     </div>
-  </Container>
+</Container>
 </Section>
 
       {/* 4. Engrowthが選ばれる理由 */}
@@ -134,7 +138,7 @@ export default function StudentCoursePage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
 
             {/* Point番号と本文を同じブロック内にflexレイアウト */}
@@ -218,7 +222,7 @@ export default function StudentCoursePage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           {/* 留サポ連携バナー */}
           <div className="max-w-[1100px] mx-auto mb-16">
             <div className="grid gap-6 md:grid-cols-2 items-center rounded-2xl border border-neutral-200 bg-neutral-50 p-6 md:p-8">
@@ -286,7 +290,7 @@ export default function StudentCoursePage() {
             className="mb-12 lg:mb-16"
           />
           
-          <Container className="px-4 sm:px-6 lg:px-8">
+          <Container className="px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {/* 不安の声 1 */}
               <div className="text-center p-6 bg-warm-white rounded-lg shadow-sm">
@@ -348,7 +352,7 @@ export default function StudentCoursePage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[1440px] mx-auto">
             {/* 1ヶ月プラン */}
             <div className="flex justify-center">

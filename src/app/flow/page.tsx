@@ -34,7 +34,7 @@ export default function FlowPage() {
 
       {/* 2) 見出し */}
       <Section className="py-16 sm:py-20 lg:py-32" background="warm-white">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold tracking-tight font-serif">受講の流れ</h2>
             <p className="mt-3 text-[15px]" style={{ color: MUTED }}>
@@ -51,7 +51,7 @@ export default function FlowPage() {
       <section className="relative pt-16 lg:pt-24">
         {/* 中央ライン（md以上） */}
         <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <ol className="space-y-0">
             {/* STEP 1：画像左 / テキスト右 */}
             <ZigzagItem
@@ -159,7 +159,7 @@ export default function FlowPage() {
 
       {/* 5) シミュレーション英会話（1カラム） */}
       <Section className="py-16 sm:py-20 lg:py-32" background="light-gray">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <span
@@ -274,7 +274,7 @@ export default function FlowPage() {
 
       {/* 7) 最終CTA（main_banner.png画像） */}
       <section className="py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <Link href="/contact">
               <Image

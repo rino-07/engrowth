@@ -26,7 +26,7 @@ export default function SciencePage() {
       {/* メインメッセージセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="relative bg-white rounded-2xl shadow-lg p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <Typography variant="body-lg" className="text-gray-800 font-semibold mb-4">
@@ -56,7 +56,7 @@ export default function SciencePage() {
 
       {/* 失敗理由の3カード */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center mb-12">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               なぜ多くの英会話教室では話せるようにならないのか
@@ -104,21 +104,16 @@ export default function SciencePage() {
         </Container>
       </Section>
 
-      {/* 本質理解セクション */}
-      <Section background="warm-white" className="pt-12 sm:pt-16 lg:pt-24 !pb-0">
-        <Container className="px-4 sm:px-6 lg:px-8">
-          <div className="!mb-0">
-            <Typography variant="heading-lg" className="text-dark-gray !mb-0 font-serif">
-              本質を理解すれば誰でも「話せる」ようになる
-            </Typography>
-          </div>
-        </Container>
-      </Section>
-
       {/* 理論的背景セクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+      　<Container className="px-6 lg:px-8">
+            {/* 1. 移動したタイトルをここに追加 */}
+            <div className="text-center mb-4 lg:mb-8"> 
+                <Typography variant="heading-lg" className="text-dark-gray !mb-0 font-serif">
+                    本質を理解すれば誰でも「話せる」ようになる
+                </Typography>
+            </div>
+      　<div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="flex-1">
               <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
                 言語学＋脳科学に基づくアプローチ
@@ -146,9 +141,8 @@ export default function SciencePage() {
                 </ul>
               </div>
             </div>
-            
-            <div className="flex-1 flex justify-center">
-              <div className="w-80 h-52 rounded-lg overflow-hidden">
+            <div className="md:flex-1 md:flex md:justify-start mx-auto"> 
+  <div className="w-80 h-52 rounded-lg overflow-hidden">
                 <Image
                   src="/images/method/method-sla-detailed.jpg"
                   alt="脳科学・理論イメージ"
@@ -164,7 +158,7 @@ export default function SciencePage() {
 
       {/* Engrowthの優位性セクション */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
@@ -192,7 +186,7 @@ export default function SciencePage() {
 
       {/* バナー */}
       <Section background="white" className="py-8">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center">
             <Image
               src="/images/main_banner.png"

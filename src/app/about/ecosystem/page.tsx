@@ -36,7 +36,7 @@ export default function AboutPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="space-y-8 max-w-4xl mx-auto mb-16">
             <div className="flex items-start gap-6">
               <FaUserTie className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
@@ -100,10 +100,10 @@ export default function AboutPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-12 items-center">
               {/* 左側: 説明テキスト */}
               <div>
                 <Typography variant="body-md" className="text-dark-gray mb-8 leading-relaxed">
@@ -143,16 +143,14 @@ export default function AboutPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="mb-12">
-              <Link href="/supporters">
+        <Container className="px-6 lg:px-8">
+        <div className="text-center"> 
+            <Link href="/supporters">
                 <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700">
-                  ぜひご支援ください
+                    ぜひご支援ください
                 </Button>
-              </Link>
-            </div>
-          </div>
+            </Link>
+        </div>
         </Container>
       </Section>
 
@@ -165,7 +163,7 @@ export default function AboutPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
 
             {/* Point番号と本文を同じブロック内にflexレイアウト */}
@@ -247,7 +245,7 @@ export default function AboutPage() {
           className="mb-12 lg:mb-16"
         />
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center">
 
             {/* エコシステム図とボタン */}

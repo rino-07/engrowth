@@ -28,7 +28,7 @@ export default function AboutPage() {
 
       {/* メインメッセージセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center mb-12">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               Engrowthが選ばれる4つの特徴
@@ -42,7 +42,7 @@ export default function AboutPage() {
 
       {/* 4つの特徴カード */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* エコシステム */}
             <Card className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
@@ -148,7 +148,7 @@ export default function AboutPage() {
           className="mb-12 lg:mb-16"
         />
 
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed mb-6">

@@ -26,7 +26,7 @@ export default function ConsultantPage() {
       {/* メインメッセージセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="relative bg-white rounded-2xl shadow-lg p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
@@ -53,7 +53,7 @@ export default function ConsultantPage() {
 
       {/* 3つの特徴カード */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center mb-12">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               伴走する側の成功体験が、学習者を確実に導く
@@ -102,7 +102,7 @@ export default function ConsultantPage() {
 
       {/* ネイティブとの違いセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="bg-gray-50 rounded-xl shadow-inner p-8">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               なぜネイティブスピーカーでは不十分なのか
@@ -125,7 +125,7 @@ export default function ConsultantPage() {
 
       {/* 脳科学的根拠セクション */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="bg-gray-50 rounded-xl shadow-inner p-8">
             <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
               脳科学的に証明された「第二言語習得の最適ルート」
@@ -189,7 +189,7 @@ export default function ConsultantPage() {
 
       {/* 留学経験の価値セクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <Typography variant="heading-md" className="mb-4 font-serif" style={{color: '#d30306'}}>
@@ -225,7 +225,7 @@ export default function ConsultantPage() {
 
       {/* バナー */}
       <Section background="white" className="py-8">
-        <Container className="px-4 sm:px-6 lg:px-8">
+        <Container className="px-6 lg:px-8">
           <div className="text-center">
             <Image
               src="/images/main_banner.png"
