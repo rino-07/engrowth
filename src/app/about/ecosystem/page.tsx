@@ -248,8 +248,8 @@ export default function AboutPage() {
         <Container className="px-6 lg:px-8">
           <div className="text-center">
 
-            {/* エコシステム図とボタン */}
-            <div className="max-w-5xl mx-auto lg:mb-16 px-4">
+           {/* エコシステム図とボタン */}
+           <div className="max-w-5xl mx-auto lg:mb-16 px-4">
               <div className="relative">
                 <Image
                   src="/images/about/eco02.png"
@@ -259,60 +259,49 @@ export default function AboutPage() {
                   className="w-full h-auto mx-auto"
                 />
                 
-                {/* ボタンを画像上に絶対配置 - レスポンシブ対応 */}
+                {/* ボタンを画像上に絶対配置 - クリックエリアとして機能させる */}
                 <div className="absolute inset-0">
-                  {/* パートナー（受講者）として参加ボタン */}
+                  
+                  {/* 1. サポーター（支援者）として参加ボタン → クリックエリア */}
                   <a 
                     href="/supporters"
-                    className="absolute"
+                    className="absolute block w-1/3 h-1/12 opacity-0 hover:opacity-10 transition-all duration-200 cursor-pointer" // ★ 修正点
                     style={{
-                      top: '40%',
+                      top: '30%', // 画像の中央上部に合わせて調整
                       left: '50%',
-                      transform: 'translate(-50%, -50%)'
+                      transform: 'translate(-50%, -50%)',
+                      // border: '1px solid red' // デバッグ用: クリックエリアを確認したい場合
                     }}
                   >
-                    <button
-                      className="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs sm:text-sm md:text-base"
-                      style={{ backgroundColor: '#d30306', minWidth: '60px', maxWidth: '80px' }}
-                    >
-                      参加
-                    </button>
+                    {/* ★ ボタン要素は削除 */}
                   </a>
 
-                  {/* サポーター（支援者）として参加ボタン */}
+                  {/* 2.パートナー受講者として参加ボタン → クリックエリア */}
                   <a 
                     href="/flow"
-                    className="absolute"
+                    className="absolute block w-1/3 h-1/12 opacity-0 hover:opacity-10 transition-all duration-200 cursor-pointer" // ★ 修正点
                     style={{
-                      top: '85%',
+                      top: '74%', // 画像の下部左側に合わせて調整
                       left: '21%',
-                      transform: 'translate(-50%, -50%)'
+                      transform: 'translate(-50%, -50%)',
+                      // border: '1px solid red' // デバッグ用: クリックエリアを確認したい場合
                     }}
                   >
-                    <button
-                      className="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs sm:text-sm md:text-base"
-                      style={{ backgroundColor: '#d30306', minWidth: '60px', maxWidth: '80px' }}
-                    >
-                      参加
-                    </button>
+                    {/* ★ ボタン要素は削除 */}
                   </a>
 
-                  {/* コンサルタントとして参加ボタン */}
+                  {/* 3. コンサルタントとして参加ボタン → クリックエリア */}
                   <a 
                     href="/contact"
-                    className="absolute"
+                    className="absolute block w-1/3 h-1/12 opacity-0 hover:opacity-10 transition-all duration-200 cursor-pointer" // ★ 修正点
                     style={{
-                      top: '85%',
+                      top: '74%', // 画像の下部右側に合わせて調整
                       left: '79%',
-                      transform: 'translate(-50%, -50%)'
+                      transform: 'translate(-50%, -50%)',
+                      // border: '1px solid red' // デバッグ用: クリックエリアを確認したい場合
                     }}
                   >
-                    <button
-                      className="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity text-xs sm:text-sm md:text-base"
-                      style={{ backgroundColor: '#d30306', minWidth: '60px', maxWidth: '80px' }}
-                    >
-                      参加
-                    </button>
+                    {/* ★ ボタン要素は削除 */}
                   </a>
                 </div>
               </div>
