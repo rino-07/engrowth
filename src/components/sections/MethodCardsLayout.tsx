@@ -81,3 +81,5 @@ const MethodCardsLayout: React.FC = () => {
 };
 
 export default MethodCardsLayout;
+
+

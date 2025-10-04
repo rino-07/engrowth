@@ -29,28 +29,28 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="p-6">
             <h1 className="text-white mb-6 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
-              あなたも<span className="text-brand-red" style={{ textShadow: '2px 2px 4px rgba(255,255,255,0.7)' }}>Engrowth</span>の一員になりませんか？
+            どんな環境に生まれても、自分が生きたい人生を。
             </h1>
             <p className="text-white mb-8 md:mb-10 max-w-[65ch] mx-auto text-base md:text-lg leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
-              独自のエコシステムで留学生の経済問題を解決し、
+            英語力と人間力で、誰かの可能性を広げながら、
               <br />
-              日本人だからこそ提供できる英会話コンサルティングサービス
+              あなた自身の未来も切り拓く。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors bg-brand-red text-white hover:bg-red-700"
-              >
-                無料相談を予約する
-              </Link>
-              <Link
-                href="/courses"
-                id="cta-course-detail"
-                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-200 bg-white text-gray-800 border border-gray-200 hover:shadow-lg"
-              >
-                コース詳細を見る
-              </Link>
-            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mx-auto max-w-xl">
+  <Link
+    href="/contact"
+    className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors bg-brand-red text-white hover:bg-red-700 sm:flex-1"
+  >
+    応募
+  </Link>
+  <Link
+    href="/courses"
+    id="cta-course-detail"
+    className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-200 bg-white text-gray-800 border border-gray-200 hover:shadow-lg sm:flex-1"
+  >
+    説明会に参加する
+  </Link>
+</div>
           </div>
         </div>
       </section>

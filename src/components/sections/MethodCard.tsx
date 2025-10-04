@@ -64,3 +64,5 @@ const MethodCard: React.FC<MethodCardProps> = ({
 };
 
 export default MethodCard;
+
+

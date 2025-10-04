@@ -19,6 +19,7 @@ const Footer: React.FC = () => {
       { name: '専属コンサルタント', href: '/about/consultant' },
       { name: '科学的根拠', href: '/about/science' },
       { name: '実践の仕組み', href: '/about/practice' },
+      { name: 'コンサルタント募集について', href: '/recruit' },
     ],
     courses: [
       { name: 'コース・料金', href: '/courses' },

@@ -146,6 +146,8 @@ dropdownItems: [
 
 { name: '実践の仕組み', href: '/about/practice' },
 
+{ name: 'コンサルタント募集について', href: '/recruit' },
+
 ]
 
 },
@@ -617,6 +619,20 @@ onClick={handleMobileMenuClose}
 >
 
 実践の仕組み
+
+</Link>
+
+<Link
+
+href="/recruit"
+
+className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
+
+onClick={handleMobileMenuClose}
+
+>
+
+コンサルタント募集について
 
 </Link>
 
