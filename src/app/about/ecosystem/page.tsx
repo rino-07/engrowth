@@ -294,7 +294,7 @@ export default function AboutPage() {
 
                   {/* 3. コンサルタントとして参加ボタン */}
                   <a 
-                    href="/contact"
+                    href="/recruit"
                     className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center"
                     style={{
                       top: '80%',
