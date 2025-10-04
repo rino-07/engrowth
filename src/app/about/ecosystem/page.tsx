@@ -259,49 +259,52 @@ export default function AboutPage() {
                   className="w-full h-auto mx-auto"
                 />
                 
-                {/* ボタンを画像上に絶対配置 - クリックエリアとして機能させる */}
+                {/* ボタンを画像上に絶対配置 */}
                 <div className="absolute inset-0">
                   
-                  {/* 1. サポーター（支援者）として参加ボタン → クリックエリア */}
+                  {/* 1. サポーター（支援者）として参加ボタン */}
                   <a 
                     href="/supporters"
-                    className="absolute block w-1/3 h-1/12 opacity-0 hover:opacity-10 transition-all duration-200 cursor-pointer" // ★ 修正点
+                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center"
                     style={{
-                      top: '30%', // 画像の中央上部に合わせて調整
+                      top: '30%',
                       left: '50%',
                       transform: 'translate(-50%, -50%)',
-                      // border: '1px solid red' // デバッグ用: クリックエリアを確認したい場合
+                      minWidth: '200px',
                     }}
                   >
-                    {/* ★ ボタン要素は削除 */}
+                    サポーター（支援者）<br />
+                    として参加
                   </a>
 
-                  {/* 2.パートナー受講者として参加ボタン → クリックエリア */}
+                  {/* 2. パートナー（受講者）として参加ボタン */}
                   <a 
                     href="/flow"
-                    className="absolute block w-1/3 h-1/12 opacity-0 hover:opacity-10 transition-all duration-200 cursor-pointer" // ★ 修正点
+                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center"
                     style={{
-                      top: '74%', // 画像の下部左側に合わせて調整
-                      left: '21%',
+                      top: '80%',
+                      left: '19%',
                       transform: 'translate(-50%, -50%)',
-                      // border: '1px solid red' // デバッグ用: クリックエリアを確認したい場合
+                      minWidth: '200px',
                     }}
                   >
-                    {/* ★ ボタン要素は削除 */}
+                    パートナー（受講者）<br />
+                    として参加
                   </a>
 
-                  {/* 3. コンサルタントとして参加ボタン → クリックエリア */}
+                  {/* 3. コンサルタントとして参加ボタン */}
                   <a 
                     href="/contact"
-                    className="absolute block w-1/3 h-1/12 opacity-0 hover:opacity-10 transition-all duration-200 cursor-pointer" // ★ 修正点
+                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center"
                     style={{
-                      top: '74%', // 画像の下部右側に合わせて調整
-                      left: '79%',
+                      top: '80%',
+                      left: '81%',
                       transform: 'translate(-50%, -50%)',
-                      // border: '1px solid red' // デバッグ用: クリックエリアを確認したい場合
+                      minWidth: '200px',
                     }}
                   >
-                    {/* ★ ボタン要素は削除 */}
+                    コンサルタント<br />
+                    として参加
                   </a>
                 </div>
               </div>
