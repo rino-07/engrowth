@@ -432,3 +432,82 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* プログレスバー型フローチャート */
+.progress-flow {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.step {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  z-index: 2;
+}
+
+/* エントリーステップ */
+.step-entry {
+  background: linear-gradient(135deg, #d30306, #e53e3e);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+  margin-right: -20px;
+}
+
+/* 書類審査ステップ */
+.step-review {
+  background: linear-gradient(135deg, #898989, #a0a0a0);
+  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%);
+  margin-right: -20px;
+}
+
+/* 面接ステップ */
+.step-interview {
+  background: linear-gradient(135deg, #898989, #a0a0a0);
+  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%);
+  margin-right: -20px;
+}
+
+/* 採用ステップ（最後） */
+.step-final {
+  background: linear-gradient(135deg, #d30306, #e53e3e);
+  clip-path: polygon(20px 0, 100% 0, 100% 100%, 20px 100%);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .progress-flow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .step {
+    clip-path: none !important;
+    margin-right: 0 !important;
+    border-radius: 0.5rem;
+    min-height: 50px;
+  }
+  
+  .step-entry,
+  .step-review,
+  .step-interview,
+  .step-final {
+    clip-path: none !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* ホバー効果 */
+.step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}

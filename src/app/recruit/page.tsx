@@ -29,123 +29,133 @@ export default function RecruitPage() {
       {/* インタラクティブ部分 */}
       <InteractiveContent />
 
-      {/* セクション3: 応募に際しての重要事項 */}
+      {/* セクション4: 応募資格 */}
+      <Section background="warm-white" className="py-6 sm:py-12 lg:py-16">
+        <Container className="px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <Typography variant="heading-lg" className="text-dark-gray mb-6 sm:mb-16 text-center font-serif pb-8">
+              応募資格
+            </Typography>
+            
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-brand-red mr-3 mt-1">・</span>
+                  <Typography variant="body-lg" className="text-gray-700">
+                    Engrowthのエコシステム・想いへ強く共感する方
+                  </Typography>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-red mr-3 mt-1">・</span>
+                  <Typography variant="body-lg" className="text-gray-700">
+                    日本語が母語の方（国籍は問いません）
+                  </Typography>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-red mr-3 mt-1">・</span>
+                  <Typography variant="body-lg" className="text-gray-700">
+                    海外の学士課程・修士課程・博士課程在籍中または卒業生の方（編入可。準学士課程の方は要相談。学業成績・語学力から総合的に評価）
+                  </Typography>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-red mr-3 mt-1">・</span>
+                  <Typography variant="body-lg" className="text-gray-700">
+                    業務を遂行する上で問題のない英語力がある方
+                  </Typography>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* セクション5: 選考プロセス */}
       <Section background="light-gray" className="py-6 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 font-serif">
-              応募に際しての重要事項
+            <Typography variant="heading-lg" className="text-dark-gray mb-6 sm:mb-16 text-center font-serif pb-8">
+              選考プロセス
             </Typography>
             
-            <div className="space-y-6">
-              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                私たちは、「経済的制約から挑戦を奪われない社会」を共に創る、同じ境遇を経験した同志を求めています。
-              </Typography>
-              
-              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                この募集は、経済的に苦しみながらも高い学習意欲で留学を継続しているあなたの経験を、後輩の人生に役立てることを目的としています。あなたの卓越した専門知識や、学費を捻出するために培った<strong className="font-bold text-brand-red">「本質的な英語運用能力」</strong>は、学生の「経済的な自立」と「夢の継続」に直結します。
-              </Typography>
-              
-              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                場所を選ばない働き方で、あなたの留学生活を経済的に支えながら、学生が自身の力で資金を得て学びを継続し、より社会貢献できる人材に成長する機会を奪われないためのエコシステムに、あなたの力を提供してください。
-              </Typography>
-              
-              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                このミッションに強く共感し、自身の経験を最大の価値として還元したいという情熱を持った方を歓迎します。
-              </Typography>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* セクション4: 応募条件 */}
-      <Section background="warm-white" className="py-6 sm:py-12 lg:py-16">
-        <Container className="px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <Typography variant="heading-lg" className="text-dark-gray mb-6 sm:mb-16 font-serif">
-                応募条件
-              </Typography>
-              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                私たちは、<strong className="font-bold text-brand-red">同じ困難に挑む「優秀な先輩」であり、未来を切り開く「真のコンサルタント」</strong>となれる方を求めています。
-              </Typography>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* 左側: 必須応募条件 */}
-              <div className="space-y-8">
-                <div>
-                  <Typography variant="heading-md" className="text-brand-red mb-4 font-serif">
-                    【必須応募条件】
+            {/* フローチャート - プログレスバー型 */}
+            <div className="mb-8">
+              <div className="progress-flow">
+                {/* エントリー */}
+                <div className="step step-entry">
+                  <Typography variant="heading-lg" className="text-white font-semibold">
+                    エントリー
                   </Typography>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <Typography variant="body-lg" className="text-gray-800 font-semibold mb-2">
-                        Engrowthのエコシステムへの強い共感（最重要）
-                      </Typography>
-                      <Typography variant="body-md" className="text-gray-700 leading-relaxed">
-                        経済的制約から挑戦を諦める学生を支えるというEngrowthのミッションに強く共感し、その実現に貢献したいという強い意志を持っていること。
-                      </Typography>
-                    </div>
-                    
-                    <div>
-                      <Typography variant="body-lg" className="text-gray-800 font-semibold mb-2">
-                        優れた留学経験と実績（在学中であること）
-                      </Typography>
-                      <Typography variant="body-md" className="text-gray-700 leading-relaxed mb-2">
-                        以下のいずれかに該当し、学術的な環境で<strong className="font-bold">優秀な成績（GPA等）</strong>を収めている方。
-                      </Typography>
-                      <ul className="list-disc list-inside space-y-1 text-gray-700">
-                        <li>著名な海外4年制大学（大学院含む）に現在在籍している方。</li>
-                        <li>コミュニティカレッジ等を経由し、著名な4年制大学への編入を成功させ、現在在籍している方。</li>
-                        <li className="text-sm">（専門性の高い分野での学習経験を特に重視します）</li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <Typography variant="body-lg" className="text-gray-800 font-semibold mb-2">
-                        高度な英会話力と専門知識
-                      </Typography>
-                      <Typography variant="body-md" className="text-gray-700 leading-relaxed">
-                        アカデミックまたはビジネスの専門分野において、高度な議論が可能なレベルの英語力を持つ方。
-                      </Typography>
-                    </div>
-                    
-                    <div>
-                      <Typography variant="body-lg" className="text-gray-800 font-semibold mb-2">
-                        日本人ならではの指導力
-                      </Typography>
-                      <Typography variant="body-md" className="text-gray-700 leading-relaxed">
-                        自身の留学経験から、日本人が英語習得でつまずくポイントを深く理解し、科学的根拠に基づいた指導を徹底できる方。
-                      </Typography>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* 右側: 歓迎する経験 */}
-              <div className="space-y-8">
-                <div>
-                  <Typography variant="heading-md" className="text-brand-red mb-4 font-serif">
-                    【歓迎する経験】
-                  </Typography>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
-                    <li>経済的な困難を乗り越え、学業と両立して留学生活を成功させている経験。</li>
-                    <li>STEM分野、経済学、法学など、専門性の高い分野での学習経験。</li>
-                    <li>海外でのインターンシップや研究経験。</li>
-                  </ul>
                 </div>
                 
-                {/* 画像 */}
-                <div className="mt-8">
-                  <Image
-                    src="/images/recruit/recruit02.png"
-                    alt="歓迎する経験のイメージ"
-                    width={400}
-                    height={300}
-                    className="w-full h-auto rounded-lg shadow-md"
-                  />
+                {/* 書類審査 */}
+                <div className="step step-review">
+                  <Typography variant="heading-lg" className="text-white font-semibold">
+                    書類審査
+                  </Typography>
+                </div>
+                
+                {/* 面接 */}
+                <div className="step step-interview">
+                  <Typography variant="heading-lg" className="text-white font-semibold">
+                    面接
+                  </Typography>
+                </div>
+                
+                {/* 採用 */}
+                <div className="step step-final">
+                  <Typography variant="heading-lg" className="text-white font-semibold">
+                    採用
+                  </Typography>
+                </div>
+              </div>
+            </div>
+            
+            {/* 注意書き */}
+            <div className="space-y-3">
+              <Typography variant="body-md" className="text-gray-700">
+                ※面接は複数回実施されます。
+              </Typography>
+              <Typography variant="body-md" className="text-gray-700">
+                ※過去に「学生コース」を受講いただいた方は、担当コンサルタントからの推薦となり、一部面接が免除されます。
+              </Typography>
+              <Typography variant="body-md" className="text-gray-700">
+                ※面接はオンラインで実施されます。
+              </Typography>
+              <Typography variant="body-md" className="text-gray-700">
+                ※採用後は当社で規定されたプロフェッショナルマインド研修プログラムを修了した方から本業務に従事となります。
+              </Typography>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* セクション6: 応募方法 */}
+      <Section background="warm-white" className="py-6 sm:py-12 lg:py-16">
+        <Container className="px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <Typography variant="heading-lg" className="text-dark-gray mb-6 sm:mb-16 text-center font-serif pb-8">
+              応募方法
+            </Typography>
+            
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="space-y-6">
+                <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
+                  選考参加をご検討いただいている方は、レジュメ（日本語・英語 どちらでも可）を添付し、recruit@engrowth.jp宛にエントリー希望の旨をご連絡ください。
+                </Typography>
+                
+                <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
+                  なお、質問・相談などございましたら公式LINEでお気軽にご質問ください
+                </Typography>
+                
+                <div className="text-center">
+                  <a
+                    href="https://lin.ee/4h74yvj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                  >
+                    公式LINEはこちら
+                  </a>
                 </div>
               </div>
             </div>
@@ -153,74 +163,7 @@ export default function RecruitPage() {
         </Container>
       </Section>
 
-      {/* セクション5: 活動内容 */}
-      <Section background="light-gray" className="py-6 sm:py-12 lg:py-16">
-        <Container className="px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6 sm:mb-16 lg:mb-16 text-center font-serif">
-              活動内容
-            </Typography>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 sm:mt-10 lg:mt-12">
-              {/* 左側: コンサルタント活動内容 */}
-              <Card className="p-8 bg-white rounded-xl shadow-lg">
-                <div className="mb-6">
-                  <Typography variant="heading-md" className="text-brand-red mb-2 font-serif">
-                    コンサルタント活動内容
-                  </Typography>
-                  <div className="w-16 h-1 bg-brand-red rounded-full"></div>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-brand-red mr-2">・</span>
-                    <Typography variant="body-md" className="text-gray-700">
-                      目標設計と学習ロードマップの策定
-                    </Typography>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-red mr-2">・</span>
-                    <Typography variant="body-md" className="text-gray-700">
-                      英語セッション（週次/スピーキング・ライティング・ビジネス英語など）
-                    </Typography>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-red mr-2">・</span>
-                    <Typography variant="body-md" className="text-gray-700">
-                      進捗管理・フィードバック・改善提案
-                    </Typography>
-                  </li>
-                </ul>
-              </Card>
-              
-              {/* 右側: エコシステム内貢献活動 */}
-              <Card className="p-8 bg-white rounded-xl shadow-lg">
-                <div className="mb-6">
-                  <Typography variant="heading-md" className="text-brand-red mb-2 font-serif">
-                    エコシステム内貢献活動
-                  </Typography>
-                  <div className="w-16 h-1 bg-brand-red rounded-full"></div>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-brand-red mr-2">・</span>
-                    <Typography variant="body-md" className="text-gray-700">
-                      ナレッジ共有（社内ポータルへの記録、次世代への知見の蓄積）
-                    </Typography>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-red mr-2">・</span>
-                    <Typography variant="body-md" className="text-gray-700">
-                      チームへの貢献（プログラム改善や後輩サポート）
-                    </Typography>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* セクション6: よくあるご質問（FAQ） */}
+      {/* セクション7: よくあるご質問（FAQ） */}
       <Section background="warm-white" className="py-6 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -328,32 +271,106 @@ export default function RecruitPage() {
                   </div>
                 </div>
               </Card>
-            </div>
-          </div>
-        </Container>
-      </Section>
 
-      {/* セクション7: 応募をご検討の方へ */}
-      <Section background="light-gray" className="py-6 sm:py-12 lg:py-16">
-        <Container className="px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6 sm:mb-16 font-serif">
-              応募をご検討の方へ
-            </Typography>
-            
-            <div className="space-y-6 mb-12 mt-6 sm:mt-12">
-              <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                あなたの<strong className="font-bold text-brand-red">「経済的困難を乗り越えている経験」と「専門性」</strong>は、後輩の人生を変える最も強力な武器となります。留学を続けながら、場所を選ばず、価値の高い仕事を通じて経済的な自立を目指しませんか？
-              </Typography>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700 w-full sm:w-auto">
-                【応募する】
-              </Button>
-              <Button variant="primary" size="lg" className="bg-brand-red hover:bg-red-700 w-full sm:w-auto">
-                【選考プロセスへ進む】
-              </Button>
+              <Card className="p-8 bg-white rounded-xl shadow-lg">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Q
+                    </Typography>
+                  </div>
+                  <Typography variant="heading-sm" className="text-dark-gray">
+                    幼少期に海外に住んでおり、家では日本語を話していましたが母語が複数あります。応募資格に日本語が第一言語とありましたがエントリーはできますか？
+                  </Typography>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      A
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="body-md" className="text-gray-700">
+                      エントリー可能です。日本語が母語であることはマストですが、母語が複数ある方も大歓迎です。
+                    </Typography>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 bg-white rounded-xl shadow-lg">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Q
+                    </Typography>
+                  </div>
+                  <Typography variant="heading-sm" className="text-dark-gray">
+                    経済的に困難な状態ではないのですが、御社の想いに共感し、是非コンサルタントとして活動したいのですが、可能でしょうか？
+                  </Typography>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      A
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="body-md" className="text-gray-700">
+                      経済的な困難を抱えていない方も大歓迎です。ただし、支援プログラムの奨学金制度対象外となります。
+                    </Typography>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 bg-white rounded-xl shadow-lg">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Q
+                    </Typography>
+                  </div>
+                  <Typography variant="heading-sm" className="text-dark-gray">
+                    学士課程を卒業し現在OPTで働いているのですが、エントリーは可能ですか？
+                  </Typography>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      A
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="body-md" className="text-gray-700">
+                      エントリー可能です。ただし勤め先の就業規定をご確認ください。
+                    </Typography>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 bg-white rounded-xl shadow-lg">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Q
+                    </Typography>
+                  </div>
+                  <Typography variant="heading-sm" className="text-dark-gray">
+                    税務処理はどうすればよいですか？
+                  </Typography>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      A
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="body-md" className="text-gray-700">
+                      当社では海外在住のコンサルタントの方により多くの報酬をお渡しするため、業務委託での契約となります。そのため、年度末にご自身で確定申告を行なっていただく必要があります。その他ご質問等ございましたら、LINEにて個別にご連絡ください。
+                    </Typography>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </Container>
