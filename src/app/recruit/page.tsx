@@ -187,12 +187,14 @@ export default function RecruitPage() {
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-40">
-                      {/* 長方形部分（最後なので三角形なし） */}
-                      <div className="w-24 h-14 bg-brand-red rounded-lg flex items-center justify-center">
+                      {/* 長方形部分 */}
+                      <div className="w-24 h-14 bg-brand-red rounded-t-lg flex items-center justify-center">
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
                           4. 採用
                         </Typography>
                       </div>
+                      {/* 下向き三角形 */}
+                      <div className="w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-brand-red mx-auto"></div>
                     </div>
                   </div>
                   {/* 右側: 説明テキスト */}
