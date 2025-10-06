@@ -179,7 +179,7 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     留学中にEngrowthの学生コースを受講していました。エントリーはこちらから可能でしょうか？
                   </Typography>
                 </div>
@@ -190,7 +190,7 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-dark-gray">
+                    <Typography variant="body-md" className="text-dark-gray font-serif">
                       はい、可能です。Engrowthの学習メソッドを熟知していることは大きな強みになります。ぜひご応募ください。
                     </Typography>
                   </div>
@@ -204,7 +204,7 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     社会人を経て現在大学院に留学中なのですが、年齢制限などはありますか？
                   </Typography>
                 </div>
@@ -215,7 +215,7 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-dark-gray">
+                    <Typography variant="body-md" className="text-dark-gray font-serif">
                       いいえ、年齢による制限はありません。あなたの社会人経験と高度な専門知識は、ビジネスコースなどのクライアント指導において特に歓迎されます。
                     </Typography>
                   </div>
@@ -229,7 +229,7 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     これまでアルバイトや指導経験がないのですが、エントリー可能でしょうか？
                   </Typography>
                 </div>
@@ -240,7 +240,7 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-dark-gray">
+                    <Typography variant="body-md" className="text-dark-gray font-serif">
                       はい、可能です。ただし、本業務はプロフェッショナルとしての活動となるため、全員オンボーディングの際に社内で規定された「プロフェッショナルマインド育成プログラム」の受講が必須となります。本プログラムを修了し、プロ意識を身につけた方のみがコンサルタントとしての活動を認められます。
                     </Typography>
                   </div>
@@ -254,7 +254,7 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     留学先のVISAではアルバイトが認められていないのですが、エントリーは可能でしょうか？
                   </Typography>
                 </div>
@@ -265,7 +265,7 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-dark-gray">
+                    <Typography variant="body-md" className="text-dark-gray font-serif">
                       本業務は、完全リモートでの業務委託契約に基づく活動であり、勤務地は問いません。報酬に対する税務処理は日本国内の規定に沿ってご自身で行っていただく形式となります。
                     </Typography>
                   </div>
@@ -279,7 +279,7 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     幼少期に海外に住んでおり、家では日本語を話していましたが母語が複数あります。応募資格に日本語が第一言語とありましたがエントリーはできますか？
                   </Typography>
                 </div>
@@ -290,7 +290,7 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-gray-700">
+                    <Typography variant="body-md" className="text-gray-700 font-serif">
                       エントリー可能です。日本語が母語であることはマストですが、母語が複数ある方も大歓迎です。
                     </Typography>
                   </div>
@@ -304,8 +304,9 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
-                    経済的に困難な状態ではないのですが、御社の想いに共感し、是非コンサルタントとして活動したいのですが、可能でしょうか？
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
+                  経済的に困難な状況ではないのですが、御社の想いに共感し、是非コンサルタントとして活動したいです。エントリーは可能でしょうか？
+
                   </Typography>
                 </div>
                 <div className="flex items-start gap-4">
@@ -315,8 +316,9 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-gray-700">
-                      経済的な困難を抱えていない方も大歓迎です。ただし、支援プログラムの奨学金制度対象外となります。
+                    <Typography variant="body-md" className="text-gray-700 font-serif">
+                    経済的な困難を抱えていない方も大歓迎です。※奨学金制度対象外となります
+
                     </Typography>
                   </div>
                 </div>
@@ -329,7 +331,7 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     学士課程を卒業し現在OPTで働いているのですが、エントリーは可能ですか？
                   </Typography>
                 </div>
@@ -340,8 +342,8 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-gray-700">
-                      エントリー可能です。ただし勤め先の就業規定をご確認ください。
+                    <Typography variant="body-md" className="text-gray-700 font-serif">
+                      エントリー可能です。※勤め先の就業規定をご確認ください。
                     </Typography>
                   </div>
                 </div>
@@ -354,7 +356,7 @@ export default function RecruitPage() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     税務処理はどうすればよいですか？
                   </Typography>
                 </div>
@@ -365,7 +367,7 @@ export default function RecruitPage() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-gray-700">
+                    <Typography variant="body-md" className="text-gray-700 font-serif">
                       当社では海外在住のコンサルタントの方により多くの報酬をお渡しするため、業務委託での契約となります。そのため、年度末にご自身で確定申告を行なっていただく必要があります。その他ご質問等ございましたら、LINEにて個別にご連絡ください。
                     </Typography>
                   </div>

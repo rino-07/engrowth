@@ -169,7 +169,7 @@ export default function FAQClient() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray">
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
                     {faq.question}
                   </Typography>
                 </div>
@@ -180,7 +180,7 @@ export default function FAQClient() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-dark-gray">
+                    <Typography variant="body-md" className="text-dark-gray font-serif">
                       {faq.answer}
                     </Typography>
                   </div>
