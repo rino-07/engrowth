@@ -21,8 +21,8 @@ export default function RecruitPage() {
     <div className="recruit-page">
       {/* ヒーローセクション */}
       <PageTitleSection
-        label="Consultant"
-        title="コンサルタント募集"
+        label="Recruit"
+        title="コンサルタント採用情報"
         description="あなたの経験を、同じ志を持つ次世代の力に。"
       />
 

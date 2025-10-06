@@ -15,7 +15,7 @@ export default function InteractiveContent() {
       <Section background="warm-white" className="py-6 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 font-serif">
+            <Typography variant="heading-lg" className="text-dark-gray mb-8 font-serif border-b-2 border-brand-red pb-2">
             理念採用で仲間を広げる
             </Typography>
             
@@ -54,7 +54,7 @@ export default function InteractiveContent() {
                   <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
                   私たちが目指すのは、個人の成長、クライアントの成功、そして社会の発展が調和する「三方よし」の組織。
                   それは一部のメンバーだけでは実現できません。
-                  自ら考え、動き、周囲に良い影響を与えられる“リーダー”としての一歩を踏み出すあなたの力が必要です。
+                  自ら考え、動き、周囲に良い影響を与えられる"リーダー"としての一歩を踏み出すあなたの力が必要です。
 
                   海外の大学・大学院に在学しながら、世界を舞台に挑戦したい方。
                   自分の成長を社会の成長につなげたい方。
@@ -62,6 +62,16 @@ export default function InteractiveContent() {
 
                   これからのEngrowthを、一緒に創っていきませんか。
                   </Typography>
+                  
+                  {/* 閉じるボタンをテキストの最後に移動 */}
+                  <div className="text-center my-6">
+                    <button
+                      onClick={() => setShowMore(false)}
+                      className="text-dark-gray hover:text-brand-red transition-colors duration-200 cursor-pointer"
+                    >
+                      − 閉じる
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
@@ -73,7 +83,7 @@ export default function InteractiveContent() {
       <Section background="light-gray" className="py-6 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 font-serif">
+            <Typography variant="heading-lg" className="text-dark-gray mb-8 font-serif border-b-2 border-brand-red pb-2">
               少数精鋭である理由
             </Typography>
             
@@ -115,6 +125,16 @@ export default function InteractiveContent() {
                   <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
                     大きな組織の一員としてではなく、一人ひとりのパートナー（クライアント）と向き合う経験をしたい人にとって、Engrowthはきっと特別な環境になるはずです。
                   </Typography>
+                  
+                  {/* 閉じるボタンをテキストの最後に移動 */}
+                  <div className="text-center my-6">
+                    <button
+                      onClick={() => setShowMoreReasons(false)}
+                      className="text-dark-gray hover:text-brand-red transition-colors duration-200 cursor-pointer"
+                    >
+                      − 閉じる
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
