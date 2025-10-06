@@ -259,52 +259,64 @@ export default function AboutPage() {
                   className="w-full h-auto mx-auto"
                 />
                 
-                {/* ボタンを画像上に絶対配置 */}
+                {/* ボタンを画像上に絶対配置 - レスポンシブ対応 */}
                 <div className="absolute inset-0">
                   
                   {/* 1. サポーター（支援者）として参加ボタン */}
                   <a 
                     href="/supporters"
-                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center"
+                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
+                             py-2 px-3 text-xs sm:py-3 sm:px-6 sm:text-sm md:text-base
+                             w-24 sm:w-32 md:w-40 lg:w-48 xl:w-52"
                     style={{
                       top: '30%',
                       left: '50%',
                       transform: 'translate(-50%, -50%)',
-                      minWidth: '200px',
                     }}
                   >
-                    サポーター（支援者）<br />
-                    として参加
+                    <span className="block sm:hidden">サポーター</span>
+                    <span className="hidden sm:block">
+                      サポーター（支援者）<br />
+                      として参加
+                    </span>
                   </a>
 
                   {/* 2. パートナー（受講者）として参加ボタン */}
                   <a 
                     href="/flow"
-                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center"
+                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
+                             py-2 px-3 text-xs sm:py-3 sm:px-6 sm:text-sm md:text-base
+                             w-24 sm:w-32 md:w-40 lg:w-48 xl:w-52"
                     style={{
                       top: '80%',
                       left: '19%',
                       transform: 'translate(-50%, -50%)',
-                      minWidth: '200px',
                     }}
                   >
-                    パートナー（受講者）<br />
-                    として参加
+                    <span className="block sm:hidden">パートナー</span>
+                    <span className="hidden sm:block">
+                      パートナー（受講者）<br />
+                      として参加
+                    </span>
                   </a>
 
                   {/* 3. コンサルタントとして参加ボタン */}
                   <a 
                     href="/recruit"
-                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center"
+                    className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
+                             py-2 px-3 text-xs sm:py-3 sm:px-6 sm:text-sm md:text-base
+                             w-24 sm:w-32 md:w-40 lg:w-48 xl:w-52"
                     style={{
                       top: '80%',
                       left: '81%',
                       transform: 'translate(-50%, -50%)',
-                      minWidth: '200px',
                     }}
                   >
-                    コンサルタント<br />
-                    として参加
+                    <span className="block sm:hidden">コンサルタント</span>
+                    <span className="hidden sm:block">
+                      コンサルタント<br />
+                      として参加
+                    </span>
                   </a>
                 </div>
               </div>
