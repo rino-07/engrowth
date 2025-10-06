@@ -117,7 +117,7 @@ export default function RecruitPage() {
                 <div className="flex items-start gap-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
-                    <div className="relative">
+                    <div className="relative z-10">
                       {/* 長方形部分 */}
                       <div className="w-24 h-14 bg-gray-300 rounded-t-lg flex items-center justify-center">
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
@@ -137,10 +137,10 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 書類審査 */}
-                <div className="flex items-start gap-4 -mt-2">
+                <div className="flex items-start gap-4 -mt-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
-                    <div className="relative">
+                    <div className="relative z-20">
                       {/* 長方形部分 */}
                       <div className="w-24 h-14 bg-gray-500 rounded-t-lg flex items-center justify-center">
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
@@ -160,10 +160,10 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 面接 */}
-                <div className="flex items-start gap-4 -mt-2">
+                <div className="flex items-start gap-4 -mt-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
-                    <div className="relative">
+                    <div className="relative z-30">
                       {/* 長方形部分 */}
                       <div className="w-24 h-14 bg-gray-700 rounded-t-lg flex items-center justify-center">
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
@@ -183,10 +183,10 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 採用 */}
-                <div className="flex items-start gap-4 -mt-2">
+                <div className="flex items-start gap-4 -mt-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
-                    <div className="relative">
+                    <div className="relative z-40">
                       {/* 長方形部分（最後なので三角形なし） */}
                       <div className="w-24 h-14 bg-brand-red rounded-lg flex items-center justify-center">
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
