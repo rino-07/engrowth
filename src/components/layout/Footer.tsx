@@ -12,6 +12,7 @@ const Footer: React.FC = () => {
       { name: '受講の流れ', href: '/flow' },
       { name: '支援者の方へ', href: '/supporters' },
       { name: 'よくある質問', href: '/faq' },
+      { name: '採用情報', href: '/recruit' },
     ],
     about: [
       { name: 'Engrowthの特徴', href: '/about' },
@@ -19,7 +20,6 @@ const Footer: React.FC = () => {
       { name: '専属コンサルタント', href: '/about/consultant' },
       { name: '科学的根拠', href: '/about/science' },
       { name: '実践の仕組み', href: '/about/practice' },
-      { name: 'コンサルタント募集について', href: '/recruit' },
     ],
     courses: [
       { name: 'コース・料金', href: '/courses' },

@@ -146,8 +146,6 @@ dropdownItems: [
 
 { name: '実践の仕組み', href: '/about/practice' },
 
-{ name: 'コンサルタント募集について', href: '/recruit' },
-
 ]
 
 },
@@ -181,6 +179,8 @@ dropdownItems: [
 { name: '支援者の方へ', href: '/supporters' },
 
 { name: 'よくある質問', href: '/faq' },
+
+{ name: '採用情報', href: '/recruit' },
 
 ];
 
@@ -632,7 +632,7 @@ onClick={handleMobileMenuClose}
 
 >
 
-コンサルタント募集について
+採用情報
 
 </Link>
 
@@ -833,6 +833,24 @@ onClick={() => setIsMenuOpen(false)}
 >
 
 FAQ
+
+</Link>
+
+
+
+{/* 採用情報 */}
+
+<Link
+
+href="/recruit"
+
+className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
+
+onClick={() => setIsMenuOpen(false)}
+
+>
+
+採用情報
 
 </Link>
 

@@ -10,7 +10,7 @@ import { PageTitleSection } from '@/components/sections';
 import InteractiveContent from '@/components/InteractiveContent';
 
 export const metadata = {
-  title: 'コンサルタント募集について - Engrowth',
+  title: '採用情報 - Engrowth',
   description: 'Engrowth専属コンサルタント募集。あなたの経験を、同じ志を持つ次世代の力に。経済的困難を乗り越えた留学経験を持つ優秀な人材を募集しています。',
   keywords: 'コンサルタント募集, 英語指導, 留学経験, エコシステム, 同志募集',
 };
