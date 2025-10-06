@@ -266,8 +266,11 @@ export default function AboutPage() {
                   <a 
                     href="/supporters"
                     className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
-                             py-2 px-3 text-xs sm:py-3 sm:px-6 sm:text-sm md:text-base
-                             w-24 sm:w-32 md:w-40 lg:w-48 xl:w-52"
+                             py-1 px-2 text-[10px] leading-tight
+                             sm:py-2 sm:px-3 sm:text-xs
+                             md:py-3 md:px-6 md:text-sm
+                             lg:text-base
+                             w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48"
                     style={{
                       top: '30%',
                       left: '50%',
@@ -285,8 +288,11 @@ export default function AboutPage() {
                   <a 
                     href="/flow"
                     className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
-                             py-2 px-3 text-xs sm:py-3 sm:px-6 sm:text-sm md:text-base
-                             w-24 sm:w-32 md:w-40 lg:w-48 xl:w-52"
+                             py-1 px-2 text-[10px] leading-tight
+                             sm:py-2 sm:px-3 sm:text-xs
+                             md:py-3 md:px-6 md:text-sm
+                             lg:text-base
+                             w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48"
                     style={{
                       top: '80%',
                       left: '19%',
@@ -304,8 +310,11 @@ export default function AboutPage() {
                   <a 
                     href="/recruit"
                     className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
-                             py-2 px-3 text-xs sm:py-3 sm:px-6 sm:text-sm md:text-base
-                             w-24 sm:w-32 md:w-40 lg:w-48 xl:w-52"
+                             py-1 px-2 text-[10px] leading-tight
+                             sm:py-2 sm:px-3 sm:text-xs
+                             md:py-3 md:px-6 md:text-sm
+                             lg:text-base
+                             w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48"
                     style={{
                       top: '80%',
                       left: '81%',
