@@ -110,56 +110,59 @@ export default function RecruitPage() {
               </div>
             </div>
 
-            {/* スマホ表示: 繋がるデザイン */}
+            {/* スマホ表示: 縦フローチャート */}
             <div className="md:hidden mb-8">
-              <div className="space-y-0">
+              <div className="flex flex-col items-center space-y-6">
                 {/* エントリー */}
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-28 h-14 bg-gray-300 flex items-center justify-center relative">
-                    <div className="absolute -right-2 top-0 w-4 h-full bg-gray-300 transform rotate-12"></div>
-                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-48 h-12 bg-gray-300 rounded-lg flex items-center justify-center relative">
+                    <Typography variant="body-md" className="text-white font-semibold">
                       1. エントリー
                     </Typography>
+                    {/* 下向き矢印 */}
+                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-300"></div>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
                     下記フォームからの応募と履歴書送付の両方をもって、エントリー完了となります。
                   </Typography>
                 </div>
 
                 {/* 書類審査 */}
-                <div className="flex items-center gap-4 -mt-2">
-                  <div className="flex-shrink-0 w-28 h-14 bg-gray-500 flex items-center justify-center relative">
-                    <div className="absolute -right-2 top-0 w-4 h-full bg-gray-500 transform rotate-12"></div>
-                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-48 h-12 bg-gray-500 rounded-lg flex items-center justify-center relative">
+                    <Typography variant="body-md" className="text-white font-semibold">
                       2. 書類審査
                     </Typography>
+                    {/* 下向き矢印 */}
+                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-500"></div>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
                     提出いただいた履歴書を基に、基本的な応募資格を満たしているかを確認いたします。
                   </Typography>
                 </div>
 
                 {/* 面接 */}
-                <div className="flex items-center gap-4 -mt-2">
-                  <div className="flex-shrink-0 w-28 h-14 bg-gray-700 flex items-center justify-center relative">
-                    <div className="absolute -right-2 top-0 w-4 h-full bg-gray-700 transform rotate-12"></div>
-                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-48 h-12 bg-gray-700 rounded-lg flex items-center justify-center relative">
+                    <Typography variant="body-md" className="text-white font-semibold">
                       3. 面接
                     </Typography>
+                    {/* 下向き矢印 */}
+                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-700"></div>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
                     30分程度、Zoomを使って面接を実施いたします。勤務時間などについてご希望があればお伝えください。
                   </Typography>
                 </div>
 
                 {/* 採用 */}
-                <div className="flex items-center gap-4 -mt-2">
-                  <div className="flex-shrink-0 w-28 h-14 bg-brand-red flex items-center justify-center relative">
-                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-48 h-12 bg-brand-red rounded-lg flex items-center justify-center">
+                    <Typography variant="body-md" className="text-white font-semibold">
                       4. 採用
                     </Typography>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
                     採用・不採用に関わらずご連絡いたします。
                   </Typography>
                 </div>
