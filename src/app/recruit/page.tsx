@@ -110,14 +110,15 @@ export default function RecruitPage() {
               </div>
             </div>
 
-            {/* スマホ表示: 2カラムレイアウト */}
+            {/* スマホ表示: 繋がるデザイン */}
             <div className="md:hidden mb-8">
-              <div className="space-y-4">
+              <div className="space-y-0">
                 {/* エントリー */}
                 <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-24 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      エントリー
+                  <div className="flex-shrink-0 w-28 h-14 bg-gray-300 flex items-center justify-center relative">
+                    <div className="absolute -right-2 top-0 w-4 h-full bg-gray-300 transform rotate-12"></div>
+                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                      1. エントリー
                     </Typography>
                   </div>
                   <Typography variant="body-sm" className="text-gray-700 flex-1">
@@ -126,10 +127,11 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 書類審査 */}
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-24 h-12 bg-gray-500 rounded-lg flex items-center justify-center">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      書類審査
+                <div className="flex items-center gap-4 -mt-2">
+                  <div className="flex-shrink-0 w-28 h-14 bg-gray-500 flex items-center justify-center relative">
+                    <div className="absolute -right-2 top-0 w-4 h-full bg-gray-500 transform rotate-12"></div>
+                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                      2. 書類審査
                     </Typography>
                   </div>
                   <Typography variant="body-sm" className="text-gray-700 flex-1">
@@ -138,10 +140,11 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 面接 */}
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-24 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      面接
+                <div className="flex items-center gap-4 -mt-2">
+                  <div className="flex-shrink-0 w-28 h-14 bg-gray-700 flex items-center justify-center relative">
+                    <div className="absolute -right-2 top-0 w-4 h-full bg-gray-700 transform rotate-12"></div>
+                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                      3. 面接
                     </Typography>
                   </div>
                   <Typography variant="body-sm" className="text-gray-700 flex-1">
@@ -150,10 +153,10 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 採用 */}
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-24 h-12 bg-brand-red rounded-lg flex items-center justify-center">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      採用
+                <div className="flex items-center gap-4 -mt-2">
+                  <div className="flex-shrink-0 w-28 h-14 bg-brand-red flex items-center justify-center relative">
+                    <Typography variant="body-md" className="text-white font-semibold z-10">
+                      4. 採用
                     </Typography>
                   </div>
                   <Typography variant="body-sm" className="text-gray-700 flex-1">
