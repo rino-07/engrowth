@@ -15,9 +15,11 @@ export default function InteractiveContent() {
       <Section background="warm-white" className="py-6 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 font-serif border-b-2 border-brand-red pb-2">
-            理念採用で仲間を広げる
-            </Typography>
+            <div className="mb-8">
+              <Typography variant="heading-lg" className="text-dark-gray font-serif inline-block border-b-2 border-brand-red pb-2">
+              理念採用で仲間を広げる
+              </Typography>
+            </div>
             
             <div className="space-y-6">
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
@@ -34,7 +36,7 @@ export default function InteractiveContent() {
                   onClick={() => setShowMore(!showMore)}
                   className="text-dark-gray hover:text-brand-red transition-colors duration-200 cursor-pointer"
                 >
-                  {showMore ? '− 閉じる' : '+ 続きを読む'}
+                  {showMore ? '' : '+ 続きを読む'}
                 </button>
               </div>
               
@@ -83,9 +85,11 @@ export default function InteractiveContent() {
       <Section background="light-gray" className="py-6 sm:py-12 lg:py-16">
         <Container className="px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8 font-serif border-b-2 border-brand-red pb-2">
+            <div className="mb-8">
+              <Typography variant="heading-lg" className="text-dark-gray font-serif inline-block border-b-2 border-brand-red pb-2">
               少数精鋭である理由
-            </Typography>
+              </Typography>
+            </div>
             
             <div className="space-y-6">
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
@@ -101,7 +105,7 @@ export default function InteractiveContent() {
                   onClick={() => setShowMoreReasons(!showMoreReasons)}
                   className="text-dark-gray hover:text-brand-red transition-colors duration-200"
                 >
-                  {showMoreReasons ? '− 閉じる' : '+ 続きを読む'}
+                  {showMoreReasons ? '' : '+ 続きを読む'}
                 </button>
               </div>
               
