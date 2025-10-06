@@ -259,75 +259,88 @@ export default function AboutPage() {
                   className="w-full h-auto mx-auto"
                 />
                 
-                {/* ボタンを画像上に絶対配置 - レスポンシブ対応 */}
-                <div className="absolute inset-0">
+                {/* PC表示: ボタンを画像上に絶対配置 */}
+                <div className="hidden md:block absolute inset-0">
                   
                   {/* 1. サポーター（支援者）として参加ボタン */}
                   <a 
                     href="/supporters"
                     className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
-                             py-1 px-2 text-[10px] leading-tight
-                             sm:py-2 sm:px-3 sm:text-xs
-                             md:py-3 md:px-6 md:text-sm
-                             lg:text-base
-                             w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48"
+                             py-3 px-6 text-base
+                             w-40 lg:w-48 xl:w-52"
                     style={{
                       top: '30%',
                       left: '50%',
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
-                    <span className="block sm:hidden">サポーター</span>
-                    <span className="hidden sm:block">
-                      サポーター（支援者）<br />
-                      として参加
-                    </span>
+                    サポーター（支援者）<br />
+                    として参加
                   </a>
 
                   {/* 2. パートナー（受講者）として参加ボタン */}
                   <a 
                     href="/flow"
                     className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
-                             py-1 px-2 text-[10px] leading-tight
-                             sm:py-2 sm:px-3 sm:text-xs
-                             md:py-3 md:px-6 md:text-sm
-                             lg:text-base
-                             w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48"
+                             py-3 px-6 text-base
+                             w-40 lg:w-48 xl:w-52"
                     style={{
                       top: '80%',
                       left: '19%',
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
-                    <span className="block sm:hidden">パートナー</span>
-                    <span className="hidden sm:block">
-                      パートナー（受講者）<br />
-                      として参加
-                    </span>
+                    パートナー（受講者）<br />
+                    として参加
                   </a>
 
                   {/* 3. コンサルタントとして参加ボタン */}
                   <a 
                     href="/recruit"
                     className="absolute bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
-                             py-1 px-2 text-[10px] leading-tight
-                             sm:py-2 sm:px-3 sm:text-xs
-                             md:py-3 md:px-6 md:text-sm
-                             lg:text-base
-                             w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48"
+                             py-3 px-6 text-base
+                             w-40 lg:w-48 xl:w-52"
                     style={{
                       top: '80%',
                       left: '81%',
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
-                    <span className="block sm:hidden">コンサルタント</span>
-                    <span className="hidden sm:block">
-                      コンサルタント<br />
-                      として参加
-                    </span>
+                    コンサルタント<br />
+                    として参加
                   </a>
                 </div>
+              </div>
+
+              {/* スマホ表示: ボタンを縦並びで配置 */}
+              <div className="md:hidden mt-8 space-y-4">
+                
+                {/* 1. サポーター（支援者）として参加ボタン */}
+                <a 
+                  href="/supporters"
+                  className="block w-full bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
+                           py-4 px-6 text-base"
+                >
+                  サポーター（支援者）として参加
+                </a>
+
+                {/* 2. パートナー（受講者）として参加ボタン */}
+                <a 
+                  href="/flow"
+                  className="block w-full bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
+                           py-4 px-6 text-base"
+                >
+                  パートナー（受講者）として参加
+                </a>
+
+                {/* 3. コンサルタントとして参加ボタン */}
+                <a 
+                  href="/recruit"
+                  className="block w-full bg-light-gray hover:bg-gray-200 text-dark-gray font-medium rounded-lg shadow-md transition-all duration-200 cursor-pointer text-center
+                           py-4 px-6 text-base"
+                >
+                  コンサルタントとして参加
+                </a>
               </div>
             </div>
 
