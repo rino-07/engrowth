@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
       { name: 'Engrowthエコシステム', href: '/about/ecosystem' },
       { name: '専属コンサルタント', href: '/about/consultant' },
       { name: '科学的根拠', href: '/about/science' },
-      { name: '実践の仕組み', href: '/about/practice' },
+      { name: '9割が成功するやり方とは', href: '/about/practice' },
     ],
     courses: [
       { name: 'コース・料金', href: '/courses' },

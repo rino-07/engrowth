@@ -8,9 +8,9 @@ import { PageTitleSection } from '@/components/sections';
 import { FaBullseye, FaMobile, FaTrophy } from 'react-icons/fa';
 
 export const metadata = {
-  title: '実践の仕組み - Engrowth',
+  title: '9割が成功するやり方とは - Engrowth',
   description: '習慣化×伴走サポートによる確実な成果創出。3ステップ習慣化プログラムと専属コンサルタントによる徹底サポート。',
-  keywords: '実践の仕組み, 習慣化, 伴走サポート, 英語学習, モチベーション維持',
+  keywords: '9割が成功するやり方とは, 習慣化, 伴走サポート, 英語学習, モチベーション維持',
 };
 
 export default function PracticePage() {

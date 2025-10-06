@@ -9,8 +9,8 @@ import Hero from '@/components/sections/Hero';
 
 export const metadata = {
   title: 'Engrowthの特徴 - Engrowth',
-  description: 'Engrowthが選ばれる4つの特徴：エコシステム、専属コンサルタント、科学的根拠、実践の仕組み。詳細をご確認ください。',
-  keywords: 'Engrowthの特徴, エコシステム, コンサルタント, 科学的根拠, 実践の仕組み, 英語学習',
+  description: 'Engrowthが選ばれる4つの特徴：エコシステム、専属コンサルタント、科学的根拠、9割が成功するやり方とは。詳細をご確認ください。',
+  keywords: 'Engrowthの特徴, エコシステム, コンサルタント, 科学的根拠, 9割が成功するやり方とは, 英語学習',
 };
 
 export default function AboutPage() {
@@ -113,14 +113,14 @@ export default function AboutPage() {
               </div>
             </Card>
 
-            {/* 実践の仕組み */}
+            {/* 9割が成功するやり方とは */}
             <Card className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
                   <span className="text-2xl">⚙️</span>
                 </div>
                 <Typography variant="heading-md" className="text-orange-700 font-serif mb-4">
-                  実践の仕組み
+                  9割が成功するやり方とは
                 </Typography>
                 <Typography variant="body-sm" className="text-gray-600 mb-6 leading-relaxed">
                   習慣化×伴走サポートによる確実な成果創出。3ステップ習慣化プログラムで継続をサポート。

@@ -70,7 +70,7 @@ const Header: React.FC = () => {
         { name: 'Engrowthエコシステム', href: '/about/ecosystem' },
         { name: '専属コンサルタント', href: '/about/consultant' },
         { name: '科学的根拠', href: '/about/science' },
-        { name: '実践の仕組み', href: '/about/practice' },
+        { name: '9割が成功するやり方とは', href: '/about/practice' },
       ]
     },
     {
@@ -307,7 +307,7 @@ const Header: React.FC = () => {
                       className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
                       onClick={handleMobileMenuClose}
                     >
-                      実践の仕組み
+                      9割が成功するやり方とは
                     </Link>
                   </div>
                 </div>
