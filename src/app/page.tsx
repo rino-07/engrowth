@@ -41,14 +41,14 @@ export default function Home() {
     href="/contact"
     className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors bg-brand-red text-white hover:bg-red-700 sm:flex-1"
   >
-    応募
+    無料相談を予約する
   </Link>
   <Link
     href="/courses"
     id="cta-course-detail"
     className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-200 bg-white text-gray-800 border border-gray-200 hover:shadow-lg sm:flex-1"
   >
-    説明会に参加する
+    コース詳細を見る
   </Link>
 </div>
           </div>
