@@ -110,61 +110,85 @@ export default function RecruitPage() {
               </div>
             </div>
 
-            {/* スマホ表示: 縦フローチャート */}
+            {/* スマホ表示: 左フローチャート + 右説明テキスト */}
             <div className="md:hidden mb-8">
-              <div className="flex flex-col items-center space-y-6">
+              <div className="space-y-6">
                 {/* エントリー */}
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-48 h-12 bg-gray-300 rounded-lg flex items-center justify-center relative">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      1. エントリー
-                    </Typography>
-                    {/* 下向き矢印 */}
-                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-300"></div>
+                <div className="flex items-start gap-4">
+                  {/* 左側: フローチャート */}
+                  <div className="flex-shrink-0 flex flex-col items-center">
+                    <div className="w-20 h-16 bg-gray-300 rounded-lg flex items-center justify-center relative">
+                      <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        1. エントリー
+                      </Typography>
+                      {/* 下向き接続線 */}
+                      <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-0.5 h-4 bg-gray-300"></div>
+                    </div>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
-                    下記フォームからの応募と履歴書送付の両方をもって、エントリー完了となります。
-                  </Typography>
+                  {/* 右側: 説明テキスト */}
+                  <div className="flex-1 pt-1">
+                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                      下記フォームからの応募と履歴書送付の両方をもって、エントリー完了となります。
+                    </Typography>
+                  </div>
                 </div>
 
                 {/* 書類審査 */}
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-48 h-12 bg-gray-500 rounded-lg flex items-center justify-center relative">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      2. 書類審査
-                    </Typography>
-                    {/* 下向き矢印 */}
-                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-500"></div>
+                <div className="flex items-start gap-4">
+                  {/* 左側: フローチャート */}
+                  <div className="flex-shrink-0 flex flex-col items-center">
+                    <div className="w-20 h-16 bg-gray-500 rounded-lg flex items-center justify-center relative">
+                      <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        2. 書類審査
+                      </Typography>
+                      {/* 下向き接続線 */}
+                      <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-0.5 h-4 bg-gray-500"></div>
+                    </div>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
-                    提出いただいた履歴書を基に、基本的な応募資格を満たしているかを確認いたします。
-                  </Typography>
+                  {/* 右側: 説明テキスト */}
+                  <div className="flex-1 pt-1">
+                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                      提出いただいた履歴書を基に、基本的な応募資格を満たしているかを確認いたします。
+                    </Typography>
+                  </div>
                 </div>
 
                 {/* 面接 */}
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-48 h-12 bg-gray-700 rounded-lg flex items-center justify-center relative">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      3. 面接
-                    </Typography>
-                    {/* 下向き矢印 */}
-                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-700"></div>
+                <div className="flex items-start gap-4">
+                  {/* 左側: フローチャート */}
+                  <div className="flex-shrink-0 flex flex-col items-center">
+                    <div className="w-20 h-16 bg-gray-700 rounded-lg flex items-center justify-center relative">
+                      <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        3. 面接
+                      </Typography>
+                      {/* 下向き接続線 */}
+                      <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-0.5 h-4 bg-gray-700"></div>
+                    </div>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
-                    30分程度、Zoomを使って面接を実施いたします。勤務時間などについてご希望があればお伝えください。
-                  </Typography>
+                  {/* 右側: 説明テキスト */}
+                  <div className="flex-1 pt-1">
+                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                      30分程度、Zoomを使って面接を実施いたします。勤務時間などについてご希望があればお伝えください。
+                    </Typography>
+                  </div>
                 </div>
 
                 {/* 採用 */}
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-48 h-12 bg-brand-red rounded-lg flex items-center justify-center">
-                    <Typography variant="body-md" className="text-white font-semibold">
-                      4. 採用
+                <div className="flex items-start gap-4">
+                  {/* 左側: フローチャート */}
+                  <div className="flex-shrink-0 flex flex-col items-center">
+                    <div className="w-20 h-16 bg-brand-red rounded-lg flex items-center justify-center">
+                      <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        4. 採用
+                      </Typography>
+                    </div>
+                  </div>
+                  {/* 右側: 説明テキスト */}
+                  <div className="flex-1 pt-1">
+                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                      採用・不採用に関わらずご連絡いたします。
                     </Typography>
                   </div>
-                  <Typography variant="body-sm" className="text-gray-700 text-center px-4">
-                    採用・不採用に関わらずご連絡いたします。
-                  </Typography>
                 </div>
               </div>
             </div>
