@@ -23,7 +23,6 @@ export default function InteractiveContent() {
             
             <div className="space-y-6">
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-              はじめまして。Engrowth創業者の眞坂莉乃です。
               世の中の多くの採用は「条件採用」です。
               給与や待遇、キャリアの条件をもとに選ばれる採用。
               けれども、私たちEngrowthが行っているのは「理念採用」です。

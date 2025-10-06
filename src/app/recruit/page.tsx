@@ -77,8 +77,8 @@ export default function RecruitPage() {
               選考プロセス
             </Typography>
             
-            {/* フローチャート - プログレスバー型 */}
-            <div className="mb-8">
+            {/* PC表示: フローチャート - プログレスバー型 */}
+            <div className="hidden md:block mb-8">
               <div className="progress-flow">
                 {/* エントリー */}
                 <div className="step step-entry">
@@ -105,6 +105,59 @@ export default function RecruitPage() {
                 <div className="step step-final">
                   <Typography variant="heading-lg" className="text-white font-semibold">
                     採用
+                  </Typography>
+                </div>
+              </div>
+            </div>
+
+            {/* スマホ表示: 2カラムレイアウト */}
+            <div className="md:hidden mb-8">
+              <div className="space-y-4">
+                {/* エントリー */}
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-24 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <Typography variant="body-md" className="text-white font-semibold">
+                      エントリー
+                    </Typography>
+                  </div>
+                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                    下記フォームからの応募と履歴書送付の両方をもって、エントリー完了となります。
+                  </Typography>
+                </div>
+
+                {/* 書類審査 */}
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-24 h-12 bg-gray-500 rounded-lg flex items-center justify-center">
+                    <Typography variant="body-md" className="text-white font-semibold">
+                      書類審査
+                    </Typography>
+                  </div>
+                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                    提出いただいた履歴書を基に、基本的な応募資格を満たしているかを確認いたします。
+                  </Typography>
+                </div>
+
+                {/* 面接 */}
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-24 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <Typography variant="body-md" className="text-white font-semibold">
+                      面接
+                    </Typography>
+                  </div>
+                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                    30分程度、Zoomを使って面接を実施いたします。勤務時間などについてご希望があればお伝えください。
+                  </Typography>
+                </div>
+
+                {/* 採用 */}
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-24 h-12 bg-brand-red rounded-lg flex items-center justify-center">
+                    <Typography variant="body-md" className="text-white font-semibold">
+                      採用
+                    </Typography>
+                  </div>
+                  <Typography variant="body-sm" className="text-gray-700 flex-1">
+                    採用・不採用に関わらずご連絡いたします。
                   </Typography>
                 </div>
               </div>
