@@ -386,7 +386,7 @@ const Header: React.FC = () => {
 
               <Link
                 href="/flow"
-                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2"
+                className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 ml-2 font-serif"
                 onClick={handleMenuClose}
               >
                 受講の流れ
