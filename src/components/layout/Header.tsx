@@ -838,21 +838,6 @@ FAQ
 
 
 
-{/* 採用情報 */}
-
-<Link
-
-href="/recruit"
-
-className="block px-3 py-2 text-base font-medium text-dark-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
-
-onClick={() => setIsMenuOpen(false)}
-
->
-
-採用情報
-
-</Link>
 
 
 
