@@ -112,20 +112,23 @@ export default function RecruitPage() {
 
             {/* スマホ表示: 左フローチャート + 右説明テキスト */}
             <div className="md:hidden mb-8">
-              <div className="space-y-0">
+              <div className="relative">
                 {/* エントリー */}
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 mb-6">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-10">
-                      {/* 長方形部分 */}
-                      <div className="w-24 h-14 bg-gray-300 rounded-t-lg flex items-center justify-center">
+                      {/* 5角形の図形 */}
+                      <div 
+                        className="w-24 h-16 bg-gray-300 flex items-center justify-center relative"
+                        style={{
+                          clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
+                        }}
+                      >
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
                           1. エントリー
                         </Typography>
                       </div>
-                      {/* 下向き三角形 */}
-                      <div className="w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-gray-300 mx-auto"></div>
                     </div>
                   </div>
                   {/* 右側: 説明テキスト */}
@@ -137,18 +140,21 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 書類審査 */}
-                <div className="flex items-start gap-4 -mt-4">
+                <div className="flex items-start gap-4 mb-6">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-20">
-                      {/* 長方形部分 */}
-                      <div className="w-24 h-14 bg-gray-500 rounded-t-lg flex items-center justify-center">
+                      {/* 5角形の図形 */}
+                      <div 
+                        className="w-24 h-16 bg-gray-500 flex items-center justify-center relative"
+                        style={{
+                          clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
+                        }}
+                      >
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
                           2. 書類審査
                         </Typography>
                       </div>
-                      {/* 下向き三角形 */}
-                      <div className="w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-gray-500 mx-auto"></div>
                     </div>
                   </div>
                   {/* 右側: 説明テキスト */}
@@ -160,18 +166,21 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 面接 */}
-                <div className="flex items-start gap-4 -mt-4">
+                <div className="flex items-start gap-4 mb-6">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-30">
-                      {/* 長方形部分 */}
-                      <div className="w-24 h-14 bg-gray-700 rounded-t-lg flex items-center justify-center">
+                      {/* 5角形の図形 */}
+                      <div 
+                        className="w-24 h-16 bg-gray-700 flex items-center justify-center relative"
+                        style={{
+                          clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
+                        }}
+                      >
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
                           3. 面接
                         </Typography>
                       </div>
-                      {/* 下向き三角形 */}
-                      <div className="w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-gray-700 mx-auto"></div>
                     </div>
                   </div>
                   {/* 右側: 説明テキスト */}
@@ -183,18 +192,21 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 採用 */}
-                <div className="flex items-start gap-4 -mt-4">
+                <div className="flex items-start gap-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-40">
-                      {/* 長方形部分 */}
-                      <div className="w-24 h-14 bg-brand-red rounded-t-lg flex items-center justify-center">
+                      {/* 5角形の図形 */}
+                      <div 
+                        className="w-24 h-16 bg-brand-red flex items-center justify-center relative"
+                        style={{
+                          clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
+                        }}
+                      >
                         <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
                           4. 採用
                         </Typography>
                       </div>
-                      {/* 下向き三角形 */}
-                      <div className="w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-brand-red mx-auto"></div>
                     </div>
                   </div>
                   {/* 右側: 説明テキスト */}
