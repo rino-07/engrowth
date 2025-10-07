@@ -114,7 +114,7 @@ export default function RecruitPage() {
             <div className="md:hidden mb-8">
               <div className="relative">
                 {/* エントリー */}
-                <div className="flex items-start gap-4 mb-6">
+                <div className="flex items-start gap-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-10">
@@ -140,7 +140,7 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 書類審査 */}
-                <div className="flex items-start gap-4 mb-6">
+                <div className="flex items-start gap-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-20">
@@ -166,7 +166,7 @@ export default function RecruitPage() {
                 </div>
 
                 {/* 面接 */}
-                <div className="flex items-start gap-4 mb-6">
+                <div className="flex items-start gap-4">
                   {/* 左側: フローチャート */}
                   <div className="flex-shrink-0 flex flex-col items-center">
                     <div className="relative z-30">
