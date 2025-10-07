@@ -195,6 +195,22 @@ export default function RecruitPage() {
                 </div>
               </div>
             </div>
+            
+            {/* PC表示用の注意書き */}
+            <div className="hidden md:block space-y-3 mt-8">
+              <Typography variant="body-md" className="text-gray-700">
+                ※面接は複数回実施されます。
+              </Typography>
+              <Typography variant="body-md" className="text-gray-700">
+                ※過去に「学生コース」を受講いただいた方は、担当コンサルタントからの推薦となり、一部面接が免除されます。
+              </Typography>
+              <Typography variant="body-md" className="text-gray-700">
+                ※面接はオンラインで実施されます。
+              </Typography>
+              <Typography variant="body-md" className="text-gray-700">
+                ※採用後は当社で規定されたプロフェッショナルマインド研修プログラムを修了した方から本業務に従事となります。
+              </Typography>
+            </div>
           </div>
         </Container>
       </Section>
