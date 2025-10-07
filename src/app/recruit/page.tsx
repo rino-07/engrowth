@@ -110,129 +110,90 @@ export default function RecruitPage() {
               </div>
             </div>
 
-            {/* スマホ表示: 左フローチャート + 右説明テキスト */}
+            {/* スマホ表示: 左フローチャート + 右注意事項（2対8） */}
             <div className="md:hidden mb-8">
-              <div className="relative">
-                {/* エントリー */}
-                <div className="flex items-start gap-4">
-                  {/* 左側: フローチャート */}
-                  <div className="flex-shrink-0 flex flex-col items-center">
+              <div className="flex gap-4">
+                {/* 左側: フローチャート（2割） */}
+                <div className="w-1/5 flex justify-center">
+                  <div className="relative">
+                    {/* エントリー */}
                     <div className="relative z-10">
                       {/* 5角形の図形 */}
                       <div 
-                        className="w-24 h-16 bg-gray-300 flex items-center justify-center relative"
+                        className="w-20 h-14 bg-gray-300 flex items-center justify-center relative"
                         style={{
                           clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
                         }}
                       >
-                        <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        <Typography variant="body-xs" className="text-white font-semibold text-center leading-tight">
                           1. エントリー
                         </Typography>
                       </div>
                     </div>
-                  </div>
-                  {/* 右側: 説明テキスト */}
-                  <div className="flex-1 pt-2">
-                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
-                      下記フォームからの応募と履歴書送付の両方をもって、エントリー完了となります。
-                    </Typography>
-                  </div>
-                </div>
 
-                {/* 書類審査 */}
-                <div className="flex items-start gap-4">
-                  {/* 左側: フローチャート */}
-                  <div className="flex-shrink-0 flex flex-col items-center">
+                    {/* 書類審査 */}
                     <div className="relative z-20">
                       {/* 5角形の図形 */}
                       <div 
-                        className="w-24 h-16 bg-gray-500 flex items-center justify-center relative"
+                        className="w-20 h-14 bg-gray-500 flex items-center justify-center relative"
                         style={{
                           clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
                         }}
                       >
-                        <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        <Typography variant="body-xs" className="text-white font-semibold text-center leading-tight">
                           2. 書類審査
                         </Typography>
                       </div>
                     </div>
-                  </div>
-                  {/* 右側: 説明テキスト */}
-                  <div className="flex-1 pt-2">
-                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
-                      提出いただいた履歴書を基に、基本的な応募資格を満たしているかを確認いたします。
-                    </Typography>
-                  </div>
-                </div>
 
-                {/* 面接 */}
-                <div className="flex items-start gap-4">
-                  {/* 左側: フローチャート */}
-                  <div className="flex-shrink-0 flex flex-col items-center">
+                    {/* 面接 */}
                     <div className="relative z-30">
                       {/* 5角形の図形 */}
                       <div 
-                        className="w-24 h-16 bg-gray-700 flex items-center justify-center relative"
+                        className="w-20 h-14 bg-gray-700 flex items-center justify-center relative"
                         style={{
                           clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
                         }}
                       >
-                        <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        <Typography variant="body-xs" className="text-white font-semibold text-center leading-tight">
                           3. 面接
                         </Typography>
                       </div>
                     </div>
-                  </div>
-                  {/* 右側: 説明テキスト */}
-                  <div className="flex-1 pt-2">
-                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
-                      30分程度、Zoomを使って面接を実施いたします。勤務時間などについてご希望があればお伝えください。
-                    </Typography>
-                  </div>
-                </div>
 
-                {/* 採用 */}
-                <div className="flex items-start gap-4">
-                  {/* 左側: フローチャート */}
-                  <div className="flex-shrink-0 flex flex-col items-center">
+                    {/* 採用 */}
                     <div className="relative z-40">
                       {/* 5角形の図形 */}
                       <div 
-                        className="w-24 h-16 bg-brand-red flex items-center justify-center relative"
+                        className="w-20 h-14 bg-brand-red flex items-center justify-center relative"
                         style={{
                           clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'
                         }}
                       >
-                        <Typography variant="body-sm" className="text-white font-semibold text-center leading-tight">
+                        <Typography variant="body-xs" className="text-white font-semibold text-center leading-tight">
                           4. 採用
                         </Typography>
                       </div>
                     </div>
                   </div>
-                  {/* 右側: 説明テキスト */}
-                  <div className="flex-1 pt-2">
-                    <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
-                      採用・不採用に関わらずご連絡いたします。
-                    </Typography>
-                  </div>
+                </div>
+
+                {/* 右側: 注意事項（8割） */}
+                <div className="w-4/5 space-y-3">
+                  <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                    ※面接は複数回実施されます。
+                  </Typography>
+                  <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                    ※過去に「学生コース」を受講いただいた方は、担当コンサルタントからの推薦となり、一部面接が免除されます。
+                  </Typography>
+                  <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                    ※面接はオンラインで実施されます。
+                  </Typography>
+                  <Typography variant="body-sm" className="text-gray-700 leading-relaxed">
+                    ※採用後は当社で規定されたプロフェッショナルマインド研修プログラムを修了した方から本業務に従事となります。
+                  </Typography>
                 </div>
               </div>
-            </div>
-            
-            {/* 注意書き */}
-            <div className="space-y-3">
-              <Typography variant="body-md" className="text-gray-700">
-                ※面接は複数回実施されます。
-              </Typography>
-              <Typography variant="body-md" className="text-gray-700">
-                ※過去に「学生コース」を受講いただいた方は、担当コンサルタントからの推薦となり、一部面接が免除されます。
-              </Typography>
-              <Typography variant="body-md" className="text-gray-700">
-                ※面接はオンラインで実施されます。
-              </Typography>
-              <Typography variant="body-md" className="text-gray-700">
-                ※採用後は当社で規定されたプロフェッショナルマインド研修プログラムを修了した方から本業務に従事となります。
-              </Typography>
             </div>
           </div>
         </Container>
