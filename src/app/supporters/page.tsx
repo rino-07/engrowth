@@ -249,7 +249,7 @@ export default function SupportersPage() {
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">支援金は「人材育成投資」として経費計上が可能です。詳細は税理士にご相談いただけますが、一般的にはCSR費用または採用関連費用として処理されています。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">支援金は「人材育成投資」として経費計上が可能です。詳細は税理士にご確認願いますが、一般的にはCSR費用または採用関連費用として処理されています。</Typography>
                 </div>
               </div>
             </Card>
@@ -266,7 +266,7 @@ export default function SupportersPage() {
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">就職を強制することはありません。ただし、過去の実績では約75%の支援学生が支援企業グループへの就職を希望しており、優先的な採用機会を提供しています。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">支援学生に対し就職を強制することはありませんが、支援学生との接点や交流を通じて、多くの学生が好意的に各支援者様への関心を示す機会となっております。結果としてほぼ全ての留学生たちが卒業後の就職先として支援企業様を候補にしております。</Typography>
                 </div>
               </div>
             </Card>
@@ -283,7 +283,7 @@ export default function SupportersPage() {
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">やむを得ない事情による中断の場合、未使用分の支援金は返金いたします。また、代替学生への支援切り替えも可能です。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">返金対応は行っておりません。他の学生への活動に活用させていただいております。</Typography>
                 </div>
               </div>
             </Card>
@@ -300,7 +300,7 @@ export default function SupportersPage() {
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">はい。月額50万円からのブロンズパートナーをご用意しており、複数企業での共同支援も可能です。企業規模に応じた柔軟なプランをご提案いたします。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">はい。月額50万円からのブロンズパートナーをご用意しており、複数企業での共同支援も可能です。また期間や回数を問わない柔軟なご支援も広く受け付けており、要望に応じた柔軟なプランをご提案させていただいております。</Typography>
                 </div>
               </div>
             </Card>
