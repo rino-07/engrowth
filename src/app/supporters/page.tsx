@@ -212,6 +212,9 @@ export default function SupportersPage() {
 
           {/* お気軽にご相談ください */}
           <div className="text-center">
+          <Typography variant="body-lg" className="text-gray">
+          月額制のパートナーシップに加え、期間や回数を問わない柔軟なご支援も広く受け付けております。
+            </Typography>
             <Typography variant="body-lg" className="text-gray mb-8">
               お気軽にご相談ください
             </Typography>
@@ -239,14 +242,14 @@ export default function SupportersPage() {
                 <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray">支援の税務処理はどうなりますか？</Typography>
+                <Typography variant="heading-sm" className="text-dark-gray">支援金の税務処理はどうなりますか？</Typography>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">現在の英語力診断、目標設定、最適な学習プランの提案、プログラムの詳細説明など、英語学習に関するあらゆるご相談を承っております。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">支援金は「人材育成投資」として経費計上が可能です。詳細は税理士にご相談いただけますが、一般的にはCSR費用または採用関連費用として処理されています。</Typography>
                 </div>
               </div>
             </Card>
@@ -256,14 +259,14 @@ export default function SupportersPage() {
                 <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray">支援学生が卒業後、必ず学社に就職するのでしょうか？</Typography>
+                <Typography variant="heading-sm" className="text-dark-gray">支援学生が卒業後、必ず弊社に就職するのですか？</Typography>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">約30分程度を予定しております。お客様のご質問やご相談内容によって、多少前後する場合があります。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">就職を強制することはありません。ただし、過去の実績では約75%の支援学生が支援企業グループへの就職を希望しており、優先的な採用機会を提供しています。</Typography>
                 </div>
               </div>
             </Card>
@@ -273,14 +276,14 @@ export default function SupportersPage() {
                 <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray">支援途中で学生がやめる場合事業で留学を断念する場合はどうなりますか？</Typography>
+                <Typography variant="heading-sm" className="text-dark-gray">支援途中で学生が留学を中断した場合はどうなりますか？</Typography>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">はい、ZoomやGoogle Meetを使用したオンラインカウンセリングも承っております。全国どこからでもご参加いただけます。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">やむを得ない事情による中断の場合、未使用分の支援金は返金いたします。また、代替学生への支援切り替えも可能です。</Typography>
                 </div>
               </div>
             </Card>
@@ -290,14 +293,14 @@ export default function SupportersPage() {
                 <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">Q</Typography>
                 </div>
-                <Typography variant="heading-sm" className="text-dark-gray">小規模企業、個人事業主でも参加できますか？</Typography>
+                <Typography variant="heading-sm" className="text-dark-gray">小規模企業でも参加できますか？</Typography>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">いいえ、カウンセリング後の入会は任意です。まずはプログラムの内容をご理解いただき、ご納得いただいた上でのご入会をお待ちしております。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">はい。月額50万円からのブロンズパートナーをご用意しており、複数企業での共同支援も可能です。企業規模に応じた柔軟なプランをご提案いたします。</Typography>
                 </div>
               </div>
             </Card>
@@ -314,7 +317,7 @@ export default function SupportersPage() {
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">ご相談、プラン提案は完全無料です。まずはお気軽にお声掛けください。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">学業成績、Engrowthでの指導実績、将来性、経済的必要度を総合的に評価しています。具体的な評価シートは面談時にご説明いたします。</Typography>
                 </div>
               </div>
             </Card>

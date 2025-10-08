@@ -247,7 +247,7 @@ export default function StudentCoursePage() {
                   ※上記サービスの提供主体は提携先"留サポ"です。Engrowth経由でご紹介します。
                 </Typography>
                 <a 
-                  href="https://ryusapo.com" 
+                  href="https://ryusapo-site.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center gap-2 rounded-full bg-dark-gray hover:bg-black text-white px-4 py-2 text-sm font-medium transition-colors duration-200"
