@@ -283,7 +283,7 @@ export default function SupportersPage() {
                   <Typography variant="body-sm" className="text-white font-bold">A</Typography>
                 </div>
                 <div>
-                  <Typography variant="body-md" className="text-dark-gray">返金対応は行っておりません。他の学生への活動に活用させていただいております。</Typography>
+                  <Typography variant="body-md" className="text-dark-gray">他の学生への活動に活用させていただいております。</Typography>
                 </div>
               </div>
             </Card>

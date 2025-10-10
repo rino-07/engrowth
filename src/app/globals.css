@@ -457,21 +457,21 @@ body {
 
 /* エントリーステップ */
 .step-entry {
-  background: linear-gradient(135deg, #d30306, #e53e3e);
+  background: linear-gradient(135deg, #d1d5db, #9ca3af);
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
   margin-right: -20px;
 }
 
 /* 書類審査ステップ */
 .step-review {
-  background: linear-gradient(135deg, #898989, #a0a0a0);
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
   clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%);
   margin-right: -20px;
 }
 
 /* 面接ステップ */
 .step-interview {
-  background: linear-gradient(135deg, #898989, #a0a0a0);
+  background: linear-gradient(135deg, #6b7280, #4b5563);
   clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%);
   margin-right: -20px;
 }
@@ -479,7 +479,8 @@ body {
 /* 採用ステップ（最後） */
 .step-final {
   background: linear-gradient(135deg, #d30306, #e53e3e);
-  clip-path: polygon(20px 0, 100% 0, 100% 100%, 20px 100%);
+  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%);
+  margin-right: 0;
 }
 
 /* レスポンシブ対応 */

@@ -21,7 +21,7 @@ export default function ContactPage() {
         label="CONTACT"
         title="お問い合わせ"
         description={`
-            まずはお気軽にご相談ください。無料相談、LINE相談受付中。|英語学習の悩み、目標設定、プラン相談など、どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
+            まずはお気軽にご相談ください。無料相談、LINE相談にて随時受け付けております。|英語学習の悩み、目標設定、プラン相談など、どんなことでもお気軽にお声掛けください。強引な営業は一切いたしません。
         `}
       />
 
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <Typography variant="body-md" className="text-dark-gray">
-                    第二言語習得理論に基づいた科学的アプローチと、AI技術を活用した独自の学習メソッドを採用しています。実践経験豊富な日本人コンサルタントが、あなたの学習を90日間伴走サポートいたします。
+                    第二言語習得理論に基づいた科学的アプローチと、AI技術を活用した独自の学習メソッドを採用しています。実践経験豊富な日本人コンサルタントが、あなたの学習を24時間伴走サポートいたします。
                   </Typography>
                 </div>
               </div>
@@ -122,14 +122,14 @@ export default function ContactPage() {
                 LINEでのご相談
               </Typography>
               <Typography variant="body-sm" className="text-gray mb-6">
-                すぐにちょっと聞きてみたい、という方におすすめです。
+                すぐにちょっと聞きてみたい、という方におすすめです
               </Typography>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-action-green rounded-full mt-2 flex-shrink-0"></div>
                   <Typography variant="body-sm" className="text-dark-gray text-left">
-                    即座に質問可能<br />登録時すぐにチャットでご相談いただけます。
+                    即座に質問可能<br />登録時すぐにチャットでご相談いただけます
                   </Typography>
                 </div>
                 <div className="flex items-start gap-3">
@@ -161,7 +161,7 @@ export default function ContactPage() {
                 メールでのお問い合わせ
               </Typography>
               <Typography variant="body-sm" className="text-gray mb-6">
-                詳細な相談内容や資料のやり取りが必要な場合に最適です
+                詳細な相談内容や資料のやり取りが必要な際に最適です
               </Typography>
               
               <div className="space-y-4 mb-8">

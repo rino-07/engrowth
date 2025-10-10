@@ -68,28 +68,28 @@ const faqData: FAQ[] = [
   // 支援プログラム
   {
     category: '支援プログラム',
-    question: '支援の税務処理はどうなりますか？',
-    answer: '支援金は寄付金控除の対象となる場合があります。詳細は税理士にご相談いただくか、弊社までお問い合わせください。'
+    question: '支援金の税務処理はどうなりますか？',
+    answer: '支援金は「人材育成投資」として経費計上が可能です。詳細は税理士にご確認願いますが、一般的にはCSR費用または採用関連費用として処理されています。'
   },
   {
     category: '支援プログラム',
-    question: '支援学生が卒業後、必ず御社に就職するのでしょうか？',
-    answer: '就職を強制するものではありません。ただし、優秀な学生との出会いの機会として、採用面接の機会を優先的にご提供いたします。'
+    question: '支援学生が卒業後、必ず弊社に就職するのですか？',
+    answer: '支援学生に対し就職を強制することはありませんが、支援学生との接点や交流を通じて、多くの学生が好意的に各支援者様への関心を示す機会となっております。結果としてほぼ全ての留学生たちが卒業後の就職先として支援企業様を候補にしております。'
   },
   {
     category: '支援プログラム',
-    question: '支援途中で学生がやめる場合や留学を断念する場合はどうなりますか？',
-    answer: '契約時に定めた条件に基づき、個別に対応させていただきます。詳細は支援契約書をご確認ください。'
+    question: '支援途中で学生が留学を中断した場合はどうなりますか？',
+    answer: '他の学生への活動に活用させていただいております。'
   },
   {
     category: '支援プログラム',
-    question: '小規模企業、個人事業主でも参加できますか？',
-    answer: 'はい、企業規模に関係なくご参加いただけます。ご予算に応じた柔軟な支援プランをご提案いたします。'
+    question: '小規模企業でも参加できますか？',
+    answer: 'はい。月額50万円からのブロンズパートナーをご用意しており、複数企業での共同支援も可能です。また期間や回数を問わない柔軟なご支援も広く受け付けており、要望に応じた柔軟なプランをご提案させていただいております。'
   },
   {
     category: '支援プログラム',
     question: '支援学生の選考基準を教えてください。',
-    answer: '学習意欲、将来性、人柄などを総合的に判断し、厳正な選考を行っております。詳細な基準については個別にご説明いたします。'
+    answer: '学業成績、Engrowthでの指導実績、将来性、経済的必要度を総合的に評価しています。具体的な評価シートは面談時にご説明いたします。'
   },
   // 受講生
   {
@@ -169,7 +169,7 @@ export default function FAQClient() {
                       Q
                     </Typography>
                   </div>
-                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
+                  <Typography variant="heading-sm" className="text-dark-gray">
                     {faq.question}
                   </Typography>
                 </div>
@@ -180,7 +180,7 @@ export default function FAQClient() {
                     </Typography>
                   </div>
                   <div>
-                    <Typography variant="body-md" className="text-dark-gray font-serif">
+                    <Typography variant="body-md" className="text-dark-gray">
                       {faq.answer}
                     </Typography>
                   </div>

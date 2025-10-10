@@ -230,7 +230,7 @@ export default function RecruitPage() {
                 </Typography>
                 
                 <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                  なお、質問・相談などございましたら公式LINEでお気軽にご質問ください
+                  なお、質問・相談などございましたら公式LINEでお気軽にご質問ください。<div className=""></div>
                 </Typography>
                 
                 <div className="text-center">
@@ -377,7 +377,7 @@ export default function RecruitPage() {
                   </div>
                   <div>
                     <Typography variant="body-md" className="text-gray-700 font-serif">
-                      エントリー可能です。日本語が母語であることはマストですが、母語が複数ある方も大歓迎です。
+                      エントリー可能です。日本語が母語であることは必須ですが、母語が複数ある方も大歓迎です。
                     </Typography>
                   </div>
                 </div>
@@ -403,7 +403,7 @@ export default function RecruitPage() {
                   </div>
                   <div>
                     <Typography variant="body-md" className="text-gray-700 font-serif">
-                    経済的な困難を抱えていない方も大歓迎です。※奨学金制度対象外となります
+                    経済的な困難を抱えていない方も大歓迎です。※奨学金制度対象外となります。
 
                     </Typography>
                   </div>
