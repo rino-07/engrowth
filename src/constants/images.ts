@@ -6,7 +6,7 @@
 export const IMAGE_PATHS = {
   // ヒーロー画像
   hero: {
-    top: '/images/top/top01.png',
+    top: '/images/top/hero.png',
     about: '/images/about/about_hero.png',
     business: '/images/business/business_hero.png',
     courses: '/images/courses/courses_hero.png',

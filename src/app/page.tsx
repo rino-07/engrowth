@@ -17,7 +17,7 @@ export default function Home() {
       {/* 1. Hero Section */}
       <section className="relative w-full overflow-hidden min-h-[50vh] md:min-h-[60vh] lg:min-h-[80vh]">
         <Image
-          src="/images/top/top01.png"
+          src="/images/top/hero.png"
           alt=""
           fill
           priority
