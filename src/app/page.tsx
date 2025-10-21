@@ -11,18 +11,30 @@ import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
 import { EvidenceSection } from '@/components/sections/EvidenceSection';
 import MethodCardsLayout from '@/components/sections/MethodCardsLayout';
+import { IMAGE_PATHS } from '@/constants/images';
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
       <section className="relative w-full overflow-hidden min-h-[50vh] md:min-h-[60vh] lg:min-h-[80vh]">
+        {/* モバイル用画像 */}
         <Image
-          src="/images/top/hero.png"
+          src={IMAGE_PATHS.heroMobile.top}
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover aspect-[16/9] w-full h-full"
+          className="object-cover aspect-[16/9] w-full h-full md:hidden"
+          style={{ objectPosition: 'center 20%' }}
+        />
+        {/* デスクトップ用画像 */}
+        <Image
+          src={IMAGE_PATHS.hero.top}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover aspect-[16/9] w-full h-full hidden md:block"
           style={{ objectPosition: 'center 20%' }}
         />
           <div className="absolute inset-0 bg-white opacity-20"></div>

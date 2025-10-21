@@ -17,7 +17,7 @@ export const IMAGE_PATHS = {
   
   // モバイル用ヒーロー画像
   heroMobile: {
-    top: '/images/hero_sma/top_hero_sma.png',
+    top: '/images/top/top_hero_mobile.png',
     about: '/images/hero_sma/about_hero_sma.png',
     business: '/images/hero_sma/business_hero_sma.png',
     courses: '/images/hero_sma/courses_hero_sma.png',
