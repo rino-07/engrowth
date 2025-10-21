@@ -20,7 +20,7 @@ export default function ConsultantPage() {
       <PageTitleSection
         label="Consultant"
         title="「英語を第二言語として習得したコンサルタント」の圧倒的な価値"
-        description="なぜEngrowthでは「日本人コンサルタント」にこだわるのか"
+        description="なぜEngrowthでは「日本人コンサルタント」にこだわるのか" 
       />
 
       {/* メインメッセージセクション */}
