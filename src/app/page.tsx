@@ -16,25 +16,15 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 1. Hero Section */}
-      <section className="relative w-full overflow-hidden min-h-[50vh] md:min-h-[60vh] lg:min-h-[80vh]">
-        {/* モバイル用画像 */}
-        <Image
-          src={IMAGE_PATHS.heroMobile.top}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover aspect-[16/9] w-full h-full md:hidden"
-          style={{ objectPosition: 'center 20%' }}
-        />
-        {/* デスクトップ用画像 */}
+      <section className="relative w-full overflow-hidden aspect-[2021/748]">
+
         <Image
           src={IMAGE_PATHS.hero.top}
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover aspect-[16/9] w-full h-full hidden md:block"
+          className="object-cover aspect-[2021/748] w-full h-full"
           style={{ objectPosition: 'center 20%' }}
         />
           <div className="absolute inset-0 bg-white opacity-20"></div>
