@@ -30,25 +30,25 @@ export default function Home() {
           <div className="absolute inset-0 bg-white opacity-20"></div>
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="p-6">
-            <h1 className="text-white mb-6 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+            <h1 className="text-white mb-3 sm:mb-6 text-base sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
             どんな環境に生まれても、自分が生きたい人生を。
             </h1>
-            <p className="text-white mb-8 md:mb-10 max-w-[65ch] mx-auto text-base md:text-lg leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+            <p className="text-white mb-4 sm:mb-8 md:mb-10 max-w-[65ch] mx-auto text-xs sm:text-base md:text-lg leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
             英語力と人間力で、誰かの可能性を広げながら、
               <br />
               あなた自身の未来も切り拓く。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mx-auto max-w-xl">
+            <div className="flex flex-row gap-2 sm:gap-4 justify-center mx-auto max-w-xl">
   <Link
     href="/contact"
-    className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors bg-brand-red text-white hover:bg-red-700 sm:flex-1"
+    className="inline-flex items-center justify-center rounded-md px-2 py-1 sm:px-6 sm:py-3 text-xs sm:text-base font-medium transition-colors bg-brand-red text-white hover:bg-red-700 sm:flex-1"
   >
     無料相談を予約する
   </Link>
   <Link
     href="/courses"
     id="cta-course-detail"
-    className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-200 bg-white text-gray-800 border border-gray-200 hover:shadow-lg sm:flex-1"
+    className="inline-flex items-center justify-center rounded-md px-2 py-1 sm:px-6 sm:py-3 text-xs sm:text-base font-medium transition-all duration-200 bg-white text-gray-800 border border-gray-200 hover:shadow-lg sm:flex-1"
   >
     コース詳細を見る
   </Link>
