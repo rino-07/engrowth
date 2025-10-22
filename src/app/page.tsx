@@ -31,7 +31,8 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="p-6">
             <h1 className="text-white mb-3 sm:mb-6 text-base sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
-            どんな環境に生まれても、自分が生きたい人生を。
+            どんな環境に生まれても、<br className="sm:hidden" />
+            自分が生きたい人生を。
             </h1>
             <p className="text-white mb-4 sm:mb-8 md:mb-10 max-w-[65ch] mx-auto text-xs sm:text-base md:text-lg leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
             英語力と人間力で、誰かの可能性を広げながら、
