@@ -30,7 +30,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-white opacity-20"></div>
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="p-6">
-            <h1 className="text-white mb-3 sm:mb-6 text-base sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+            <h1 className="text-white mb-3 sm:mb-6 text-sm sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
             どんな環境に生まれても、<br className="sm:hidden" />
             自分が生きたい人生を。
             </h1>
